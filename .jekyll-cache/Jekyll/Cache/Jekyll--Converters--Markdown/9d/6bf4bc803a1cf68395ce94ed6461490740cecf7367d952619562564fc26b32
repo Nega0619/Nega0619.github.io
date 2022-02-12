@@ -1,0 +1,37 @@
+I"�<h1 id="언제-사용">언제 사용?</h1>
+
+<p>여러 문자열들을 가지고와서 원하는 문자로 시작하거나 끝나는 문자열을 검색할때 사용합니다.</p>
+
+<h1 id="startswith">startswith</h1>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">EmployeeID</span> <span class="o">=</span> <span class="p">[</span><span class="s">'OB94382'</span><span class="p">,</span> <span class="s">'OW34723'</span><span class="p">,</span> <span class="s">'OB32308'</span><span class="p">,</span> <span class="s">'OB83461'</span><span class="p">,</span> 
+                                  <span class="s">'OB74830'</span><span class="p">,</span> <span class="s">'OW37402'</span><span class="p">,</span> <span class="s">'OW11235'</span><span class="p">,</span> <span class="s">'OB82345'</span><span class="p">]</span> 
+<span class="n">Production_Employee</span> <span class="o">=</span> <span class="p">[</span><span class="n">P</span> <span class="k">for</span> <span class="n">P</span> <span class="ow">in</span> <span class="n">EmployeeID</span> <span class="k">if</span> <span class="n">P</span><span class="p">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">'OB'</span><span class="p">)]</span>   <span class="c1"># 'OB'로 시작하는 직원 ID를 다 찾아봅니다
+</span><span class="n">Production_Employee</span>
+</code></pre></div></div>
+
+<p>실행결과</p>
+
+<blockquote>
+  <p>[‘OB94382’, ‘OB32308’, ‘OB83461’, ‘OB74830’, ‘OB82345’]</p>
+</blockquote>
+
+<h1 id="endswith">endswith</h1>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span>
+<span class="n">image_dir_path</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">getenv</span><span class="p">(</span><span class="s">"HOME"</span><span class="p">)</span> <span class="o">+</span> <span class="s">"/data/pictures"</span>   
+
+<span class="n">photo</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">image_dir_path</span> <span class="p">)</span>
+<span class="n">png</span> <span class="o">=</span> <span class="p">[</span><span class="n">png</span> <span class="k">for</span> <span class="n">png</span> <span class="ow">in</span> <span class="n">photo</span> <span class="k">if</span> <span class="n">png</span><span class="p">.</span><span class="n">endswith</span><span class="p">(</span><span class="s">'.png'</span><span class="p">)]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">png</span><span class="p">)</span>
+<span class="c1">#해당디렉토리에 실행결과의 이미지.PNG들이 존재해야 아래와 같이 뜸.
+</span></code></pre></div></div>
+
+<p>실행결과</p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>['image5.png', 'image2.png', 'image12.png', 'image3.png', 'image8.png', 'image13.png', 'image6.png', 'image4.png', 'image14.png', 'image9.png', 'image10.png', 'image7.png', 'image11.png']
+</code></pre></div>  </div>
+</blockquote>
+
+:ET

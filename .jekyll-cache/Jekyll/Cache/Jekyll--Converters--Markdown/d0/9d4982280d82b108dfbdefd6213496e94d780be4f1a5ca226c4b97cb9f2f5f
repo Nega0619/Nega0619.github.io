@@ -1,0 +1,40 @@
+I"*<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"""
+def fibonacci(n):
+    if n &lt;= 2:
+        return 1
+    else:
+        return fibonacci(n-2) + fibonacci(n-1)
+
+n = 1
+while n &lt;= 20:
+    print(fibonacci(n))
+    n = n + 1
+print('끝!')
+"""
+
+# 직접 만들어보세요.
+
+fiboIndex = 0;		# peopleNum 값이 몇 번째 인덱스인지 저장할 변수
+
+def fibonacci(input):
+    if input&lt;=2:
+        return 1
+    else:
+        return fibonacci(input-2)+fibonacci(input-1)
+    
+def FibonaChicken(peopleNum):
+    index = 0;    
+    while(peopleNum != fibonacci(index)):
+        index = index+1
+        #print(index)
+    return index
+
+"""
+fiboIndex = FibonaChicken(13)
+fibonacci(fiboIndex-1)
+"""
+
+fibonacci(FibonaChicken(13)-1)
+</code></pre></div></div>
+
+:ET

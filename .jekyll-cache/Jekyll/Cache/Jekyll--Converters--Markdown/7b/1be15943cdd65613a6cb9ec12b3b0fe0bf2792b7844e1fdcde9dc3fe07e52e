@@ -1,0 +1,44 @@
+I"�<p>컴파일 타임 Compile time과 런타임 Run time은 소프트웨어 개발의 서로 다른 계층의 차이를 설명하기 위한 용어이다.</p>
+
+<h1 id="컴파일타임-compile-time">컴파일타임 Compile time</h1>
+
+<p>개발자가 작성한 소스 코드를 컴파일러가 <strong>컴파일</strong>이라는 과정을 통해 기계어 코드로 번역한다. 이러한 편집 과정을 <strong>컴파일타임</strong>이라고 한다.</p>
+
+<h1 id="런타임-run-time">런타임 Run time</h1>
+
+<p>컴파일 과정을 마친 프로그램이 사용자에게 실행 되며, 이 응용 프로그램이 동작되어 지는 때를 런타임이라고 한다.</p>
+
+<h2 id="컴파일-타임과-런타임">컴파일 타임과 런타임</h2>
+
+<p>서로 다른 타입의 에러를 나타내기 위하여 사용되어지곤 한다.</p>
+
+<ul>
+  <li>컴파일 타임에 일어나는 에러
+    <ul>
+      <li>syntax error</li>
+      <li>type error</li>
+    </ul>
+  </li>
+  <li>
+    <p>런타임에 일어나는 에러</p>
+
+    <ul>
+      <li>
+        <p>zero division error</p>
+      </li>
+      <li>
+        <p>null point error</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h6 id="출처">출처</h6>
+
+<ul>
+  <li>https://spaghetti-code.tistory.com/35</li>
+</ul>
+
+:ET

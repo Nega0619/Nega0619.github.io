@@ -1,0 +1,196 @@
+I"<h1 id="리눅스-명령어">리눅스 명령어</h1>
+
+<p>abc순으로 정리되어있으며 ctrl + f해서 찾으세요.</p>
+
+<h3 id="cd---change-directory"><code class="language-plaintext highlighter-rouge">cd </code> : change directory</h3>
+
+<p>경로 이동</p>
+
+<h3 id="cp--copy">cp : copy</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">cp -r 복제할폴더이름</code> : 디렉토리 복사 할 때 -r 옵션이 필수이다.</li>
+</ul>
+
+<h3 id="grep---특정-문자열을-찾고자할-때"><code class="language-plaintext highlighter-rouge">grep </code> : 특정 문자열을 찾고자할 때</h3>
+
+<p>특정 문자열을 찾고자할 때 사용하는 명령어</p>
+
+<ul>
+  <li>
+    <p>정규표현식을 사용하여 보통 많이 서칭합니다.</p>
+
+    <details>
+    <summary>정규 표현식 메타 문자 및 설명&lt;/summay&gt;
+    <div>
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   &lt;table border = 1&gt;
+       &lt;th&gt;메타 문자 (Meta Character&gt;&lt;/th&gt;
+       &lt;th&gt;설명&lt;/th&gt;
+       &lt;tr&gt;
+           &lt;td&gt;.&lt;/td&gt;
+           &lt;td&gt;1개의 문자 매치 (정확히 1개의 문자와 매치)&lt;/td&gt;
+       &lt;/tr&gt;
+       &lt;tr&gt;
+           &lt;td&gt;*&lt;/td&gt;
+           &lt;td&gt;앞 문자가 0회 이상 매치&lt;/td&gt;
+       &lt;/tr&gt;
+       &lt;tr&gt;
+           &lt;td&gt;{n}&lt;/td&gt;
+           &lt;td&gt;앞 문자가 정확히 n회 매치&lt;/td&gt;
+       &lt;/tr&gt;
+       &lt;tr&gt;
+           &lt;td&gt;{n,m}&lt;/td&gt;
+           &lt;td&gt;앞 문자가 n회 이상 m회 이하 매치&lt;/td&gt;
+       &lt;/tr&gt;
+       &lt;tr&gt;
+           &lt;td&gt;[ ]&lt;/td&gt;
+           &lt;td&gt;대괄호에 포함된 문자 중 한개와 매치&lt;/td&gt;
+       &lt;/tr&gt;
+       &lt;tr&gt;
+           &lt;td&gt;[^ ]&lt;/td&gt;
+           &lt;td&gt;대괄호 안에서 ^뒤에 있는 문자들을 제외&lt;/td&gt;
+       &lt;/tr&gt;
+       &lt;tr&gt;
+           &lt;td&gt;[ - ]&lt;/td&gt;
+           &lt;td&gt;대괄호 안 문자 범위에 있는 문자들 매치&lt;/td&gt;
+       &lt;/tr&gt;
+       &lt;tr&gt;
+           &lt;td&gt;()&lt;/td&gt;
+           &lt;td&gt;표현식을 그룹화&lt;/td&gt;
+       &lt;/tr&gt;
+       &lt;tr&gt;
+           &lt;td&gt;^&lt;/td&gt;
+           &lt;td&gt;문자열 라인의 처음&lt;/td&gt;
+       &lt;/tr&gt;
+       &lt;tr&gt;
+           &lt;td&gt;$&lt;/td&gt;
+           &lt;td&gt;문자열 라인의 마지막&lt;/td&gt;
+       &lt;/tr&gt;
+       &lt;tr&gt;
+           &lt;td&gt;?&lt;/td&gt;
+           &lt;td&gt;앞 문자가 0 또는 1회 매치 (확장 정규 표현식)&lt;/td&gt;
+       &lt;/tr&gt;
+       &lt;tr&gt;
+           &lt;td&gt;+&lt;/td&gt;
+           &lt;td&gt;앞 문자가 1회 이상 매치 (확장 정규 표현식)&lt;/td&gt;
+       &lt;/tr&gt;
+       &lt;tr&gt;
+           &lt;td&gt;|&lt;/td&gt;
+           &lt;td&gt;표현식 논리 OR (확장 정규 표현식)&lt;/td&gt;
+       &lt;/tr&gt;
+    &lt;/table&gt; 
+&lt;/div&gt;
+</code></pre></div>          </div>
+          <p>&lt;/details&gt;</p>
+
+        </div></summary></details>
+  </li>
+  <li>
+    <details>
+  <summary>grep 명령어 옵션</summary>
+    <div>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;pre&gt; grep [OPTION...] PATTERN [FILE...]
+    -E        : PATTERN을 확장 정규 표현식(Extended RegEx)으로 해석.
+    -F        : PATTERN을 정규 표현식(RegEx)이 아닌 일반 문자열로 해석.
+  -G        : PATTERN을 기본 정규 표현식(Basic RegEx)으로 해석.
+  -P        : PATTERN을 Perl 정규 표현식(Perl RegEx)으로 해석.
+    -e        : 매칭을 위한 PATTERN 전달.
+    -f        : 파일에 기록된 내용을 PATTERN으로 사용.
+    -i        : 대/소문자 무시.
+  -v        : 매칭되는 PATTERN이 존재하지 않는 라인 선택.
+    -w        : 단어(word) 단위로 매칭.
+    -x        : 라인(line) 단위로 매칭.
+    -z        : 라인을 newline(\n)이 아닌 NULL(\0)로 구분.
+    -m        : 최대 검색 결과 갯수 제한.
+    -b        : 패턴이 매치된 각 라인(-o 사용 시 문자열)의 바이트 옵셋 출력.
+    -n        : 검색 결과 출력 라인 앞에 라인 번호 출력.
+    -H        : 검색 결과 출력 라인 앞에 파일 이름 표시.
+    -h        : 검색 결과 출력 시, 파일 이름 무시.
+    -o        : 매치되는 문자열만 표시.
+    -q        : 검색 결과 출력하지 않음.
+    -a        : 바이너리 파일을 텍스트 파일처럼 처리.
+    -I        : 바이너리 파일은 검사하지 않음.
+    -d        : 디렉토리 처리 방식 지정. (read, recurse, skip)
+    -D        : 장치 파일 처리 방식 지정. (read, skip)
+    -r        : 하위 디렉토리 탐색.
+    -R        : 심볼릭 링크를 따라가며 모든 하위 디렉토리 탐색.
+    -L        : PATTERN이 존재하지 않는 파일 이름만 표시.
+    -l        : 패턴이 존재하는 파일 이름만 표시.
+    -c        : 파일 당 패턴이 일치하는 라인의 갯수 출력.
+    &lt;/pre&gt;
+&lt;/div&gt;
+</code></pre></div>        </div>
+        <p>&lt;/details&gt;</p>
+
+      </div></details>
+  </li>
+</ul>
+<h3 id="ls---list-디렉토리-목록-확인"><code class="language-plaintext highlighter-rouge">ls</code>  : list 디렉토리 목록 확인</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">-R</code> 옵션 : 하위 디렉토리까지 출력한다.</li>
+  <li>
+    <p>https://akdl911215.tistory.com/201</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">ln</code>  : link</p>
+
+    <p>한 파일을 다른 파일 이름으로도 사용하고자 할 때 사용</p>
+
+    <ul>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">-s</code> : 심볼릭 링크 생성</p>
+
+        <p><code class="language-plaintext highlighter-rouge">ln -s &lt;TARGET&gt; &lt;LINK_NAME&gt;</code> 윈도우에서 바로가기 같은 느낌</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="mkdir---make-directory-디렉토리-생성"><code class="language-plaintext highlighter-rouge">mkdir </code> : make directory 디렉토리 생성</h3>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">-p</code> 옵션 : 하위 디렉토리까지 한번에 생성 가능</p>
+
+    <blockquote>
+      <p>$ mkdir -p a/b/c</p>
+
+      <p>$ ls -R a/</p>
+
+      <p>a/:</p>
+
+      <p>b/</p>
+
+      <p>a/b:</p>
+
+      <p>c/</p>
+
+      <p>a/b/c:</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h3 id="mv--move">mv : move</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">mv 옮길파일경로 옮겨질경로</code></li>
+</ul>
+
+<h3 id="pwd---print-working-directory"><code class="language-plaintext highlighter-rouge">pwd</code>  : print working directory</h3>
+
+<p>현재 작업중인 디렉토리 정보 출력</p>
+
+<h3 id="rm--remove">rm : remove</h3>
+
+<ul>
+  <li>
+    <p>디렉토리 삭제 : <code class="language-plaintext highlighter-rouge">rm -r</code></p>
+
+    <p><code class="language-plaintext highlighter-rouge">-r</code> : 하위 디렉토리와 파일까지 모두 삭제하라는 것을 의미한다.</p>
+  </li>
+  <li>
+    <p>일반 파일 삭제 : <code class="language-plaintext highlighter-rouge">rm</code></p>
+  </li>
+</ul>
+:ET

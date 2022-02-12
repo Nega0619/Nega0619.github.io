@@ -1,0 +1,34 @@
+<h4 id="support-vector-machine-svm">Support Vector Machine (SVM)</h4>
+
+<p>SVM은 Support Vector와 Hyperplane(초평면)을 이용해서 분류를 수행하게 되는 대표적인 선형 분류 알고리즘입니다.</p>
+
+<p>2 차원 공간에서, 즉 데이터에 2개의 클래스만 존재할 때,</p>
+
+<ul>
+  <li>Decision Boundary(결정 경계): 두 개의 클래스를 구분해 주는 선</li>
+  <li>Support Vector: Decision Boundary에 가까이 있는 데이터</li>
+  <li>Margin: Decision Boundary와 Support Vector 사이의 거리</li>
+</ul>
+
+<p>Margin이 넓을수록 새로운 데이터를 잘 구분할 수 있다. (Margin 최대화 -&gt; robustness 최대화)</p>
+
+<ul>
+  <li>Kernel Trick: 저차원의 공간을 고차원의 공간으로 매핑해주는 작업. 데이터의 분포가 Linearly separable 하지 않을 경우 데이터를 고차원으로 이동시켜 Linearly separable하도록 만든다.</li>
+  <li>cost: Decision Boundary와 Margin의 간격 결정. cost가 높으면 Margin이 좁아지고 train error가 작아진다. 그러나 새로운 데이터에서는 분류를 잘 할 수 있다. cost가 낮으면 Margin이 넓어지고, train error는 커진다.</li>
+  <li>γ: 한 train data당 영향을 미치는 범위 결정. γ가 커지면 영향을 미치는 범위가 줄어들고, Decision Boundary에 가까이 있는 데이터만이 선의 굴곡에 영향을 준다. 따라서 Decision Boundary는 구불구불하게 그어진다. (오버피팅 초래 가능) 작아지면 데이터가 영향을 미치는 범위가 커지고, 대부분의 데이터가 Decision Boundary에 영향을 준다. 따라서 Decision Boundary를 직선에 가까워진다.</li>
+</ul>
+
+<p>많은 선형 분류 모델은 대부분 이진 분류 모델입니다. 그런데 이진 분류 알고리즘을 일대다(one-vs.-rest 또는 one-vs.-all) 방법을 사용해 다중 클래스 분류 알고리즘으로 사용할 수 있습니다. 일대다 방식은 각 클래스를 다른 모든 클래스와 구분하도록 이진 분류 모델을 학습시킵니다. 클래스의 수만큼 이진 분류 모델이 만들어지고 예측할 때는 만들어진 모든 이진 분류기가 작동하여 가장 높은 점수를 내는 분류기의 클래스를 예측값으로 선택합니다. 그리고 SVM 모델은 다음과 같이 사용합니다.</p>
+
+<hr />
+
+<h6 id="출처">출처</h6>
+
+<ul>
+  <li>
+    <p>AIFFEL LMS</p>
+
+    <p>문제시 연락 부탁드립니다. :)</p>
+  </li>
+</ul>
+

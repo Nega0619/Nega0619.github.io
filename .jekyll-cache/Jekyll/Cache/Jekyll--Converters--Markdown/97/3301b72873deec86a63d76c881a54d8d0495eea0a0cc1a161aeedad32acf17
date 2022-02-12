@@ -1,0 +1,38 @@
+I"�<h1 id="리스트-컴프리헨션-list-comprehension이란">리스트 컴프리헨션 List Comprehension이란?</h1>
+
+<p>리스트, 셋(set), 딕셔너리에 사용할 수 있는 기능으로, 기존의 이중 포문을 이용해서 선언해주어야 했던 변수를 한줄로 끝낼 수 있다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">list_1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">list_2</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">500</span><span class="p">,</span><span class="mi">100</span><span class="p">)]</span>
+
+<span class="n">result_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span>  <span class="n">list_1</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">list_2</span><span class="p">:</span>
+        <span class="n">result_list</span><span class="p">.</span><span class="n">append</span><span class="p">((</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">))</span>
+        
+<span class="k">print</span><span class="p">(</span><span class="n">result_list</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>실행 결과</p>
+
+<blockquote>
+  <p>[(1, 100), (1, 200), (1, 300), (1, 400), (2, 100), (2, 200), (2, 300), (2, 400)]</p>
+</blockquote>
+
+<p>위와 같은 코드가 아래와 같이 짧아진다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">list_1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">list_2</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">500</span><span class="p">,</span><span class="mi">100</span><span class="p">)]</span>
+
+<span class="n">result_list</span> <span class="o">=</span> <span class="p">[(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">list_1</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">list_2</span><span class="p">]</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">result_list</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>실행 결과</p>
+
+<blockquote>
+  <p>[(1, 100), (1, 200), (1, 300), (1, 400), (2, 100), (2, 200), (2, 300), (2, 400)]</p>
+</blockquote>
+
+:ET

@@ -1,0 +1,59 @@
+I"�<h1 id="순차-처리와-병렬-처리">순차 처리와 병렬 처리</h1>
+
+<p><img src="https://d3s0tskafalll9.cloudfront.net/media/images/F-9-6.max-800x600.png" alt="content img" /></p>
+
+<h2 id="순차-처리-serial-processing">순차 처리 serial processing</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">num_list</span> <span class="o">=</span> <span class="p">[</span><span class="s">'p1'</span><span class="p">,</span><span class="s">'p2'</span><span class="p">,</span> <span class="s">'p3'</span><span class="p">,</span> <span class="s">'p4'</span><span class="p">]</span>
+<span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">count</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100000000</span><span class="p">):</span>
+        <span class="k">pass</span>
+        
+    <span class="k">print</span><span class="p">(</span><span class="s">"finish:"</span><span class="o">+</span><span class="n">name</span><span class="o">+</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">num_list</span><span class="p">:</span>
+    <span class="n">count</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"time :"</span><span class="p">,</span> <span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="병렬-처리-parallel-processing">병렬 처리 parallel processing</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">multiprocessing</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">num_list</span> <span class="o">=</span> <span class="p">[</span><span class="s">'p1'</span><span class="p">,</span><span class="s">'p2'</span><span class="p">,</span> <span class="s">'p3'</span><span class="p">,</span> <span class="s">'p4'</span><span class="p">]</span>
+<span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">count</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100000000</span><span class="p">):</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="o">+</span><span class="mi">2</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"finish:"</span><span class="o">+</span><span class="n">name</span><span class="o">+</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+    
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">pool</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="p">.</span><span class="n">Pool</span><span class="p">(</span><span class="n">processes</span> <span class="o">=</span> <span class="mi">4</span><span class="p">)</span>
+    <span class="n">pool</span><span class="p">.</span><span class="nb">map</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">num_list</span><span class="p">)</span>
+    <span class="n">pool</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">pool</span><span class="p">.</span><span class="n">join</span><span class="p">()</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"time :"</span><span class="p">,</span> <span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>프로세세서,,?를 여러개사용하는것.</p>
+
+<p>병렬처리인데사 왜 시간은 비슷하지?</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">pool = multiprocessing.Pool(processes = 4)</code> : 병렬 처리 시, 4개의 프로세스를 사용하도록 합니다. CPU 코어의 개수만큼 입력해 주면 최대의 효과를 볼 수 있습니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">pool.map(count, num_list)</code> : 병렬화를 시키는 함수로, count 함수에 num_list의 원소들을 하나씩 넣어 놓습니다. 여기서 num_list의 원소는 4개이므로 4개의 count 함수에 각각 하나씩 원소가 들어가게 됩니다.
+즉, <code class="language-plaintext highlighter-rouge">count('p1')</code>, <code class="language-plaintext highlighter-rouge">count('p2')</code>, <code class="language-plaintext highlighter-rouge">count('p3')</code>, <code class="language-plaintext highlighter-rouge">count('p4')</code>가 만들어집니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">pool.close()</code> : 일반적으로 병렬화 부분이 끝나면 나옵니다. 더 이상 pool을 통해서 새로운 작업을 추가하지 않을 때 사용합니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">pool.join()</code> : 프로세스가 종료될 때까지 대기하도록 지시하는 구문으로써 병렬처리 작업이 끝날 때까지 기다리도록 합니다.</li>
+</ul>
+
+:ET

@@ -1,0 +1,132 @@
+I"&<p>이 포스팅은 아이펠 fundamentals 18번 노드를 학습하고 적은 기록물 입니다.</p>
+
+<h1 id="신경망이란">신경망이란?</h1>
+
+<p>과학자들은 문제에 대한 해답을 종종 자연에서 찾아냅니다. 머신러닝 / 딥러닝 과학자들은 해당 문제를 해결하기 위하여 신경망의 뉴런 하나를 본 딴, 퍼셉트론의 개념을 도입하였고, 후에 이를 연결하여 다층 신경망 구조, 인공신경망을 구축해내게 됩니다.</p>
+
+<p>신경망은 모두가 가지고 있는 뇌의 뉴런들을 본딴 것입니다. 뉴런들이 모여 거대한 그물망과 같은 형태를 띄고 있는데, 이를 컴퓨터 프로그램으로 풀어낸 것입니다.</p>
+
+<p>다음은 다층 퍼셉트론 구조로 학습한 mnist 코드의 부분입니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 모델에 맞게 데이터 가공
+</span><span class="n">x_train_norm</span><span class="p">,</span> <span class="n">x_test_norm</span> <span class="o">=</span> <span class="n">x_train</span> <span class="o">/</span> <span class="mf">255.0</span><span class="p">,</span> <span class="n">x_test</span> <span class="o">/</span> <span class="mf">255.0</span>
+<span class="n">x_train_reshaped</span> <span class="o">=</span> <span class="n">x_train_norm</span><span class="p">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">x_train_norm</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">x_train_norm</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">x_test_reshaped</span> <span class="o">=</span> <span class="n">x_test_norm</span><span class="p">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">x_test_norm</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">x_test_norm</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+
+<span class="c1"># 딥러닝 모델 구성 - 2 Layer Perceptron
+</span><span class="n">model</span><span class="o">=</span><span class="n">keras</span><span class="p">.</span><span class="n">models</span><span class="p">.</span><span class="n">Sequential</span><span class="p">()</span>
+<span class="n">model</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">keras</span><span class="p">.</span><span class="n">layers</span><span class="p">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'sigmoid'</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">784</span><span class="p">,)))</span>  <span class="c1"># 입력층 d=784, 은닉층 레이어 H=50
+</span><span class="n">model</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">keras</span><span class="p">.</span><span class="n">layers</span><span class="p">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'softmax'</span><span class="p">))</span>   <span class="c1"># 출력층 레이어 K=10
+</span><span class="n">model</span><span class="p">.</span><span class="n">summary</span><span class="p">()</span>
+
+</code></pre></div></div>
+
+<p>궁금증 1. x_train_reshaped에서 왜 -1 값을 줄까?</p>
+
+<p>​	찾아보니 reshape에서 (-1) 옵션을 주면, 주어진 옵션값에 맞는 값을 찾아준다고 한다.</p>
+
+<p>궁금증 2. 전에 Dense()는 뭐였을까 궁금했었다.</p>
+
+<p>​	Dense : 다층 퍼셉트론을 keras 코드로 사용하는 거였습니다.</p>
+
+<h1 id="bias란">Bias란?</h1>
+
+<p>bias에 관한 링크를 보다 궁금증이 생겼었습니다.</p>
+
+<p>참고 링크 : https://stackoverflow.com/questions/2480650/what-is-the-role-of-the-bias-in-neural-networks</p>
+
+<p>질문 1. 제가 알고 있는 출력값 y = w(가중치)*x(입력데이터) + b(bias)인데, 링크의 첫번째 답변에서 bias를 이용한 시그모이드를 sigmoid(w0*x + w1*1.0)이라 표현했어요. 제가 알기론 bias에 관해서는 가중치를 안쓴다고 알고있는데 쓰는경우도 있는건지, 원래 쓰는데 안쓰는걸로 제가 잘못알고있는건지 궁금해요.</p>
+
+<ul>
+  <li>
+    <p>이 질문에 가장 도움이 되었던 링크 두개를 먼저 첨부합니다.</p>
+
+    <ul>
+      <li>https://devlog.jwgo.kr/2018/04/16/sigmoid-graph-according-to-slope-change/</li>
+      <li>https://blog.naver.com/PostView.nhn?blogId=winddori2002&amp;logNo=221937861519</li>
+    </ul>
+  </li>
+  <li>
+    <p>가장 먼저 이해가 안됐던 부분은 bias가 성공적인 학습에 매우 중요한 요소이며, bias가 바뀜에 따라 함수가 왼쪽 혹은 오른쪽으로 이동이 된다는 것이었습니다. 제가 알고있는 출력 함수의 식은 <code class="language-plaintext highlighter-rouge">w*x + b</code>인데, 결국 w가 0일때 활성화함수가 b인곳을 꼭 지나게 됩니다. w=0일때, bias값의 절편에 따라 출력함수값이 거기에 묶이게 되는데 어떻게 성공적인 학습에 어떻게 기여를 하는지가 이해가 안됐고 특히 bias값에 따라 그래프가 왼쪽 혹은 오른쪽으로 움직이는 것이 아니라 위 아래로 움직여야 한다고생각했습니다.</p>
+
+    <ul>
+      <li>
+        <p>이 질문이 들었던 가장 큰 오해는 출력함수는 wx+b라는 가장 간단한 식으로 나타내는것이 아니라는 것입니다. 예를 들어, sigmoid함수에서 wx+b함수를 적용해서 그리면 아래 링크와 같습니다.</p>
+
+        <p>https://devlog.jwgo.kr/2018/04/16/sigmoid-graph-according-to-slope-change/</p>
+      </li>
+      <li>
+        <p>bias를 -10에서 10으로 변화시킬때 시그모이드 함수의 형태를 보여주고 있습니다. 세로가 아니라 가로로 움직이게 된다는 것을 시각적으로 확인하였고, wx+b에서 학습결과가 꼭 0, b를 지나게되지 않는다는 것도 이해를 하게되었습니다.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>두번째로 이해가 안되었던, 시그모이드에서 bias 1.0을 sigmoid(w0*x + w1*1.0)과 같이 가중치가 있는것 처럼 표현하였습니다. 이부분은 아래 질문에서 답하겠습니다.</p>
+  </li>
+</ul>
+
+<p>질문2. bias에 관해서 그렇게 깊게 생각해보지 않았었는데, (그냥 주는구나 싶은정도?) bias 값은 어떻게 결정해서 주게되나용? 이거도 그냥 많이 쓰는숫자에서 시행착오로 돌려보고 결정하나요?</p>
+
+<ul>
+  <li>
+    <p>https://brunch.co.kr/@coolmindory/32</p>
+
+    <p>여기 링크를 보고 이해가 되었습니다. 여기서 보면 backpropagation에서 업데이트 대상은 가중치와 bias 둘 다입니다. 그랬기 때문에, 바이어스에도 가중치가 있다는 듯이 표현을 한것이라 이해했습니다.</p>
+
+    <p>그리고 최근에 backpropagation에 대해서 발표를 한 적이 있는데, 그때 이런 질문을 받은 적이 있습니다. 그렇다면 Backpropagation에서 bias는 어떻게 업데이트되냐 라는 질문이었습니다. 저는 그때 출력함수 wx+b라는 매우 간단한 식만을 이해하고 있었기 때문에, backpropagation에서 b는 상수항이다. 그래서, 미분하면 0이 된다. 라고 답변을 드렸었는데, 제가 잘못된 답변을 드린것을 알게되었습니다. 가중치를 갱신할 때 w=w-α*dL/dw 인것처럼 bias도 b= b-α*dL/db로 갱신된다는 것을 알게 되었습니다.</p>
+  </li>
+</ul>
+
+<h1 id="활성화-함수">활성화 함수</h1>
+
+<p>신경망은 수 많은 뉴런으로 이루어져 있고,</p>
+
+<h1 id="손실함수">손실함수</h1>
+
+<h1 id="경사하강법">경사하강법</h1>
+
+<h1 id="오늘-배운-메소드">오늘 배운 메소드</h1>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">np.dot(X,Y)</code> : np.array 객체를 곱할때 사용합니다.</p>
+
+    <ul>
+      <li>
+        <p>1차원 행렬(Vector) 이라면 : 각 자리 숫자끼리 곱하여 더합니다.</p>
+      </li>
+      <li>
+        <p>2차원 행렬(matrix) 라면 : 일반적인 행렬 곱을 수행합니다.</p>
+
+        <p><img src="../../../../Typora Images/image-20220121215051856.png" alt="image-20220121215051856" /></p>
+
+        <p>출처 : https://ko.wikipedia.org/wiki/%ED%96%89%EB%A0%AC_%EA%B3%B1%EC%85%88</p>
+      </li>
+      <li>
+        <p>X나 Y 중 하나가 상수라면 : 상수곱 연산을 합니다.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">np.exp(x)</code> : numpy.exp() 함수는 밑이 자연상수 e인 지수함수(e^x)로 변환해줍니다.</p>
+  </li>
+</ul>
+
+<hr />
+
+<h6 id="출처">출처</h6>
+
+<ul>
+  <li>
+    <p>AIFFEL LMS</p>
+
+    <p>문제시 연락 부탁드립니다. :)</p>
+  </li>
+  <li>
+    <p>https://m.blog.naver.com/shwotjd14/221435180635</p>
+  </li>
+  <li>
+    <p>https://reniew.github.io/12/</p>
+  </li>
+</ul>
+:ET

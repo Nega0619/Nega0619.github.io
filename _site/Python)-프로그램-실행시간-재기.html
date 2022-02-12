@@ -1,0 +1,43 @@
+<p>프로그램의 실행 시간을 재려면 <code class="language-plaintext highlighter-rouge">time</code>모듈을 사용하면 됩니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">time</span>
+<span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">" hi "</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">' '</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">end time ="</span><span class="p">,</span> <span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span><span class="o">-</span><span class="n">start</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>실행 결과</p>
+
+<blockquote>
+  <p>hi   hi   hi   hi   hi   hi   hi   hi   hi   hi   hi   hi   hi  ….</p>
+
+  <p>end time = 0.10024499893188477</p>
+</blockquote>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">time</span>
+<span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5000</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">" hi "</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">' '</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">end time ="</span><span class="p">,</span> <span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span><span class="o">-</span><span class="n">start</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>실행 결과</p>
+
+<blockquote>
+  <p>hi   hi   hi   hi   hi   hi   hi   hi   hi   hi   hi   hi   hi  ….</p>
+
+  <p>end time = 0.05303597450256348</p>
+</blockquote>
+
+<hr />
+
+<h6 id="출처">출처</h6>
+
+<ul>
+  <li>AIFFEL LMS</li>
+</ul>

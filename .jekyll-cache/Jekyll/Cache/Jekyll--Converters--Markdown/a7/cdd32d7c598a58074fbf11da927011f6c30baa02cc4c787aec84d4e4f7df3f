@@ -1,0 +1,90 @@
+I".#<h1 id="문자열-포맷팅-text-formatting">문자열 포맷팅 text formatting</h1>
+
+<ul>
+  <li>
+    <p>기본적인 사용 방법</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">"hi, my name is {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="s">"호이얏"</span><span class="p">))</span>
+<span class="n">hi</span><span class="p">,</span> <span class="n">my</span> <span class="n">name</span> <span class="ow">is</span> <span class="n">호이얏</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">"{} is a horse in korean"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="s">"말"</span><span class="p">))</span>
+<span class="n">말</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">horse</span> <span class="ow">in</span> <span class="n">korean</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>인덱스 사용</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">"책 제목 : {1}, 출판사 : {0}, 가격 : {2}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="s">"길벗"</span><span class="p">,</span> <span class="s">"이 책은 누구의 책이냐?"</span><span class="p">,</span> <span class="mi">9500</span><span class="p">))</span>
+<span class="n">책</span> <span class="n">제목</span> <span class="p">:</span> <span class="n">이</span> <span class="n">책은</span> <span class="n">누구의</span> <span class="n">책이냐</span><span class="err">?</span><span class="p">,</span> <span class="n">출판사</span> <span class="p">:</span> <span class="n">길벗</span><span class="p">,</span> <span class="n">가격</span> <span class="p">:</span> <span class="mi">9500</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">"a: {3}, b: {1}, c:{0}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s">"-"</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">a</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="n">c</span><span class="p">:</span><span class="mi">3</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>변수 지정</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">"책 제목 : {a}, 출판사 : {b}, 가격 : {c}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">b</span><span class="o">=</span><span class="s">"길벗"</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="s">"이 책은 누구의 책이냐?"</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">9500</span><span class="p">))</span>
+<span class="n">책</span> <span class="n">제목</span> <span class="p">:</span> <span class="n">이</span> <span class="n">책은</span> <span class="n">누구의</span> <span class="n">책이냐</span><span class="err">?</span><span class="p">,</span> <span class="n">출판사</span> <span class="p">:</span> <span class="n">길벗</span><span class="p">,</span> <span class="n">가격</span> <span class="p">:</span> <span class="mi">9500</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">"a: {a}, b: {c}, c:{d}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">b</span><span class="o">=</span><span class="s">"-"</span><span class="p">,</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">a</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="n">c</span><span class="p">:</span><span class="mi">3</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>형식 변경</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">format</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span><span class="s">","</span><span class="p">)</span>
+<span class="s">'10,000'</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h1 id="진수-변환">진수 변환</h1>
+
+<ul>
+  <li>
+    <p>10진수 -&gt; 16진수</p>
+
+    <p><code class="language-plaintext highlighter-rouge">"{0:x}".format(10진수)</code></p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="s">"{0:x}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="mi">1669</span><span class="p">)</span>
+<span class="s">'685'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s">"{0:x}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="mi">9999</span><span class="p">)</span>
+<span class="s">'270f'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s">"{0:x}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="mi">1111</span><span class="p">)</span>
+<span class="s">'457'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s">"{0:x}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<span class="s">'3e8'</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>10진수 -&gt; 8진수</p>
+
+    <p><code class="language-plaintext highlighter-rouge">"{0:o}".format(10진수)</code></p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="s">"{0:o}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="mi">1669</span><span class="p">)</span>
+<span class="s">'3205'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s">"{0:o}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="mi">9999</span><span class="p">)</span>
+<span class="s">'23417'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s">"{0:o}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="mi">1111</span><span class="p">)</span>
+<span class="s">'2127'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s">"{0:o}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<span class="s">'1750'</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>10진수 -&gt; 2진수</p>
+
+    <p><code class="language-plaintext highlighter-rouge">"{0:b}".format(10진수)</code></p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="s">"{0:b}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="mi">1669</span><span class="p">)</span>
+<span class="s">'11010000101'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s">"{0:b}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="mi">9999</span><span class="p">)</span>
+<span class="s">'10011100001111'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s">"{0:b}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="mi">1111</span><span class="p">)</span>
+<span class="s">'10001010111'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s">"{0:b}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<span class="s">'1111101000'</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+:ET

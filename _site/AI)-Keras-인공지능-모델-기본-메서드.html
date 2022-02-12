@@ -1,0 +1,28 @@
+
+<p><img src="../../../../Typora Images/image-20220104110403238.png" alt="image-20220104110403238" /></p>
+
+<h1 id="모델-생성-관련">모델 생성 관련</h1>
+
+<p>model=keras.models.Sequential()
+model.add(keras.layers.Conv2D(16, (3,3), activation=’relu’, input_shape=(28,28,1)))
+model.add(keras.layers.MaxPool2D(2,2))
+model.add(keras.layers.Conv2D(32, (3,3), activation=’relu’))
+model.add(keras.layers.MaxPooling2D((2,2)))
+model.add(keras.layers.Flatten())
+model.add(keras.layers.Dense(32, activation=’relu’))
+model.add(keras.layers.Dense(10, activation=’softmax’))</p>
+
+<p>print(‘Model에 추가된 Layer 개수: ‘, len(model.layers))</p>
+
+<h1 id="모델">모델</h1>
+
+<p>```</p>
+
+<hr />
+
+<h6 id="출처">출처</h6>
+
+<ul>
+  <li>AIFFEL LMS</li>
+</ul>
+

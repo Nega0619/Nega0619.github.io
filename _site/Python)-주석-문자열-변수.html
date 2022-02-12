@@ -1,0 +1,54 @@
+<h1 id="파이썬-주석-문자열내용의-여러-쓰임">파이썬 주석 문자열<code class="language-plaintext highlighter-rouge">"""내용"""</code>의 여러 쓰임</h1>
+
+<h2 id="진짜-여러줄을-문자열로-처리할-때">진짜 여러줄을 문자열로 처리할 때</h2>
+
+<p>파이썬에서 여러줄을 주석처리할 때 다음과 같이 사용합니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="s">"""
+여기서 주석 시작
+a= 7
+여기서 주석 끝
+"""</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>실행결과</p>
+
+<blockquote>
+  <p>5</p>
+</blockquote>
+
+<p>위와 같은 코드가 있을 때, <code class="language-plaintext highlighter-rouge">""" 내용 """</code>에서 내용부분은 주석으로 처리됩니다.</p>
+
+<p>그렇기 때문에, <code class="language-plaintext highlighter-rouge">a=7</code>로 초기화해도 위과 같이 실행결과가 5가 나오게 됩니다.</p>
+
+<h2 id="문자열을-변수로-사용할때">문자열을 변수로 사용할때</h2>
+
+<p>알고나서 너무 신기했는데, 파이썬은 여러줄로 표현된 문자열도 변수로 받을 수 있으며 이때 해당 문자열을 다음과 같이 <code class="language-plaintext highlighter-rouge">""" 여러줄의 문자열 """</code>로 감싸줍니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">re</span> 		<span class="c1"># 정규표현식을 사용하기 위한 라이브러리 추가
+</span>
+<span class="c1">#- 연도(숫자)
+</span><span class="n">text</span> <span class="o">=</span> <span class="s">"""
+The first season of America Premiere League  was played in 1993. 
+The second season was played in 1995 in South Africa. 
+Last season was played in 2019 and won by Chennai Super Kings (CSK).
+CSK won the title in 2000 and 2002 as well.
+Mumbai Indians (MI) has also won the title 3 times in 2013, 2015 and 2017.
+"""</span>
+<span class="n">pattern</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="nb">compile</span><span class="p">(</span><span class="s">"[1-2]\d\d\d"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">pattern</span><span class="p">.</span><span class="n">findall</span><span class="p">(</span><span class="n">text</span><span class="p">))</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>[‘1993’, ‘1995’, ‘2019’, ‘2000’, ‘2002’, ‘2013’, ‘2015’, ‘2017’]</p>
+</blockquote>
+
+<h5 id="같이-공부하면-좋을-것-링크첨부필요">같이 공부하면 좋을 것 (링크첨부필요)</h5>
+
+<ul>
+  <li>원시 문자열 str = r”원시문자열”</li>
+  <li>포맷 문자열 리터럴 str=f”포맷 문자열 리터럴”</li>
+</ul>
+

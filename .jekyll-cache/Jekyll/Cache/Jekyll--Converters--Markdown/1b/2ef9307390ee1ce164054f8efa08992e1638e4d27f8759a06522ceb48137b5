@@ -1,0 +1,29 @@
+I"q<h1 id="join">join()</h1>
+
+<p>튜플, 리스트, stirng 등 반복 가능한 iterable 객체를 받는 메서드입니다.</p>
+
+<p><strong>각각의 원소를 모아 하나의 문자열로 합쳐줍니다.</strong></p>
+
+<p>“요소 연결시 추가할 문자”.join(iterable객체)</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#- join()
+</span><span class="n">alphabet</span> <span class="o">=</span> <span class="p">[</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">]</span>
+<span class="s">","</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">alphabet</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>실행 결과</p>
+
+<blockquote>
+  <p>‘a,b,c’</p>
+</blockquote>
+
+<h1 id="split">split()</h1>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#- split()
+</span><span class="o">&gt;&gt;&gt;</span> <span class="s">"hi this is me"</span><span class="p">.</span><span class="n">split</span><span class="p">()</span>
+<span class="p">[</span><span class="s">'hi'</span><span class="p">,</span> <span class="s">'this'</span><span class="p">,</span> <span class="s">'is'</span><span class="p">,</span> <span class="s">'me'</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s">"this,is,me!"</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">','</span><span class="p">)</span>
+<span class="p">[</span><span class="s">'this'</span><span class="p">,</span> <span class="s">'is'</span><span class="p">,</span> <span class="s">'me!'</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> 
+</code></pre></div></div>
+:ET

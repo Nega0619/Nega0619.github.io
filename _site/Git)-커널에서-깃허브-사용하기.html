@@ -1,0 +1,295 @@
+<p>많은 프로젝트를 진행하면서 Git을 이용해봤지만, 부끄럽게도 항상 GUI프로그램이 잘 되어있는 Git을 사용해왔다. Xshell이나 리눅스에서 cmd라인으로 깃에 로그인하고 레포지토리를 만들고 commit과 pull 등의 기본 동작을 하는 것을 배웠었으나, 당시에는 너무 어렵게만 느껴졌었고, 오류라도 뜨면 해결할 생각보다는 모르겠다며 넘기기 바빴다. 그런 이유로 smartGit이나, Github Desktop과 같은 프로그램들을 좋아했다.</p>
+
+<p>언제나 한켠에 짐짝처럼 커맨드라인으로 깃을 사용할 줄 알아야 한다고 느꼈었지만 미루기 일수였지만, <del>(깃에 올리기만 하면 되잖아..! 라는 마인드였다.)</del> 오늘, 그 짐을 털어버리려한다.</p>
+
+<p><strong>커맨드라인 / 리눅스에서 git사용하기 START!</strong></p>
+
+<h1 id="git과-github는-뭘까">Git과 Github는 뭘까?</h1>
+
+<h2 id="git">Git</h2>
+
+<p>소스 코드가 업데이트 되는 버전을 기록해두고 관리할 수 있는 소스 코드 버전 관리 시스템이다.</p>
+
+<h2 id="github">Github</h2>
+
+<p>Git으로 관리하는 프로젝트를 호스팅하고, 시간과 공간의 제약없이 협업할 수 있는 온라인 서비스를 제공하는 웹 사이트이다.</p>
+
+<p>즉, git은 버전 기록을 저장하고, github는 git의 소스코드들을 다른 사람과 공유하여 여러사람과 협업할 수있게 도와준다.</p>
+
+<h1 id="git-사용하기">Git 사용하기</h1>
+
+<h2 id="1-로컬-git에-github-계정-정보-등록하기">1. 로컬 git에 github 계정 정보 등록하기</h2>
+
+<p>가장 먼저 할 일은, 로컬의 git과 원격에 있는 github를 연결하는 것이다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git config --global user.email "yourEmailAddress@gmail.com"
+$ git config --global user.name "Nickname"
+</code></pre></div></div>
+
+<p>위 과정이 끝나고 git의 config 정보를 출력하면 다음과 같이 나올것이다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git config -l
+</code></pre></div></div>
+
+<p>실행결과</p>
+
+<blockquote>
+  <p>user.email=yourEmailAddress@gmail.com</p>
+
+  <p>user.name=Nickname</p>
+</blockquote>
+
+<h2 id="2-내-컴퓨터에-로컬-저장소-만들기">2. 내 컴퓨터에 로컬 저장소 만들기</h2>
+
+<p>git으로 관리할 로컬 저장소를 만들어봅니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd ~
+$ mkdir localGit
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">cd ~</code> : ~는 홈디렉토리를 의미합니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">mkdir localGit</code> 홈디렉토리에 localGit이라는 디렉토리(폴더)를 하나 만들었습니다.</li>
+</ul>
+
+<h4 id="주의사항-및-수정사항"><span style="color:red">주의사항 및 수정사항</span></h4>
+
+<p>git만드는 것을 cmd창에서 실행할 때, git의 repository이름과 로컬저장소의 폴더 이름이 <span style="color:red">달라도 되는 줄 알았다.</span></p>
+
+<p>repository의 이름과 로컬 저장소 폴더 이름이 다르면 git push할때 오류가 난다. 아마 다르게 설정을 더 해주어야 하거나(추측)  맘편하려면 git과 repository이름을 같게하는 것이 나을 것이다.</p>
+
+<p>그래서, 처음에는 글을 작성할 때, 로컬 git을 localGit이라는 폴더로 만들었으나, 후에 test_git으로 수정하였다.</p>
+
+<p>아래 글에서는 전부 test_git으로 전부 수정하였다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">$ mkdir localGit</code>   –&gt; <code class="language-plaintext highlighter-rouge">$ mkdir test_git</code>으로 만들기</p>
+
+<h2 id="3-로컬-저장소를-git으로-만들기">3. 로컬 저장소를 git으로 만들기</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd test_git
+$ git init
+</code></pre></div></div>
+
+<p>실행 결과</p>
+
+<blockquote>
+  <p>Initialized empty Git repository in /aiffel/test_git/.git/</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">cd localGit</code> : git저장소로 만들고 싶은 폴더내부로 이동합니다.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">git init</code> : git이 이제 localGit폴더에서 발생하는 변화를 모두 기록할 것입니다.</p>
+
+    <p><code class="language-plaintext highlighter-rouge">ls</code>명령어를 사용하면 .git디렉토리가 생긴것을 볼 수 있습니다.</p>
+  </li>
+</ul>
+
+<h2 id="4-git-변화주기----readmemd-작성">4. git 변화주기 -  README.md 작성</h2>
+
+<p>유명한 github의 레포지토리를 들어가면 readme.md파일이 존재하는 것을 볼 수 있습니다. 이는 해당 레포지토리가 담은 오픈 소스 코드들에 대하여 혹은 해당 레포지토리 프로젝트에 대하여 소개하는 역할을 합니다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">.md</code>파일은 markdown이라는 파일을 지칭하며, 개발자들이 많이 사용하는 문서작업용 언어입니다. 필자의 블로그 카테고리 중 개인공부 &gt; 기타 에서 markdown 문법에 대한 글을 몇몇 볼 수 있으며, 구글에 markdown 문법이라 검색하면 많이 나옵니다.</p>
+
+<p>간단하게 readme.md를 작성해보았습니다. 이 파일은 로컬 git 저장소에서 만들어야 합니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd ~/test_git
+$ echo "# This is my First command line git directory" &gt;&gt; README.md
+</code></pre></div></div>
+
+<p>echo는 출력을 하는 명령어로 “쌍따옴표 안의 문자열”을 » 뒤에 나오는 파일을 타겟으로 출력합니다.</p>
+
+<p>즉, README.md파일을 만들고, # This is my First command line git directory을 입력해줍니다. 만들어진 파일은 다음과 같이 확인할 수 있습니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ls
+</code></pre></div></div>
+
+<blockquote>
+  <p>README.md</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cat README.md
+</code></pre></div></div>
+
+<blockquote>
+  <p># This is my First command line git directory</p>
+</blockquote>
+
+<h2 id="5-git-변경사항-저장하기---stage">5. git 변경사항 저장하기 - stage</h2>
+
+<p>4번째 단계에서 git에 README.md파일을 작성함으로써 깃에 변화를 주었습니다. git의 변화는 다음과 같이 확인할 수 있습니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git status
+</code></pre></div></div>
+
+<blockquote>
+  <p>On branch master</p>
+
+  <p>No commits yet</p>
+
+  <p>Untracked files:
+  (use “git add <file>..." to include in what will be committed)
+        README.md</file></p>
+
+  <p>nothing added to commit but untracked files present (use “git add” to track)</p>
+</blockquote>
+
+<ul>
+  <li>기본 브랜치로 master를 사용하고 있어 master로 표기되고 있습니다. 현재는 인종차별이슈로 메인 브랜치가 main으로 표기되기도 한다네요!</li>
+  <li>untracked files: 새로운 파일에 대한 정보를 읽어냈습니다. 이력관리 대상에 포함 되지 않은 README.md파일을 감지한 것을 알 수 있습니다.</li>
+</ul>
+
+<h3 id="add-와-commit">add 와 commit</h3>
+
+<p>git의 repository 구조는 다음과 같이 3단계로 구성되어 있습니다.</p>
+
+<p>작업폴더(working directory / 로컬 git) -&gt; 인덱스 (staging area) -&gt; 저장소 (Head-repository / 실제 github내의 repository라 이해하심이 편합니다)</p>
+
+<p>저장소에 commit 하기 위해서는 추가(untracked files) 및 변경(Modified files)하고자 하는 파일을 먼저 인덱스에 기록(stage)하고 스테이징된 목록을 commit 명령어를 통해 저장소에 기록하게 됩니다.</p>
+
+<p>즉, stage(현재 git 변화가 있는지 확인용도) -&gt; add (현재 변화가 있는 파일을 후에 저장소에 저장하겠다고 표시함) -&gt; commit(저장소에 add된 요소들을 기록) 과 같은 단계로 진행됩니다.</p>
+
+<h4 id="add-명령어">add 명령어</h4>
+
+<p>status에서 새로 추가된 파일에 대하여 add명령어를 수행할것입니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git add README.md
+$ git status
+</code></pre></div></div>
+
+<p>실행 결과</p>
+
+<blockquote>
+  <p>On branch master</p>
+
+  <p>No commits yet</p>
+
+  <p>Changes to be committed:
+  (use “git rm –cached <file>..." to unstage)
+        new file:   README.md</file></p>
+</blockquote>
+
+<ul>
+  <li>Changes to be committed : 목록에 있는 파일은 stage 완료된 파일입니다.</li>
+  <li>여러 파일을 add하기
+    <ul>
+      <li>모든 파일 : <code class="language-plaintext highlighter-rouge">git add .</code></li>
+      <li>인덱스에 추가된 파일을 제외하려면 : <code class="language-plaintext highlighter-rouge">git rm --cached</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="commit-명령어">commit 명령어</h4>
+
+<p>로컬에서 stage된 변화들을 저장소에 기록하는 명령어입니다. 이를 위해서는 저장소에 repository를 만들어야합니다. 로컬에서 git을 만들었지만, 저장소에 해당 git에 대한 repository를 만들지 않았으므로, repository 생성을 한 후, commit 해보겠습니다.</p>
+
+<h2 id="6-github-저장소에-repository-만들기">6. github 저장소에 repository 만들기</h2>
+
+<ul>
+  <li>
+    <p>github에서 repository 만들기</p>
+
+    <p>오른쪽 위에 프로필에 + 버튼을 입력하면 New repository 버튼을 통해 새로운 repository를 만들 수 있다.</p>
+  </li>
+</ul>
+
+<p><img src="../../../../Typora Images/image-20220107150751580.png" alt="" /></p>
+
+<p>​	<del><span style="color:red">저는 test_repository라는 이름으로 새로운 repository를 만들었습니다.</span></del> <span style="color:red">test_git이라는 이름으로 repository를 만들었습니다.</span></p>
+
+<p><img src="../../../../Typora Images/image-20220107152729742.png" alt="image-20220107152729742" /></p>
+
+<p>사진은 수정하지 않았으므로 혼동하지마세요!</p>
+
+<ul>
+  <li>
+    <p>cmd 명령어로 repository 만들기</p>
+
+    <p>todo</p>
+  </li>
+</ul>
+
+<h2 id="7-로컬-저장소와-원격-저장소-연결하기">7. 로컬 저장소와 원격 저장소 연결하기</h2>
+
+<p>이 명령어는 로컬 저장소 디렉토리 안에서 실행해야 합니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd ~/localGit
+$ git remote add origin https://github.com/username/test_git.git
+</code></pre></div></div>
+
+<p>위 실행에서 url은 아까 repository를 만들고 나면 나오는 url을 넣으면 됩니다. <span style="color:red">test_repository —&gt; test_git.</span></p>
+
+<p><img src="../../../../Typora Images/image-20220107152759917.png" alt="image-20220107152759917" /></p>
+
+<p>사진은 수정하지 않았으므로 혼동하지마세요!</p>
+
+<h2 id="8-원격-저장소-연결을-위한--토큰-생성하기">8. 원격 저장소 연결을 위한  토큰 생성하기</h2>
+
+<p>user profile &gt; setting &gt; Developer settings &gt; Personal access tokens &gt; generate token</p>
+
+<p>https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token</p>
+
+<p>주의점은 토큰은, 지금 현재만 보이므로, 메모 잘해두어야합니다.</p>
+
+<h2 id="9-로컬-저장소의-기록을-원격-저장소로-전송하기">9. 로컬 저장소의 기록을 원격 저장소로 전송하기</h2>
+
+<h2 id="91-commit">9.1 commit</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git commit -m "first commit"
+</code></pre></div></div>
+
+<p>add 했던 파일들이 commit 됩니다.</p>
+
+<p><img src="../../../../Typora Images/image-20220110202423552.png" alt="image-20220110202423552" /></p>
+
+<h2 id="92-branch-생성">9.2 branch 생성</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git branch -M main
+</code></pre></div></div>
+
+<h2 id="93-push">9.3 push</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git push -u origin main
+Username for 'https://github.com': [계정에 사용된 이메일을 입력하세요]
+Password for 'https://[위에 입력한 이메일]@github.com': [비밀번호(토큰)를 입력하세요]
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 230 bytes | 230.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/jeina7/first-repository.git
+</code></pre></div></div>
+
+<p><span style="color:red">유념사항</span></p>
+
+<ul>
+  <li>[계정에 사용된 이메일을 입력하세요] : 제가 임의로 작성한 것이며, 이메일을 작성할 때는 대괄호를 빼고 작성하시면 됩니다.</li>
+  <li>리눅스 환경의 경우, 비밀번호 입력에는 커서가 안움직이고 아무것도 안보이는게 맞습니다. 당황하지 말고 그냥 입력하세요.</li>
+</ul>
+
+<p>다음과 같이 뜨면 commit 성공!</p>
+
+<p><img src="../../../../Typora Images/image-20220110204312974.png" alt="image-20220110204312974" /></p>
+
+<hr />
+
+<h6 id="참고하면-좋을-링크">참고하면 좋을 링크</h6>
+
+<ul>
+  <li>
+    <p>지옥에서 온 Git - git 관련 강의</p>
+
+    <p>https://opentutorials.org/module/2676</p>
+  </li>
+</ul>
+
+<hr />
+
+<h6 id="출처">출처</h6>
+
+<ul>
+  <li>AIFFEL LMS</li>
+  <li>https://ifuwanna.tistory.com/193 - add와 commit 비교</li>
+</ul>
+

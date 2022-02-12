@@ -1,0 +1,55 @@
+<h1 id="파이썬-디렉터리-관련-표준-라이브러리">파이썬 디렉터리 관련 표준 라이브러리</h1>
+
+<ul>
+  <li>sys</li>
+  <li>os</li>
+  <li>glob</li>
+</ul>
+
+<h2 id="sys">sys</h2>
+
+<ul>
+  <li>definition : 시스템 특정 파라미터와 함수</li>
+  <li>reference : https://docs.python.org/ko/3/library/sys.html</li>
+</ul>
+
+<h2 id="os">os</h2>
+
+<ul>
+  <li>definition : 기타 운영 체제 인터페이스</li>
+  <li>reference : https://docs.python.org/ko/3.8/library/os.html</li>
+</ul>
+
+<h2 id="glob">glob</h2>
+
+<ul>
+  <li>definition : 유닉스 스타일 경로명 패턴 확장</li>
+  <li>reference : https://docs.python.org/ko/3/library/glob.html</li>
+</ul>
+
+<h3 id="자주쓰는-함수">자주쓰는 함수</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">sys.path</code> : 현재 폴더와 파이썬 모듈들이 저장되는 위치를 리스트 형태로 반환</li>
+  <li><code class="language-plaintext highlighter-rouge">sys.path.append()</code> : 자신이 만든 모듈의 경로를 <code class="language-plaintext highlighter-rouge">append</code> 함수를 이용해서 추가함. 그 후 추가한 디렉터리에 있는 파이썬 모듈을 불러와 사용할 수 있다.</li>
+  <li><code class="language-plaintext highlighter-rouge">os.chdir()</code> : 디렉터리 위치 변경</li>
+  <li><code class="language-plaintext highlighter-rouge">os.getcwd()</code> : 현재 자신의 디렉터리 위치를 반환</li>
+  <li><code class="language-plaintext highlighter-rouge">os.mkdir()</code> : 디렉터리 생성</li>
+  <li><code class="language-plaintext highlighter-rouge">os.rmdir()</code> : 디렉터리 삭제 (단, 디렉터리가 비어 있을 경우)</li>
+  <li><code class="language-plaintext highlighter-rouge">glob.glob()</code> : 해당 경로 안의 디렉터리나 파일들을 리스트 형태로 반환</li>
+  <li><code class="language-plaintext highlighter-rouge">os.path.join()</code> : 경로(path)를 병합하여 새 경로 생성</li>
+  <li><code class="language-plaintext highlighter-rouge">os.listdir()</code> : 디렉터리 안의 파일 및 서브 디렉터리를 리스트 형태로 반환</li>
+  <li><code class="language-plaintext highlighter-rouge">os.path.exists()</code> : 파일 혹은 디렉터리의 경로 존재 여부 확인</li>
+  <li><code class="language-plaintext highlighter-rouge">os.path.isfile()</code> : 파일 경로의 존재 여부 확인</li>
+  <li><code class="language-plaintext highlighter-rouge">os.path.isdir()</code> : 디렉터리 경로의 존재 여부 확인</li>
+  <li><code class="language-plaintext highlighter-rouge">os.path.getsize()</code> : 파일의 크기 확인</li>
+</ul>
+
+<hr />
+
+<h6 id="출처">출처</h6>
+
+<ul>
+  <li>AIFFEL LMS</li>
+</ul>
+

@@ -1,0 +1,58 @@
+I"�	<h1 id="컬러이미지---흑백-이미지-사용을-위한-코드-수정">컬러이미지 -&gt; 흑백 이미지 사용을 위한 코드 수정</h1>
+
+<p>아이펠 기존 이미지는 컬러이미지인데, 244*244로 이미지가 너무많이 날라갈것을고려하였따.</p>
+
+<p>그래서 나는 흑백으로 96?**으로 찍었고, 2828로 reshape해주었다.</p>
+
+<h2 id="기존-코드">기존 코드</h2>
+
+<p>import numpy as np</p>
+
+<p>def load_data(img_path, number_of_data=300):  # 가위바위보 이미지 개수 총합에 주의하세요.
+    # 가위 : 0, 바위 : 1, 보 : 2
+    img_size=28
+    color=3
+    #이미지 데이터와 라벨(가위 : 0, 바위 : 1, 보 : 2) 데이터를 담을 행렬(matrix) 영역을 생성합니다.
+    imgs=np.zeros(number_of_data<em>img_size</em>img_size*color,dtype=np.int32).reshape(number_of_data,img_size,img_size,color)
+    labels=np.zeros(number_of_data,dtype=np.int32)</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>idx=0
+for file in glob.iglob(img_path+'/scissor/*.jpg'):
+    img = np.array(Image.open(file),dtype=np.int32)
+    imgs[idx,:,:,:]=img    # 데이터 영역에 이미지 행렬을 복사
+    labels[idx]=0   # 가위 : 0
+    idx=idx+1
+
+for file in glob.iglob(img_path+'/rock/*.jpg'):
+    img = np.array(Image.open(file),dtype=np.int32)
+    imgs[idx,:,:,:]=img    # 데이터 영역에 이미지 행렬을 복사
+    labels[idx]=1   # 바위 : 1
+    idx=idx+1  
+
+for file in glob.iglob(img_path+'/paper/*.jpg'):
+    img = np.array(Image.open(file),dtype=np.int32)
+    imgs[idx,:,:,:]=img    # 데이터 영역에 이미지 행렬을 복사
+    labels[idx]=2   # 보 : 2
+    idx=idx+1
+    
+print("학습데이터(x_train)의 이미지 개수는", idx,"입니다.")
+return imgs, labels
+</code></pre></div></div>
+
+<p>image_dir_path = os.getenv(“HOME”) + “/aiffel/rock_scissor_paper”
+(x_train, y_train)=load_data(image_dir_path)
+x_train_norm = x_train/255.0   # 입력은 0~1 사이의 값으로 정규화</p>
+
+<p>print(“x_train shape: {}”.format(x_train.shape))
+print(“y_train shape: {}”.format(y_train.shape))</p>
+
+<p><img src="../../../../Typora Images/image-20220104140202606.png" alt="image-20220104140202606" /></p>
+
+<h1>##</h1>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span><span class="mi">3</span> <span class="p">;</span>
+
+
+</code></pre></div></div>
+
+:ET

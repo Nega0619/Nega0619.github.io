@@ -1,0 +1,29 @@
+I"�<p>파이썬에서 가장 자주 쓰는 print() 메서드.</p>
+
+<p>여러가지 옵션을 주어서 다르게 사용하도록 해보았다.</p>
+
+<h1 id="print문자열-123sepㅁ">print(“문자열”, “123”,sep=’ㅁ’)</h1>
+
+<p>sep은 print함수에서 문자열 여러개를 출력할 때 문자열 사이에 sep다음 문자를 끼워준다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">"문자열"</span><span class="p">,</span> <span class="s">"123"</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s">'ㅁ'</span><span class="p">)</span>
+<span class="n">문자열ㅁ123</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">"문자열"</span><span class="p">,</span> <span class="s">"123"</span><span class="p">,</span><span class="s">"abc"</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s">'y'</span><span class="p">)</span>
+<span class="n">문자열y123yabc</span>
+</code></pre></div></div>
+
+<h1 id="print문자열-enda">print(“문자열”, end=’a’)</h1>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+	<span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="s">' '</span><span class="p">)</span>
+
+	
+<span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> 
+<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+	<span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">'%%'</span><span class="p">)</span>
+
+	
+<span class="mi">0</span><span class="o">%%</span><span class="mi">1</span><span class="o">%%</span><span class="mi">2</span><span class="o">%%</span><span class="mi">3</span><span class="o">%%</span><span class="mi">4</span><span class="o">%%</span><span class="mi">5</span><span class="o">%%</span><span class="mi">6</span><span class="o">%%</span><span class="mi">7</span><span class="o">%%</span><span class="mi">8</span><span class="o">%%</span><span class="mi">9</span><span class="o">%%</span>
+</code></pre></div></div>
+
+:ET

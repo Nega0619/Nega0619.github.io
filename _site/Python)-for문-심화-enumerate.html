@@ -1,0 +1,19 @@
+<h1 id="enumerate란">enumerate란?</h1>
+
+<p>리스트, 문자열, 튜플 등이 있는 경우 순서와 리스트의 값을 함께 반환해주는 기능입니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">list</span><span class="p">):</span>
+	<span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="s">"번째 값 : "</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+
+	
+<span class="mi">0</span> <span class="n">번째</span> <span class="n">값</span> <span class="p">:</span>  <span class="mi">0</span>
+<span class="mi">1</span> <span class="n">번째</span> <span class="n">값</span> <span class="p">:</span>  <span class="mi">1</span>
+<span class="mi">2</span> <span class="n">번째</span> <span class="n">값</span> <span class="p">:</span>  <span class="mi">2</span>
+<span class="mi">3</span> <span class="n">번째</span> <span class="n">값</span> <span class="p">:</span>  <span class="mi">3</span>
+<span class="mi">4</span> <span class="n">번째</span> <span class="n">값</span> <span class="p">:</span>  <span class="mi">4</span>
+</code></pre></div></div>
+
+<p>사용법 핵 간편!</p>

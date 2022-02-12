@@ -1,0 +1,44 @@
+I"L<h1 id="기본-수식-사용법">기본 수식 사용법</h1>
+
+<p><code class="language-plaintext highlighter-rouge">$$ 수식 $$</code>로 사용합니다.</p>
+
+<h1 id="1-띄어쓰기">1. 띄어쓰기</h1>
+
+<p>마크다운 수식 사이에 띄어쓰기를 하고 싶다면</p>
+
+<ul>
+  <li>
+    <p>한칸 : <code class="language-plaintext highlighter-rouge">\,</code>
+\(start \, end\)</p>
+
+    <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$$
+start<span class="se">\,</span>end
+$$
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>\;       두칸</p>
+
+    <p>\quad    네칸</p>
+
+    <p>\qquad   여덟칸 이라는데 마크다운에선 안먹히네요?</p>
+  </li>
+</ul>
+
+<h1 id="2-분수-작성하기">2. 분수 작성하기</h1>
+
+\[z\, score(\frac{X-μ}{σ})\]
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$$
+z<span class="se">\,</span> score(<span class="se">\f</span>rac{X-μ}{σ})
+$$
+</code></pre></div></div>
+
+<h1 id="인라인-수식-작성법">인라인 수식 작성법</h1>
+
+<p><code class="language-plaintext highlighter-rouge">$ 수식 $</code>로 사용합니다.</p>
+
+<p>$ w_1,\cdots, w_{n-1} $는 다음과 같이 작성합니다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">$ w_1,\cdots, w_{n-1} $</code></p>
+:ET

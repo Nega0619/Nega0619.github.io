@@ -1,0 +1,44 @@
+<h1 id="메모이제이션-memoization">메모이제이션 memoization</h1>
+
+<p>프로그래밍에서 중간 계산 값을 변수에 저장해놓는다. 반복되는 계산을 하게 되는 부분은 코딩상으로 계속 계산하게 하는 것 대신에 중간 계산 값을 읽어서 사용하여 계산 시간을 줄이는 기법이다.</p>
+
+<p>예시. 나쁜 예시</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">20</span><span class="p">):</span>
+	<span class="k">print</span><span class="p">(</span><span class="n">fibonacci</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>예시. 좋은 예시</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">memory</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">memory</span><span class="p">:</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="n">memory</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+       <span class="n">number</span> <span class="o">=</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+       <span class="n">memory</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">number</span>
+    <span class="k">return</span> <span class="n">number</span>
+        
+<span class="k">print</span><span class="p">(</span><span class="n">fibonacci</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>    
+<span class="k">print</span><span class="p">(</span><span class="n">memory</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>나쁜 예시에서는 fibonacci(1), fibonacci(2)가 들어갈때는 바로 if문에서 끝나게 된다.</p>
+
+<p>하지만, fibonacci(2+n)의 단계에서 부터는 1, 1, 이라는 값이 고정인데도 불구하고 else문에서 재귀함수로 fibonacci를 두번이나 불러주게 된다. 이렇게 재귀로 함수를 두번 부르는 것 보다는 차라리 중간 계산 값(좋은 예시에서 memory)을 지정해놓고 fibonacci 계산을 할때 변수 값을 사용(읽어서)하는게 처리 속도가 더 빠르다.</p>
+
+<hr />
+
+<h6 id="출처">출처</h6>
+
+<ul>
+  <li>AIFFEL LMS</li>
+</ul>
+
