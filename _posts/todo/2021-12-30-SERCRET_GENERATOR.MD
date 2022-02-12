@@ -1,0 +1,94 @@
+### 제너레이터(Generator)
+
+https://dojang.io/mod/page/view.php?id=2412
+
+------
+
+머신러닝을 하면 매우 많은 데이터를 다루게 됩니다. 데이터는 1건만 존재하는 법은 없기 때문에 우리는 데이터를 처리하는 반복 구조를 위해 for문을 떠올리게 될 것입니다. 위에서 살펴본 코드를 다시 한번 가져와 봅시다.
+
+우리는 my_list에 있는 데이터셋을 하나씩 가져와서 공급해 주는 제너레이터를 만들 것입니다. my_list를 총 2번 반복하여 8개의 데이터를 공급할 계획이죠
+
+단순히 for문을 사용해서 데이터를 공급해 보도록 하는 첫 번째 코드와, Generator의 개념을 이용하여 데이터를 공급하는 두 번째 코드를 비교해 봅시다.
+
+
+
+```my_list = ['a','b','c','d']
+my_list = ['a','b','c','d']
+
+# 인자로 받은 리스트를 가공해서 만든 데이터셋 리스트를 리턴하는 함수
+def get_dataset_list(my_list):
+    result_list = []
+    for i in range(2):
+        for j in my_list:
+            result_list.append((i, j))
+    print('>>  {} data loaded..'.format(len(result_list)))
+    return result_list
+
+for X, y in get_dataset_list(my_list):
+    print(X, y)
+```
+
+실행 완료
+
+```
+>>  8 data loaded..
+0 a
+0 b
+0 c
+0 d
+1 a
+1 b
+1 c
+1 d
+```
+
+첫 번째 코드의 문제가 뭘까요? 이중 for 문이 다 돌아가는 걸 기다린 후, 반환된 `result_list` 값에 대해 또 for 문을 돌려야 한다는 것입니다. 뭔가 중복되는 느낌도 들고, 확실히 느리겠죠? 지금은 `my_list` 에 데이터 4개밖에 없지만 만약 1억 개가 담겨 있다면 또 어떤 문제가 있을까요? 바로, `get_dataset_list(my_list)` 를 위해 엄청난 양의 데이터를 전부 메모리에 올려놔야 한다는 것입니다.
+
+
+
+```python
+my_list = ['a','b','c','d']
+
+# 인자로 받은 리스트로부터 데이터를 하나씩 가져오는 제너레이터를 리턴하는 함수
+def get_dataset_generator(my_list):
+    result_list = []
+    for i in range(2):
+        for j in my_list:
+            yield (i, j)   # 이 줄이 이전의 append 코드를 대체했습니다
+            print('>>  1 data loaded..')
+
+dataset_generator = get_dataset_generator(my_list)
+for X, y in dataset_generator: 0 1
+    print(X, y)
+```
+
+
+
+실행 완료
+
+```
+0 a
+>>  1 data loaded..
+0 b
+>>  1 data loaded..
+0 c
+>>  1 data loaded..
+0 d
+>>  1 data loaded..
+1 a
+>>  1 data loaded..
+1 b
+>>  1 data loaded..
+1 c
+>>  1 data loaded..
+1 d
+>>  1 data loaded..
+```
+
+두 번째 코드가 이 문제를 해결합니다. 8번째 줄에 `yield`라는 새로운 키워드가 보이네요.
+
+영어로 "Yield"라는 단어는 "양보하다"라는 뜻을 갖고 있죠. 파이썬에서도 마찬가지로 `yield`는 코드 실행의 순서를 밖으로 "양보"합니다. 즉, `dataset_generator = get_dataset_generator(my_list)` 을 실행해도 "generator object" 만 반환할 뿐, 저희가 원하는 값을 바로 반환하고 있지 않습니다. 실질적으로 데이터를 반환하는 건 for 문에서 값을 하나씩 불러올 때죠.
+
+위 코드 블록의 실행 결과를 보면 값을 한 번 반환 후 "1 data loaded.." 를 출력하는 걸 반복합니다.
+
+이처럼 제너레이터가 없다면 우리는 길이 1억짜리 리스트를 리턴 받아 메모리에 전부 올려놓고 처리를 시작해야 합니다. 그러나 제너레이터를 활용할 때는 1억 개의 데이터를 전부 메모리에 올려놓을 필요가 없이 현재 처리해야 할 데이터를 1개씩 로드해서 사용할 수 있게 됩니다. 이것은 빅데이터를 처리해야 할 머신러닝 상황에서 매우 요긴합니다.
