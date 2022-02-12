@@ -130,6 +130,10 @@ scatter = axs2.scatter(x, y,
 
 To actually see the progress while learning, I created a Matplotlib animation, and it is quite interesting to see as it learns.
 
+
+
+![image-20220212130051732](../assets/img/posts/20210210/300px-TRS-80_Color_Computer_3.jpg)
+
 <center><video width="598" height="298" controls autoplay loop>
   <source type="video/mp4" src="data:video/mp4;base64,AAAAIGZ0eXBNNFYgAAACAE00ViBpc29taXNvMmF2YzEAAAAIZnJlZQAF5nJtZGF0AAACrgYF//+q
 3EXpvebZSLeWLNgg2SPu73gyNjQgLSBjb3JlIDE2MSByMzA0OCBiODZhZTNjIC0gSC4yNjQvTVBF
