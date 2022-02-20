@@ -1,0 +1,110 @@
+I"�#<p>오늘은, 프로그래머스 문제를 풀면서 새로 배운 함수와 새로 배운 것을 정리해보았습니다.</p>
+
+<h1 id="목차">목차</h1>
+
+<ol>
+  <li>datetime 패키지</li>
+  <li>
+    <p>숫자 판별함수</p>
+  </li>
+  <li>sort()와 sorted()의 차이</li>
+</ol>
+
+<h1 id="1--datetime-패키지">1.  datetime 패키지</h1>
+
+<h2 id="datetime-객체만들기">datetime 객체만들기</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="c1"># 2022년 2월 4일 12시 30분 30초 0 밀리세컨즈
+</span><span class="n">day2</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2022</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="n">day1</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2022</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>년, 월, 일, 시, 분, 초, millis 혹은 년, 월, 일 넣어서 datetime 객체를 만들 수 있습니다.</li>
+</ul>
+
+<h2 id="요일-가져오기">요일 가져오기</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">days</span> <span class="o">=</span> <span class="p">[</span><span class="s">'MON'</span><span class="p">,</span><span class="s">'TUE'</span><span class="p">,</span><span class="s">'WED'</span><span class="p">,</span><span class="s">'THU'</span><span class="p">,</span><span class="s">'FRI'</span><span class="p">,</span><span class="s">'SAT'</span><span class="p">,</span><span class="s">'SUN'</span><span class="p">]</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">days</span><span class="p">[</span><span class="n">day1</span><span class="p">.</span><span class="n">weekday</span><span class="p">()])</span>
+<span class="c1"># 출력값 : FRI
+</span></code></pre></div></div>
+
+<ul>
+  <li>weekday()의 값이 int로 나오기 때문에 days와 같이 리스트를 선언해서 사용해주었습니다.</li>
+</ul>
+
+<h1 id="2-숫자-판별-함수">2. 숫자 판별 함수</h1>
+
+<p><code class="language-plaintext highlighter-rouge">isdigit()</code>, <code class="language-plaintext highlighter-rouge">isnumeric()</code>, <code class="language-plaintext highlighter-rouge">isdecimal()</code>메소드는 string이 숫자로 이루어져있는지 검색하기 위해 사용됩니다. 같은 기능인데  함수가 3개나 존재한다는 것은 전부 다르다는 의미이므로, 오늘은 이 각각의 함수가 어떻게 다른지 살펴보았습니다.</p>
+
+<h2 id="isdigit">isdigit()</h2>
+
+<p>문자열에 사용된 글자들이 ‘digit’이거나 특수문자로 작성된 숫자인지 확인 ( 분수는 불가)</p>
+
+<h2 id="isnumeric">isnumeric()</h2>
+
+<p>문자열에 사용된 글자들이 ‘숫자’로 해석될 수 있는지를 확인</p>
+
+<h2 id="isdecimal">isdecimal()</h2>
+
+<p>문자열에 사용된 글자들이 ‘digit’인지를 확인</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">s1</span> <span class="o">=</span> <span class="s">'123456'</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="s">'00123456'</span>
+<span class="n">s3</span> <span class="o">=</span> <span class="s">'3²'</span>
+<span class="n">s4</span> <span class="o">=</span> <span class="s">'²'</span>
+<span class="n">s5</span> <span class="o">=</span> <span class="s">'ⅲ'</span>
+<span class="n">s6</span> <span class="o">=</span> <span class="s">'½'</span>
+<span class="n">s7</span> <span class="o">=</span> <span class="s">'3₂'</span>
+<span class="n">s8</span> <span class="o">=</span> <span class="s">'₂'</span>
+<span class="n">s9</span> <span class="o">=</span> <span class="s">'log5'</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">'s1'</span><span class="p">,</span> <span class="n">s1</span><span class="p">.</span><span class="n">isdigit</span><span class="p">(),</span> <span class="n">s1</span><span class="p">.</span><span class="n">isnumeric</span><span class="p">(),</span> <span class="n">s1</span><span class="p">.</span><span class="n">isdecimal</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'s2'</span><span class="p">,</span> <span class="n">s2</span><span class="p">.</span><span class="n">isdigit</span><span class="p">(),</span> <span class="n">s2</span><span class="p">.</span><span class="n">isnumeric</span><span class="p">(),</span> <span class="n">s2</span><span class="p">.</span><span class="n">isdecimal</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'s3'</span><span class="p">,</span> <span class="n">s3</span><span class="p">.</span><span class="n">isdigit</span><span class="p">(),</span> <span class="n">s3</span><span class="p">.</span><span class="n">isnumeric</span><span class="p">(),</span> <span class="n">s3</span><span class="p">.</span><span class="n">isdecimal</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'s4'</span><span class="p">,</span> <span class="n">s4</span><span class="p">.</span><span class="n">isdigit</span><span class="p">(),</span> <span class="n">s4</span><span class="p">.</span><span class="n">isnumeric</span><span class="p">(),</span> <span class="n">s4</span><span class="p">.</span><span class="n">isdecimal</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'s5'</span><span class="p">,</span> <span class="n">s5</span><span class="p">.</span><span class="n">isdigit</span><span class="p">(),</span> <span class="n">s5</span><span class="p">.</span><span class="n">isnumeric</span><span class="p">(),</span> <span class="n">s5</span><span class="p">.</span><span class="n">isdecimal</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'s6'</span><span class="p">,</span> <span class="n">s6</span><span class="p">.</span><span class="n">isdigit</span><span class="p">(),</span> <span class="n">s6</span><span class="p">.</span><span class="n">isnumeric</span><span class="p">(),</span> <span class="n">s6</span><span class="p">.</span><span class="n">isdecimal</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'s7'</span><span class="p">,</span> <span class="n">s7</span><span class="p">.</span><span class="n">isdigit</span><span class="p">(),</span> <span class="n">s7</span><span class="p">.</span><span class="n">isnumeric</span><span class="p">(),</span> <span class="n">s7</span><span class="p">.</span><span class="n">isdecimal</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'s8'</span><span class="p">,</span> <span class="n">s8</span><span class="p">.</span><span class="n">isdigit</span><span class="p">(),</span> <span class="n">s8</span><span class="p">.</span><span class="n">isnumeric</span><span class="p">(),</span> <span class="n">s8</span><span class="p">.</span><span class="n">isdecimal</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'s9'</span><span class="p">,</span> <span class="n">s9</span><span class="p">.</span><span class="n">isdigit</span><span class="p">(),</span> <span class="n">s9</span><span class="p">.</span><span class="n">isnumeric</span><span class="p">(),</span> <span class="n">s9</span><span class="p">.</span><span class="n">isdecimal</span><span class="p">())</span>
+</code></pre></div></div>
+
+<p>실행결과</p>
+
+<blockquote>
+  <p>s1 True True True
+s2 True True True
+s3 True True False
+s4 True True False
+s5 False True False
+s6 False True False
+s7 True True False
+s8 True True False
+s9 False False False</p>
+</blockquote>
+
+<h1 id="3-sort와-sorted-차이">3. sort()와 sorted() 차이</h1>
+
+<h2 id="listsort">list.sort()</h2>
+
+<p>list 원본을 정렬하고 수정한 후, None 을 리턴합니다.</p>
+
+<h2 id="sortedlist">sorted(list)</h2>
+
+<p>list 원본은 유지하고, 정렬한 새 리스트를 리턴합니다.</p>
+
+<hr />
+
+<p>참고 사이트</p>
+
+<ul>
+  <li>https://soooprmx.com/%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9D%98-%EC%88%AB%EC%9E%90%ED%8C%90%EB%B3%84%ED%95%A8%EC%88%98/</li>
+  <li>https://blog.naver.com/PostView.nhn?isHttpsRedirect=true&amp;blogId=wideeyed&amp;logNo=221745416992&amp;redirect=Dlog&amp;widgetTypeCall=true&amp;directAccess=false</li>
+</ul>
+:ET

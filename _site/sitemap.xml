@@ -3,7 +3,137 @@
   
     
     <url>
-      <loc>http://localhost:4000/%EC%9C%A0%EC%9A%A9%ED%95%9C-%ED%8C%8C%EC%9D%B4%EC%8D%AC-%ED%95%A8%EC%88%98%EC%82%AC%EC%9D%B4%ED%8A%B8.txt</loc>
+      <loc>http://localhost:4000/20220212-%EC%B6%94%EC%B2%9C-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EC%84%B8%EB%AF%B8%EB%82%98.html</loc>
+      
+        <lastmod>2022-02-12T00:00:00+09:00</lastmod>
+      
+      
+        <changefreq>daily</changefreq>
+      
+      
+        <priority>0.5</priority></url>
+    
+  
+    
+    <url>
+      <loc>http://localhost:4000/fd_18-%EB%94%A5%EB%9F%AC%EB%8B%9D-%EB%93%A4%EC%97%AC%EB%8B%A4%EB%B3%B4%EA%B8%B0.html</loc>
+      
+        <lastmod>2022-02-08T00:00:00+09:00</lastmod>
+      
+      
+        <changefreq>daily</changefreq>
+      
+      
+        <priority>0.5</priority></url>
+    
+  
+    
+    <url>
+      <loc>http://localhost:4000/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-)-%EC%95%99%EC%83%81%EB%B8%94-Ensemble.html</loc>
+      
+        <lastmod>2022-02-08T00:00:00+09:00</lastmod>
+      
+      
+        <changefreq>daily</changefreq>
+      
+      
+        <priority>0.5</priority></url>
+    
+  
+    
+    <url>
+      <loc>http://localhost:4000/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-)-%EB%8B%A4%EB%B3%80%EB%9F%89%ED%9A%8C%EA%B7%80%EB%B6%84%EC%84%9D-Multivariate-regression.html</loc>
+      
+        <lastmod>2022-02-08T00:00:00+09:00</lastmod>
+      
+      
+        <changefreq>daily</changefreq>
+      
+      
+        <priority>0.5</priority></url>
+    
+  
+    
+    <url>
+      <loc>http://localhost:4000/%EB%8F%99%EC%A0%81-%EC%9B%B9-%ED%8E%98%EC%9D%B4%EC%A7%80%EC%99%80-%EC%A0%95%EC%A0%81-%EC%9B%B9-%ED%8E%98%EC%9D%B4%EC%A7%80.html</loc>
+      
+        <lastmod>2022-02-08T00:00:00+09:00</lastmod>
+      
+      
+        <changefreq>daily</changefreq>
+      
+      
+        <priority>0.5</priority></url>
+    
+  
+    
+    <url>
+      <loc>http://localhost:4000/kaggle-)-Imagenet-embeddings-%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C.html</loc>
+      
+        <lastmod>2022-02-08T00:00:00+09:00</lastmod>
+      
+      
+        <changefreq>daily</changefreq>
+      
+      
+        <priority>0.5</priority></url>
+    
+  
+    
+    <url>
+      <loc>http://localhost:4000/kaggle-%EC%B0%B8%EA%B0%80%ED%95%98%EA%B3%A0-%EC%8B%B6%EC%9D%80-%EB%8C%80%ED%9A%8C-%EB%A6%AC%EC%8A%A4%ED%8A%B8.html</loc>
+      
+        <lastmod>2022-02-08T00:00:00+09:00</lastmod>
+      
+      
+        <changefreq>daily</changefreq>
+      
+      
+        <priority>0.5</priority></url>
+    
+  
+    
+    <url>
+      <loc>http://localhost:4000/Kaggle-)-Imagenet-embeddings+RAPIDS-SVR+Finetuned-models-%EB%B6%84%EC%84%9D.html</loc>
+      
+        <lastmod>2022-02-08T00:00:00+09:00</lastmod>
+      
+      
+        <changefreq>daily</changefreq>
+      
+      
+        <priority>0.5</priority></url>
+    
+  
+    
+    <url>
+      <loc>http://localhost:4000/CS231-5%EA%B0%95.-CNN.html</loc>
+      
+        <lastmod>2022-02-08T00:00:00+09:00</lastmod>
+      
+      
+        <changefreq>daily</changefreq>
+      
+      
+        <priority>0.5</priority></url>
+    
+  
+    
+    <url>
+      <loc>http://localhost:4000/AlexNet%EC%9D%B4%EB%9E%80.html</loc>
+      
+        <lastmod>2022-02-08T00:00:00+09:00</lastmod>
+      
+      
+        <changefreq>daily</changefreq>
+      
+      
+        <priority>0.5</priority></url>
+    
+  
+    
+    <url>
+      <loc>http://localhost:4000/fd_22-%EB%94%A5%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC,-%EC%84%9C%EB%A1%9C-%EB%AD%90%EA%B0%80-%EB%8B%A4%EB%A5%B8-%EA%B1%B0%EC%A3%A0.html</loc>
       
         <lastmod>2022-02-04T00:00:00+09:00</lastmod>
       
@@ -16,7 +146,7 @@
   
     
     <url>
-      <loc>http://localhost:4000/fd_22-%EB%94%A5%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC,-%EC%84%9C%EB%A1%9C-%EB%AD%90%EA%B0%80-%EB%8B%A4%EB%A5%B8-%EA%B1%B0%EC%A3%A0.html</loc>
+      <loc>http://localhost:4000/220204-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EB%A1%9D.html</loc>
       
         <lastmod>2022-02-04T00:00:00+09:00</lastmod>
       
@@ -1410,7 +1540,7 @@
     <url>
       <loc>http://localhost:4000/404.html</loc>
       
-        <lastmod>2022-02-12T22:14:08+09:00</lastmod>
+        <lastmod>2022-02-21T02:22:36+09:00</lastmod>
       
       
         <changefreq>daily</changefreq>
@@ -1425,7 +1555,7 @@
     <url>
       <loc>http://localhost:4000/about.html</loc>
       
-        <lastmod>2022-02-12T22:14:08+09:00</lastmod>
+        <lastmod>2022-02-21T02:22:36+09:00</lastmod>
       
       
         <changefreq>daily</changefreq>
@@ -1440,7 +1570,7 @@
     <url>
       <loc>http://localhost:4000/all-posts.json</loc>
       
-        <lastmod>2022-02-12T22:14:08+09:00</lastmod>
+        <lastmod>2022-02-21T02:22:36+09:00</lastmod>
       
       
         <changefreq>daily</changefreq>
@@ -1455,7 +1585,7 @@
     <url>
       <loc>http://localhost:4000/archive.html</loc>
       
-        <lastmod>2022-02-12T22:14:08+09:00</lastmod>
+        <lastmod>2022-02-21T02:22:36+09:00</lastmod>
       
       
         <changefreq>daily</changefreq>
@@ -1470,7 +1600,7 @@
     <url>
       <loc>http://localhost:4000/</loc>
       
-        <lastmod>2022-02-12T22:14:08+09:00</lastmod>
+        <lastmod>2022-02-21T02:22:36+09:00</lastmod>
       
       
         <changefreq>daily</changefreq>
@@ -1485,7 +1615,7 @@
     <url>
       <loc>http://localhost:4000/ipfs-404.html</loc>
       
-        <lastmod>2022-02-12T22:14:08+09:00</lastmod>
+        <lastmod>2022-02-21T02:22:36+09:00</lastmod>
       
       
         <changefreq>daily</changefreq>
@@ -1500,7 +1630,7 @@
     <url>
       <loc>http://localhost:4000/posts-by-tag.json</loc>
       
-        <lastmod>2022-02-12T22:14:08+09:00</lastmod>
+        <lastmod>2022-02-21T02:22:36+09:00</lastmod>
       
       
         <changefreq>daily</changefreq>
@@ -1515,7 +1645,7 @@
     <url>
       <loc>http://localhost:4000/search.json</loc>
       
-        <lastmod>2022-02-12T22:14:08+09:00</lastmod>
+        <lastmod>2022-02-21T02:22:36+09:00</lastmod>
       
       
         <changefreq>daily</changefreq>
@@ -1532,7 +1662,7 @@
     <url>
       <loc>http://localhost:4000/tag.html</loc>
       
-        <lastmod>2022-02-12T22:14:08+09:00</lastmod>
+        <lastmod>2022-02-21T02:22:36+09:00</lastmod>
       
       
         <changefreq>daily</changefreq>
@@ -1547,7 +1677,7 @@
     <url>
       <loc>http://localhost:4000/tags.html</loc>
       
-        <lastmod>2022-02-12T22:14:08+09:00</lastmod>
+        <lastmod>2022-02-21T02:22:36+09:00</lastmod>
       
       
         <changefreq>daily</changefreq>
@@ -1562,7 +1692,7 @@
     <url>
       <loc>http://localhost:4000/feed.xml</loc>
       
-        <lastmod>2022-02-12T22:14:08+09:00</lastmod>
+        <lastmod>2022-02-21T02:22:36+09:00</lastmod>
       
       
         <changefreq>daily</changefreq>
@@ -1577,7 +1707,7 @@
     <url>
       <loc>http://localhost:4000/page2/</loc>
       
-        <lastmod>2022-02-12T22:14:08+09:00</lastmod>
+        <lastmod>2022-02-21T02:22:36+09:00</lastmod>
       
       
         <changefreq>daily</changefreq>
@@ -1592,7 +1722,7 @@
     <url>
       <loc>http://localhost:4000/page3/</loc>
       
-        <lastmod>2022-02-12T22:14:08+09:00</lastmod>
+        <lastmod>2022-02-21T02:22:36+09:00</lastmod>
       
       
         <changefreq>daily</changefreq>
@@ -1607,7 +1737,7 @@
     <url>
       <loc>http://localhost:4000/page4/</loc>
       
-        <lastmod>2022-02-12T22:14:08+09:00</lastmod>
+        <lastmod>2022-02-21T02:22:36+09:00</lastmod>
       
       
         <changefreq>daily</changefreq>
@@ -1622,7 +1752,7 @@
     <url>
       <loc>http://localhost:4000/page5/</loc>
       
-        <lastmod>2022-02-12T22:14:08+09:00</lastmod>
+        <lastmod>2022-02-21T02:22:36+09:00</lastmod>
       
       
         <changefreq>daily</changefreq>
@@ -1637,7 +1767,7 @@
     <url>
       <loc>http://localhost:4000/page6/</loc>
       
-        <lastmod>2022-02-12T22:14:08+09:00</lastmod>
+        <lastmod>2022-02-21T02:22:36+09:00</lastmod>
       
       
         <changefreq>daily</changefreq>
@@ -1652,7 +1782,7 @@
     <url>
       <loc>http://localhost:4000/page7/</loc>
       
-        <lastmod>2022-02-12T22:14:08+09:00</lastmod>
+        <lastmod>2022-02-21T02:22:36+09:00</lastmod>
       
       
         <changefreq>daily</changefreq>
@@ -1667,7 +1797,7 @@
     <url>
       <loc>http://localhost:4000/page8/</loc>
       
-        <lastmod>2022-02-12T22:14:08+09:00</lastmod>
+        <lastmod>2022-02-21T02:22:36+09:00</lastmod>
       
       
         <changefreq>daily</changefreq>
@@ -1682,7 +1812,7 @@
     <url>
       <loc>http://localhost:4000/page9/</loc>
       
-        <lastmod>2022-02-12T22:14:08+09:00</lastmod>
+        <lastmod>2022-02-21T02:22:36+09:00</lastmod>
       
       
         <changefreq>daily</changefreq>
@@ -1697,7 +1827,7 @@
     <url>
       <loc>http://localhost:4000/page10/</loc>
       
-        <lastmod>2022-02-12T22:14:08+09:00</lastmod>
+        <lastmod>2022-02-21T02:22:36+09:00</lastmod>
       
       
         <changefreq>daily</changefreq>
@@ -1712,7 +1842,7 @@
     <url>
       <loc>http://localhost:4000/page11/</loc>
       
-        <lastmod>2022-02-12T22:14:08+09:00</lastmod>
+        <lastmod>2022-02-21T02:22:36+09:00</lastmod>
       
       
         <changefreq>daily</changefreq>
@@ -1727,7 +1857,7 @@
     <url>
       <loc>http://localhost:4000/page12/</loc>
       
-        <lastmod>2022-02-12T22:14:08+09:00</lastmod>
+        <lastmod>2022-02-21T02:22:36+09:00</lastmod>
       
       
         <changefreq>daily</changefreq>
@@ -1742,7 +1872,7 @@
     <url>
       <loc>http://localhost:4000/page13/</loc>
       
-        <lastmod>2022-02-12T22:14:08+09:00</lastmod>
+        <lastmod>2022-02-21T02:22:36+09:00</lastmod>
       
       
         <changefreq>daily</changefreq>
@@ -1757,7 +1887,7 @@
     <url>
       <loc>http://localhost:4000/page14/</loc>
       
-        <lastmod>2022-02-12T22:14:08+09:00</lastmod>
+        <lastmod>2022-02-21T02:22:36+09:00</lastmod>
       
       
         <changefreq>daily</changefreq>
@@ -1772,7 +1902,7 @@
     <url>
       <loc>http://localhost:4000/page15/</loc>
       
-        <lastmod>2022-02-12T22:14:08+09:00</lastmod>
+        <lastmod>2022-02-21T02:22:36+09:00</lastmod>
       
       
         <changefreq>daily</changefreq>
@@ -1787,7 +1917,7 @@
     <url>
       <loc>http://localhost:4000/page16/</loc>
       
-        <lastmod>2022-02-12T22:14:08+09:00</lastmod>
+        <lastmod>2022-02-21T02:22:36+09:00</lastmod>
       
       
         <changefreq>daily</changefreq>
@@ -1802,7 +1932,7 @@
     <url>
       <loc>http://localhost:4000/page17/</loc>
       
-        <lastmod>2022-02-12T22:14:08+09:00</lastmod>
+        <lastmod>2022-02-21T02:22:36+09:00</lastmod>
       
       
         <changefreq>daily</changefreq>
@@ -1817,7 +1947,37 @@
     <url>
       <loc>http://localhost:4000/page18/</loc>
       
-        <lastmod>2022-02-12T22:14:08+09:00</lastmod>
+        <lastmod>2022-02-21T02:22:36+09:00</lastmod>
+      
+      
+        <changefreq>daily</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>http://localhost:4000/page19/</loc>
+      
+        <lastmod>2022-02-21T02:22:36+09:00</lastmod>
+      
+      
+        <changefreq>daily</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>http://localhost:4000/page20/</loc>
+      
+        <lastmod>2022-02-21T02:22:36+09:00</lastmod>
       
       
         <changefreq>daily</changefreq>
