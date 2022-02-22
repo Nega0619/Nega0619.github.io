@@ -149,30 +149,67 @@
       data = data.append(my_playlist)                           # 위에 임의로 만든 my_favorite 데이터를 추가해 줍니다. 
   ```
 
-  - inplace , drop, ignore_index 다안됨.
-    - https://yganalyst.github.io/data_handling/Pd_2/
+  - `data = data.append(my_palylist)`로 하면 index 순서대로가 아닌 0 ,1, 2, 3, 4, .... , 56643,56644, 0,1,2,3,4 순으로 들어오게 됩니다.
 
+    - 인덱스 순서대로 넣게해주려면 `data = data.append(my_playlist, ignore_index=True) ` 처럼 `ignore_index=True`옵션을 넣어주면 됩니다.
 
+    - https://yganalyst.github.io/data_handling/Pd_2/에서의 inplace와 drop은 안됨.
+
+    
 
 # 3. 사용자의 명시적 / 암묵적 평가
 
+- 명시적 평가 : 좋아요나 별점과 같은 사용자가 직접적으로 드러낸 데이터
+
+- 암묵적 평가 : 어떤 곡을 몇번 플레이했다 / 어떤 영화를 몇번 봤다와 같은 서비스를 이용하면서 자연스럽게 발생하는 암묵적(Implicit) 피드백
+
+  - 암묵적 데이터를 사용할때 참고하면 좋을 논문 : [Collaborative Filtering for Implicit Feedback Datasets](http://yifanhu.net/PUB/cf.pdf)
+  - 특징
+    - 부정적인 피드백이 없다.(No Negative Feedback)
+    - 애초에 잡음이 많다.(Inherently Noisy)
+    - 수치는 신뢰도를 의미한다.(The numerical value of implicit feedback indicates confidence)
+    - Implicit-feedback Recommender System의 평가는 적절한 방법을 고민해봐야 한다.(Evaluation of implicit-feedback recommender requires appropriate measures)
+
+  
+
+해당 프로젝트에서는 암묵적 데이터의 해석에 대한 규칙을 다음과 같이 정했습니다.
+
+- 한번이라도 들었으면 선호라고 판단
+- 많이 재생한 아티스트에 대해 가중치를 주어서 확실히 좋아한다고 판단한다.
 
 
-# 4. 사용자의 명시적 / 암묵적 평가
+
+# 4. Matrix Factorization ( MF )
+
+해당 프로젝트에서는 m명의 사용자들이 n명의 아티스트에 대해 평가한 데이터를 포함한 (m*n) 사이즈의 평가 행렬(Rating Matrix)을 만들었습니다.
+
+행렬에는 그림과 같이 결측치가 존재하며, 추천시스템의 협업 필터링이란 이 평가행렬을 전제로합니다. 
 
 
 
-# 5. Matrix Factorization ( MF )
+추천시스템의 모델은 Matrix Factorization(MF, 행렬 분해) 모델을 사용하였습니다. 기본아이디어는 `(m*n)` 사이즈의 행렬 R을 `(m*k)` 사이즈의 행렬 P와 `(k*n)`사이즈의 행렬 Q로 분해한다면 R이란 P와 Q의 행렬곱으로 표현할수 있다는 것입니다. 아이디어는 단순하지만, k는 m이나 n보다 훨씬 작은 값이므로, 계산량 측면에서 매우 유리하고 MF모델의 성능이 준수하고 Scalability가 좋아서 많이 사용됩니다.
+
+![image-20220222205911237](../assets/img/posts/image-20220222205911237.png)
+
+실제 영화 추천 시스템에 예를들어 보자면 다음과 같습니다.
+
+![image-20220222211810682](../assets/img/posts/image-20220222211810682.png)
+
+MF 모델의 목표는 모든 유저와 아이템들에 대해서 K-Dimension 벡터를 벡터를 잘 만드는 것입니다. 벡터를 잘 만드는 기준은 유저 i의 벡터 U_i와 아이템 백터 j의 벡터 I_j를 내적했을 때 유저 i가 아이템 j에 대해 평가한 수치 M_ij와 비슷한지 입니다.
+
+![image-20220222212919507](../assets/img/posts/image-20220222212919507.png)
 
 
 
-# 6. CSR (Compressed Sparse Row) Matrix
+
+
+# 5. CSR (Compressed Sparse Row) Matrix
 
 
 
-# 7. MF 모델 학습하기
+# 6. MF 모델 학습하기
 
 
 
 
-# 8. 비슷한 아티스트 찾기 + 유저에게 추천하기
+# 7. 비슷한 아티스트 찾기 + 유저에게 추천하기
