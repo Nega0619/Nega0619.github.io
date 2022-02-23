@@ -1,0 +1,87 @@
+<h6 id="전제사항">전제사항</h6>
+
+<ul>
+  <li>파이썬이 이미 설치된 상황이다.</li>
+</ul>
+
+<hr />
+
+<h6 id="참고링크">참고링크</h6>
+
+<ul>
+  <li>https://greeksharifa.github.io/references/2020/10/30/python-selenium-usage/</li>
+</ul>
+
+<p>오늘은 셀레니움이라는 패키지의 설치 및 사용방법에 대해 공부해보았다.</p>
+
+<p>셀레니움은 파이썬 패키지 중 하나로, 웹 자동화에 많이 사용된다고 한다.</p>
+
+<h1 id="셀레니움-시작하기">셀레니움 시작하기</h1>
+
+<h2 id="설치법">설치법</h2>
+
+<p>cmd창에서 <code class="language-plaintext highlighter-rouge">pip install selenium</code></p>
+
+<h2 id="드라이버-다운">드라이버 다운</h2>
+
+<p>사용하고 있는 브라우저 별로 셀레니움 웹드라이버를 다운로드해야한다. 사용하고 있는 웹 버전과 동일한 버전의 셀레니움 브라우저를 다운받아야 한다!</p>
+
+<ul>
+  <li><a href="https://sites.google.com/a/chromium.org/chromedriver/downloads">Google Chrome</a></li>
+  <li><a href="https://github.com/mozilla/geckodriver/releases">Firefox</a></li>
+  <li><a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/">Microsoft Edge</a></li>
+  <li><a href="https://webkit.org/blog/6900/webdriver-support-in-safari-10/">Safari</a></li>
+</ul>
+
+<h2 id="브라우저-열기">브라우저 열기</h2>
+
+<pre><code class="language-pyth">from selenium import webdriver
+
+chrome_driver = webdriver.Chrome('chromedriver.exe')
+
+</code></pre>
+
+<ul>
+  <li>
+    <p>드라이버 다운하지 않았을 시 혹은 경로를 설정해주지 않았을 경우 뜨는 오류</p>
+
+    <p><img src="../assets/img/posts/image-20220220161002912.png" alt="image-20220220161002912" /></p>
+
+    <ul>
+      <li>
+        <p>해결법</p>
+
+        <p>지금 작성하고 있는 파이썬 파일 이름이 test.py라고 했을 때, test.py가 있는 폴더 안에(같은 폴더안에) 드라이버를 넣어주면 정상작동한다.</p>
+
+        <p>경로를 설정해주지 않았을 경우, 기본값은 현재 test.py가 존재하고있는 폴더의 경로이기 때문이다.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>브라우저 버전과 맞지 않는 셀레니움 드라이버를 다운받았을 경우,</p>
+
+    <ul>
+      <li>
+        <p>어떤 창이 켜졌다가 바로 꺼지며 다음과 같은 오류를 내뱉는다.</p>
+
+        <p><img src="../assets/img/posts/image-20220220162552359.png" alt="image-20220220162552359" /></p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="브라우저-닫기">브라우저 닫기</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">driver</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>	<span class="c1"># 현재 탭 닫기
+</span><span class="n">driver</span><span class="p">.</span><span class="n">quit</span><span class="p">()</span>	<span class="c1"># 현재 브라우저 닫기
+</span></code></pre></div></div>
+
+<h2 id="페이지-앞으로-가기--뒤로-가기">페이지 앞으로 가기 / 뒤로 가기</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>driver.forward()
+driver.back()
+</code></pre></div></div>
+
+<h1 id="엘레멘트에-접근하기">엘레멘트에 접근하기</h1>
+
+<h2 id="엘레멘트란">엘레멘트란?</h2>

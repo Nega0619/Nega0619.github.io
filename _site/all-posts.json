@@ -1,6 +1,32 @@
 {
   "posts" : [
     
+    "./fd_30-Computer-Power-UP.html",
+    
+    "./%EA%B0%95%ED%99%94%ED%95%99%EC%8A%B5-%EC%B9%98%ED%8C%85%EC%8B%9C%ED%8A%B8.html",
+    
+    "./ex_14-Find-another-artist-that-IU-fans-will-like.html",
+    
+    "./%EA%B9%83%ED%97%88%EB%B8%8C-%ED%86%A0%ED%81%B0-%EB%A7%8C%EB%93%A4%EA%B8%B0-+-%EA%B9%83%ED%97%88%EB%B8%8C-%EC%BB%A4%EB%84%90%EC%97%90%EC%84%9C-%EA%B9%83-%EC%98%AC%EB%A6%AC%EA%B8%B0.html",
+    
+    "./scikit-learn-)-tranform()%EA%B3%BC-fit_transform().html",
+    
+    "./fd_29-%EC%82%AC%EC%9D%B4%ED%82%B7%EB%9F%B0%EC%9D%84-%ED%99%9C%EC%9A%A9%ED%95%9C-%EC%B6%94%EC%B2%9C-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EC%9E%85%EB%AC%B8.html",
+    
+    "./Git-LFS-%EA%B9%83%EC%97%90-100MB%EB%B3%B4%EB%8B%A4-%ED%81%B0-%ED%8C%8C%EC%9D%BC-%EC%98%AC%EB%A6%AC%EA%B8%B0.html",
+    
+    "./fd_15.html",
+    
+    "./Selenium-%EC%97%B0%EC%8A%B5%EA%B8%B0%EB%A1%9D.html",
+    
+    "./01.-UML%EC%9D%84-%EC%86%8C%EA%B0%9C%ED%95%A9%EB%8B%88%EB%8B%A4.html",
+    
+    "./Pandas-Dataframe%EA%B3%BC-Series.html",
+    
+    "./Database.html",
+    
+    "./Database-final.html",
+    
     "./20220212-%EC%B6%94%EC%B2%9C-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EC%84%B8%EB%AF%B8%EB%82%98.html",
     
     "./fd_18-%EB%94%A5%EB%9F%AC%EB%8B%9D-%EB%93%A4%EC%97%AC%EB%8B%A4%EB%B3%B4%EA%B8%B0.html",
@@ -87,9 +113,9 @@
     
     "./%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A0%84%EC%B2%98%EB%A6%AC-)-%EC%9B%90-%ED%95%AB-%EC%9D%B8%EC%BD%94%EB%94%A9-One-Hot-Encoding.html",
     
-    "./%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A0%84%EC%B2%98%EB%A6%AC-)-%EC%A4%91%EB%B3%B5%EB%90%9C-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%B2%98%EB%A6%AC-%EB%B0%A9%EB%B2%95.html",
-    
     "./%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A0%84%EC%B2%98%EB%A6%AC%EC%9D%98-%EB%8B%A4%EC%96%91%ED%95%9C-%EA%B8%B0%EB%B2%95.html",
+    
+    "./%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A0%84%EC%B2%98%EB%A6%AC-)-%EC%A4%91%EB%B3%B5%EB%90%9C-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%B2%98%EB%A6%AC-%EB%B0%A9%EB%B2%95.html",
     
     "./%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-)-%EC%9D%98%EC%82%AC%EA%B2%B0%EC%A0%95-%ED%8A%B8%EB%A6%AC%EC%99%80-%EB%9E%9C%EB%8D%A4-%ED%8F%AC%EB%A0%88%EC%8A%A4%ED%8A%B8-Decision-tree-Random-forest.html",
     
@@ -101,6 +127,8 @@
     
     "./%ED%8C%8C%EC%9D%B4%EC%8D%AC-)-%EA%B0%9D%EC%B2%B4.html",
     
+    "./Git)-%EC%BB%A4%EB%84%90%EC%97%90%EC%84%9C-%EA%B9%83%ED%97%88%EB%B8%8C-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0.html",
+    
     "./%ED%86%B5%EA%B3%84)-%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9C%BC%EB%A1%9C-%ED%8F%89%EA%B7%A0,-%ED%91%9C%EC%A4%80%ED%8E%B8%EC%B0%A8,-%EC%A4%91%EA%B0%84%EA%B0%92,-%EB%B6%84%EC%82%B0-%EA%B3%84%EC%82%B0%ED%95%98%EA%B8%B0.html",
     
     "./Python-%EC%A0%9C%EB%84%88%EB%A0%88%EC%9D%B4%ED%84%B0.html",
@@ -111,11 +139,9 @@
     
     "./AI)-%EA%B0%95%ED%99%94%ED%95%99%EC%8A%B5%EC%9D%98-%EA%B0%9C%EB%85%90.html",
     
-    "./Git)-%EC%BB%A4%EB%84%90%EC%97%90%EC%84%9C-%EA%B9%83%ED%97%88%EB%B8%8C-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0.html",
+    "./Python)-%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9D%98-%EB%94%94%EB%A0%89%ED%84%B0%EB%A6%AC-%EA%B4%80%EB%A0%A8-%ED%91%9C%EC%A4%80-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC.html",
     
     "./AI)-%EB%B6%93%EA%BD%83-%EB%B6%84%EB%A5%98%EB%AC%B8%EC%A0%9C-By-scikit-learn.html",
-    
-    "./Python)-%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9D%98-%EB%94%94%EB%A0%89%ED%84%B0%EB%A6%AC-%EA%B4%80%EB%A0%A8-%ED%91%9C%EC%A4%80-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC.html",
     
     "./%ED%86%B5%EA%B3%84)-%EC%8B%A0%EB%A2%B0%EB%8F%84,-%EC%8B%A0%EB%A2%B0%EA%B5%AC%EA%B0%84,-%EC%98%A4%EC%B0%A8%EB%B2%94%EC%9C%84.html",
     
@@ -137,12 +163,6 @@
     
     "./AI)-Keras-%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5-%EB%AA%A8%EB%8D%B8-%EA%B8%B0%EB%B3%B8-%EB%A9%94%EC%84%9C%EB%93%9C.html",
     
-    "./%EC%88%8F%EC%BD%94%EB%94%A9)-%EB%B0%B1%EC%A4%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%ED%92%80%EC%9D%B4%EC%97%90-%EC%82%AC%EC%9A%A9%EB%90%98%EB%8A%94-%EC%88%8F%EC%BD%94%EB%94%A9-%EA%B4%80%EB%A0%A8-%EB%A7%81%ED%81%AC.html",
-    
-    "./TODO_pandas)-%EA%B8%B0%EB%B3%B8-%EB%A9%94%EC%84%9C%EB%93%9C.html",
-    
-    "./TODO_AI)-%EB%8B%A4%EC%96%91%ED%95%9C-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A0%84%EC%B2%98%EB%A6%AC-%EB%B0%A9%EB%B2%95.html",
-    
     "./%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4-)-%EC%88%98%EC%8B%9D-%EC%9E%91%EC%84%B1%ED%95%98%EB%8A%94-%EB%B2%95.html",
     
     "./%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A0%84%EC%B2%98%EB%A6%AC)-%EC%9D%B4%EC%83%81%EC%B9%98-Outlier.html",
@@ -151,13 +171,17 @@
     
     "./Window)-%EC%9C%88%EB%8F%84%EC%9A%B0-%EC%BB%A4%EB%A7%A8%EB%93%9C%EC%B0%BD-%EB%AA%85%EB%A0%B9%EC%96%B4-%EC%A0%95%EB%A6%AC.html",
     
+    "./%EC%88%8F%EC%BD%94%EB%94%A9)-%EB%B0%B1%EC%A4%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%ED%92%80%EC%9D%B4%EC%97%90-%EC%82%AC%EC%9A%A9%EB%90%98%EB%8A%94-%EC%88%8F%EC%BD%94%EB%94%A9-%EA%B4%80%EB%A0%A8-%EB%A7%81%ED%81%AC.html",
+    
+    "./TODO_pandas)-%EA%B8%B0%EB%B3%B8-%EB%A9%94%EC%84%9C%EB%93%9C.html",
+    
+    "./TODO_AI)-%EB%8B%A4%EC%96%91%ED%95%9C-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A0%84%EC%B2%98%EB%A6%AC-%EB%B0%A9%EB%B2%95.html",
+    
     "./%ED%95%A8%EC%88%98%ED%98%95-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%B4%EB%9E%80.html",
     
     "./%EB%9F%B0%ED%83%80%EC%9E%84%EA%B3%BC-%EC%BB%B4%ED%8C%8C%EC%9D%BC%ED%83%80%EC%9E%84.html",
     
     "./Python)-%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EB%9E%8C%EB%8B%A4%EC%8B%9D-%ED%91%9C%ED%98%84%EC%8B%9D-lambda-expression.html",
-    
-    "./%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A0%84%EC%B2%98%EB%A6%AC)-%EC%A0%95%EA%B7%9C%ED%99%94-Normalization.html",
     
     "./%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4-)-%ED%86%A0%EA%B8%80-%EB%A7%8C%EB%93%A4%EA%B8%B0-%EC%A0%91%EA%B8%B0,-%ED%8E%BC%EC%B9%98%EA%B8%B0-Expander-control.html",
     
@@ -167,11 +191,7 @@
     
     "./Linux)-%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%8B%A8%EC%B6%95%ED%82%A4.html",
     
-    "./SERCRET_%EC%99%9C-%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9D%B8%EA%B0%80.html",
-    
-    "./SERCRET_GENERATOR.html",
-    
-    "./Python-%EB%B3%91%EB%A0%AC%EC%B2%98%EB%A6%AC-Multiprocessing.html",
+    "./%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A0%84%EC%B2%98%EB%A6%AC)-%EC%A0%95%EA%B7%9C%ED%99%94-Normalization.html",
     
     "./%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EA%B8%B0%EB%B2%95)-%EB%A9%94%EB%AA%A8%EC%9D%B4%EC%A0%9C%EC%9D%B4%EC%85%98-memoization.html",
     
@@ -189,9 +209,11 @@
     
     "./Linux)-%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%AA%85%EB%A0%B9%EC%96%B4-%EC%A0%95%EB%A6%AC.html",
     
-    "./python-%EC%A0%95%EA%B7%9C%ED%91%9C%ED%98%84%EC%8B%9D.html",
+    "./SERCRET_%EC%99%9C-%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9D%B8%EA%B0%80.html",
     
-    "./AIFFEL)-2%EC%A3%BC%EC%B0%A8-%EC%95%84%EC%9D%B4%ED%8E%A0-%EC%9D%BC%EA%B8%B0.html",
+    "./SERCRET_GENERATOR.html",
+    
+    "./Python-%EB%B3%91%EB%A0%AC%EC%B2%98%EB%A6%AC-Multiprocessing.html",
     
     "./%ED%85%8D%EC%8A%A4%ED%8A%B8-%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%9D%98-%EC%B2%98%EB%A6%AC%EA%B3%BC%EC%A0%95.html",
     
@@ -212,6 +234,10 @@
     "./Python)-join(),-split().html",
     
     "./Markdown)-%ED%85%8D%EC%8A%A4%ED%8A%B8%EC%97%90-%EC%83%89%EA%B9%94%EC%9E%85%ED%9E%88%EA%B8%B0.html",
+    
+    "./python-%EC%A0%95%EA%B7%9C%ED%91%9C%ED%98%84%EC%8B%9D.html",
+    
+    "./AIFFEL)-2%EC%A3%BC%EC%B0%A8-%EC%95%84%EC%9D%B4%ED%8E%A0-%EC%9D%BC%EA%B8%B0.html",
     
     "./python)-%EB%B3%80%EC%88%98%EC%9D%98-%EC%9C%A0%ED%9A%A8-%EB%B2%94%EC%9C%84.html",
     
