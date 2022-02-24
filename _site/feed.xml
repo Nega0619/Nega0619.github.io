@@ -1,4 +1,359 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-02-23T18:55:51+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hwi’s footsteps</title><subtitle>Artificial Intelligence trends and concepts made easy.</subtitle><author><name>Armando Maynez</name></author><entry><title type="html">[fd_30] computer power up</title><link href="http://localhost:4000/fd_30-Computer-Power-UP.html" rel="alternate" type="text/html" title="[fd_30] computer power up" /><published>2022-02-23T00:00:00+09:00</published><updated>2022-02-23T00:00:00+09:00</updated><id>http://localhost:4000/%5Bfd_30%5D%20Computer%20Power%20UP</id><content type="html" xml:base="http://localhost:4000/fd_30-Computer-Power-UP.html"><![CDATA[<p>오늘은 아이펠 Fundamental 노드 30번을 공부하고 공부한 내용을 포스팅해보았습니다.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-02-24T22:41:05+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hwi’s footsteps</title><subtitle>Artificial Intelligence trends and concepts made easy.</subtitle><author><name>Armando Maynez</name></author><entry><title type="html">Swea ) 프로그래밍과 논리, 수학 1 복사본</title><link href="http://localhost:4000/SWEA-)-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EA%B3%BC-%EB%85%BC%EB%A6%AC,-%EC%88%98%ED%95%99-1-%EB%B3%B5%EC%82%AC%EB%B3%B8.html" rel="alternate" type="text/html" title="Swea ) 프로그래밍과 논리, 수학 1 복사본" /><published>2022-02-24T00:00:00+09:00</published><updated>2022-02-24T00:00:00+09:00</updated><id>http://localhost:4000/SWEA%20)%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EA%B3%BC%20%EB%85%BC%EB%A6%AC,%20%EC%88%98%ED%95%99%201%20-%20%EB%B3%B5%EC%82%AC%EB%B3%B8</id><content type="html" xml:base="http://localhost:4000/SWEA-)-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EA%B3%BC-%EB%85%BC%EB%A6%AC,-%EC%88%98%ED%95%99-1-%EB%B3%B5%EC%82%AC%EB%B3%B8.html"><![CDATA[<p>오늘은 삼성 SW Expert Academy의 프로그래밍과 논리, 수학 강의 1강을 보고 학습한 내용을 정리해보았습니다</p>
+
+<hr />
+
+<h6 id="강의-링크">강의 링크</h6>
+
+<p>https://swexpertacademy.com/main/learn/course/lectureVideoPlayer.do</p>
+
+<hr />
+
+<h6 id="강의-전체-목차">강의 전체 목차</h6>
+
+<ul>
+  <li>프로그래밍과 논리/수학 ( 오늘의 분량 )</li>
+  <li>논리와 증명 ( 오늘의 분량 )</li>
+  <li>수와 표현</li>
+  <li>집합과 조합론</li>
+  <li>기초 수식</li>
+  <li>재귀</li>
+  <li>동적 프로그래밍</li>
+  <li>조합론 프로그램 과제</li>
+  <li>기초 알고리즘 프로그램 과제</li>
+</ul>
+
+<hr />]]></content><author><name>Armando Maynez</name></author><summary type="html"><![CDATA[오늘은 삼성 SW Expert Academy의 프로그래밍과 논리, 수학 강의 1강을 보고 학습한 내용을 정리해보았습니다]]></summary></entry><entry><title type="html">[ex_15]문자를 읽을 수 있는 딥러닝</title><link href="http://localhost:4000/ex_15-%EB%AC%B8%EC%9E%90%EB%A5%BC-%EC%9D%BD%EC%9D%84-%EC%88%98-%EC%9E%88%EB%8A%94-%EB%94%A5%EB%9F%AC%EB%8B%9D.html" rel="alternate" type="text/html" title="[ex_15]문자를 읽을 수 있는 딥러닝" /><published>2022-02-24T00:00:00+09:00</published><updated>2022-02-24T00:00:00+09:00</updated><id>http://localhost:4000/%5Bex_15%5D%EB%AC%B8%EC%9E%90%EB%A5%BC%20%EC%9D%BD%EC%9D%84%20%EC%88%98%20%EC%9E%88%EB%8A%94%20%EB%94%A5%EB%9F%AC%EB%8B%9D</id><content type="html" xml:base="http://localhost:4000/ex_15-%EB%AC%B8%EC%9E%90%EB%A5%BC-%EC%9D%BD%EC%9D%84-%EC%88%98-%EC%9E%88%EB%8A%94-%EB%94%A5%EB%9F%AC%EB%8B%9D.html"><![CDATA[<p>오늘은 아이펠 Exploration 노드 15번을 공부하고 공부한 내용을 포스팅해보았습니다.</p>
+
+<hr />
+
+<h6 id="출처">출처</h6>
+
+<ul>
+  <li>
+    <p>AIFFEL LMS</p>
+
+    <p>문제시 연락 부탁드립니다. :)</p>
+  </li>
+</ul>
+
+<hr />
+
+<h6 id="목차">목차</h6>
+
+<ul>
+  <li>기계는 어떤 방식으로 글을 읽을까?
+    <ul>
+      <li>딥러닝 문자 인식의 시작</li>
+    </ul>
+  </li>
+  <li>사진 속 문자 찾아내기 - detection</li>
+  <li>사진 속 문자 읽어내기 - recognition</li>
+  <li>keras-ocr 써보기</li>
+  <li>테서랙트 써보기</li>
+  <li>프로젝트 : 다양한 OCR 모델 비교하기</li>
+</ul>
+
+<hr />
+
+<h1 id="기계는-어떤-방식으로-글을-읽을까">기계는 어떤 방식으로 글을 읽을까?</h1>
+
+<h2 id="딥러닝-문자-인식의-시작">딥러닝 문자 인식의 시작</h2>
+
+<h1 id="사진-속-문자-찾아내기---detection">사진 속 문자 찾아내기 - detection</h1>
+
+<h1 id="사진-속-문자-읽어내기---recognition">사진 속 문자 읽어내기 - recognition</h1>
+
+<h1 id="keras-ocr-써보기">keras-ocr 써보기</h1>
+
+<h1 id="테서랙트-써보기">테서랙트 써보기</h1>
+
+<h1 id="프로젝트--다양한-ocr-모델-비교하기">프로젝트 : 다양한 OCR 모델 비교하기</h1>]]></content><author><name>Armando Maynez</name></author><summary type="html"><![CDATA[오늘은 아이펠 Exploration 노드 15번을 공부하고 공부한 내용을 포스팅해보았습니다.]]></summary></entry><entry><title type="html">Swea ) 프로그래밍과 논리, 수학 1</title><link href="http://localhost:4000/SWEA-)-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EA%B3%BC-%EB%85%BC%EB%A6%AC,-%EC%88%98%ED%95%99-1.html" rel="alternate" type="text/html" title="Swea ) 프로그래밍과 논리, 수학 1" /><published>2022-02-23T00:00:00+09:00</published><updated>2022-02-23T00:00:00+09:00</updated><id>http://localhost:4000/SWEA%20)%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EA%B3%BC%20%EB%85%BC%EB%A6%AC,%20%EC%88%98%ED%95%99%201</id><content type="html" xml:base="http://localhost:4000/SWEA-)-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EA%B3%BC-%EB%85%BC%EB%A6%AC,-%EC%88%98%ED%95%99-1.html"><![CDATA[<p>오늘은 삼성 SW Expert Academy의 프로그래밍과 논리, 수학 강의 1강을 보고 학습한 내용을 정리해보았습니다</p>
+
+<hr />
+
+<h6 id="강의-링크">강의 링크</h6>
+
+<p>https://swexpertacademy.com/main/learn/course/lectureVideoPlayer.do</p>
+
+<hr />
+
+<h6 id="강의-전체-목차">강의 전체 목차</h6>
+
+<ul>
+  <li>프로그래밍과 논리/수학 ( 오늘의 분량 )</li>
+  <li>논리와 증명 ( 오늘의 분량 )</li>
+  <li>수와 표현</li>
+  <li>집합과 조합론</li>
+  <li>기초 수식</li>
+  <li>재귀</li>
+  <li>동적 프로그래밍</li>
+  <li>조합론 프로그램 과제</li>
+  <li>기초 알고리즘 프로그램 과제</li>
+</ul>
+
+<hr />
+
+<h1 id="프로그래밍과-논리--수학">프로그래밍과 논리 / 수학</h1>
+
+<ul>
+  <li>
+    <p>프로그래밍이 어려운 이유</p>
+
+    <ul>
+      <li>
+        <p>능숙해지기 위해 많은 훈련이 필요하지만, 이 과정의 중요 목표는 아님!</p>
+      </li>
+      <li>
+        <p>논리적인 어려움 존재</p>
+
+        <ul>
+          <li>
+            <p>ex ( 카드문제 )</p>
+
+            <ul>
+              <li>
+                <p>사실과, 주장, 문제에서 사실과 주장을 잘 구분해야한다!</p>
+              </li>
+              <li>
+                <p>사실 : 모든 카드의 한쪽에는 알파벳, 다른쪽에는 숫자</p>
+              </li>
+              <li>
+                <p>주장 : 만약 한쪽이 D이면 반대쪽은 3</p>
+              </li>
+              <li>
+                <p>문제 : 주장이 사실인지 확인하기 위해 아래 카드 중 반드시 뒤집어봐야 하는 카드는 몇개이고 어느것인가?</p>
+
+                <p><img src="../assets/img/posts/image-20220224183257085.png" alt="image-20220224183257085" /></p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>정답 : D와 7</p>
+</blockquote>
+
+<p>D를 뒤집어 봐야한다는 것은, 3인지를 확인해야하기 위함이고,</p>
+
+<p>7을 뒤집어 봐야하는 것은 다른 숫자가 적힌 카드의 뒷면에는 D가 없는지를 확인해봐야하기 때문.</p>
+
+<p>여기서 F는 확인 안해도 되는 것이 <del>이미 이미 D와 3에 위반된 조건이기 때문이다.</del></p>
+
+<p>F의 뒤에 3이 있을지 걱정하는 경우인데, 주장은 D 뒤에 3이있다는 것이지 F뒤에 3이 잇으면 안된다가 아님! <strong>3이 있던 없던 상관없음!</strong></p>
+
+<p>그렇담 3은 확인 안해도 되는것인가? 이건 F의 문제와 귀결되네. <strong>D뒤에 3이 존재하는것을 주장</strong>하는 거지 3 뒤에 그 어떤것이 와도 상관없다는 것!</p>
+
+<p>7을 뒤집어야 하는 이유는 7뒤에 D가 있으면 <strong>주장이 깨어지기 때문!</strong></p>
+
+<p><del>나는 여기서 궁금한 것이, 카드가 저기 4장뿐인가 라는 생각은 할 필요가 없는것인가. 카드 종류가 다양할 수 있잖아. 이 경우에는 전부 다 뒤집어야 하나?</del> 주장을 제대로 파악하지 못해서 생긴 문제다.</p>
+
+<ul>
+  <li>논리 != 직관
+    <ul>
+      <li>직관이란, 논리적인 <strong>느낌</strong>을 주는 것.
+        <ul>
+          <li>장점은 익숙한 상황에서는 매우 빠름</li>
+          <li>단점은 정확하지 않다. 가끔은 익숙한 상황에서도 틀릴 수 있다.</li>
+          <li>또한, 강한 착각을 일으킬 수 있다.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="논리와-증명">논리와 증명</h1>
+
+<ul>
+  <li>soft logic
+    <ul>
+      <li>논리적으로 부정확한 표현을 사용하지만, 어떤 의미인지 모든 사람이 알고있다는 가정</li>
+    </ul>
+  </li>
+  <li>hard logic
+    <ul>
+      <li>프로그래밍 언어 표현의 모두 논리학에서 나온 것입니다.</li>
+      <li>사용되고 있는 수 많은 알고리즘을 이해하기 위해서는 hard logic이 필요하다.</li>
+    </ul>
+  </li>
+  <li>프로그래밍의 어려움에는 soft logic으로 알고리즘을 이해하려고 하는 것입니다.
+    <ul>
+      <li>알고리즘 설명을 보고 또 봐도 이해가 안되는 것은 증명을 안봤기 때문</li>
+      <li>증명을 봐도 이해가 안되는 것은 직관으로 이해하려고 하기 때문.</li>
+      <li>직관으로 완전한 이해를 얻는 것은 불 가 능</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="논리연습-1">논리연습 1</h2>
+
+<ul>
+  <li>다음을 명제식 형태로 쓰고 참인지 거짓인지 판단하시오
+    <ol>
+      <li>만약 0이 홀수라면, 미국에서 2080년 월드컵이 열린다.</li>
+      <li>만약<img src="../assets/img/posts/image-20220224203954973.png" alt="image-20220224203954973" />이 prime number라면 2는 짝수이다.</li>
+    </ol>
+  </li>
+</ul>
+
+<blockquote>
+  <p>1.</p>
+
+  <p>p 이면 q이다 라는 명제에서 p는 0이 홀수이다. q는 미국에서2080년 월드컵이 열린다 입니다.</p>
+
+  <p><del>p이면 q이다 의 명제의 전제는 p가 참일 경우입니다. p가 거짓이면 명제식 자체가 거짓이 됩니다.</del></p>
+
+  <p>p이면 q이다 (참)</p>
+
+  <p>p이면 ~q이다 (거짓)</p>
+
+  <p>~p이면 q이다 (참)</p>
+
+  <p>~p이면 ~q이다 (참)</p>
+
+  <p>p이면 q라고 주장했지, ~p이면 ~q라고 말한게 아닙니다!</p>
+
+  <p>즉, ~p이면 q, ~q 둘 다 참입니다.</p>
+
+  <p><strong>가정이 거짓이되면 전체는 참이됩니다.</strong></p>
+
+  <p>1번 : 참</p>
+</blockquote>
+
+<blockquote>
+  <p>2.</p>
+
+  <p>p 이면 q이다 라는 명제에서 p는 저 숫자가 prime numer이다. q는 2는 짝수이다. 입니다.</p>
+
+  <p>p의 사실 여부와 상관없이, q가 항상 참이므로, 2번 명제는 항상 참입니다. p가 참이어도 결론 q는 참, p가 거짓이어도 결론 q는 참이기 때문입니다.</p>
+</blockquote>
+
+<h2 id="논리-연습2">논리 연습2</h2>
+
+<p>p와 q가 명제이고, p -&gt; q가 거짓이라고 하자. 다음 명제식의 참 거짓은 어떻게 되는가?</p>
+
+<p>ⓐ ~p -&gt; q</p>
+
+<p>ⓑ p V q</p>
+
+<p>ⓒq -&gt; p</p>
+
+<p>생각정리.</p>
+
+<p>p가 참이면 q의 참 거짓에 따라 거짓이 판별됨.</p>
+
+<p>p가 거짓이면 q는 항상 참이다.</p>
+
+<p>근데, q는 거짓이라그랬으니까, p는 참인데, q가 거짓인 경우뿐이네!</p>
+
+<p><del>즉, 참인 경우 : ~q or q -&gt; p인 경우 (c) ,거짓인 경우 : ~p -&gt; q인 경우 (a)</del></p>
+
+<p>(a) : 참 (가정이 거짓이 되면 전체는 참이 되기 때문입니다.)</p>
+
+<p>(b) : 참 (참 과 거짓 이면 참입니다.)</p>
+
+<p>(c) : 참</p>
+
+<blockquote>
+  <p>b의 문법은 뭘까요?</p>
+
+  <p>p와 q 합집합으로 이해하면 됩니다.</p>
+</blockquote>
+
+<h2 id="논리-연습-3">논리 연습 3.</h2>
+
+<p>다음 명제들의 역 이 대우를 쓰시오</p>
+
+<ol>
+  <li>만약 0이 홀수라면, 미국에서 2080년 월드컵이 열린다.</li>
+  <li>
+    <p>만약 <img src="../assets/img/posts/image-20220224205958021.png" alt="image-20220224205958021" />가 prime number라면 2는 짝수이다.</p>
+  </li>
+  <li>
+    <p>역 : 만약 미국에서 2080년 월드컵이 열린다면 0이 홀수이다.</p>
+  </li>
+  <li>
+    <p>이 : 만약 0이 홀수가 아니라면, 미국에서 2080년 월드컵이 열리지 않는다.</p>
+  </li>
+  <li>대우 : 미국에서 2080년 월드컵이 열리지 않는다면, 0이 홀수가 아니다.</li>
+  <li>
+    <p>역 : 만약 2가 짝수라면저 숫자는 prime number이다.</p>
+  </li>
+  <li>
+    <p>이 : 만약 저 숫자가 prime number가 아니라면, 2는 짝수가 아니다.</p>
+  </li>
+  <li>대우 : 2가 짝수가 아니라면, 저 숫자가 prime number가 아니다.</li>
+</ol>
+
+<h2 id="논리-연습-4">논리 연습 4.</h2>
+
+<p><img src="../assets/img/posts/image-20220224210624355.png" alt="image-20220224210624355" /></p>
+
+<ol>
+  <li><img src="../assets/img/posts/image-20220224212544120.png" alt="image-20220224212544120" /></li>
+</ol>
+
+<ul>
+  <li>증명이란?
+    <ul>
+      <li>정확한 명제식으로 표현할 수 있는 것이라야 함</li>
+      <li>보통은 정확한 명제식까지 쓰지는 않으나 근본적으로는 명제식으로 바꿀 수 있음</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="당구공-paradox">당구공 paradox</h2>
+
+<p><img src="../assets/img/posts/image-20220224212905380.png" alt="image-20220224212905380" /></p>
+
+<p><img src="../assets/img/posts/image-20220224213249351.png" alt="image-20220224213249351" /></p>
+
+<ul>
+  <li>
+    <p>수학적 귀납법이란?</p>
+
+    <ul>
+      <li>
+        <p>자연수 n에 관한 명제 P(n)이 모든 자연수 n에 대하여 성립함을 다음과 같이 증명하는 방법</p>
+
+        <p>자연수 n에 관한 어떤 명제 P(n)에 대하여</p>
+
+        <p>(1) n = 1일 때, 즉 P(1)이 성립함을 증명하고,</p>
+
+        <p>(2) n = k일 때, 즉 P(k)가 성립한다고 가정하면 n = k+1일 때, 즉 P(k+1)도 성립함을 증명한다.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>대부분 사람들이 P(n)이 참이라고 가정할 수없다고 반론함.</p>
+
+    <ul>
+      <li><strong>수학적 귀납법에서 필요한 것은 P(n)-&gt;P(n+1)이 참임을 보이는 것 뿐이므로, P(n)이 정말로 참일 필요는 없음.</strong>
+        <ul>
+          <li><del>P(n)이 거짓이면 전부 통째로 참이되어버리니까 오히려 좋아</del></li>
+        </ul>
+      </li>
+      <li>위 증명에서 실제로 잘못된 부분은
+        <ul>
+          <li>위의 두 상황에서 처음 뺀 당구공과 두번째로 뺀 당구공의 색이 같음을 알수있으므로,,,</li>
+        </ul>
+      </li>
+      <li>처음뺀 당구공과 두번째로 뺀 당구공의 색이 같다는 것은 공통부분이 있다는 것인데, 실제로 n = 1인 경우, 즉, n+1=2인 경우 공통부분이 없다.
+        <ul>
+          <li>n=1인 경우에는 주머니안에 있는 공들의 색이 전부 같다는게 아니라, n=1인경우에는 주머니에 그 공 하나라서 색이 같을 수 밖에 없다는 것이므로 성립하지 않는대.</li>
+          <li>조금 이해가 안되는 부분이 공을 뺐을 때 다른색깔일 경우는 생각조차 안하는건가?</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="infinitely-many-prime-numbers">Infinitely Many Prime Numbers</h2>
+
+<p><img src="../assets/img/posts/image-20220224224029944.png" alt="image-20220224224029944" /></p>]]></content><author><name>Armando Maynez</name></author><summary type="html"><![CDATA[오늘은 삼성 SW Expert Academy의 프로그래밍과 논리, 수학 강의 1강을 보고 학습한 내용을 정리해보았습니다]]></summary></entry><entry><title type="html">[fd_30] computer power up</title><link href="http://localhost:4000/fd_30-Computer-Power-UP.html" rel="alternate" type="text/html" title="[fd_30] computer power up" /><published>2022-02-23T00:00:00+09:00</published><updated>2022-02-23T00:00:00+09:00</updated><id>http://localhost:4000/%5Bfd_30%5D%20Computer%20Power%20UP</id><content type="html" xml:base="http://localhost:4000/fd_30-Computer-Power-UP.html"><![CDATA[<p>오늘은 아이펠 Fundamental 노드 30번을 공부하고 공부한 내용을 포스팅해보았습니다.</p>
 
 <p>깃허브 주소 : https://github.com/Nega0619/Aiffel_Fundamental_nodes/blob/main/%5Bfd_30%5D%20Computer%20Power%20UP.ipynb</p>
 
@@ -1385,195 +1740,4 @@
       <li>https://medium.com/@stargt/github%EC%97%90-100mb-%EC%9D%B4%EC%83%81%EC%9D%98-%ED%8C%8C%EC%9D%BC%EC%9D%84-%EC%98%AC%EB%A6%AC%EB%8A%94-%EB%B0%A9%EB%B2%95-9d9e6e3b94ef</li>
     </ul>
   </li>
-</ul>]]></content><author><name>Armando Maynez</name></author><summary type="html"><![CDATA[git lfs install git lfs track “*.exe” git config –global http.postBuffer 20971520 git config –global http.maxRequestBuffer 100M]]></summary></entry><entry><title type="html">01. uml을 소개합니다</title><link href="http://localhost:4000/01.-UML%EC%9D%84-%EC%86%8C%EA%B0%9C%ED%95%A9%EB%8B%88%EB%8B%A4.html" rel="alternate" type="text/html" title="01. uml을 소개합니다" /><published>2022-02-20T00:00:00+09:00</published><updated>2022-02-20T00:00:00+09:00</updated><id>http://localhost:4000/01.%20UML%EC%9D%84%20%EC%86%8C%EA%B0%9C%ED%95%A9%EB%8B%88%EB%8B%A4</id><content type="html" xml:base="http://localhost:4000/01.-UML%EC%9D%84-%EC%86%8C%EA%B0%9C%ED%95%A9%EB%8B%88%EB%8B%A4.html"><![CDATA[<p>1장에서는 가벼운 개념 정리만 있고, 다음장에서 세분화하여 더 자세하게 설명할 예정이다.</p>
-
-<h1 id="uml">UML</h1>
-
-<p>Unified Modeling Language</p>
-
-<p>UML은 다이어그램을 그리는데 사용되며, 시스템 분석을 목표로 만들어진 언어이다.</p>
-
-<h2 id="다이어그램">다이어그램</h2>
-
-<p>시스템을 여러 가지 시각에서 볼 수 있는 뷰를 제공하는 것이며, 뷰의 집합을 모델이라고 한다.</p>
-
-<h2 id="uml-1x-버전">UML 1.X 버전</h2>
-
-<h3 id="uml-모델">UML 모델</h3>
-
-<p>시스템 자체의 “목적 <strong>행동</strong>“을 설명하는 언어,  X구현 방법을 설명하는 수단은 아니다X</p>
-
-<h3 id="클래스-다이어그램">클래스 다이어그램</h3>
-
-<p>클래스 : 비슷한 속성과 공통적인 행동 수단을 지닌 것들의 범주 혹은 그룹</p>
-
-<p>윗 영역에는 클래스의 이름을 넣고, 둘째 영역은 <strong>속성(특성)</strong>을, 마지막 영역에는 <strong>오퍼레이션(행동)</strong>을 넣는다.</p>
-
-<h3 id="객체-다이어그램">객체 다이어그램</h3>
-
-<p>객체 : 클래스의 인스턴스</p>
-
-<p>인스턴스의 이름은 콜론(:)의 왼편에 쓰며, 클래스의 이름은 콜론의 오른편에 쓴다.</p>
-
-<p>오른쪽 그림과 같이 익명 객체도 가능하다.</p>
-
-<h3 id="유스케이스-다이어그램">유스케이스 다이어그램</h3>
-
-<p>유스케이스(use case) : 사용자의 입장에서 본 시스템의 행동을 일컫는다.</p>
-
-<p>막대 인간 그림을 액터Actor라고 하며, 네모칸은 시스템 범위를 의미한다.</p>
-
-<h3 id="상태-다이어그램">상태 다이어그램</h3>
-
-<p>객체는 시간에 따라 각기 다른 상태에 있을 수 있으며, 그림에서 왼쪽의 기호는 시작 상태(start state)를 오른쪽의 기호는 종료상태(end state)를 의미한다.</p>
-
-<h3 id="시퀀스-다이어그램">시퀀스 다이어그램</h3>
-
-<p>클래스 다이어그램과 객체 다이어그램은 정적인 정보를 나타낸다. 하지만 특정한 행동을 수행하는 시스템에서는 여러개의 객체들이 서로 메시지를 주고받으며 작업을 진행하는 것이 보통이다. UML 시퀀스 다이어그램은 객체들끼리 주고받는 메시지의 순서를 시간의 흐름에 따라 보여 주는것이다.</p>
-
-<p>이때, 객체가 메시지를 보낼 때 자기 자신에게도 보낼수 있음을 유념해야 한다.</p>
-
-<h3 id="활동-다이어그램">활동 다이어그램</h3>
-
-<p>유스케이스 내부 혹은 객체의 동작중에 발생하는 활동을 다이어그램으로 나타낸 것이다.</p>
-
-<h3 id="통신-다이어그램">통신 다이어그램</h3>
-
-<p>시간의 경과를 보여주는 시퀀스 다이어그램과 달리, 메시지에 숫자를 붙임으로써 메시지에 대한 순서를 나타낸다.</p>
-
-<h3 id="컴포넌트-다이어그램">컴포넌트 다이어그램</h3>
-
-<p>컴퓨터 시스템을 나타낼수 있도록 만들어진 다이어그램이다.(with 배포 다이어그램)</p>
-
-<h3 id="배포-다이어그램">배포 다이어그램</h3>
-
-<p>컴퓨터 시스템을 나타낼수 있도록 만들어진 다이어그램이다.(with 컴포넌트 다이어그램)</p>
-
-<p>특히, 시스템의 물리적 구조를 나타낸다. 컴퓨터와 부가장치, 그리고 각각의 연결 관계뿐만 아니라 각각의 기계에 설치된 소프트웨어까지 표시한다. 컴퓨터는 큐브로 나타내며 컴퓨터사이의 연결 관계는 선으로 이어줌으로써 나타낸다.</p>
-
-<h2 id="이외의-것들">이외의 것들</h2>
-
-<h3 id="노트">노트</h3>
-
-<p>노트에는 부가설명을 쓸 수있으며 한쪽 귀가 접힌 사각형으로 나타내며, 연결은 점선으로 한다.</p>
-
-<h3 id="키워드와-스테레오-타입">키워드와 스테레오 타입</h3>
-
-<p><strong>스테레오 타입</strong>은 기존이 UML 요소를 기본으로 하여 다른 요소를 새로 만들 수 있게 하는 장치이다.</p>
-
-<p>원하는 이름을 거듭 인용표(≪≫)로 감싸는 것으로 간단히 마무리 되며, 이에 감싸여진 이름을 <strong>키워드</strong>라고 한다.</p>
-
-<p>키워드는 개체가 원래 존재하는 의미로서가 아닌 어떤 다른 목적으로 사용되었음을 나타낸다.</p>
-
-<h2 id="uml-2x-버전">UML 2.X 버전</h2>
-
-<h3 id="복합체-구조-다이어그램">복합체 구조 다이어그램</h3>
-
-<p>각 콤포넌트 클래스를 전체 클래스 안에 위치시킴으로써 넓이의 개념을 포함한다.</p>
-
-<h3 id="교류-개요-다이어그램">교류 개요 다이어그램</h3>
-
-<h3 id="타이밍-다이어그램">타이밍 다이어그램</h3>
-
-<h3 id="패키지-다이어그램">패키지 다이어그램</h3>
-
-<p>탭이 달린 폴더로 나타낸다. 클래스 혹은 컴포넌트가 특정한 서브 시스템을 구성하는 요소로 다수 존재한다면 패키지 안에 그려주면 된다.</p>]]></content><author><name>Armando Maynez</name></author><summary type="html"><![CDATA[1장에서는 가벼운 개념 정리만 있고, 다음장에서 세분화하여 더 자세하게 설명할 예정이다.]]></summary></entry><entry><title type="html">[fd_15]</title><link href="http://localhost:4000/fd_15.html" rel="alternate" type="text/html" title="[fd_15]" /><published>2022-02-20T00:00:00+09:00</published><updated>2022-02-20T00:00:00+09:00</updated><id>http://localhost:4000/%5Bfd_15%5D</id><content type="html" xml:base="http://localhost:4000/fd_15.html"><![CDATA[<hr />
-
-<h6 id="출처">출처</h6>
-
-<ul>
-  <li>
-    <p>AIFFEL LMS</p>
-
-    <p>문제시 연락 부탁드립니다. :)</p>
-  </li>
-  <li>
-    <p>5</p>
-  </li>
-</ul>]]></content><author><name>Armando Maynez</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Selenium 연습기록</title><link href="http://localhost:4000/Selenium-%EC%97%B0%EC%8A%B5%EA%B8%B0%EB%A1%9D.html" rel="alternate" type="text/html" title="Selenium 연습기록" /><published>2022-02-20T00:00:00+09:00</published><updated>2022-02-20T00:00:00+09:00</updated><id>http://localhost:4000/Selenium%20%EC%97%B0%EC%8A%B5%EA%B8%B0%EB%A1%9D</id><content type="html" xml:base="http://localhost:4000/Selenium-%EC%97%B0%EC%8A%B5%EA%B8%B0%EB%A1%9D.html"><![CDATA[<h6 id="전제사항">전제사항</h6>
-
-<ul>
-  <li>파이썬이 이미 설치된 상황이다.</li>
-</ul>
-
-<hr />
-
-<h6 id="참고링크">참고링크</h6>
-
-<ul>
-  <li>https://greeksharifa.github.io/references/2020/10/30/python-selenium-usage/</li>
-</ul>
-
-<p>오늘은 셀레니움이라는 패키지의 설치 및 사용방법에 대해 공부해보았다.</p>
-
-<p>셀레니움은 파이썬 패키지 중 하나로, 웹 자동화에 많이 사용된다고 한다.</p>
-
-<h1 id="셀레니움-시작하기">셀레니움 시작하기</h1>
-
-<h2 id="설치법">설치법</h2>
-
-<p>cmd창에서 <code class="language-plaintext highlighter-rouge">pip install selenium</code></p>
-
-<h2 id="드라이버-다운">드라이버 다운</h2>
-
-<p>사용하고 있는 브라우저 별로 셀레니움 웹드라이버를 다운로드해야한다. 사용하고 있는 웹 버전과 동일한 버전의 셀레니움 브라우저를 다운받아야 한다!</p>
-
-<ul>
-  <li><a href="https://sites.google.com/a/chromium.org/chromedriver/downloads">Google Chrome</a></li>
-  <li><a href="https://github.com/mozilla/geckodriver/releases">Firefox</a></li>
-  <li><a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/">Microsoft Edge</a></li>
-  <li><a href="https://webkit.org/blog/6900/webdriver-support-in-safari-10/">Safari</a></li>
-</ul>
-
-<h2 id="브라우저-열기">브라우저 열기</h2>
-
-<pre><code class="language-pyth">from selenium import webdriver
-
-chrome_driver = webdriver.Chrome('chromedriver.exe')
-
-</code></pre>
-
-<ul>
-  <li>
-    <p>드라이버 다운하지 않았을 시 혹은 경로를 설정해주지 않았을 경우 뜨는 오류</p>
-
-    <p><img src="../assets/img/posts/image-20220220161002912.png" alt="image-20220220161002912" /></p>
-
-    <ul>
-      <li>
-        <p>해결법</p>
-
-        <p>지금 작성하고 있는 파이썬 파일 이름이 test.py라고 했을 때, test.py가 있는 폴더 안에(같은 폴더안에) 드라이버를 넣어주면 정상작동한다.</p>
-
-        <p>경로를 설정해주지 않았을 경우, 기본값은 현재 test.py가 존재하고있는 폴더의 경로이기 때문이다.</p>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p>브라우저 버전과 맞지 않는 셀레니움 드라이버를 다운받았을 경우,</p>
-
-    <ul>
-      <li>
-        <p>어떤 창이 켜졌다가 바로 꺼지며 다음과 같은 오류를 내뱉는다.</p>
-
-        <p><img src="../assets/img/posts/image-20220220162552359.png" alt="image-20220220162552359" /></p>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="브라우저-닫기">브라우저 닫기</h2>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">driver</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>	<span class="c1"># 현재 탭 닫기
-</span><span class="n">driver</span><span class="p">.</span><span class="n">quit</span><span class="p">()</span>	<span class="c1"># 현재 브라우저 닫기
-</span></code></pre></div></div>
-
-<h2 id="페이지-앞으로-가기--뒤로-가기">페이지 앞으로 가기 / 뒤로 가기</h2>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>driver.forward()
-driver.back()
-</code></pre></div></div>
-
-<h1 id="엘레멘트에-접근하기">엘레멘트에 접근하기</h1>
-
-<h2 id="엘레멘트란">엘레멘트란?</h2>]]></content><author><name>Armando Maynez</name></author><summary type="html"><![CDATA[전제사항]]></summary></entry></feed>
+</ul>]]></content><author><name>Armando Maynez</name></author><summary type="html"><![CDATA[git lfs install git lfs track “*.exe” git config –global http.postBuffer 20971520 git config –global http.maxRequestBuffer 100M]]></summary></entry></feed>
