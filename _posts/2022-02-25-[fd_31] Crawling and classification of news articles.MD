@@ -192,6 +192,88 @@ print(soup.select('body'))
 
 
 
+부모와 자식관계라면 다음과 같이 사용합니다.
+
+`soup.select( 부모 > 자식 )`
+
+다음과 같은 html body 태그가 있으면, 
+
+```html
+<body>
+  <h1> 장바구니
+    <p class="name" id="clothes" title="라운드티"> 라운드티
+      <span class="number"> 25 </span>
+      <span class="price"> 29000 </span>
+      <span class="menu"> 의류</span>
+      <a href="http://www.naver.com"> 바로가기 </a>
+    </p>
+    <p class="name" id="watch" title="시계"> 시계
+      <span class="number"> 28 </span>
+      <span class="price"> 32000 </span>
+      <span class="menu"> 악세서리 </span>
+      <a href="http://www.facebook.com"> 바로가기 </a>
+    </p>
+  </h1>
+</body>
+```
+
+h1 요소의 자식에서 .name의 자식인 클래스 menu인 경우만 뽑는다면,
+
+```python
+print(soup.select('h1 .name .menu'))
+```
+
+실행 결과
+
+> ```
+> [<span class="menu"> 의류</span>, <span class="menu"> 악세서리 </span>]
+> ```
+
+
+
+잘못된 입력
+
+```python
+print(soup.select('html > h1'))
+```
+
+> ```
+> []
+> ```
+
+h1이 html의 자식이긴 하지만, 바로 아래 자식은 아니고, body의 자식입니다. 즉 html > body > h1인 것입니다. 하지만 html의 바로 아래 자식인것 처럼 사용하면 위와 같이 빈 정보를 출력합니다.
+
+
+
+# newspaper3k 패키지
+
+뉴스데이터를 크롤링하기 위해 만들어진 패키지입니다.
+
+
+
+```python
+from newspaper import Article
+
+url = 'https://news.naver.com/main/read.nhn?mode=LSD&mid=sec&sid1=101&oid=030&aid=0002881076'
+
+#- 언어가 한국어이므로 language='ko'로 설정해주었습니다.
+article = Article(url, language='ko')
+article.download()
+article.parse()
+```
+
+위 코드를 실행하면, URL의 뉴스 데이터를 파싱합니다.
+
+
+
+- `article.title` : 기사 제목을 출력해줍니다.
+
+- `article.text` : 기사의 내용을 출력해줍니다.
+
+
+
+
+
 
 
 
