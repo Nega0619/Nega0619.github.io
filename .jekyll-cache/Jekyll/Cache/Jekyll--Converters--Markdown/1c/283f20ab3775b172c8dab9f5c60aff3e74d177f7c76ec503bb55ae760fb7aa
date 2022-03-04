@@ -1,0 +1,453 @@
+I"Q><h1 id="노드복사러에게-남기는-글">노드복사러에게 남기는 글.</h1>
+
+<p>공용 git이기 때문에, 여러분은 (토큰을 생성하지 않았을 시) 토큰생성 먼저 하시고, 3-3의 git clone을 이용하여 작성된 노드들을 올려주시면 됩니다. 그 이후에 추가적으로 글을 올리실 때에는 3-1과 3-2를 참고하여 config 파일작성하고,  fetch , pull 진행해주신 다음 add commit push 명령어를 실행하시면 됩니다.</p>
+
+<p>해당 글은 혹시, 개인적으로 repository를 생성하시고 싶으신 분들을 위해 레포지토리를 아예 생성하는것 부터시작합니다. 참고되셨으면 좋겠네요.</p>
+
+<p>이 이상 문제 생길시, 카톡으로 문의바랍니다.</p>
+
+<hr />
+
+<p>리눅스 커널에서 깃허브를 처음 사용해보는 분들을 위해 작성해 보았습니다.</p>
+
+<p>해당 포스팅은 깃허브에 가입을 하신 상태를 전제로 진행합니다.</p>
+
+<p>리눅스 커널에서 깃허브를 사용하는 방법을 알려드리지만, 깃허브의 add / commit / push등의 용어에 대해서는 설명하지 않습니다.</p>
+
+<h1 id="목차">목차</h1>
+
+<ol>
+  <li>깃허브 토큰 만들기
+    <ol>
+      <li>깃허브 토큰 생성 페이지로 이동하기</li>
+      <li>토큰 생성하기</li>
+    </ol>
+  </li>
+  <li>로컬 Git과 Github Repository 연결하기
+    <ol>
+      <li>Github repository 생성하기</li>
+      <li>로컬 Git 생성하기</li>
+      <li>Github repository와 로컬 Git 연결하기</li>
+      <li>git config 작성하기</li>
+    </ol>
+  </li>
+  <li>Github repository에 파일 push하기
+    <ol>
+      <li>add와 commit하기</li>
+      <li>git branch 생성</li>
+      <li>push하기</li>
+    </ol>
+  </li>
+  <li>이미 생성된 repository에 추가로 commit하고 싶다면?
+    <ol>
+      <li>git fetch와 pull</li>
+      <li>git config 작성</li>
+      <li>git clone하기</li>
+    </ol>
+  </li>
+</ol>
+
+<h1 id="0-깃허브-토큰-만들기">0. 깃허브 토큰 만들기</h1>
+
+<p>깃허브 토큰은, 로컬 git에서 깃허브로 commit 혹은 pull등의 작업을 할 때 권한을 허가받기 위하여 필요합니다.</p>
+
+<p>생성 방법은 아래에 설명되어 있으며, 토큰 정보는 단 한번만 보이므로 잘 저장해놓아야 합니다.</p>
+
+<h3 id="1-깃허브-토큰-생성-페이지로-이동하기">1. 깃허브 토큰 생성 페이지로 이동하기</h3>
+
+<p>요약 : 깃허브 profile page &gt; Settings &gt; Developers settings &gt; Personal access tokens &gt; Generate new tokens</p>
+
+<p>profile page &gt; settings</p>
+
+<p><img src="../assets/img/posts/image-20220128214631819-1645962436710.png" alt="image-20220128214631819" /></p>
+
+<p>settings &gt; developer settings</p>
+
+<p><img src="../assets/img/posts/image-20220128215412756-1645962438852.png" alt="image-20220128215412756" /></p>
+
+<p>developer settings &gt; Personal access tokens &gt; Generate new tokens</p>
+
+<p><img src="../assets/img/posts/image-20220128215455576-1645962440462.png" alt="image-20220128215455576" /></p>
+
+<h3 id="2-토큰-생성하기">2. 토큰 생성하기</h3>
+
+<p>요약</p>
+
+<ol>
+  <li>token 설명 작성</li>
+  <li>토큰 사용기한 설정</li>
+  <li>토큰 권한 설정</li>
+  <li><span style="color:red">토큰 복사 ( 가장 중요 )</span></li>
+</ol>
+
+<p><img src="../assets/img/posts/image-20220128220049499-1645962441986.png" alt="image-20220128220049499" /></p>
+
+<ol>
+  <li>
+    <p>Note : token에 대한 설명을 작성합니다. (skip 가능)</p>
+  </li>
+  <li>
+    <p>Expiration : 토큰 사용기한.</p>
+
+    <p>저는 약 6개월이상, 넉넉히 custom하여 2022-07-15일로 설정해주었습니다.</p>
+  </li>
+  <li>
+    <p>권한 설정</p>
+  </li>
+</ol>
+
+<p>권한이 많을 수록 편리합니다. 깃허브 사용에 익숙하시지 않으시다면, delete 권한은 주지마세요.</p>
+
+<p>제가 설정한 권한은 다음과 같습니다.</p>
+
+<p><img src="../assets/img/posts/image-20220128220311820-1645962443804.png" alt="image-20220128220311820" /></p>
+
+<ol>
+  <li>
+    <p><span style="color:red">토큰 복사 ( 가장 중요 )</span></p>
+
+    <p>사진에 가려진 부분은 생성된 토큰입니다.</p>
+
+    <p><span style="color:red">현재밖에 볼 수 없으므로, 메모장등에 꼭 복사해둡니다. pull / push 할 때 항상 사용합니다.</span></p>
+  </li>
+</ol>
+
+<p><img src="../assets/img/posts/image-20220128220926517-1645962445165.png" alt="image-20220128220926517" /></p>
+
+<h1 id="1-로컬-git과-github-repository-연결하기">1. 로컬 Git과 Github repository 연결하기</h1>
+
+<p>&lt; 요약 &gt;</p>
+
+<ol>
+  <li>Github repository 생성하기</li>
+  <li>로컬 Git 생성하기</li>
+  <li>Github repository와 로컬 Git 연결하기</li>
+  <li>git config 작성하기</li>
+  <li>Git branch 생성하기</li>
+</ol>
+
+<h3 id="1-github-repository-생성하기">1. Github repository 생성하기</h3>
+
+<p>요약 : github profile page &gt; + 버튼 클릭 &gt; New Repository &gt; repository 정보 작성하기 &gt; create repository 버튼 클릭</p>
+
+<p>github profile page &gt; + 버튼 &gt; New Repository</p>
+
+<p><img src="../assets/img/posts/image-20220128224729423-1645962447697.png" alt="image-20220128224729423" style="zoom: 33%;" /></p>
+
+<p>&lt; 아래 그림 설명 &gt;</p>
+
+<p>① : repository이름 작성</p>
+
+<p>​	<span style="color:red">후에 로컬 Git 폴더명과 동일해야 합니다. </span></p>
+
+<p>​	저는 <code class="language-plaintext highlighter-rouge">this_IS_test</code>라는 repository를 생성했습니다.</p>
+
+<p>② : repository에 대한 설명</p>
+
+<p>③ : repository의 Access 설정</p>
+
+<p>④ : repository 초기화 파일</p>
+
+<p>⑤ : 1, 2, 3, 4 설정이 끝난 후, 눌러주면 repository가 생성됩니다.</p>
+
+<p><img src="../assets/img/posts/image-20220128224922791-1645962449688.png" alt="image-20220128224922791" /></p>
+
+<p>​	깃허브 초보자가 리눅스 커널에서 git을 사용하려 할 때, 초기화 파일을 추가 하지 않는 것을 추천드립니다.</p>
+
+<p>​	로컬 git에서 깃허브로 push할 때, 로컬 git의 상태가 깃허브의 repository 최신상태와 동일해야 합니다. (fetch &amp; pull한 상태 / 혹은 git clone한 직후.) 깃허브 repository 의 최신 상태와 동일하지 않으면 git push 명령어가 먹히지 않으므로, 초보자에게는 repository의 초기화파일을 만들지 않는 것을 추천드립니다. repository의 상태가 변경되기 때문입니다.</p>
+
+<p>초기화 파일을 선택하지 않았을 시, 완료 화면</p>
+
+<p><img src="../assets/img/posts/image-20220128231024990-1645962451547.png" alt="image-20220128231024990" /></p>
+
+<h3 id="2-로컬-git-생성하기">2. 로컬 Git 생성하기</h3>
+
+<p>요약</p>
+
+<ol>
+  <li>리눅스에서 repository명과 동일한 폴더 만들기</li>
+  <li>
+    <p>git init</p>
+  </li>
+  <li>
+    <p>리눅스에서 repository명과 동일한 폴더 만들기</p>
+
+    <p>대소문자 구분해야합니다. 일부로 이름을 <code class="language-plaintext highlighter-rouge">this_IS_test</code>이렇게 한 것은, 대소문자 구분을 해주어야 함을 보여주기 위함입니다. 다음은 리눅스에서 this_IS_test 디렉토리를 만든 화면입니다.</p>
+
+    <p>실행화면</p>
+
+    <p><img src="../assets/img/posts/image-20220128231441275-1645962453799.png" alt="image-20220128231441275" /></p>
+
+    <p>리눅스에서 사용한 명령어</p>
+
+    <blockquote>
+      <p>$ mkdir 폴더명</p>
+    </blockquote>
+
+    <p>​	<span style="color:red">이때 폴더명은 repository와 동일한 이름이어야 합니다. </span></p>
+  </li>
+  <li>
+    <p>git init</p>
+
+    <p>이 폴더를 Git으로 사용하겠다는 설정으로, 생성한 로컬 git 폴더로 이동하여 <code class="language-plaintext highlighter-rouge">git init</code>명령어를 사용합니다.</p>
+
+    <p>실행화면</p>
+
+    <p><img src="../assets/img/posts/image-20220128231910283-1645962455266.png" alt="image-20220128231910283" /></p>
+
+    <p>리눅스에서 사용한 명령어</p>
+
+    <blockquote>
+      <p>$ cd 폴더명</p>
+
+      <p>$ git init</p>
+    </blockquote>
+  </li>
+</ol>
+
+<h3 id="3-github-repository와-로컬-git-연결하기">3. Github repository와 로컬 Git 연결하기</h3>
+
+<p>요약</p>
+
+<ol>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">git remote add origin https://github.com/Nega0619/this_IS_test.git</code></p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">git remote add origin https://github.com/Nega0619/this_IS_test.git</code></p>
+
+    <p>로컬 git 폴더 내에서 위 명령어를 실행해줍니다.</p>
+
+    <p>이때 깃허브 repository 주소는 사진에서 참고하시면 됩니다.</p>
+
+    <p>① : 깃허브의 repository로 이동한 상태에서 URL 복사+.git</p>
+
+    <p>② : 초기 생성화면에서 복사 버튼 클릭하면 됩니다.</p>
+
+    <p><img src="../assets/img/posts/image-20220128232528762-1645962456933.png" alt="image-20220128232528762" /></p>
+
+    <p>실행화면</p>
+
+    <p><img src="../assets/img/posts/image-20220128232649696-1645962458723.png" alt="image-20220128232649696" /></p>
+
+    <p>리눅스에서 사용한 명령어 (이미 로컬 깃내에 존재한다는 전제하에)</p>
+
+    <blockquote>
+      <p>$ git remote add origin https://github.com/Nega0619/this_IS_test.git</p>
+    </blockquote>
+  </li>
+</ol>
+
+<h3 id="4-git-config-작성하기">4. git config 작성하기</h3>
+
+<p>요약</p>
+
+<ol>
+  <li>git config –global user.email 설정</li>
+  <li>git config –global user.name 설정</li>
+  <li>git config 파일 확인하기</li>
+</ol>
+
+<p>이미 config 작성을 하신적이 있다면 git config -l 로 설정이 되어있는지 확인하세요.</p>
+
+<ol>
+  <li>
+    <p>git config –global user.email 설정</p>
+
+    <p>“여기안에 이메일” 써야합니다.</p>
+
+    <blockquote>
+      <p>$ git config –global user.email “h0riya0619@gmail.com”</p>
+    </blockquote>
+  </li>
+  <li>
+    <p>git config –global user.name 설정</p>
+
+    <p>“여기안에 name” 써야합니다.</p>
+
+    <blockquote>
+      <p>$ git config –global user.name “Nega0619”</p>
+    </blockquote>
+  </li>
+  <li>
+    <p>git config 파일 확인하기</p>
+
+    <blockquote>
+      <p>$ git config -l</p>
+    </blockquote>
+
+    <p>실행화면</p>
+
+    <p><img src="../assets/img/posts/image-20220128233340161-1645962461675.png" alt="image-20220128233340161" /></p>
+  </li>
+</ol>
+
+<h1 id="2-repository에-파일-push하기">2. repository에 파일 push하기</h1>
+
+<p>&lt; 요약 &gt;</p>
+
+<ol>
+  <li>
+    <p>add와 commit하기</p>
+  </li>
+  <li>
+    <p>git branch 생성</p>
+  </li>
+  <li>
+    <p>push하기</p>
+  </li>
+</ol>
+
+<h3 id="1-add와-commit하기">1. add와 commit하기</h3>
+
+<ul>
+  <li>파일 생성하기</li>
+</ul>
+
+<p>로컬 깃에서 repository로 push하기 위해선 파일이 잇어야 합니다. 저는 다음 명령어로 파일을 만들어 주었습니다. ( 이미 올릴 파일이 있으면 skip )</p>
+
+<blockquote>
+  <p>$ cat &gt; test.txt</p>
+
+  <p>this is test</p>
+</blockquote>
+
+<p>여기까지 작성하고 ctrl+z 입력하면 test.txt에 this is test 라는 파일이 생성됩니다.</p>
+
+<p>실행화면</p>
+
+<p><img src="../assets/img/posts/image-20220128234220082-1645962464629.png" alt="image-20220128234220082" /></p>
+
+<ul>
+  <li>
+    <p>add</p>
+
+    <p>깃에 존재하는 전체 파일을 github에 올리려면 *을 사용하면 됩니다.</p>
+
+    <blockquote>
+      <p>$ git add *</p>
+    </blockquote>
+  </li>
+  <li>
+    <p>commit</p>
+
+    <p>commit 명령어에서 -m 옵션은 commit 메시지를 설정하는 옵션입니다.</p>
+
+    <p>아래 명령어는 깃으로 commit할때 first commit 이란 메시지로 commit하겠다는 뜻입니다.</p>
+
+    <blockquote>
+      <p>$ git commit -m “first commit”</p>
+    </blockquote>
+  </li>
+  <li>
+    <p>git commit 상태 확인하기</p>
+
+    <p>현재 add / commit할 파일들에 대한 정보를 보여줍니다.</p>
+
+    <blockquote>
+      <p>$ git status</p>
+    </blockquote>
+  </li>
+</ul>
+
+<p>실행화면</p>
+
+<p><img src="../assets/img/posts/image-20220128234528303-1645962466405.png" alt="image-20220128234528303" /></p>
+
+<h3 id="2-git-branch-생성">2. git branch 생성</h3>
+
+<p>main 이라는 이름의 branch를 생성합니다.</p>
+
+<blockquote>
+  <p>$ git branch -M main</p>
+</blockquote>
+
+<p>실행화면</p>
+
+<p><img src="../assets/img/posts/image-20220128234659996-1645962467995.png" alt="image-20220128234659996" /></p>
+
+<h3 id="3-push하기">3. push하기</h3>
+
+<p>main이란 branch에 git을 push 합니다.</p>
+
+<blockquote>
+  <p>$ git push -u origin main</p>
+
+  <p>Username for ‘https://github.com’: 이메일넣기</p>
+
+  <p>Password for ‘https://h0riya0619@gmail.com@github.com’: 토큰넣기</p>
+</blockquote>
+
+<p>유의사항</p>
+
+<ul>
+  <li>이메일은 “” 등을 사용하지 않고 바로 작성합니다.</li>
+  <li>리눅스 환경의 경우, 비밀번호 입력에는 아무것도 보이지 않습니다. 당황하지 마시고 바로 입력하세요
+    <ul>
+      <li>리눅스 붙여넣기 명령어 : ctrl + shift + v</li>
+    </ul>
+  </li>
+</ul>
+
+<p>실행화면</p>
+
+<p><img src="../assets/img/posts/image-20220128235325441-1645962470358.png" alt="image-20220128235325441" /></p>
+
+<h1 id="3-이미-생성된-repository에-추가로-commit하고-싶다면">3. 이미 생성된 repository에 추가로 commit하고 싶다면?</h1>
+
+<p>처음 repository를 생성하고 파일을 올리는 것과 다르게, 이미 사용하고 있는 repository에 로컬 git을 만들어 파일을 올리고 싶은 경우, add / commit / push가 안되는 경우가 있습니다.</p>
+
+<p>이런 경우, 2가지를 확인해 보면됩니다.</p>
+
+<h3 id="1-git-config-파일-확인하기">1. git config 파일 확인하기</h3>
+
+<p>리눅스 커널에서 git config 파일이 초기화 된경우가 있습니다.</p>
+
+<p>이럴 경우, <code class="language-plaintext highlighter-rouge">git config -l</code>명령어로 config 설정을 먼저 확인해 본 후, 1-4 처럼 user.email과 user.name을 설정을 해주면 됩니다.</p>
+
+<h3 id="2-git-fetch--git-pull-명령어-사용하기">2. git fetch / git pull 명령어 사용하기</h3>
+
+<p>git의 add / commit / push 오류가 나는 경우, 로컬 git의 상태가 git repository 상태와 다른 경우가 많습니다. 이럴때는 fetch와 pull을 해준 후, add / commit / push를 해주면 해결됩니다.</p>
+
+<p>명령어 :</p>
+
+<blockquote>
+  <p>$ git fetch</p>
+
+  <p>$ git pull</p>
+</blockquote>
+
+<p>fetch와 pull 후, push처럼 이메일과 토큰을 작성해주면 됩니다.</p>
+
+<p>실행화면</p>
+
+<p><img src="../assets/img/posts/image-20220129000155035-1645962473179.png" alt="image-20220129000155035" /></p>
+
+<p>### 3. git clone하기</p>
+
+<p>1, 2로도 해결이안된다 혹은 로컬 깃을 만들지 않은 상태라면, git clone 명령어를 이용해 이미 존재하는 repository를 최신 상태로 로컬에 가져올 수 있습니다.</p>
+
+<p>준비물 : repository URL</p>
+
+<p>명령어</p>
+
+<blockquote>
+  <p>$ git clone 깃허브RepositoryURL.git</p>
+</blockquote>
+
+<p>실행화면 : 기존에 있던 this_IS_test 로컬 깃을 삭제한 후, clone을 해보았습니다.</p>
+
+<p><img src="../assets/img/posts/image-20220129002245325-1645962474597.png" alt="image-20220129002245325" /></p>
+
+<p>만약 안된다면 config 설정은 해주었는지 확인해보세요~!</p>
+
+<h1 id="아이펠-복사러들에게-git-clone-명령어-선물">아이펠 복사러들에게 git clone 명령어 선물</h1>
+
+<blockquote>
+  <p>git clone https://github.com/Nega0619/Aiffel_nodes.git</p>
+</blockquote>
+
+<p>실행화면</p>
+
+<p><img src="../assets/img/posts/image-20220129002835862-1645962477287.png" alt="image-20220129002835862" /></p>
+:ET

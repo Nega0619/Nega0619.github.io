@@ -1,28 +1,261 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-02-25T00:28:29+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hwi’s footsteps</title><subtitle>Artificial Intelligence and Computer Science Study Notes.</subtitle><author><name>Shin Hwi Jeong</name></author><entry><title type="html">Swea ) 프로그래밍과 논리, 수학 1 복사본</title><link href="http://localhost:4000/SWEA-)-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EA%B3%BC-%EB%85%BC%EB%A6%AC,-%EC%88%98%ED%95%99-1-%EB%B3%B5%EC%82%AC%EB%B3%B8.html" rel="alternate" type="text/html" title="Swea ) 프로그래밍과 논리, 수학 1 복사본" /><published>2022-02-24T00:00:00+09:00</published><updated>2022-02-24T00:00:00+09:00</updated><id>http://localhost:4000/SWEA%20)%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EA%B3%BC%20%EB%85%BC%EB%A6%AC,%20%EC%88%98%ED%95%99%201%20%EB%B3%B5%EC%82%AC%EB%B3%B8</id><content type="html" xml:base="http://localhost:4000/SWEA-)-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EA%B3%BC-%EB%85%BC%EB%A6%AC,-%EC%88%98%ED%95%99-1-%EB%B3%B5%EC%82%AC%EB%B3%B8.html"><![CDATA[<p>오늘은 삼성 SW Expert Academy의 프로그래밍과 논리, 수학 강의 1강을 보고 학습한 내용을 정리해보았습니다</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-03-04T22:51:33+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hwi’s footsteps</title><subtitle>Artificial Intelligence and Computer Science Study Notes.</subtitle><author><name>Shin Hwi Jeong</name></author><entry><title type="html">Rgrg</title><link href="http://localhost:4000/RGRG.html" rel="alternate" type="text/html" title="Rgrg" /><published>2022-03-01T00:00:00+09:00</published><updated>2022-03-01T00:00:00+09:00</updated><id>http://localhost:4000/RGRG</id><content type="html" xml:base="http://localhost:4000/RGRG.html"><![CDATA[]]></content><author><name>Shin Hwi Jeong</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">강화학습 ) finite markov decision processes</title><link href="http://localhost:4000/%EA%B0%95%ED%99%94%ED%95%99%EC%8A%B5-)-Finite-Markov-Decision-Processes.html" rel="alternate" type="text/html" title="강화학습 ) finite markov decision processes" /><published>2022-02-28T00:00:00+09:00</published><updated>2022-02-28T00:00:00+09:00</updated><id>http://localhost:4000/%EA%B0%95%ED%99%94%ED%95%99%EC%8A%B5%20)%20Finite%20Markov%20Decision%20Processes</id><content type="html" xml:base="http://localhost:4000/%EA%B0%95%ED%99%94%ED%95%99%EC%8A%B5-)-Finite-Markov-Decision-Processes.html"><![CDATA[<p>오늘은 강화학습 분야에서 Finite Markov Decision Processes에 대하여 공부한 것을 정리해 보았습니다.</p>
 
 <hr />
 
-<h6 id="강의-링크">강의 링크</h6>
-
-<p>https://swexpertacademy.com/main/learn/course/lectureVideoPlayer.do</p>
-
-<hr />
-
-<h6 id="강의-전체-목차">강의 전체 목차</h6>
+<h6 id="참고사이트">참고사이트</h6>
 
 <ul>
-  <li>프로그래밍과 논리/수학 ( 오늘의 분량 )</li>
-  <li>논리와 증명 ( 오늘의 분량 )</li>
-  <li>수와 표현</li>
-  <li>집합과 조합론</li>
-  <li>기초 수식</li>
-  <li>재귀</li>
-  <li>동적 프로그래밍</li>
-  <li>조합론 프로그램 과제</li>
-  <li>기초 알고리즘 프로그램 과제</li>
+  <li>https://towardsdatascience.com/introduction-to-reinforcement-learning-rl-part-3-finite-markov-decision-processes-51e1f8d3ddb7</li>
 </ul>
 
-<hr />]]></content><author><name>Shin Hwi Jeong</name></author><summary type="html"><![CDATA[오늘은 삼성 SW Expert Academy의 프로그래밍과 논리, 수학 강의 1강을 보고 학습한 내용을 정리해보았습니다]]></summary></entry><entry><title type="html">[ex_15]문자를 읽을 수 있는 딥러닝</title><link href="http://localhost:4000/ex_15-%EB%AC%B8%EC%9E%90%EB%A5%BC-%EC%9D%BD%EC%9D%84-%EC%88%98-%EC%9E%88%EB%8A%94-%EB%94%A5%EB%9F%AC%EB%8B%9D.html" rel="alternate" type="text/html" title="[ex_15]문자를 읽을 수 있는 딥러닝" /><published>2022-02-24T00:00:00+09:00</published><updated>2022-02-24T00:00:00+09:00</updated><id>http://localhost:4000/%5Bex_15%5D%EB%AC%B8%EC%9E%90%EB%A5%BC%20%EC%9D%BD%EC%9D%84%20%EC%88%98%20%EC%9E%88%EB%8A%94%20%EB%94%A5%EB%9F%AC%EB%8B%9D</id><content type="html" xml:base="http://localhost:4000/ex_15-%EB%AC%B8%EC%9E%90%EB%A5%BC-%EC%9D%BD%EC%9D%84-%EC%88%98-%EC%9E%88%EB%8A%94-%EB%94%A5%EB%9F%AC%EB%8B%9D.html"><![CDATA[<p>오늘은 아이펠 Exploration 노드 15번을 공부하고 공부한 내용을 포스팅해보았습니다.</p>
+<hr />
+
+<h6 id="핵심개념">핵심개념</h6>
+
+<ul>
+  <li>RL Problem이 MDP 프레임워크에 어떻게 적용이 되는가</li>
+  <li>Markov Property란 무엇인가</li>
+  <li>전환 확률 transition probabilities란 무엇인가</li>
+  <li>미래 보상 할인이란 무엇인가 Discounting future rewards</li>
+  <li>일시적인 작업과 연속작업</li>
+  <li>벨만 최적 방정식 Bellman optimality Equations을 사용하여 최적의 정책 optimal Policy Function및 가치함수 optimal Value Function 풀기</li>
+</ul>
+
+<hr />
+
+<h1 id="강화학습-정리">강화학습 정리</h1>
+
+<ul>
+  <li>강화학습에서 learner, decision-maker는 Agent입니다.</li>
+  <li>Agent 외부의 모든 것을 포함하여 상호작용 하는 것은 Environment입니다.</li>
+  <li>매 time step마다 environment는 agent에게 state를 보냅니다.</li>
+  <li>state를 기초로 하여 agent는 Action을 선택합니다.</li>
+  <li>다음 time step에서 Agent는 reward를 받게 되고, 다음 단계의 state를 받게 됩니다.</li>
+  <li>매 time step마다 Agent는 현재 State에 따라 가능한 Action들을 선택할 확률에 대해 맵핑 알고리즘을 따르게 됩니다.
+    <ul>
+      <li>At each time step, the agent follows a mapping from its current state to probabilities of selecting each possible action in that state.</li>
+    </ul>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>위에서 설명한 맵핑 알고리즘을 Agent의 Policy라고 얘기하며 πt(A</td>
+          <td>S)라고 표기합니다. time step = t에서 State가 S일 때 Action A를 선택할 확률입니다.</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>Agent의 목표는 장기적으로 reward를 최대화 하는 것이 목표이며 reward를 최대화 하는 방향으로 학습하게 됩니다.</li>
+</ul>
+
+<h1 id="보상">보상</h1>
+
+<ul>
+  <li>time step t 이후,  agent가 reward를 받게될 보상을 <code class="language-plaintext highlighter-rouge">R(t+1), R(t+2), . . .</code>라고 한다면, Agent는 기대보상값  <strong>E</strong>(<strong>Gt)</strong>를 최대화 하는 방법을 학습하게 됩니다.
+    <ul>
+      <li>Gt = R(t+1) +R(t+2) +R(t+3) + · · · +R(T)</li>
+      <li>T는 마지막 time step</li>
+    </ul>
+  </li>
+  <li>기대 보상값을 최대화 할 수 있는 경우는 실제 최동 단계인 T가 존재할 경우에만 유의미합니다.</li>
+</ul>]]></content><author><name>Shin Hwi Jeong</name></author><summary type="html"><![CDATA[오늘은 강화학습 분야에서 Finite Markov Decision Processes에 대하여 공부한 것을 정리해 보았습니다.]]></summary></entry><entry><title type="html">Python ) 리스트</title><link href="http://localhost:4000/Python-)-%EB%A6%AC%EC%8A%A4%ED%8A%B8.html" rel="alternate" type="text/html" title="Python ) 리스트" /><published>2022-02-27T00:00:00+09:00</published><updated>2022-02-27T00:00:00+09:00</updated><id>http://localhost:4000/Python%20)%20%EB%A6%AC%EC%8A%A4%ED%8A%B8</id><content type="html" xml:base="http://localhost:4000/Python-)-%EB%A6%AC%EC%8A%A4%ED%8A%B8.html"><![CDATA[<p>오늘은 파이썬 리스트 자료형의 개념과 사용법에 대해서 공부를 해보았습니다.</p>
+
+<hr />
+
+<h6 id="출처">출처</h6>
+
+<ul>
+  <li><a href="https://dojang.io/mod/page/view.php?id=2200">파이썬 코딩도장 - 리스트</a></li>
+</ul>
+
+<hr />
+
+<h1 id="1-리스트-만들기">1. 리스트 만들기</h1>
+
+<ul>
+  <li>리스트 = [값, 값, 값]</li>
+  <li>리스트 = list( iterable object )
+    <ul>
+      <li>리스트 = list(range(4,40,5))</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="빈-리스트-만들기">빈 리스트 만들기</h2>
+
+<ul>
+  <li>리스트 = []</li>
+  <li>리스트 = list()</li>
+</ul>
+
+<h2 id="range를-사용하여-리스트-만들기">range를 사용하여 리스트 만들기</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+</code></pre></div></div>
+
+<p>실행결과</p>
+
+<blockquote>
+  <p>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</p>
+</blockquote>
+
+<ul>
+  <li>리스트 = list(range(시작, 끝, 증가폭))</li>
+</ul>
+
+<h2 id="문자열을-이용해-리스트-만들기">문자열을 이용해 리스트 만들기</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="s">"hello"</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+</code></pre></div></div>
+
+<p>실행결과</p>
+
+<blockquote>
+  <p>[‘H’, ‘e’, ‘l’, ‘l’, ‘o’]</p>
+</blockquote>
+
+<h1 id="2-리스트로-변수-만들기">2. 리스트로 변수 만들기</h1>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; a, b, c = [1, 2, 3]
+&gt;&gt;&gt; print(a, b, c)
+</code></pre></div></div>
+
+<p>실행결과</p>
+
+<blockquote>
+  <p>1 2 3</p>
+</blockquote>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">x</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>실행결과</p>
+
+<blockquote>
+  <p>1 2 3</p>
+</blockquote>
+
+<h1 id="3-특정-값이-있는지-확인하기">3. 특정 값이 있는지 확인하기</h1>
+
+<h2 id="값-in-시퀀스-자료형">값 in 시퀀스 자료형</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">90</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">30</span> <span class="ow">in</span> <span class="n">a</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">100</span> <span class="ow">in</span> <span class="n">a</span>
+<span class="bp">False</span>
+</code></pre></div></div>
+
+<h1 id="4-객체끼리-연결하기">4. 객체끼리 연결하기</h1>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; a = [10, 20, 30]
+&gt;&gt;&gt; b = [1, 2, 3]
+&gt;&gt;&gt; a + b
+</code></pre></div></div>
+
+<p>실행결과</p>
+
+<blockquote>
+  <p>[10, 20, 30, 1, 2, 3]</p>
+</blockquote>
+
+<h1 id="5-시퀀스-객체-반복하기">5. 시퀀스 객체 반복하기</h1>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span>
+</code></pre></div></div>
+
+<p>실행결과</p>
+
+<blockquote>
+  <p>[0, 10, 20, 30, 0, 10, 20, 30, 0, 10, 20, 30]</p>
+</blockquote>
+
+<h1 id="6-특정-값-가져오기">6. 특정 값 가져오기</h1>
+
+<ul>
+  <li>
+    <p>대괄호 사용하기</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">38</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">62</span><span class="p">,</span> <span class="mi">19</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</code></pre></div>    </div>
+
+    <p>실행결과</p>
+
+    <blockquote>
+      <p>21</p>
+    </blockquote>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">__getitem__</code> 사용하기</p>
+
+    <p>시퀀스 객체에서 <code class="language-plaintext highlighter-rouge">[]</code>(대괄호)를 사용하면 실제로는 <code class="language-plaintext highlighter-rouge">__getitem__</code> 메서드를 호출하여 요소를 가져옵니다. 따라서 메서드를 직접 호출하여 요소를 가져올 수도 있습니다.</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">38</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">62</span><span class="p">,</span> <span class="mi">19</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">.</span><span class="n">__getitem__</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>    </div>
+
+    <p>실행결과</p>
+
+    <blockquote>
+      <p>21</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h1 id="7-특정-값-삭제하기">7. 특정 값 삭제하기</h1>
+
+<ul>
+  <li>del a[5]</li>
+</ul>]]></content><author><name>Shin Hwi Jeong</name></author><summary type="html"><![CDATA[오늘은 파이썬 리스트 자료형의 개념과 사용법에 대해서 공부를 해보았습니다.]]></summary></entry><entry><title type="html">Python ) 문자열</title><link href="http://localhost:4000/Python-)-%EB%AC%B8%EC%9E%90%EC%97%B4.html" rel="alternate" type="text/html" title="Python ) 문자열" /><published>2022-02-27T00:00:00+09:00</published><updated>2022-02-27T00:00:00+09:00</updated><id>http://localhost:4000/Python%20)%20%EB%AC%B8%EC%9E%90%EC%97%B4</id><content type="html" xml:base="http://localhost:4000/Python-)-%EB%AC%B8%EC%9E%90%EC%97%B4.html"><![CDATA[<p>오늘은 파이썬 문자열의 개념과 사용법에 대해서 공부를 해보았습니다.</p>
+
+<hr />
+
+<h6 id="출처">출처</h6>
+
+<ul>
+  <li><a href="https://dojang.io/mod/page/view.php?id=2196">파이썬 코딩도장 - 문자열</a></li>
+</ul>
+
+<hr />
+
+<h1 id="문자열-생성">문자열 생성</h1>
+
+<p>” “ , ‘ ‘ , “”” “”” , ‘’’ ‘’’ 를 이용하여서 생성할수 있습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">hello</span> <span class="o">=</span> <span class="s">"Hello Python!"</span>
+</code></pre></div></div>
+
+<p>특히 “”” “”” , ‘’’ ‘’’ 따옴표를 3개 연달아 붙여 사용하면 여러 줄로 된 문자열을 하나의 변수에 할당하여 사용할 수 있습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">hello</span> <span class="o">=</span> <span class="s">"""
+Hello Python!
+Hello World!
+"""</span>
+</code></pre></div></div>
+
+<h2 id="--와----두가지-생성-방법이-있는-이유">” “, 와 ‘ ‘ : 두가지 생성 방법이 있는 이유</h2>
+
+<p>” “ 로 생성하면 ‘ ‘를 기호문자로 받아들이지 않고, ‘ ‘로 생성하면 “ “를 기호문자로 받아들이지 않습니다.</p>
+
+<p>즉, 문자열 사이에 ‘ ‘가 있으면 “ “로 문자열을 생성하고, “ “가 있으면 ‘ ‘로 문자열을 생성해야 합니다.</p>
+
+<ul>
+  <li>
+    <p>기호문자를 기호문자로 인식하지 않게 하는 법</p>
+
+    <p><code class="language-plaintext highlighter-rouge">\</code> 문자를 앞에 붙이면 됩니다.</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="s">'Python isn</span><span class="se">\'</span><span class="s">t difficult'</span>
+<span class="s">'Python isn'</span><span class="n">t</span> <span class="n">difficult</span><span class="s">'
+</span></code></pre></div>    </div>
+  </li>
+</ul>]]></content><author><name>Shin Hwi Jeong</name></author><summary type="html"><![CDATA[오늘은 파이썬 문자열의 개념과 사용법에 대해서 공부를 해보았습니다.]]></summary></entry><entry><title type="html">[fd_31] crawling and classification of news articles</title><link href="http://localhost:4000/fd_31-Crawling-and-classification-of-news-articles.html" rel="alternate" type="text/html" title="[fd_31] crawling and classification of news articles" /><published>2022-02-25T00:00:00+09:00</published><updated>2022-02-25T00:00:00+09:00</updated><id>http://localhost:4000/%5Bfd_31%5D%20Crawling%20and%20classification%20of%20news%20articles</id><content type="html" xml:base="http://localhost:4000/fd_31-Crawling-and-classification-of-news-articles.html"><![CDATA[<p>오늘은 아이펠 Fundamental 노드 31번을 공부하고 공부한 내용을 포스팅해보았습니다.</p>
 
 <hr />
 
@@ -41,33 +274,271 @@
 <h6 id="목차">목차</h6>
 
 <ul>
-  <li>기계는 어떤 방식으로 글을 읽을까?
+  <li>HTML과 태그</li>
+  <li>선택자</li>
+</ul>
+
+<p>[TOC]</p>
+
+<hr />
+
+<h6 id="사용하는-패키지--모듈">사용하는 패키지 / 모듈</h6>
+
+<ul>
+  <li>
+    <p>Mecab</p>
+
     <ul>
-      <li>딥러닝 문자 인식의 시작</li>
+      <li>
+        <p>$ git clone https://github.com/SOMJANG/Mecab-ko-for-Google-Colab.git</p>
+
+        <p>$ cd Mecab-ko-for-Google-Colab</p>
+
+        <p>$ bash install_mecab-ko_on_colab190912.sh</p>
+      </li>
     </ul>
   </li>
-  <li>사진 속 문자 찾아내기 - detection</li>
-  <li>사진 속 문자 읽어내기 - recognition</li>
-  <li>keras-ocr 써보기</li>
-  <li>테서랙트 써보기</li>
-  <li>프로젝트 : 다양한 OCR 모델 비교하기</li>
+  <li>beautifulsoup4</li>
+  <li>newspaper3k</li>
+  <li>konlpy</li>
 </ul>
 
 <hr />
 
-<h1 id="기계는-어떤-방식으로-글을-읽을까">기계는 어떤 방식으로 글을 읽을까?</h1>
+<h1 id="html과-태그">HTML과 태그</h1>
 
-<h2 id="딥러닝-문자-인식의-시작">딥러닝 문자 인식의 시작</h2>
+<p>크롤링이란, 웹 페이지로부터 데이터를 추출하는 것입니다. 크롤링하는 소프트웨어는 크롤러라고 합니다.</p>
 
-<h1 id="사진-속-문자-찾아내기---detection">사진 속 문자 찾아내기 - detection</h1>
+<p>크롤링을 하기 위해서는 HTML과 태그에 대해서 알아야합니다.</p>
 
-<h1 id="사진-속-문자-읽어내기---recognition">사진 속 문자 읽어내기 - recognition</h1>
+<ul>
+  <li>HTML이란 Hyper Text Markup Language의 준말입니다.
+    <ul>
+      <li>HyperText : 문서와 문서가 링크로 연결되어 있다.</li>
+      <li>Markup : 태그로 이루어져 있다.</li>
+    </ul>
+  </li>
+  <li>태그란 정보를 정의하는 형식입니다.</li>
+</ul>
 
-<h1 id="keras-ocr-써보기">keras-ocr 써보기</h1>
+<h1 id="선택자">선택자</h1>
 
-<h1 id="테서랙트-써보기">테서랙트 써보기</h1>
+<p>원활한 크롤링을 위해서는 HTML 내의 선택자가 매우 중요합니다. 선택자란, 특정 태그들에 그룹이나 번호를 주는 기능입니다.</p>
 
-<h1 id="프로젝트--다양한-ocr-모델-비교하기">프로젝트 : 다양한 OCR 모델 비교하기</h1>]]></content><author><name>Shin Hwi Jeong</name></author><summary type="html"><![CDATA[오늘은 아이펠 Exploration 노드 15번을 공부하고 공부한 내용을 포스팅해보았습니다.]]></summary></entry><entry><title type="html">Swea ) 프로그래밍과 논리, 수학 1</title><link href="http://localhost:4000/SWEA-)-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EA%B3%BC-%EB%85%BC%EB%A6%AC,-%EC%88%98%ED%95%99-1.html" rel="alternate" type="text/html" title="Swea ) 프로그래밍과 논리, 수학 1" /><published>2022-02-24T00:00:00+09:00</published><updated>2022-02-24T00:00:00+09:00</updated><id>http://localhost:4000/SWEA%20)%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EA%B3%BC%20%EB%85%BC%EB%A6%AC,%20%EC%88%98%ED%95%99%201</id><content type="html" xml:base="http://localhost:4000/SWEA-)-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EA%B3%BC-%EB%85%BC%EB%A6%AC,-%EC%88%98%ED%95%99-1.html"><![CDATA[<p>오늘은 삼성 SW Expert Academy의 프로그래밍과 논리, 수학 강의 1강을 보고 학습한 내용을 정리해보았습니다</p>
+<pre><code class="language-HTML">&lt;html&gt; 
+    &lt;head&gt; 
+    &lt;/head&gt; 
+    &lt;body&gt; 
+        &lt;h1&gt; 장바구니
+            &lt;p&gt; 라운드티
+                &lt;span&gt; 25 &lt;/span&gt; 
+                &lt;span&gt; 29000 &lt;/span&gt; 
+                &lt;span&gt; 의류&lt;/span&gt; 
+                &lt;a href = 'http://www.naver.com'&gt; 이동 &lt;/a&gt; 
+            &lt;/p&gt; 
+            &lt;p&gt; 시계
+                &lt;span&gt; 28 &lt;/span&gt;
+                &lt;span&gt; 32000 &lt;/span&gt; 
+                &lt;span&gt; 악세서리 &lt;/span&gt; 
+                &lt;a href = 'http://www.facebook.com'&gt; 이동 &lt;/a&gt; 
+            &lt;/p&gt; 
+        &lt;/h1&gt; 
+    &lt;/body&gt; 
+&lt;/html&gt;
+</code></pre>
+
+<p>위와 같은 HTML 문서가 있다고 할 때, <code class="language-plaintext highlighter-rouge">&lt;p&gt;</code> 태그는 2개, <code class="language-plaintext highlighter-rouge">&lt;span&gt;</code>태그는 6개, <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> 태그는 2개가 있습니다.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">&lt;p&gt;</code>
+    <ul>
+      <li>Paragraph 문단의 약자로, 하나의 문단을 만들 때 쓰입니다.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;span&gt;</code>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">&lt;span&gt;</code>태그는 <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code>태그처럼 특별한 기능을 갖고 있지 않으며 CSS와 함께 쓰입니다.</li>
+      <li>display속성이 Block이 아닌, Inline이며, <a href="https://ofcourse.kr/css-course/display-%EC%86%8D%EC%84%B1">CSS Display</a> 페이지에서 세부 정보를 알 수 있습니다.</li>
+      <li>줄바꿈안되는 속성</li>
+      <li><code class="language-plaintext highlighter-rouge">&lt;div&gt;</code>
+        <ul>
+          <li>Division의 약자로, 레이아웃을 나누는데 쓰입니다.</li>
+          <li>특별한 기능은 없으며 가상의 레이아웃을 설계하는데 쓰이며 CSS와 연동하여 쓰입니다.</li>
+          <li>줄바꿈이 됨</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;a&gt;</code>
+    <ul>
+      <li>하이퍼링크를 걸어주는 태그</li>
+      <li>속성
+        <ul>
+          <li>href : 클릭시 이동할 링크</li>
+          <li>target : 링크를 여는 방법
+            <ul>
+              <li><code class="language-plaintext highlighter-rouge">_self</code>: 현재 페이지 (기본값)</li>
+              <li><code class="language-plaintext highlighter-rouge">_blank</code>: 새 탭</li>
+              <li><code class="language-plaintext highlighter-rouge">_parent</code>: 부모 페이지로, iframe 등이 사용된 환경에서 쓰입니다.</li>
+              <li><code class="language-plaintext highlighter-rouge">_top</code>: 최상위 페이지로, iframe 등이 사용된 환경에서 쓰입니다.</li>
+              <li><em><code class="language-plaintext highlighter-rouge">프레임이름</code></em>: 직접 프레임이름을 명시해서 사용할 수도 있습니다.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="https://ofcourse.kr/html-course/p-%ED%83%9C%EA%B7%B8">HTML 태그</a></li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span> 
+    <span class="nt">&lt;head&gt;</span> 
+    <span class="nt">&lt;/head&gt;</span> 
+    <span class="nt">&lt;body&gt;</span> 
+        <span class="nt">&lt;h1&gt;</span> 장바구니
+            <span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">'clothes'</span> <span class="na">class=</span><span class="s">'name'</span> <span class="na">title=</span><span class="s">'라운드티'</span><span class="nt">&gt;</span> 라운드티
+                <span class="nt">&lt;span</span> <span class="na">class = </span><span class="s">'number'</span><span class="nt">&gt;</span> 25 <span class="nt">&lt;/span&gt;</span> 
+                <span class="nt">&lt;span</span> <span class="na">class = </span><span class="s">'price'</span><span class="nt">&gt;</span> 29000 <span class="nt">&lt;/span&gt;</span> 
+                <span class="nt">&lt;span</span> <span class="na">class = </span><span class="s">'menu'</span><span class="nt">&gt;</span> 의류<span class="nt">&lt;/span&gt;</span> 
+                <span class="nt">&lt;a</span> <span class="na">href = </span><span class="s">'http://www.naver.com'</span><span class="nt">&gt;</span> 바로가기 <span class="nt">&lt;/a&gt;</span> 
+            <span class="nt">&lt;/p&gt;</span> 
+            <span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">'watch'</span> <span class="na">class=</span><span class="s">'name'</span> <span class="na">title=</span><span class="s">'시계'</span><span class="nt">&gt;</span> 시계
+                <span class="nt">&lt;span</span> <span class="na">class = </span><span class="s">'number'</span><span class="nt">&gt;</span> 28 <span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class = </span><span class="s">'price'</span><span class="nt">&gt;</span> 32000 <span class="nt">&lt;/span&gt;</span> 
+                <span class="nt">&lt;span</span> <span class="na">class = </span><span class="s">'menu'</span><span class="nt">&gt;</span> 악세서리 <span class="nt">&lt;/span&gt;</span> 
+                <span class="nt">&lt;a</span> <span class="na">href = </span><span class="s">'http://www.facebook.com'</span><span class="nt">&gt;</span> 바로가기 <span class="nt">&lt;/a&gt;</span> 
+            <span class="nt">&lt;/p&gt;</span> 
+        <span class="nt">&lt;/h1&gt;</span> 
+    <span class="nt">&lt;/body&gt;</span> 
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p>위 코드는 id와 class를 위 코드블록에서 추가한 코드입니다.</p>
+
+<ul>
+  <li>id : CSS의 스타일을 적용할때 매우 유용</li>
+  <li>class : 비슷한 성격을 가지는 그룹을 정의해서 한번에 관리하고 싶을때 사용</li>
+</ul>
+
+<h1 id="beautifulsoup-패키지">BeautifulSoup 패키지</h1>
+
+<p>HTML이나 XML 문서로부터 원하는 정보를 추출해주는 파이썬 크롤링 패키지입니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html</span><span class="p">,</span> <span class="s">'html.parser'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">BeautifulSoup(입력 문자열, parser종류)</code> 형식으로 사용하는 메소드입니다.</p>
+
+<ul>
+  <li>html 자리에 html 문서 혹은 html형식으로 작성된 문자열을 넣어줍니다.</li>
+  <li>‘html.parser’ : 입력 문자열이 html 형식으로 작성되어 있으니, HTML 문법을 기반으로 파싱하라는 뜻</li>
+</ul>
+
+<p>위와같이 인스턴스를 생성하고나면, 정보를 가져오는 것은 <code class="language-plaintext highlighter-rouge">select()</code> 메소드를 이용하여 가능합니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">soup</span><span class="p">.</span><span class="n">select</span><span class="p">(</span><span class="s">'body'</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>실행결과</p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[&lt;body&gt;
+&lt;h1&gt; 장바구니
+            &lt;p class="name" id="clothes" title="라운드티"&gt; 라운드티
+                &lt;span class="number"&gt; 25 &lt;/span&gt;
+&lt;span class="price"&gt; 29000 &lt;/span&gt;
+&lt;span class="menu"&gt; 의류&lt;/span&gt;
+&lt;a href="http://www.naver.com"&gt; 바로가기 &lt;/a&gt;
+&lt;/p&gt;
+&lt;p class="name" id="watch" title="시계"&gt; 시계
+                &lt;span class="number"&gt; 28 &lt;/span&gt;
+&lt;span class="price"&gt; 32000 &lt;/span&gt;
+&lt;span class="menu"&gt; 악세서리 &lt;/span&gt;
+&lt;a href="http://www.facebook.com"&gt; 바로가기 &lt;/a&gt;
+&lt;/p&gt;
+&lt;/h1&gt;
+&lt;/body&gt;]
+</code></pre></div>  </div>
+</blockquote>
+
+<p>즉, soup.select(‘찾는정보’) 형식으로 사용합니다.</p>
+
+<ul>
+  <li><a href="https://m.blog.naver.com/kiddwannabe/221177292446">BeautifulSoup로 크롤링하기</a></li>
+</ul>
+
+<p>부모와 자식관계라면 다음과 같이 사용합니다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">soup.select( 부모 &gt; 자식 )</code></p>
+
+<p>다음과 같은 html body 태그가 있으면,</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;h1&gt;</span> 장바구니
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"name"</span> <span class="na">id=</span><span class="s">"clothes"</span> <span class="na">title=</span><span class="s">"라운드티"</span><span class="nt">&gt;</span> 라운드티
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"number"</span><span class="nt">&gt;</span> 25 <span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"price"</span><span class="nt">&gt;</span> 29000 <span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"menu"</span><span class="nt">&gt;</span> 의류<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://www.naver.com"</span><span class="nt">&gt;</span> 바로가기 <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"name"</span> <span class="na">id=</span><span class="s">"watch"</span> <span class="na">title=</span><span class="s">"시계"</span><span class="nt">&gt;</span> 시계
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"number"</span><span class="nt">&gt;</span> 28 <span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"price"</span><span class="nt">&gt;</span> 32000 <span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"menu"</span><span class="nt">&gt;</span> 악세서리 <span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://www.facebook.com"</span><span class="nt">&gt;</span> 바로가기 <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+</code></pre></div></div>
+
+<p>h1 요소의 자식에서 .name의 자식인 클래스 menu인 경우만 뽑는다면,</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">soup</span><span class="p">.</span><span class="n">select</span><span class="p">(</span><span class="s">'h1 .name .menu'</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>실행 결과</p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[&lt;span class="menu"&gt; 의류&lt;/span&gt;, &lt;span class="menu"&gt; 악세서리 &lt;/span&gt;]
+</code></pre></div>  </div>
+</blockquote>
+
+<p>잘못된 입력</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">soup</span><span class="p">.</span><span class="n">select</span><span class="p">(</span><span class="s">'html &gt; h1'</span><span class="p">))</span>
+</code></pre></div></div>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[]
+</code></pre></div>  </div>
+</blockquote>
+
+<p>h1이 html의 자식이긴 하지만, 바로 아래 자식은 아니고, body의 자식입니다. 즉 html &gt; body &gt; h1인 것입니다. 하지만 html의 바로 아래 자식인것 처럼 사용하면 위와 같이 빈 정보를 출력합니다.</p>
+
+<h1 id="newspaper3k-패키지">newspaper3k 패키지</h1>
+
+<p>뉴스데이터를 크롤링하기 위해 만들어진 패키지입니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">newspaper</span> <span class="kn">import</span> <span class="n">Article</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s">'https://news.naver.com/main/read.nhn?mode=LSD&amp;mid=sec&amp;sid1=101&amp;oid=030&amp;aid=0002881076'</span>
+
+<span class="c1">#- 언어가 한국어이므로 language='ko'로 설정해주었습니다.
+</span><span class="n">article</span> <span class="o">=</span> <span class="n">Article</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s">'ko'</span><span class="p">)</span>
+<span class="n">article</span><span class="p">.</span><span class="n">download</span><span class="p">()</span>
+<span class="n">article</span><span class="p">.</span><span class="n">parse</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>위 코드를 실행하면, URL의 뉴스 데이터를 파싱합니다.</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">article.title</code> : 기사 제목을 출력해줍니다.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">article.text</code> : 기사의 내용을 출력해줍니다.</p>
+  </li>
+</ul>]]></content><author><name>Shin Hwi Jeong</name></author><summary type="html"><![CDATA[오늘은 아이펠 Fundamental 노드 31번을 공부하고 공부한 내용을 포스팅해보았습니다.]]></summary></entry><entry><title type="html">Swea ) 프로그래밍과 논리, 수학 1</title><link href="http://localhost:4000/SWEA-)-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EA%B3%BC-%EB%85%BC%EB%A6%AC,-%EC%88%98%ED%95%99-1.html" rel="alternate" type="text/html" title="Swea ) 프로그래밍과 논리, 수학 1" /><published>2022-02-24T00:00:00+09:00</published><updated>2022-02-24T00:00:00+09:00</updated><id>http://localhost:4000/SWEA%20)%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EA%B3%BC%20%EB%85%BC%EB%A6%AC,%20%EC%88%98%ED%95%99%201</id><content type="html" xml:base="http://localhost:4000/SWEA-)-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EA%B3%BC-%EB%85%BC%EB%A6%AC,-%EC%88%98%ED%95%99-1.html"><![CDATA[<p>오늘은 삼성 SW Expert Academy의 프로그래밍과 논리, 수학 강의 1강을 보고 학습한 내용을 정리해보았습니다</p>
 
 <hr />
 
@@ -123,7 +594,7 @@
               <li>
                 <p>문제 : 주장이 사실인지 확인하기 위해 아래 카드 중 반드시 뒤집어봐야 하는 카드는 몇개이고 어느것인가?</p>
 
-                <p><img src="../assets/img/posts/image-20220224183257085.png" alt="image-20220224183257085" /></p>
+                <p><img src="../assets/img/posts/image-20220224183257085-1645964110017-1645964263172.png" alt="image-20220224183257085" /></p>
               </li>
             </ul>
           </li>
@@ -194,7 +665,7 @@
   <li>다음을 명제식 형태로 쓰고 참인지 거짓인지 판단하시오
     <ol>
       <li>만약 0이 홀수라면, 미국에서 2080년 월드컵이 열린다.</li>
-      <li>만약<img src="../assets/img/posts/image-20220224203954973.png" alt="image-20220224203954973" />이 prime number라면 2는 짝수이다.</li>
+      <li>만약<img src="../assets/img/posts/image-20220224203954973-1645964113990-1645964270286.png" alt="image-20220224203954973" />이 prime number라면 2는 짝수이다.</li>
     </ol>
   </li>
 </ul>
@@ -270,7 +741,7 @@
 <ol>
   <li>만약 0이 홀수라면, 미국에서 2080년 월드컵이 열린다.</li>
   <li>
-    <p>만약 <img src="../assets/img/posts/image-20220224205958021.png" alt="image-20220224205958021" />가 prime number라면 2는 짝수이다.</p>
+    <p>만약 <img src="../assets/img/posts/image-20220224205958021-1645964117645-1645964203117-1645964273354.png" alt="image-20220224205958021" />가 prime number라면 2는 짝수이다.</p>
   </li>
   <li>
     <p>역 : 만약 미국에서 2080년 월드컵이 열린다면 0이 홀수이다.</p>
@@ -290,10 +761,10 @@
 
 <h2 id="논리-연습-4">논리 연습 4.</h2>
 
-<p><img src="../assets/img/posts/image-20220224210624355.png" alt="image-20220224210624355" /></p>
+<p><img src="../assets/img/posts/image-20220224210624355-1645964119319-1645964200049-1645964274639.png" alt="image-20220224210624355" /></p>
 
 <ol>
-  <li><img src="../assets/img/posts/image-20220224212544120.png" alt="image-20220224212544120" /></li>
+  <li><img src="../assets/img/posts/image-20220224212544120-1645964120754-1645964199087-1645964275703.png" alt="image-20220224212544120" /></li>
 </ol>
 
 <ul>
@@ -307,9 +778,9 @@
 
 <h2 id="당구공-paradox">당구공 paradox</h2>
 
-<p><img src="../assets/img/posts/image-20220224212905380.png" alt="image-20220224212905380" /></p>
+<p><img src="../assets/img/posts/image-20220224212905380-1645964122235-1645964207905-1645964277479.png" alt="image-20220224212905380" /></p>
 
-<p><img src="../assets/img/posts/image-20220224213249351.png" alt="image-20220224213249351" /></p>
+<p><img src="../assets/img/posts/image-20220224213249351-1645964123503-1645964206425-1645964279271.png" alt="image-20220224213249351" /></p>
 
 <ul>
   <li>
@@ -353,7 +824,7 @@
 
 <h2 id="infinitely-many-prime-numbers">Infinitely Many Prime Numbers</h2>
 
-<p><img src="../assets/img/posts/image-20220224224029944.png" alt="image-20220224224029944" /></p>
+<p><img src="../assets/img/posts/image-20220224224029944-1645964209792-1645964282270.png" alt="image-20220224224029944" /></p>
 
 <ul>
   <li>Prime number란?
@@ -383,7 +854,76 @@
 
 <h1 id="버블-소트-증명">버블 소트 증명</h1>
 
-<p><img src="../assets/img/posts/image-20220224233546030.png" alt="image-20220224233546030" /></p>]]></content><author><name>Shin Hwi Jeong</name></author><summary type="html"><![CDATA[오늘은 삼성 SW Expert Academy의 프로그래밍과 논리, 수학 강의 1강을 보고 학습한 내용을 정리해보았습니다]]></summary></entry><entry><title type="html">[fd_30] computer power up</title><link href="http://localhost:4000/fd_30-Computer-Power-UP.html" rel="alternate" type="text/html" title="[fd_30] computer power up" /><published>2022-02-23T00:00:00+09:00</published><updated>2022-02-23T00:00:00+09:00</updated><id>http://localhost:4000/%5Bfd_30%5D%20Computer%20Power%20UP</id><content type="html" xml:base="http://localhost:4000/fd_30-Computer-Power-UP.html"><![CDATA[<p>오늘은 아이펠 Fundamental 노드 30번을 공부하고 공부한 내용을 포스팅해보았습니다.</p>
+<p><img src="../assets/img/posts/image-20220224233546030-1645964211709-1645964256942.png" alt="image-20220224233546030" /></p>]]></content><author><name>Shin Hwi Jeong</name></author><summary type="html"><![CDATA[오늘은 삼성 SW Expert Academy의 프로그래밍과 논리, 수학 강의 1강을 보고 학습한 내용을 정리해보았습니다]]></summary></entry><entry><title type="html">[ex_15]문자를 읽을 수 있는 딥러닝</title><link href="http://localhost:4000/ex_15-%EB%AC%B8%EC%9E%90%EB%A5%BC-%EC%9D%BD%EC%9D%84-%EC%88%98-%EC%9E%88%EB%8A%94-%EB%94%A5%EB%9F%AC%EB%8B%9D.html" rel="alternate" type="text/html" title="[ex_15]문자를 읽을 수 있는 딥러닝" /><published>2022-02-24T00:00:00+09:00</published><updated>2022-02-24T00:00:00+09:00</updated><id>http://localhost:4000/%5Bex_15%5D%EB%AC%B8%EC%9E%90%EB%A5%BC%20%EC%9D%BD%EC%9D%84%20%EC%88%98%20%EC%9E%88%EB%8A%94%20%EB%94%A5%EB%9F%AC%EB%8B%9D</id><content type="html" xml:base="http://localhost:4000/ex_15-%EB%AC%B8%EC%9E%90%EB%A5%BC-%EC%9D%BD%EC%9D%84-%EC%88%98-%EC%9E%88%EB%8A%94-%EB%94%A5%EB%9F%AC%EB%8B%9D.html"><![CDATA[<p>오늘은 아이펠 Exploration 노드 15번을 공부하고 공부한 내용을 포스팅해보았습니다.</p>
+
+<hr />
+
+<h6 id="출처">출처</h6>
+
+<ul>
+  <li>
+    <p>AIFFEL LMS</p>
+
+    <p>문제시 연락 부탁드립니다. :)</p>
+  </li>
+</ul>
+
+<hr />
+
+<h6 id="목차">목차</h6>
+
+<ul>
+  <li>기계는 어떤 방식으로 글을 읽을까?
+    <ul>
+      <li>딥러닝 문자 인식의 시작</li>
+    </ul>
+  </li>
+  <li>사진 속 문자 찾아내기 - detection</li>
+  <li>사진 속 문자 읽어내기 - recognition</li>
+  <li>keras-ocr 써보기</li>
+  <li>테서랙트 써보기</li>
+  <li>프로젝트 : 다양한 OCR 모델 비교하기</li>
+</ul>
+
+<hr />
+
+<h1 id="기계는-어떤-방식으로-글을-읽을까">기계는 어떤 방식으로 글을 읽을까?</h1>
+
+<h2 id="딥러닝-문자-인식의-시작">딥러닝 문자 인식의 시작</h2>
+
+<h1 id="사진-속-문자-찾아내기---detection">사진 속 문자 찾아내기 - detection</h1>
+
+<h1 id="사진-속-문자-읽어내기---recognition">사진 속 문자 읽어내기 - recognition</h1>
+
+<h1 id="keras-ocr-써보기">keras-ocr 써보기</h1>
+
+<h1 id="테서랙트-써보기">테서랙트 써보기</h1>
+
+<h1 id="프로젝트--다양한-ocr-모델-비교하기">프로젝트 : 다양한 OCR 모델 비교하기</h1>]]></content><author><name>Shin Hwi Jeong</name></author><summary type="html"><![CDATA[오늘은 아이펠 Exploration 노드 15번을 공부하고 공부한 내용을 포스팅해보았습니다.]]></summary></entry><entry><title type="html">Swea ) 프로그래밍과 논리, 수학 1 복사본</title><link href="http://localhost:4000/SWEA-)-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EA%B3%BC-%EB%85%BC%EB%A6%AC,-%EC%88%98%ED%95%99-1-%EB%B3%B5%EC%82%AC%EB%B3%B8.html" rel="alternate" type="text/html" title="Swea ) 프로그래밍과 논리, 수학 1 복사본" /><published>2022-02-24T00:00:00+09:00</published><updated>2022-02-24T00:00:00+09:00</updated><id>http://localhost:4000/SWEA%20)%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EA%B3%BC%20%EB%85%BC%EB%A6%AC,%20%EC%88%98%ED%95%99%201%20%EB%B3%B5%EC%82%AC%EB%B3%B8</id><content type="html" xml:base="http://localhost:4000/SWEA-)-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EA%B3%BC-%EB%85%BC%EB%A6%AC,-%EC%88%98%ED%95%99-1-%EB%B3%B5%EC%82%AC%EB%B3%B8.html"><![CDATA[<p>오늘은 삼성 SW Expert Academy의 프로그래밍과 논리, 수학 강의 1강을 보고 학습한 내용을 정리해보았습니다</p>
+
+<hr />
+
+<h6 id="강의-링크">강의 링크</h6>
+
+<p>https://swexpertacademy.com/main/learn/course/lectureVideoPlayer.do</p>
+
+<hr />
+
+<h6 id="강의-전체-목차">강의 전체 목차</h6>
+
+<ul>
+  <li>프로그래밍과 논리/수학 ( 오늘의 분량 )</li>
+  <li>논리와 증명 ( 오늘의 분량 )</li>
+  <li>수와 표현</li>
+  <li>집합과 조합론</li>
+  <li>기초 수식</li>
+  <li>재귀</li>
+  <li>동적 프로그래밍</li>
+  <li>조합론 프로그램 과제</li>
+  <li>기초 알고리즘 프로그램 과제</li>
+</ul>
+
+<hr />]]></content><author><name>Shin Hwi Jeong</name></author><summary type="html"><![CDATA[오늘은 삼성 SW Expert Academy의 프로그래밍과 논리, 수학 강의 1강을 보고 학습한 내용을 정리해보았습니다]]></summary></entry><entry><title type="html">[fd_30] computer power up</title><link href="http://localhost:4000/fd_30-Computer-Power-UP.html" rel="alternate" type="text/html" title="[fd_30] computer power up" /><published>2022-02-23T00:00:00+09:00</published><updated>2022-02-23T00:00:00+09:00</updated><id>http://localhost:4000/%5Bfd_30%5D%20Computer%20Power%20UP</id><content type="html" xml:base="http://localhost:4000/fd_30-Computer-Power-UP.html"><![CDATA[<p>오늘은 아이펠 Fundamental 노드 30번을 공부하고 공부한 내용을 포스팅해보았습니다.</p>
 
 <p>깃허브 주소 : https://github.com/Nega0619/Aiffel_Fundamental_nodes/blob/main/%5Bfd_30%5D%20Computer%20Power%20UP.ipynb</p>
 
@@ -488,7 +1028,7 @@
 
 <p>각각의 작업을 할 때 도마나 불판 등의 주방 공간은 공유되지만 요리사 각자의 주방 공간은 공유하지 않습니다. 마찬가지로 프로세스도 자신만의 전용 메모리 공간 (Heap)을 가집니다.그렇기때문에 스레드들도 메모리 공간자체는 공유 하지만 다른 프로세스와 공유하지는 않습니다.</p>
 
-<p><img src="../assets/img/posts/image-20220223135657027.png" alt="image-20220223135657027" /></p>
+<p><img src="../assets/img/posts/image-20220223135657027-1645964094740-1645964447641.png" alt="image-20220223135657027" /></p>
 
 <h3 id="프로파일링-profiling">프로파일링 Profiling</h3>
 
@@ -927,847 +1467,4 @@
 
 <h1 id="6-mf-모델-학습하기">6. MF 모델 학습하기</h1>
 
-<h1 id="7-비슷한-아티스트-찾기--유저에게-추천하기">7. 비슷한 아티스트 찾기 + 유저에게 추천하기</h1>]]></content><author><name>Shin Hwi Jeong</name></author><summary type="html"><![CDATA[오늘은 아이펠 Exploration 노드 14번을 공부하고 공부한 내용을 포스팅해보았습니다.]]></summary></entry><entry><title type="html">강화학습 치팅시트</title><link href="http://localhost:4000/%EA%B0%95%ED%99%94%ED%95%99%EC%8A%B5-%EC%B9%98%ED%8C%85%EC%8B%9C%ED%8A%B8.html" rel="alternate" type="text/html" title="강화학습 치팅시트" /><published>2022-02-22T00:00:00+09:00</published><updated>2022-02-22T00:00:00+09:00</updated><id>http://localhost:4000/%EA%B0%95%ED%99%94%ED%95%99%EC%8A%B5%20%EC%B9%98%ED%8C%85%EC%8B%9C%ED%8A%B8</id><content type="html" xml:base="http://localhost:4000/%EA%B0%95%ED%99%94%ED%95%99%EC%8A%B5-%EC%B9%98%ED%8C%85%EC%8B%9C%ED%8A%B8.html"><![CDATA[<ul>
-  <li>
-    <p>파이</p>
-  </li>
-  <li>
-    <p>스타</p>
-  </li>
-  <li>
-    <p>파이_뉴= 파이</p>
-
-    <p>​				!= 파이</p>
-  </li>
-</ul>]]></content><author><name>Shin Hwi Jeong</name></author><summary type="html"><![CDATA[파이]]></summary></entry><entry><title type="html">깃허브 토큰 만들기 + 깃허브 커널에서 깃 올리기</title><link href="http://localhost:4000/%EA%B9%83%ED%97%88%EB%B8%8C-%ED%86%A0%ED%81%B0-%EB%A7%8C%EB%93%A4%EA%B8%B0-+-%EA%B9%83%ED%97%88%EB%B8%8C-%EC%BB%A4%EB%84%90%EC%97%90%EC%84%9C-%EA%B9%83-%EC%98%AC%EB%A6%AC%EA%B8%B0.html" rel="alternate" type="text/html" title="깃허브 토큰 만들기 + 깃허브 커널에서 깃 올리기" /><published>2022-02-21T00:00:00+09:00</published><updated>2022-02-21T00:00:00+09:00</updated><id>http://localhost:4000/%EA%B9%83%ED%97%88%EB%B8%8C%20%ED%86%A0%ED%81%B0%20%EB%A7%8C%EB%93%A4%EA%B8%B0%20+%20%EA%B9%83%ED%97%88%EB%B8%8C%20%EC%BB%A4%EB%84%90%EC%97%90%EC%84%9C%20%EA%B9%83%20%EC%98%AC%EB%A6%AC%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/%EA%B9%83%ED%97%88%EB%B8%8C-%ED%86%A0%ED%81%B0-%EB%A7%8C%EB%93%A4%EA%B8%B0-+-%EA%B9%83%ED%97%88%EB%B8%8C-%EC%BB%A4%EB%84%90%EC%97%90%EC%84%9C-%EA%B9%83-%EC%98%AC%EB%A6%AC%EA%B8%B0.html"><![CDATA[<h1 id="노드복사러에게-남기는-글">노드복사러에게 남기는 글.</h1>
-
-<p>공용 git이기 때문에, 여러분은 (토큰을 생성하지 않았을 시) 토큰생성 먼저 하시고, 3-3의 git clone을 이용하여 작성된 노드들을 올려주시면 됩니다. 그 이후에 추가적으로 글을 올리실 때에는 3-1과 3-2를 참고하여 config 파일작성하고,  fetch , pull 진행해주신 다음 add commit push 명령어를 실행하시면 됩니다.</p>
-
-<p>해당 글은 혹시, 개인적으로 repository를 생성하시고 싶으신 분들을 위해 레포지토리를 아예 생성하는것 부터시작합니다. 참고되셨으면 좋겠네요.</p>
-
-<p>이 이상 문제 생길시, 카톡으로 문의바랍니다.</p>
-
-<hr />
-
-<p>리눅스 커널에서 깃허브를 처음 사용해보는 분들을 위해 작성해 보았습니다.</p>
-
-<p>해당 포스팅은 깃허브에 가입을 하신 상태를 전제로 진행합니다.</p>
-
-<p>리눅스 커널에서 깃허브를 사용하는 방법을 알려드리지만, 깃허브의 add / commit / push등의 용어에 대해서는 설명하지 않습니다.</p>
-
-<h1 id="목차">목차</h1>
-
-<ol>
-  <li>깃허브 토큰 만들기
-    <ol>
-      <li>깃허브 토큰 생성 페이지로 이동하기</li>
-      <li>토큰 생성하기</li>
-    </ol>
-  </li>
-  <li>로컬 Git과 Github Repository 연결하기
-    <ol>
-      <li>Github repository 생성하기</li>
-      <li>로컬 Git 생성하기</li>
-      <li>Github repository와 로컬 Git 연결하기</li>
-      <li>git config 작성하기</li>
-    </ol>
-  </li>
-  <li>Github repository에 파일 push하기
-    <ol>
-      <li>add와 commit하기</li>
-      <li>git branch 생성</li>
-      <li>push하기</li>
-    </ol>
-  </li>
-  <li>이미 생성된 repository에 추가로 commit하고 싶다면?
-    <ol>
-      <li>git fetch와 pull</li>
-      <li>git config 작성</li>
-      <li>git clone하기</li>
-    </ol>
-  </li>
-</ol>
-
-<h1 id="0-깃허브-토큰-만들기">0. 깃허브 토큰 만들기</h1>
-
-<p>깃허브 토큰은, 로컬 git에서 깃허브로 commit 혹은 pull등의 작업을 할 때 권한을 허가받기 위하여 필요합니다.</p>
-
-<p>생성 방법은 아래에 설명되어 있으며, 토큰 정보는 단 한번만 보이므로 잘 저장해놓아야 합니다.</p>
-
-<h3 id="1-깃허브-토큰-생성-페이지로-이동하기">1. 깃허브 토큰 생성 페이지로 이동하기</h3>
-
-<p>요약 : 깃허브 profile page &gt; Settings &gt; Developers settings &gt; Personal access tokens &gt; Generate new tokens</p>
-
-<p>profile page &gt; settings</p>
-
-<p><img src="../assets/img/posts/image-20220128214631819.png" alt="image-20220128214631819" /></p>
-
-<p>settings &gt; developer settings</p>
-
-<p><img src="../assets/img/posts/image-20220128215412756.png" alt="image-20220128215412756" /></p>
-
-<p>developer settings &gt; Personal access tokens &gt; Generate new tokens</p>
-
-<p><img src="../assets/img/posts/image-20220128215455576.png" alt="image-20220128215455576" /></p>
-
-<h3 id="2-토큰-생성하기">2. 토큰 생성하기</h3>
-
-<p>요약</p>
-
-<ol>
-  <li>token 설명 작성</li>
-  <li>토큰 사용기한 설정</li>
-  <li>토큰 권한 설정</li>
-  <li><span style="color:red">토큰 복사 ( 가장 중요 )</span></li>
-</ol>
-
-<p><img src="../assets/img/posts/image-20220128220049499.png" alt="image-20220128220049499" /></p>
-
-<ol>
-  <li>
-    <p>Note : token에 대한 설명을 작성합니다. (skip 가능)</p>
-  </li>
-  <li>
-    <p>Expiration : 토큰 사용기한.</p>
-
-    <p>저는 약 6개월이상, 넉넉히 custom하여 2022-07-15일로 설정해주었습니다.</p>
-  </li>
-  <li>
-    <p>권한 설정</p>
-  </li>
-</ol>
-
-<p>권한이 많을 수록 편리합니다. 깃허브 사용에 익숙하시지 않으시다면, delete 권한은 주지마세요.</p>
-
-<p>제가 설정한 권한은 다음과 같습니다.</p>
-
-<p><img src="../assets/img/posts/image-20220128220311820.png" alt="image-20220128220311820" /></p>
-
-<ol>
-  <li>
-    <p><span style="color:red">토큰 복사 ( 가장 중요 )</span></p>
-
-    <p>사진에 가려진 부분은 생성된 토큰입니다.</p>
-
-    <p><span style="color:red">현재밖에 볼 수 없으므로, 메모장등에 꼭 복사해둡니다. pull / push 할 때 항상 사용합니다.</span></p>
-  </li>
-</ol>
-
-<p><img src="../assets/img/posts/image-20220128220926517.png" alt="image-20220128220926517" /></p>
-
-<h1 id="1-로컬-git과-github-repository-연결하기">1. 로컬 Git과 Github repository 연결하기</h1>
-
-<p>&lt; 요약 &gt;</p>
-
-<ol>
-  <li>Github repository 생성하기</li>
-  <li>로컬 Git 생성하기</li>
-  <li>Github repository와 로컬 Git 연결하기</li>
-  <li>git config 작성하기</li>
-  <li>Git branch 생성하기</li>
-</ol>
-
-<h3 id="1-github-repository-생성하기">1. Github repository 생성하기</h3>
-
-<p>요약 : github profile page &gt; + 버튼 클릭 &gt; New Repository &gt; repository 정보 작성하기 &gt; create repository 버튼 클릭</p>
-
-<p>github profile page &gt; + 버튼 &gt; New Repository</p>
-
-<p><img src="../assets/img/posts/image-20220128224729423.png" alt="image-20220128224729423" style="zoom: 33%;" /></p>
-
-<p>&lt; 아래 그림 설명 &gt;</p>
-
-<p>① : repository이름 작성</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;span style="color:red"&gt;후에 로컬 Git 폴더명과 동일해야 합니다. &lt;/span&gt;
-
-저는 `this_IS_test`라는 repository를 생성했습니다.
-</code></pre></div></div>
-
-<p>② : repository에 대한 설명</p>
-
-<p>③ : repository의 Access 설정</p>
-
-<p>④ : repository 초기화 파일</p>
-
-<p>⑤ : 1, 2, 3, 4 설정이 끝난 후, 눌러주면 repository가 생성됩니다.</p>
-
-<p><img src="../assets/img/posts/image-20220128224922791.png" alt="image-20220128224922791" /></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>깃허브 초보자가 리눅스 커널에서 git을 사용하려 할 때, 초기화 파일을 추가 하지 않는 것을 추천드립니다.
-
-로컬 git에서 깃허브로 push할 때, 로컬 git의 상태가 깃허브의 repository 최신상태와 동일해야 합니다. (fetch &amp; pull한 상태 / 혹은 git clone한 직후.) 깃허브 repository 의 최신 상태와 동일하지 않으면 git push 명령어가 먹히지 않으므로, 초보자에게는 repository의 초기화파일을 만들지 않는 것을 추천드립니다. repository의 상태가 변경되기 때문입니다.
-</code></pre></div></div>
-
-<p>초기화 파일을 선택하지 않았을 시, 완료 화면</p>
-
-<p><img src="../assets/img/posts/image-20220128231024990.png" alt="image-20220128231024990" /></p>
-
-<h3 id="2-로컬-git-생성하기">2. 로컬 Git 생성하기</h3>
-
-<p>요약</p>
-
-<ol>
-  <li>리눅스에서 repository명과 동일한 폴더 만들기</li>
-  <li>
-    <p>git init</p>
-  </li>
-  <li>
-    <p>리눅스에서 repository명과 동일한 폴더 만들기</p>
-
-    <p>대소문자 구분해야합니다. 일부로 이름을 <code class="language-plaintext highlighter-rouge">this_IS_test</code>이렇게 한 것은, 대소문자 구분을 해주어야 함을 보여주기 위함입니다. 다음은 리눅스에서 this_IS_test 디렉토리를 만든 화면입니다.</p>
-
-    <p>실행화면</p>
-
-    <p><img src="../assets/img/posts/image-20220128231441275.png" alt="image-20220128231441275" /></p>
-
-    <p>리눅스에서 사용한 명령어</p>
-
-    <blockquote>
-      <p>$ mkdir 폴더명</p>
-    </blockquote>
-
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;span style="color:red"&gt;이때 폴더명은 repository와 동일한 이름이어야 합니다. &lt;/span&gt;
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p>git init</p>
-
-    <p>이 폴더를 Git으로 사용하겠다는 설정으로, 생성한 로컬 git 폴더로 이동하여 <code class="language-plaintext highlighter-rouge">git init</code>명령어를 사용합니다.</p>
-
-    <p>실행화면</p>
-
-    <p><img src="../assets/img/posts/image-20220128231910283.png" alt="image-20220128231910283" /></p>
-
-    <p>리눅스에서 사용한 명령어</p>
-
-    <blockquote>
-      <p>$ cd 폴더명</p>
-
-      <p>$ git init</p>
-    </blockquote>
-  </li>
-</ol>
-
-<h3 id="3-github-repository와-로컬-git-연결하기">3. Github repository와 로컬 Git 연결하기</h3>
-
-<p>요약</p>
-
-<ol>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">git remote add origin https://github.com/Nega0619/this_IS_test.git</code></p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">git remote add origin https://github.com/Nega0619/this_IS_test.git</code></p>
-
-    <p>로컬 git 폴더 내에서 위 명령어를 실행해줍니다.</p>
-
-    <p>이때 깃허브 repository 주소는 사진에서 참고하시면 됩니다.</p>
-
-    <p>① : 깃허브의 repository로 이동한 상태에서 URL 복사+.git</p>
-
-    <p>② : 초기 생성화면에서 복사 버튼 클릭하면 됩니다.</p>
-
-    <p><img src="../assets/img/posts/image-20220128232528762.png" alt="image-20220128232528762" /></p>
-
-    <p>실행화면</p>
-
-    <p><img src="../assets/img/posts/image-20220128232649696.png" alt="image-20220128232649696" /></p>
-
-    <p>리눅스에서 사용한 명령어 (이미 로컬 깃내에 존재한다는 전제하에)</p>
-
-    <blockquote>
-      <p>$ git remote add origin https://github.com/Nega0619/this_IS_test.git</p>
-    </blockquote>
-  </li>
-</ol>
-
-<h3 id="4-git-config-작성하기">4. git config 작성하기</h3>
-
-<p>요약</p>
-
-<ol>
-  <li>git config –global user.email 설정</li>
-  <li>git config –global user.name 설정</li>
-  <li>git config 파일 확인하기</li>
-</ol>
-
-<p>이미 config 작성을 하신적이 있다면 git config -l 로 설정이 되어있는지 확인하세요.</p>
-
-<ol>
-  <li>
-    <p>git config –global user.email 설정</p>
-
-    <p>“여기안에 이메일” 써야합니다.</p>
-
-    <blockquote>
-      <p>$ git config –global user.email “h0riya0619@gmail.com”</p>
-    </blockquote>
-  </li>
-  <li>
-    <p>git config –global user.name 설정</p>
-
-    <p>“여기안에 name” 써야합니다.</p>
-
-    <blockquote>
-      <p>$ git config –global user.name “Nega0619”</p>
-    </blockquote>
-  </li>
-  <li>
-    <p>git config 파일 확인하기</p>
-
-    <blockquote>
-      <p>$ git config -l</p>
-    </blockquote>
-
-    <p>실행화면</p>
-
-    <p><img src="../assets/img/posts/image-20220128233340161.png" alt="image-20220128233340161" /></p>
-  </li>
-</ol>
-
-<h1 id="2-repository에-파일-push하기">2. repository에 파일 push하기</h1>
-
-<p>&lt; 요약 &gt;</p>
-
-<ol>
-  <li>
-    <p>add와 commit하기</p>
-  </li>
-  <li>
-    <p>git branch 생성</p>
-  </li>
-  <li>
-    <p>push하기</p>
-  </li>
-</ol>
-
-<h3 id="1-add와-commit하기">1. add와 commit하기</h3>
-
-<ul>
-  <li>파일 생성하기</li>
-</ul>
-
-<p>로컬 깃에서 repository로 push하기 위해선 파일이 잇어야 합니다. 저는 다음 명령어로 파일을 만들어 주었습니다. ( 이미 올릴 파일이 있으면 skip )</p>
-
-<blockquote>
-  <p>$ cat &gt; test.txt</p>
-
-  <p>this is test</p>
-</blockquote>
-
-<p>여기까지 작성하고 ctrl+z 입력하면 test.txt에 this is test 라는 파일이 생성됩니다.</p>
-
-<p>실행화면</p>
-
-<p><img src="../assets/img/posts/image-20220128234220082.png" alt="image-20220128234220082" /></p>
-
-<ul>
-  <li>
-    <p>add</p>
-
-    <p>깃에 존재하는 전체 파일을 github에 올리려면 *을 사용하면 됩니다.</p>
-
-    <blockquote>
-      <p>$ git add *</p>
-    </blockquote>
-  </li>
-  <li>
-    <p>commit</p>
-
-    <p>commit 명령어에서 -m 옵션은 commit 메시지를 설정하는 옵션입니다.</p>
-
-    <p>아래 명령어는 깃으로 commit할때 first commit 이란 메시지로 commit하겠다는 뜻입니다.</p>
-
-    <blockquote>
-      <p>$ git commit -m “first commit”</p>
-    </blockquote>
-  </li>
-  <li>
-    <p>git commit 상태 확인하기</p>
-
-    <p>현재 add / commit할 파일들에 대한 정보를 보여줍니다.</p>
-
-    <blockquote>
-      <p>$ git status</p>
-    </blockquote>
-  </li>
-</ul>
-
-<p>실행화면</p>
-
-<p><img src="../assets/img/posts/image-20220128234528303.png" alt="image-20220128234528303" /></p>
-
-<h3 id="2-git-branch-생성">2. git branch 생성</h3>
-
-<p>main 이라는 이름의 branch를 생성합니다.</p>
-
-<blockquote>
-  <p>$ git branch -M main</p>
-</blockquote>
-
-<p>실행화면</p>
-
-<p><img src="../assets/img/posts/image-20220128234659996.png" alt="image-20220128234659996" /></p>
-
-<h3 id="3-push하기">3. push하기</h3>
-
-<p>main이란 branch에 git을 push 합니다.</p>
-
-<blockquote>
-  <p>$ git push -u origin main</p>
-
-  <p>Username for ‘https://github.com’: 이메일넣기</p>
-
-  <p>Password for ‘https://h0riya0619@gmail.com@github.com’: 토큰넣기</p>
-</blockquote>
-
-<p>유의사항</p>
-
-<ul>
-  <li>이메일은 “” 등을 사용하지 않고 바로 작성합니다.</li>
-  <li>리눅스 환경의 경우, 비밀번호 입력에는 아무것도 보이지 않습니다. 당황하지 마시고 바로 입력하세요
-    <ul>
-      <li>리눅스 붙여넣기 명령어 : ctrl + shift + v</li>
-    </ul>
-  </li>
-</ul>
-
-<p>실행화면</p>
-
-<p><img src="../assets/img/posts/image-20220128235325441.png" alt="image-20220128235325441" /></p>
-
-<h1 id="3-이미-생성된-repository에-추가로-commit하고-싶다면">3. 이미 생성된 repository에 추가로 commit하고 싶다면?</h1>
-
-<p>처음 repository를 생성하고 파일을 올리는 것과 다르게, 이미 사용하고 있는 repository에 로컬 git을 만들어 파일을 올리고 싶은 경우, add / commit / push가 안되는 경우가 있습니다.</p>
-
-<p>이런 경우, 2가지를 확인해 보면됩니다.</p>
-
-<h3 id="1-git-config-파일-확인하기">1. git config 파일 확인하기</h3>
-
-<p>리눅스 커널에서 git config 파일이 초기화 된경우가 있습니다.</p>
-
-<p>이럴 경우, <code class="language-plaintext highlighter-rouge">git config -l</code>명령어로 config 설정을 먼저 확인해 본 후, 1-4 처럼 user.email과 user.name을 설정을 해주면 됩니다.</p>
-
-<h3 id="2-git-fetch--git-pull-명령어-사용하기">2. git fetch / git pull 명령어 사용하기</h3>
-
-<p>git의 add / commit / push 오류가 나는 경우, 로컬 git의 상태가 git repository 상태와 다른 경우가 많습니다. 이럴때는 fetch와 pull을 해준 후, add / commit / push를 해주면 해결됩니다.</p>
-
-<p>명령어 :</p>
-
-<blockquote>
-  <p>$ git fetch</p>
-
-  <p>$ git pull</p>
-</blockquote>
-
-<p>fetch와 pull 후, push처럼 이메일과 토큰을 작성해주면 됩니다.</p>
-
-<p>실행화면</p>
-
-<p><img src="../assets/img/posts/image-20220129000155035.png" alt="image-20220129000155035" /></p>
-
-<p>### 3. git clone하기</p>
-
-<p>1, 2로도 해결이안된다 혹은 로컬 깃을 만들지 않은 상태라면, git clone 명령어를 이용해 이미 존재하는 repository를 최신 상태로 로컬에 가져올 수 있습니다.</p>
-
-<p>준비물 : repository URL</p>
-
-<p>명령어</p>
-
-<blockquote>
-  <p>$ git clone 깃허브RepositoryURL.git</p>
-</blockquote>
-
-<p>실행화면 : 기존에 있던 this_IS_test 로컬 깃을 삭제한 후, clone을 해보았습니다.</p>
-
-<p><img src="../assets/img/posts/image-20220129002245325.png" alt="image-20220129002245325" /></p>
-
-<p>만약 안된다면 config 설정은 해주었는지 확인해보세요~!</p>
-
-<h1 id="아이펠-복사러들에게-git-clone-명령어-선물">아이펠 복사러들에게 git clone 명령어 선물</h1>
-
-<blockquote>
-  <p>git clone https://github.com/Nega0619/Aiffel_nodes.git</p>
-</blockquote>
-
-<p>실행화면</p>
-
-<p><img src="../assets/img/posts/image-20220129002835862.png" alt="image-20220129002835862" /></p>]]></content><author><name>Shin Hwi Jeong</name></author><summary type="html"><![CDATA[노드복사러에게 남기는 글.]]></summary></entry><entry><title type="html">Scikit Learn ) tranform()과 fit_transform()</title><link href="http://localhost:4000/scikit-learn-)-tranform()%EA%B3%BC-fit_transform().html" rel="alternate" type="text/html" title="Scikit Learn ) tranform()과 fit_transform()" /><published>2022-02-21T00:00:00+09:00</published><updated>2022-02-21T00:00:00+09:00</updated><id>http://localhost:4000/scikit-learn%20)%20tranform()%EA%B3%BC%20fit_transform()</id><content type="html" xml:base="http://localhost:4000/scikit-learn-)-tranform()%EA%B3%BC-fit_transform().html"><![CDATA[<p>https://deepinsight.tistory.com/165</p>
-
-<p>https://velog.io/@classe55/fittransform</p>]]></content><author><name>Shin Hwi Jeong</name></author><summary type="html"><![CDATA[https://deepinsight.tistory.com/165]]></summary></entry><entry><title type="html">[fd_29] 사이킷런을 활용한 추천 시스템 입문</title><link href="http://localhost:4000/fd_29-%EC%82%AC%EC%9D%B4%ED%82%B7%EB%9F%B0%EC%9D%84-%ED%99%9C%EC%9A%A9%ED%95%9C-%EC%B6%94%EC%B2%9C-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EC%9E%85%EB%AC%B8.html" rel="alternate" type="text/html" title="[fd_29] 사이킷런을 활용한 추천 시스템 입문" /><published>2022-02-21T00:00:00+09:00</published><updated>2022-02-21T00:00:00+09:00</updated><id>http://localhost:4000/%5Bfd_29%5D%20%EC%82%AC%EC%9D%B4%ED%82%B7%EB%9F%B0%EC%9D%84%20%ED%99%9C%EC%9A%A9%ED%95%9C%20%EC%B6%94%EC%B2%9C%20%EC%8B%9C%EC%8A%A4%ED%85%9C%20%EC%9E%85%EB%AC%B8</id><content type="html" xml:base="http://localhost:4000/fd_29-%EC%82%AC%EC%9D%B4%ED%82%B7%EB%9F%B0%EC%9D%84-%ED%99%9C%EC%9A%A9%ED%95%9C-%EC%B6%94%EC%B2%9C-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EC%9E%85%EB%AC%B8.html"><![CDATA[<p>오늘은 아이펠 29번 fundamental 노드를 읽고 공부한 것을 작성해 보았습니다.</p>
-
-<blockquote>
-  <p>깃허브 : https://github.com/Nega0619/Aiffel_Fundamental_nodes/blob/main/%5Bfd_29%5D%20Introduction%20to%20the%20recommendation%20system%20using%20scikit-learn.ipynb</p>
-</blockquote>
-
-<h6 id="목차">목차</h6>
-
-<ul>
-  <li>추천시스템이란?</li>
-  <li>유사도 계산</li>
-  <li>추천 시스템 종류
-    <ul>
-      <li>콘텐츠 기반 필터링</li>
-      <li>협업 필터링
-        <ul>
-          <li>사용자 기반</li>
-          <li>아이템 기반</li>
-          <li>잠재요인 협업 필터링</li>
-        </ul>
-      </li>
-      <li>실제 추천 시스템</li>
-    </ul>
-  </li>
-</ul>
-
-<h1 id="1-추천-시스템이란">1. 추천 시스템이란?</h1>
-
-<blockquote>
-  <p>사용자와 관련한 아이템을 추천해주는 것</p>
-</blockquote>
-
-<p>이라고 한마디로 정의할 수 있습니다.</p>
-
-<p>영화 추천 시스템을 예로 설명해보겠습니다.</p>
-
-<p>실제 추천 시스템에서는 영화를 아래 사진처럼 좌표평면에 표현합니다.</p>
-
-<p>수식을 이용해 정교하게 그리지만, 대략적으로 그리면 다음과 같습니다.</p>
-
-<p><img src="../assets/img/posts/image-20220221104115455.png" alt="image-20220221104115455" /></p>
-
-<p>이렇게 놓고 보면 거리가 가까운 영화들은 장르가 비슷하다고 생각할 수 있으며, 사용자의 선호도가 어디에 위치하느냐에 따라 사용자에게 맞는 영화를 추천해 줄 수 있습니다.</p>
-
-<p>이러한 추천은 사용자가 이용한 콘텐츠를 기반으로 추천해 주는 방식입니다. 하지만 만약 뉴비 사용자가 나타났다면 어떻게 추천을 해줄까요?</p>
-
-<p>보통은 취향에 대한 정보를 받도록 설문조사가 배치되어있지만 전부 다 스킵하고 정말 인적사항만 아는 사용자의 경우가 있습니다. 이 경우, 뉴비 사용자의 인적사항과 기존 회원들의 인적사항을 분석하여 유사도를 측정하고, 뉴비 사용자에게 유사한 인적사항을 가진 사용자의 선호를 추천해주게 됩니다.</p>
-
-<p>간단한 추천 로직이며, 이를 통해 두가지를 꼭 기억해야 합니다.</p>
-
-<ol>
-  <li>
-    <p>범주형 데이터를 다룬다.</p>
-
-    <p>이산적, 혹은 범주형이라고 합니다. 액션 / 로맨스 / 호러 등 카테고리가 나뉜 형태의 데이터입니다.</p>
-  </li>
-  <li>
-    <p>(숫자 벡터로 변환한 후) 유사도를 계산한다.</p>
-
-    <p>범주형 데이터를 좌표에 나타내기 위하여 숫자로 이루어진 벡터로 변환합니다.(numerical vector) 그리고 그 거리를 계산해 유사도를 측정합니다.</p>
-  </li>
-</ol>
-
-<h1 id="2-코사인-유사도">2. 코사인 유사도</h1>
-
-<p>가장 유명한 유사도를 계산하는 방법입니다. 코사인 유사도는 두 벡터간의 코사인값을 계산하여 유사도를 측정하게됩니다.</p>
-
-<p>코사인 유사도는 두 벡터가 방향이 이루는 각도에 코사인을 취해 구합니다.</p>
-
-<p><img src="../assets/img/posts/image-20220221105201542.png" alt="image-20220221105201542" /></p>
-
-<p>위 그림은 두 벡터가 이루는 각도에 따른 유사도입니다. 1에 가까울 수록 유사도가 높다고 할 수 있습니다. 수식은 다음과 같습니다.</p>
-
-<p><img src="../assets/img/posts/image-20220221105248414.png" alt="image-20220221105248414" /></p>
-
-<h3 id="numpy를-이용한-코사인-유사도">numpy를 이용한 코사인 유사도</h3>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">dot</span>
-<span class="kn">from</span> <span class="nn">numpy.linalg</span> <span class="kn">import</span> <span class="n">norm</span>
-<span class="k">def</span> <span class="nf">cos_sim</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
-	<span class="k">return</span> <span class="n">dot</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">norm</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">*</span><span class="n">norm</span><span class="p">(</span><span class="n">B</span><span class="p">))</span>
-</code></pre></div></div>
-
-<h3 id="사이킷-런을-활용한-코사인-유사도">사이킷 런을 활용한 코사인 유사도</h3>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">sklearn.metrics.pairwise</span> <span class="kn">import</span> <span class="n">cosine_similarity</span>
-<span class="n">t1</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
-<span class="n">t2</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
-<span class="n">cosine_similarity</span><span class="p">(</span><span class="n">t1</span><span class="p">,</span><span class="n">t2</span><span class="p">)</span>
-</code></pre></div></div>
-
-<h3 id="다른-방법의-유사도-측정방법">다른 방법의 유사도 측정방법</h3>
-
-<p>유클리드 거리 / 자카드 유사도 / 피어슨 상관계수 등의 방법이 있습니다.</p>
-
-<h1 id="3-추천-시스템의-종류">3. 추천 시스템의 종류</h1>
-
-<ul>
-  <li>
-    <p>콘텐츠 기반 필터링 (Content Based Filtering)</p>
-  </li>
-  <li>
-    <p>협업 기반 필터링 (Collaborative Filtering</p>
-
-    <ul>
-      <li>사용자 기반</li>
-      <li>아이템 기반</li>
-      <li>잠재요인 협업 필터링 (latent factor collaborative filtering) → 행렬 인수분해(matrix factorization)</li>
-    </ul>
-  </li>
-  <li>
-    <p>DeepLearning 적용</p>
-  </li>
-  <li>
-    <p>Hybrid방식</p>
-
-    <p>여러 방법을 결합한 방식</p>
-  </li>
-</ul>
-
-<h2 id="3-1-콘텐츠-기반-필터링-방식">3-1. 콘텐츠 기반 필터링 방식</h2>
-
-<p>콘텐츠 기반은 오직 콘텐츠의 내용만을 비교해 추천하는 방식입니다.</p>
-
-<p>아까 예를 들었던 영화로 말하자면, 사람들이 영화를 볼때 고려하는 점은 다음과 같습니다. 장르, 배우, 감독 등의 정보. 이러한 요소들을 영화의 <strong>특성(Feature)</strong>이라고 하고 이 특성을 바탕으로 콘텐츠의 유사도를 측정하게 됩니다.</p>
-
-<ul>
-  <li>코드</li>
-</ul>
-
-<p><strong>해당 예제는 CODE HEROKU의 <a href="http://www.codeheroku.com/post.html?name=Building a Movie Recommendation Engine in Python using Scikit-Learn">‘Building a Movie Recemmendation Engine in Python using Scikit-Learn’</a> 을 바탕으로 제작되었습니다.</strong></p>
-
-<blockquote>
-  <p>전체코드는 깃허브를 참고하시고, 블로그에는 새로 배운 것 위주로 작성하였습니다.</p>
-</blockquote>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
-<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">CountVectorizer</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics.pairwise</span> <span class="kn">import</span> <span class="n">cosine_similarity</span>
-</code></pre></div></div>
-
-<ul>
-  <li>
-    <p>os.getcwd() : 현재 파일이 실행되고 있는 working directory 출력</p>
-  </li>
-  <li>
-    <p>scikit-learn.CountVectorize() : 단순하게 등장 횟수를 세어 숫자 벡터로 만들어줌.</p>
-
-    <ul>
-      <li>
-        <p>out : CSR(Compressed Sparse Row) Matrix</p>
-
-        <p>CSR Matrix란?</p>
-
-        <p>Sparse한 matrix에서 0이 아닌 데이터로 채워지는 데이터 값과 좌표 정보로만으로 구성하여 메모리 사용량을 최소화하고 Sparse한 matrix와 동일한 행렬을 표현할 수 있도록 하는 데이터 구조</p>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p>CountVectorize().fit_transform(pandas.dataframe)</p>
-
-    <ul>
-      <li>데이터에 맞춘 다음 변환합니다.</li>
-    </ul>
-  </li>
-  <li>
-    <p>cosine_similarity() : 코사인 유사도를 구하는 메소드</p>
-
-    <ul>
-      <li>in : CSR Matrix</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="3-2-협업-필터링-방식">3-2. 협업 필터링 방식</h2>
-
-<p>과거의 사용자 행동 양식(User Behavior) 데이터를 기반으로 추천하는 방식으로, 잠재요인 기법을 활용하여 행동 양식을 데이터로 나타냄</p>
-
-<h3 id="기본원리">기본원리</h3>
-
-<p><img src="../assets/img/posts/image-20220221144819086.png" alt="image-20220221144819086" /></p>
-
-<p>다음과 같은 테이블이 있다고 생각해봅시다. timestamp는 사용자가 평점을 매긴 시간입니다. 위 데이터를 사용자와 아이템간의 interaction matrix로 변환해봅시다. 그리고 해당 행렬의 데이터로 평점을 넣으면 아래와 같은 형식이 됩니다. 이를 평점행렬이라고 부르기도 합니다.</p>
-
-<p><img src="../assets/img/posts/image-20220221144944827.png" alt="image-20220221144944827" /></p>
-
-<p>이러한 행렬은 굉장히 희소(sparse)한 행렬이 됩니다.</p>
-
-<p>평점 행렬로 변환 후, 평점 행렬의 유사도를 계산하여 추천하는 방식 : 사용자기반, 아이템 기반 방식</p>
-
-<p>평점행렬을 분해하여 더 많은 정보를 고려하는 방식 : 잠재요인 필터링</p>
-
-<p>정리하자면 다음과 같습니다.</p>
-
-<ul>
-  <li>협업 필터링의 종류
-    <ul>
-      <li>사용자 기반
-        <ul>
-          <li>유사도 계산방식</li>
-        </ul>
-      </li>
-      <li>아이템 기반
-        <ul>
-          <li>유사도 계산방식</li>
-        </ul>
-      </li>
-      <li>잠재요인 기반
-        <ul>
-          <li>행렬인수분해 방식</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="사용자기반">사용자기반</h3>
-
-<blockquote>
-  <p>당신과 비슷한 고객들이 다음 상품을 구매했습니다.</p>
-</blockquote>
-
-<p>위 글을 시스템으로 만든 것이 사용자 기반 추천시스템입니다.</p>
-
-<p><img src="../assets/img/posts/image-20220221154853846.png" alt="image-20220221154853846" /></p>
-
-<p>user 4가 아이템 1을 구매하고, user 4와 가장 유사한 user 2는 아이템 1-4까지 위와 같은 평점을 남겼다고 합시다. 이 경우, user2가 선호한 제품인 item 3을 4에게 추천해주는 방식입니다.</p>
-
-<h3 id="아이템기반">아이템기반</h3>
-
-<blockquote>
-  <p>이 상품을 선택한 다른 고객들은 다음 상품을 구매했습니다.</p>
-</blockquote>
-
-<p>위 말을 시스템으로 만든 것이 아이템 기반 추천 시스템입니다. 일반적으로 사용자 기반보다는 아이템 기반 방식이 정확도가 높다고 합니다.</p>
-
-<p><img src="../assets/img/posts/image-20220221155923256.png" alt="image-20220221155923256" /></p>
-
-<p>user2가 위와 같은 선호도를 가졌다할 때, 아이템 1의 선호도가 가장 높습니다.</p>
-
-<p>그리고 아이템 1의 선호도는 다음과 같습니다.</p>
-
-<p><img src="../assets/img/posts/image-20220221155952136.png" alt="image-20220221155952136" /></p>
-
-<p>아이템 2을 좋아한 사람은 user4이므로 user4에게 user2가 좋아한 상품인 3을 추천해줍니다.</p>
-
-<p><img src="../assets/img/posts/image-20220221160008483.png" alt="image-20220221160008483" /></p>
-
-<h3 id="잠재요인-협업-필터링-기반">잠재요인 협업 필터링 기반</h3>
-
-<p>평점행렬을 행렬 인수분해(matrix factorization)를 통해 잠재요인(latent factor)을 분석</p>
-
-<p>행렬 인수분해 종류</p>
-
-<ul>
-  <li>SVD(Singular Vector Decomposition)</li>
-  <li>ALS(Alternating Least Squares)</li>
-  <li>NMF(Non-Negative Factorization)</li>
-</ul>
-
-<h4 id="svd-singular-vector-decomposition">SVD Singular Vector Decomposition</h4>
-
-<p>가장 많이 사용됨, 우리말로는 특잇값 분해</p>
-
-<p>M*N 형태의 행렬 A를 다음과 같은 형태로 분해하여 나타냄</p>
-
-<p><img src="../assets/img/posts/image-20220221171929948.png" alt="image-20220221171929948" /></p>
-
-<ul>
-  <li>
-    <p>구현 메소드 : https://numpy.org/doc/stable/reference/generated/numpy.linalg.svd.html</p>
-  </li>
-  <li>코드
-    <ul>
-      <li>np.diag(Sigma) : 대각선을 추출하거나 대각선 배열을 구성합니다.</li>
-      <li>np.dot(np.dot(U, Sigma_mat), VT) : 두 배열간의 내적</li>
-    </ul>
-  </li>
-  <li>
-    <p>참고 링크</p>
-
-    <ul>
-      <li>
-        <p><a href="https://angeloyeo.github.io/2019/08/01/SVD.html">특잇값분해</a></p>
-      </li>
-      <li>
-        <p>[<a href="https://darkpgmr.tistory.com/106">선형대수학 #4] 특이값 분해(Singular Value Decomposition, SVD)의 활용</a></p>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<h4 id="truncated-svd--lsa-latent-sementic-analysis">Truncated SVD = LSA Latent Sementic Analysis</h4>
-
-<p>우리말로 번역하면 잘린 SVD, 다른 말로는 LSA(Latent semantic analysis), 잠재 의미 분석 이라고 합니다.</p>
-
-<p>Truncated SVD를 이용해 분해한 뒤, 복원하면 SVD처럼 완벽히 나오지않습니다. 왜냐하면 Truncated SVD가 차원을 축소한 다음 행렬을 분해하기 때문입니다.</p>
-
-<p>SVD(특이값 분해)를 평가행렬에 적용해 잠재요인을 분석하는 것을 도식화하면 사진과 같습니다.</p>
-
-<p><img src="../assets/img/posts/image-20220221174558265.png" alt="image-20220221174558265" /></p>
-
-<p>표기법</p>
-
-<ul>
-  <li>R: 사용자와 아이템 사이의 행렬</li>
-  <li>P: 사용자와 잠재요인 사이의 행렬</li>
-  <li>Q: 아이템과 잠재요인 사이의 행렬 —&gt; 전치 행렬 형태로 나타냄</li>
-</ul>
-
-<p><img src="../assets/img/posts/image-20220221174851001.png" alt="image-20220221174851001" /></p>
-
-<p>사용자가 아이템에 대한 평점을 매기는 요인으로 많은 항목들이 있습니다. 그리고 평점을 매기는 것은 매우 주관적입니다. 그렇기 때문에, 사용자가 평점을 매기는 요인을 잠재요인으로 취급한 뒤, SVD 기법을 이용해 분해하고, 다시 합치는 방법으로 영화에 평점을 매긴 이유를 벡터화하고 이를 기반으로 추천합니다. 이 기법은 넷플릭스, 왓챠, 유튜브와 같은 기업에서 효과를 입증해냈고 이후 많은 기업들도 채택하였다고 합니다.</p>
-
-<p>이렇게 협업 필터링을 이용하면 사용자가 아이템에 대해 평점을 매긴 평점행렬을 인수분해(Matrix Factorization)를 통해 잠재요인을 분석한 뒤 유사도를 계산할 수도 있으며 사용자의 평점도 예측할 수 있습니다. 특히 잠재요인을 고려해 행렬을 인수분해하면 파라미터수는 감소하게 됩니다.</p>
-
-<p>구현 메소드 : https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.TruncatedSVD.html</p>
-
-<h2 id="3-3-실제-추천-시스템">3-3. 실제 추천 시스템</h2>
-
-<p>오늘 작성한 내용들은 추천 시스템에 기본이 되는 요소입니다. 실제로 대기업에서는 더 많은 것을 추천에 고려합니다.</p>
-
-<p>사용자의 구매여부, 평점데이터는 기본이고 얼마나 오랜 시간 시청(혹은 사이트에 머물렀는지)했는지, 어떤 사이트에서 유입되었는지, 시청 후 구매로 이어지기까지의 시간 등 행동 족적을 다 분석합니다. 이를 전문 용어로 <strong>Digital Footprint(디지털 발자국), Digital Shadow(디지털 그림자)</strong>라고 합니다.</p>
-
-<p>이중 가장 중요한 지표가 **클릭룰( CTR , Click Through Rate) **입니다.</p>
-
-<ul>
-  <li>참고: <a href="https://support.google.com/google-ads/answer/2615875?hl=en">Clickthrough rate (CTR): Definition</a></li>
-</ul>
-
-<p>어떻게든 다양한 데이터들을 모아 추천을 한 뒤, 적절한 추천이었는지 아니었는지를 평가하는 것 또한 중요한 일입니다. 추천한 제품이 구매 혹은 시청으로 이루어졌는지를 통해 추천의 성공여부를 평가하기도 하고, 모델 단계에서 평가하기도 합니다.</p>
-
-<p>추천시스템은 매우 큰 시스템입니다. 데이터를 기반으로 고객에게 적절한 제품 혹은 콘텐츠를 추천하고, 이것이 구매 , 결제로 이루어 지는 것은 매출과 직결되는 문제기도 합니다. 좋은 추천 시스템을 만들기 위해서는, 어떤 데이터를 사용할지 매우 고민을 해야합니다. 어떤 데이터가 사용자와 연관성이 있을지, 구매와 직결되는 각종 데이터는 무엇인지 고려하고 수집, 정렬(sorting)하여 다시 순위(ranking)를 매긴 다음 평가하는 작업을 반복하며 적합한 데이터와 추천 시스템이 만들어냅니다.</p>
-
-<blockquote>
-  <p>추천시스템이 머신러닝이 적용될 수도 있는거지 머신러닝안에 추천시스템이 있는것은 아닙니다.</p>
-</blockquote>
-
-<hr />
-
-<h6 id="출처">출처</h6>
-
-<ul>
-  <li>
-    <p>AIFFEL LMS</p>
-
-    <p>문제시 연락 부탁드립니다. :)</p>
-  </li>
-  <li>
-    <p>5</p>
-  </li>
-</ul>]]></content><author><name>Shin Hwi Jeong</name></author><summary type="html"><![CDATA[오늘은 아이펠 29번 fundamental 노드를 읽고 공부한 것을 작성해 보았습니다.]]></summary></entry><entry><title type="html">Git lfs 깃에 100mb보다 큰 파일 올리기</title><link href="http://localhost:4000/Git-LFS-%EA%B9%83%EC%97%90-100MB%EB%B3%B4%EB%8B%A4-%ED%81%B0-%ED%8C%8C%EC%9D%BC-%EC%98%AC%EB%A6%AC%EA%B8%B0.html" rel="alternate" type="text/html" title="Git lfs 깃에 100mb보다 큰 파일 올리기" /><published>2022-02-21T00:00:00+09:00</published><updated>2022-02-21T00:00:00+09:00</updated><id>http://localhost:4000/Git%20LFS%20%EA%B9%83%EC%97%90%20100MB%EB%B3%B4%EB%8B%A4%20%ED%81%B0%20%ED%8C%8C%EC%9D%BC%20%EC%98%AC%EB%A6%AC%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/Git-LFS-%EA%B9%83%EC%97%90-100MB%EB%B3%B4%EB%8B%A4-%ED%81%B0-%ED%8C%8C%EC%9D%BC-%EC%98%AC%EB%A6%AC%EA%B8%B0.html"><![CDATA[<blockquote>
-  <p>git lfs install</p>
-
-  <p>git lfs track “*.exe”</p>
-
-  <p>git config –<strong>global</strong> http.postBuffer 20971520</p>
-
-  <p>git config –<strong>global</strong> http.maxRequestBuffer 100M</p>
-</blockquote>
-
-<ul>
-  <li>git lfs 사이트
-    <ul>
-      <li>https://git-lfs.github.com/</li>
-    </ul>
-  </li>
-  <li>참고 사이트
-    <ul>
-      <li>https://jamie-dev.tistory.com/79</li>
-      <li>https://goodtogreate.tistory.com/entry/Github%EC%97%90-100Mb%EC%9D%B4%EC%83%81-%ED%8C%8C%EC%9D%BC-%EC%98%AC%EB%A6%AC%EB%8A%94-%EB%B0%A9%EB%B2%95-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0</li>
-      <li>https://medium.com/@stargt/github%EC%97%90-100mb-%EC%9D%B4%EC%83%81%EC%9D%98-%ED%8C%8C%EC%9D%BC%EC%9D%84-%EC%98%AC%EB%A6%AC%EB%8A%94-%EB%B0%A9%EB%B2%95-9d9e6e3b94ef</li>
-    </ul>
-  </li>
-</ul>]]></content><author><name>Shin Hwi Jeong</name></author><summary type="html"><![CDATA[git lfs install git lfs track “*.exe” git config –global http.postBuffer 20971520 git config –global http.maxRequestBuffer 100M]]></summary></entry></feed>
+<h1 id="7-비슷한-아티스트-찾기--유저에게-추천하기">7. 비슷한 아티스트 찾기 + 유저에게 추천하기</h1>]]></content><author><name>Shin Hwi Jeong</name></author><summary type="html"><![CDATA[오늘은 아이펠 Exploration 노드 14번을 공부하고 공부한 내용을 포스팅해보았습니다.]]></summary></entry></feed>

@@ -1,0 +1,285 @@
+<p>오늘은 아이펠 Fundamental 노드 31번을 공부하고 공부한 내용을 포스팅해보았습니다.</p>
+
+<hr />
+
+<h6 id="출처">출처</h6>
+
+<ul>
+  <li>
+    <p>AIFFEL LMS</p>
+
+    <p>문제시 연락 부탁드립니다. :)</p>
+  </li>
+</ul>
+
+<hr />
+
+<h6 id="목차">목차</h6>
+
+<ul>
+  <li>HTML과 태그</li>
+  <li>선택자</li>
+</ul>
+
+<p>[TOC]</p>
+
+<hr />
+
+<h6 id="사용하는-패키지--모듈">사용하는 패키지 / 모듈</h6>
+
+<ul>
+  <li>
+    <p>Mecab</p>
+
+    <ul>
+      <li>
+        <p>$ git clone https://github.com/SOMJANG/Mecab-ko-for-Google-Colab.git</p>
+
+        <p>$ cd Mecab-ko-for-Google-Colab</p>
+
+        <p>$ bash install_mecab-ko_on_colab190912.sh</p>
+      </li>
+    </ul>
+  </li>
+  <li>beautifulsoup4</li>
+  <li>newspaper3k</li>
+  <li>konlpy</li>
+</ul>
+
+<hr />
+
+<h1 id="html과-태그">HTML과 태그</h1>
+
+<p>크롤링이란, 웹 페이지로부터 데이터를 추출하는 것입니다. 크롤링하는 소프트웨어는 크롤러라고 합니다.</p>
+
+<p>크롤링을 하기 위해서는 HTML과 태그에 대해서 알아야합니다.</p>
+
+<ul>
+  <li>HTML이란 Hyper Text Markup Language의 준말입니다.
+    <ul>
+      <li>HyperText : 문서와 문서가 링크로 연결되어 있다.</li>
+      <li>Markup : 태그로 이루어져 있다.</li>
+    </ul>
+  </li>
+  <li>태그란 정보를 정의하는 형식입니다.</li>
+</ul>
+
+<h1 id="선택자">선택자</h1>
+
+<p>원활한 크롤링을 위해서는 HTML 내의 선택자가 매우 중요합니다. 선택자란, 특정 태그들에 그룹이나 번호를 주는 기능입니다.</p>
+
+<pre><code class="language-HTML">&lt;html&gt; 
+    &lt;head&gt; 
+    &lt;/head&gt; 
+    &lt;body&gt; 
+        &lt;h1&gt; 장바구니
+            &lt;p&gt; 라운드티
+                &lt;span&gt; 25 &lt;/span&gt; 
+                &lt;span&gt; 29000 &lt;/span&gt; 
+                &lt;span&gt; 의류&lt;/span&gt; 
+                &lt;a href = 'http://www.naver.com'&gt; 이동 &lt;/a&gt; 
+            &lt;/p&gt; 
+            &lt;p&gt; 시계
+                &lt;span&gt; 28 &lt;/span&gt;
+                &lt;span&gt; 32000 &lt;/span&gt; 
+                &lt;span&gt; 악세서리 &lt;/span&gt; 
+                &lt;a href = 'http://www.facebook.com'&gt; 이동 &lt;/a&gt; 
+            &lt;/p&gt; 
+        &lt;/h1&gt; 
+    &lt;/body&gt; 
+&lt;/html&gt;
+</code></pre>
+
+<p>위와 같은 HTML 문서가 있다고 할 때, <code class="language-plaintext highlighter-rouge">&lt;p&gt;</code> 태그는 2개, <code class="language-plaintext highlighter-rouge">&lt;span&gt;</code>태그는 6개, <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> 태그는 2개가 있습니다.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">&lt;p&gt;</code>
+    <ul>
+      <li>Paragraph 문단의 약자로, 하나의 문단을 만들 때 쓰입니다.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;span&gt;</code>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">&lt;span&gt;</code>태그는 <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code>태그처럼 특별한 기능을 갖고 있지 않으며 CSS와 함께 쓰입니다.</li>
+      <li>display속성이 Block이 아닌, Inline이며, <a href="https://ofcourse.kr/css-course/display-%EC%86%8D%EC%84%B1">CSS Display</a> 페이지에서 세부 정보를 알 수 있습니다.</li>
+      <li>줄바꿈안되는 속성</li>
+      <li><code class="language-plaintext highlighter-rouge">&lt;div&gt;</code>
+        <ul>
+          <li>Division의 약자로, 레이아웃을 나누는데 쓰입니다.</li>
+          <li>특별한 기능은 없으며 가상의 레이아웃을 설계하는데 쓰이며 CSS와 연동하여 쓰입니다.</li>
+          <li>줄바꿈이 됨</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;a&gt;</code>
+    <ul>
+      <li>하이퍼링크를 걸어주는 태그</li>
+      <li>속성
+        <ul>
+          <li>href : 클릭시 이동할 링크</li>
+          <li>target : 링크를 여는 방법
+            <ul>
+              <li><code class="language-plaintext highlighter-rouge">_self</code>: 현재 페이지 (기본값)</li>
+              <li><code class="language-plaintext highlighter-rouge">_blank</code>: 새 탭</li>
+              <li><code class="language-plaintext highlighter-rouge">_parent</code>: 부모 페이지로, iframe 등이 사용된 환경에서 쓰입니다.</li>
+              <li><code class="language-plaintext highlighter-rouge">_top</code>: 최상위 페이지로, iframe 등이 사용된 환경에서 쓰입니다.</li>
+              <li><em><code class="language-plaintext highlighter-rouge">프레임이름</code></em>: 직접 프레임이름을 명시해서 사용할 수도 있습니다.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="https://ofcourse.kr/html-course/p-%ED%83%9C%EA%B7%B8">HTML 태그</a></li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span> 
+    <span class="nt">&lt;head&gt;</span> 
+    <span class="nt">&lt;/head&gt;</span> 
+    <span class="nt">&lt;body&gt;</span> 
+        <span class="nt">&lt;h1&gt;</span> 장바구니
+            <span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">'clothes'</span> <span class="na">class=</span><span class="s">'name'</span> <span class="na">title=</span><span class="s">'라운드티'</span><span class="nt">&gt;</span> 라운드티
+                <span class="nt">&lt;span</span> <span class="na">class = </span><span class="s">'number'</span><span class="nt">&gt;</span> 25 <span class="nt">&lt;/span&gt;</span> 
+                <span class="nt">&lt;span</span> <span class="na">class = </span><span class="s">'price'</span><span class="nt">&gt;</span> 29000 <span class="nt">&lt;/span&gt;</span> 
+                <span class="nt">&lt;span</span> <span class="na">class = </span><span class="s">'menu'</span><span class="nt">&gt;</span> 의류<span class="nt">&lt;/span&gt;</span> 
+                <span class="nt">&lt;a</span> <span class="na">href = </span><span class="s">'http://www.naver.com'</span><span class="nt">&gt;</span> 바로가기 <span class="nt">&lt;/a&gt;</span> 
+            <span class="nt">&lt;/p&gt;</span> 
+            <span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">'watch'</span> <span class="na">class=</span><span class="s">'name'</span> <span class="na">title=</span><span class="s">'시계'</span><span class="nt">&gt;</span> 시계
+                <span class="nt">&lt;span</span> <span class="na">class = </span><span class="s">'number'</span><span class="nt">&gt;</span> 28 <span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class = </span><span class="s">'price'</span><span class="nt">&gt;</span> 32000 <span class="nt">&lt;/span&gt;</span> 
+                <span class="nt">&lt;span</span> <span class="na">class = </span><span class="s">'menu'</span><span class="nt">&gt;</span> 악세서리 <span class="nt">&lt;/span&gt;</span> 
+                <span class="nt">&lt;a</span> <span class="na">href = </span><span class="s">'http://www.facebook.com'</span><span class="nt">&gt;</span> 바로가기 <span class="nt">&lt;/a&gt;</span> 
+            <span class="nt">&lt;/p&gt;</span> 
+        <span class="nt">&lt;/h1&gt;</span> 
+    <span class="nt">&lt;/body&gt;</span> 
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p>위 코드는 id와 class를 위 코드블록에서 추가한 코드입니다.</p>
+
+<ul>
+  <li>id : CSS의 스타일을 적용할때 매우 유용</li>
+  <li>class : 비슷한 성격을 가지는 그룹을 정의해서 한번에 관리하고 싶을때 사용</li>
+</ul>
+
+<h1 id="beautifulsoup-패키지">BeautifulSoup 패키지</h1>
+
+<p>HTML이나 XML 문서로부터 원하는 정보를 추출해주는 파이썬 크롤링 패키지입니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html</span><span class="p">,</span> <span class="s">'html.parser'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">BeautifulSoup(입력 문자열, parser종류)</code> 형식으로 사용하는 메소드입니다.</p>
+
+<ul>
+  <li>html 자리에 html 문서 혹은 html형식으로 작성된 문자열을 넣어줍니다.</li>
+  <li>‘html.parser’ : 입력 문자열이 html 형식으로 작성되어 있으니, HTML 문법을 기반으로 파싱하라는 뜻</li>
+</ul>
+
+<p>위와같이 인스턴스를 생성하고나면, 정보를 가져오는 것은 <code class="language-plaintext highlighter-rouge">select()</code> 메소드를 이용하여 가능합니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">soup</span><span class="p">.</span><span class="n">select</span><span class="p">(</span><span class="s">'body'</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>실행결과</p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[&lt;body&gt;
+&lt;h1&gt; 장바구니
+            &lt;p class="name" id="clothes" title="라운드티"&gt; 라운드티
+                &lt;span class="number"&gt; 25 &lt;/span&gt;
+&lt;span class="price"&gt; 29000 &lt;/span&gt;
+&lt;span class="menu"&gt; 의류&lt;/span&gt;
+&lt;a href="http://www.naver.com"&gt; 바로가기 &lt;/a&gt;
+&lt;/p&gt;
+&lt;p class="name" id="watch" title="시계"&gt; 시계
+                &lt;span class="number"&gt; 28 &lt;/span&gt;
+&lt;span class="price"&gt; 32000 &lt;/span&gt;
+&lt;span class="menu"&gt; 악세서리 &lt;/span&gt;
+&lt;a href="http://www.facebook.com"&gt; 바로가기 &lt;/a&gt;
+&lt;/p&gt;
+&lt;/h1&gt;
+&lt;/body&gt;]
+</code></pre></div>  </div>
+</blockquote>
+
+<p>즉, soup.select(‘찾는정보’) 형식으로 사용합니다.</p>
+
+<ul>
+  <li><a href="https://m.blog.naver.com/kiddwannabe/221177292446">BeautifulSoup로 크롤링하기</a></li>
+</ul>
+
+<p>부모와 자식관계라면 다음과 같이 사용합니다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">soup.select( 부모 &gt; 자식 )</code></p>
+
+<p>다음과 같은 html body 태그가 있으면,</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;h1&gt;</span> 장바구니
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"name"</span> <span class="na">id=</span><span class="s">"clothes"</span> <span class="na">title=</span><span class="s">"라운드티"</span><span class="nt">&gt;</span> 라운드티
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"number"</span><span class="nt">&gt;</span> 25 <span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"price"</span><span class="nt">&gt;</span> 29000 <span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"menu"</span><span class="nt">&gt;</span> 의류<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://www.naver.com"</span><span class="nt">&gt;</span> 바로가기 <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"name"</span> <span class="na">id=</span><span class="s">"watch"</span> <span class="na">title=</span><span class="s">"시계"</span><span class="nt">&gt;</span> 시계
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"number"</span><span class="nt">&gt;</span> 28 <span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"price"</span><span class="nt">&gt;</span> 32000 <span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"menu"</span><span class="nt">&gt;</span> 악세서리 <span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://www.facebook.com"</span><span class="nt">&gt;</span> 바로가기 <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+</code></pre></div></div>
+
+<p>h1 요소의 자식에서 .name의 자식인 클래스 menu인 경우만 뽑는다면,</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">soup</span><span class="p">.</span><span class="n">select</span><span class="p">(</span><span class="s">'h1 .name .menu'</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>실행 결과</p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[&lt;span class="menu"&gt; 의류&lt;/span&gt;, &lt;span class="menu"&gt; 악세서리 &lt;/span&gt;]
+</code></pre></div>  </div>
+</blockquote>
+
+<p>잘못된 입력</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">soup</span><span class="p">.</span><span class="n">select</span><span class="p">(</span><span class="s">'html &gt; h1'</span><span class="p">))</span>
+</code></pre></div></div>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[]
+</code></pre></div>  </div>
+</blockquote>
+
+<p>h1이 html의 자식이긴 하지만, 바로 아래 자식은 아니고, body의 자식입니다. 즉 html &gt; body &gt; h1인 것입니다. 하지만 html의 바로 아래 자식인것 처럼 사용하면 위와 같이 빈 정보를 출력합니다.</p>
+
+<h1 id="newspaper3k-패키지">newspaper3k 패키지</h1>
+
+<p>뉴스데이터를 크롤링하기 위해 만들어진 패키지입니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">newspaper</span> <span class="kn">import</span> <span class="n">Article</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s">'https://news.naver.com/main/read.nhn?mode=LSD&amp;mid=sec&amp;sid1=101&amp;oid=030&amp;aid=0002881076'</span>
+
+<span class="c1">#- 언어가 한국어이므로 language='ko'로 설정해주었습니다.
+</span><span class="n">article</span> <span class="o">=</span> <span class="n">Article</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s">'ko'</span><span class="p">)</span>
+<span class="n">article</span><span class="p">.</span><span class="n">download</span><span class="p">()</span>
+<span class="n">article</span><span class="p">.</span><span class="n">parse</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>위 코드를 실행하면, URL의 뉴스 데이터를 파싱합니다.</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">article.title</code> : 기사 제목을 출력해줍니다.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">article.text</code> : 기사의 내용을 출력해줍니다.</p>
+  </li>
+</ul>
+

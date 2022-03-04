@@ -1,0 +1,188 @@
+I"�<p>깃허브 블로그 제작기 시리즈의 첫번째 글입니다.</p>
+
+<p>https://devinlife.com/howto%20github%20pages/github-prepare/</p>
+
+<p>위 링크를 참고하여 따라하였음을 밝힙니다.</p>
+
+<h2 id="1-github-pages-준비하기">1. github pages 준비하기</h2>
+
+<ul>
+  <li>
+    <p>github pages  준비하기 축약</p>
+
+    <ul>
+      <li>
+        <p>1-1 Ruby 설치하기</p>
+      </li>
+      <li>
+        <p>1-2 Jekyll과 bundler 설치하기</p>
+      </li>
+      <li>
+        <p>1-3 샘플 블로그 생성하기</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="1-1-ruby-설치하기">1-1. Ruby 설치하기</h3>
+
+<ul>
+  <li>
+    <p>Ruby를 먼저 설치해줍니다.</p>
+
+    <p>설치링크 - https://rubyinstaller.org/downloads/%E3%84%B4</p>
+
+    <p>저는 노란색으로 칠해진 버전을 다운받았고, with DEVKIT로 다운받았습니다.</p>
+
+    <p><img src="../assets/img/posts/image-20220124152602837-16459659014651.png" alt="image-20220124152602837" /></p>
+  </li>
+  <li>
+    <p>설치화면</p>
+
+    <ol>
+      <li>Accept license</li>
+    </ol>
+
+    <p><img src="../assets/img/posts/image-20220124153353808-16459659040052.png" alt="image-20220124153353808" /></p>
+
+    <ol>
+      <li>
+        <p>원하는 파일 경로를 지정해줍니다.</p>
+
+        <p>저는 D드라이브에 설치해주었습니다. 제 경험상 Path 관련한 체크사항은 꼭! 체크를 해주고 넘어가야합니다.</p>
+
+        <p><img src="../assets/img/posts/image-20220124160502927-16459659057203.png" alt="image-20220124160502927" /></p>
+      </li>
+      <li>
+        <p>MSYS2 Development도 설치해줍니다.</p>
+
+        <p><img src="../assets/img/posts/image-20220124153433453-16459659073054.png" alt="image-20220124153433453" /></p>
+      </li>
+      <li>
+        <p>Ruby 설치 완료</p>
+
+        <p><img src="../assets/img/posts/image-20220124154118392-16459659097985.png" alt="image-20220124154118392" /></p>
+      </li>
+      <li>
+        <p>MSYS2 Development toolchain설치</p>
+
+        <p>4번 설치를 완료하고 나면, 자동으로 뜹니다. Enter를 한번 눌러주면 설치가 진행됩니다.</p>
+
+        <ul>
+          <li>
+            <p>처음화면</p>
+
+            <p><img src="../assets/img/posts/image-20220124154139988-16459659119006.png" alt="image-20220124154139988" /></p>
+          </li>
+          <li>
+            <p>중간화면</p>
+
+            <p><img src="../assets/img/posts/image-20220124163246528-16459659143577.png" alt="image-20220124163246528" /></p>
+          </li>
+          <li>
+            <p>완료화면</p>
+
+            <p>캡쳐를 못했는데, 처음화면과 같이 Enter를 입력하라는 칸이 더 뜹니다. 이때, 엔터를 한번 더 쳐주면, 끝나게 됩니다.</p>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+</ul>
+
+<h3 id="1-2-jekyll과-bundler-설치하기">1-2. Jekyll과 bundler 설치하기</h3>
+
+<p>윈도우 검색창에 <code class="language-plaintext highlighter-rouge">Start Command Prompt with Ruby</code>를 검색 후, 실행하면 다음과 같이 창이 뜹니다.</p>
+
+<p><img src="../assets/img/posts/image-20220124174330385-16459659171158.png" alt="image-20220124174330385" /></p>
+
+<p>다음 명령어를 사용하여 jekyll bundler를 설치합니다.</p>
+
+<blockquote>
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem <span class="nb">install </span>jekyll bundler
+</code></pre></div>  </div>
+</blockquote>
+
+<ul>
+  <li>
+    <p>설치화면</p>
+
+    <p><img src="../assets/img/posts/image-20220124174529777-16459659202139.png" alt="image-20220124174529777" /></p>
+  </li>
+  <li>
+    <p>완료화면</p>
+
+    <p><img src="../assets/img/posts/image-20220124174549466-164596592204510.png" alt="image-20220124174549466" /></p>
+  </li>
+</ul>
+
+<h3 id="1-3-샘플-블로그-생성하기">1-3. 샘플 블로그 생성하기</h3>
+
+<ol>
+  <li>
+    <p>블로그 폴더 생성</p>
+
+    <p>새로운 블로그를 생성하려면 다음과 같이 명령어를 입력합니다. testBlog라는 블로그 폴더를 생성합니다.</p>
+
+    <blockquote>
+      <p>jekyll new testBlog</p>
+    </blockquote>
+
+    <p><img src="../assets/img/posts/image-20220124175156214-164596592393311.png" alt="image-20220124175156214" /></p>
+
+    <p>만약, D드라이브에 생성하고 싶다면, 명령어에 <code class="language-plaintext highlighter-rouge">D:</code> 를 입력한 후, cd 명령어로 원하는 디렉토리로 이동 한 후 똑같이 따라하시면 됩니다.</p>
+  </li>
+  <li>
+    <p>생성한 블로그 폴더로 이동</p>
+
+    <p>생성된 블로그 폴더로 이동합니다.</p>
+
+    <blockquote>
+      <p>cd testBlog</p>
+    </blockquote>
+  </li>
+  <li>
+    <p>블로그 폴더에서 서버 실행</p>
+
+    <p>다음 명령어를 이용하여 jekyll서버를 내 컴퓨터에서 실행합니다.</p>
+
+    <blockquote>
+      <p>bundle exec jekyll serve</p>
+    </blockquote>
+
+    <p>3-1. 정상 실행 화면</p>
+
+    <p><img src="../assets/img/posts/image-20220124175752079-164596592612412.png" alt="image-20220124175752079" /></p>
+
+    <p>Server Running 인 상태로 <strong>창을 끄지않고 그대로 둔 후</strong> 인터넷 창에 localhost:4000으로 접속하면 다음과 같이 뜹니다. 빈 블로그 만들기가 성공했습니다!</p>
+
+    <p><img src="../assets/img/posts/image-20220124175852735-164596592805913.png" alt="image-20220124175852735" /></p>
+
+    <p>3-2. 오류화면</p>
+
+    <p>​	bundle exec jekyll serve로 로컬에서 jekyll 서버를 구동하려고 하면 webrick을 로드하지 못했다는 오류가 	발생할 수 있습니다.</p>
+
+    <p>​	Error 명 : Cannot load such file – webrick (LoadError)</p>
+
+    <p><img src="../assets/img/posts/image-20220124175320036-164596592962114.png" alt="image-20220124175320036" /></p>
+
+    <p>Ruby 3.x 이상에서는 webrick파일이 자동으로 포함되지 않아 발생하는 문제입니다.</p>
+
+    <p>다음 명령어를 통해서 이를 해결할 수있습니다.</p>
+
+    <blockquote>
+      <p>bundle add webrick</p>
+    </blockquote>
+  </li>
+</ol>
+
+<hr />
+
+<h6 id="참고사이트">참고사이트</h6>
+
+<ul>
+  <li>https://devinlife.com/howto/</li>
+  <li>https://ogaeng.com/jekyll-blog-install/</li>
+  <li>https://junho85.pe.kr/1850</li>
+</ul>
+:ET

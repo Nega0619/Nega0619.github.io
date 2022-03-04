@@ -1,0 +1,487 @@
+I"#G<h1 id="1-세트란">1. 세트란?</h1>
+
+<p>파이썬 자료형 중에는 수학적 의미를 가진 ‘집합’의 개념이 존재합니다. 이를 파이썬에서 <code class="language-plaintext highlighter-rouge">세트</code>라고 합니다.</p>
+
+<hr />
+
+<h6 id="자료형이란">자료형이란?</h6>
+
+<p>Data Type이라고도 하며, 프로그래밍 언어에서 정수(integer), 실수(float), 문자(character), 문자열(string), 부울(Boolean : True, False 값을 가지는 데이터) 와 같은 여러 종류의 데이터를 식별하는 분류입니다.</p>
+
+<p>자료형은 컴퓨터와 프로그래머에게 어떤 종류의 자료를 다루고 있는지 알려줍니다. 자료형에 따라 사용할 수 있는 연산이나 값이 제한됩니다. (ex. string - string은 안됨 : “abc”-“a” 불가 / integer-integer는 가능 : 456-3 은가능)</p>
+
+<hr />
+
+<h2 id="11-세트-자료형의-선언">1.1 세트 자료형의 선언</h2>
+
+<h3 id="변수--값1-값2-값3">변수 = {값1, 값2, 값3}</h3>
+
+<p>{ } 중괄호 안에 값을 저장하며 콤마<code class="language-plaintext highlighter-rouge">,</code>로 구분해 줍니다.</p>
+
+<h3 id="set">set()</h3>
+
+<p><code class="language-plaintext highlighter-rouge">set( 반복 가능한 iterable 객체 )</code> : return 세트 자료형의 데이터</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; result = set('banana')
+&gt;&gt;&gt; result 
+</code></pre></div></div>
+
+<p>실행결과</p>
+
+<blockquote>
+  <p>{‘a’, ‘b’, ‘n’}</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; result = set(range(3))
+&gt;&gt;&gt; result 
+</code></pre></div></div>
+
+<p>실행결과</p>
+
+<blockquote>
+  <p>{0, 1, 2}</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; result = set() 				# 빈 세트 만드는 법.
+&gt;&gt;&gt; result 
+</code></pre></div></div>
+
+<p>실행결과</p>
+
+<blockquote>
+  <p>set()</p>
+</blockquote>
+
+<p><span style="color:red">result = set()  는 result={}와 같지 않음 XXXXXX dictionary로 선언되기 때문</span></p>
+
+<h2 id="12-세트-자료형의-특징">1.2 세트 자료형의 특징</h2>
+
+<ul>
+  <li>
+    <p>순서가 정해져 있지 않음.</p>
+  </li>
+  <li>
+    <p>데이터 값 중복 불가.</p>
+
+    <p>-&gt; 중복 데이터를 넣으면, 중복 데이터는 무시됨.</p>
+  </li>
+  <li>
+    <p>특정 요소만 출력 불가.</p>
+
+    <ul>
+      <li>전체만 출력 가능</li>
+    </ul>
+  </li>
+  <li>
+    <p>세트안에 세트 넣기 불가.</p>
+  </li>
+  <li>
+    <p>내용을 변경할 수 없는 세트도 있음</p>
+
+    <ul>
+      <li>
+        <p>형식 : <code class="language-plaintext highlighter-rouge">a = frozenset(range(10))</code></p>
+      </li>
+      <li>
+        <p>set안에 frozenset 넣는것은 가능</p>
+      </li>
+      <li>
+        <p>frozenset 안에 frozenset 넣는것도 가능</p>
+
+        <p>ex 1. <code class="language-plaintext highlighter-rouge">result={frozenset("123"), frozenset("456")}</code></p>
+
+        <p>ex 2.  <code class="language-plaintext highlighter-rouge">result = frozenset({frozenset("123"), frozenset("456"), "789"})</code></p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="13-세트-연산--집합-연산">1.3 세트 연산 = 집합 연산</h2>
+
+<h3 id="131-합집합">1.3.1 합집합</h3>
+
+<p>or 연산자를 사용하거나 set.union(세트1, 세트2)메서드 사용</p>
+
+<h4 id="-연산자-사용">| 연산자 사용</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; a = {1, 2, 3}
+&gt;&gt;&gt; b = {4, 5, 6}
+&gt;&gt;&gt; a | b				# 혹은 a |= b		a = a|b 의 축약형
+</code></pre></div></div>
+
+<p>실행 결과</p>
+
+<blockquote>
+  <p>{1, 2, 3, 4, 5, 6}</p>
+</blockquote>
+
+<h4 id="setunion사용">set.union()사용</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; a = {1, 2, 3}
+&gt;&gt;&gt; b = {4, 5, 6}
+&gt;&gt;&gt; set.union(a,b)
+</code></pre></div></div>
+
+<p>실행 결과</p>
+
+<blockquote>
+  <p>{1, 2, 3, 4, 5, 6}</p>
+</blockquote>
+
+<h4 id="세트1update세트2사용">세트1.update(세트2)사용</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; a = {1, 2, 3}
+&gt;&gt;&gt; b = {4, 5, 6}
+&gt;&gt;&gt; a.update(b)				# a에 결과가 저장됨.
+</code></pre></div></div>
+
+<p>실행 결과</p>
+
+<blockquote>
+  <p>{1, 2, 3, 4, 5, 6}</p>
+</blockquote>
+
+<h3 id="132-교집합">1.3.2 교집합</h3>
+
+<h4 id="-연산자-사용-1">&amp; 연산자 사용</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; a = {1, 2, 3}
+&gt;&gt;&gt; b = {4, 5, 6}
+&gt;&gt;&gt; a &amp; b				# 혹은 a &amp;= b		a = a &amp; b의 축약형
+</code></pre></div></div>
+
+<p>실행 결과</p>
+
+<blockquote>
+  <p>set()</p>
+</blockquote>
+
+<h4 id="setintersectionab-사용">set.intersection(a,b) 사용</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; a = {1, 2, 3}
+&gt;&gt;&gt; b = {4, 5, 6}
+&gt;&gt;&gt; set.intersection(a, b)
+</code></pre></div></div>
+
+<p>실행 결과</p>
+
+<blockquote>
+  <p>set()</p>
+</blockquote>
+
+<h4 id="세트1intersection_update세트2-사용">세트1.intersection_update(세트2) 사용</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; x = {1, 2, 3}
+&gt;&gt;&gt; y = {2, 3, 4}
+&gt;&gt;&gt; x.intersection_update(y)			# x에 결과가 저장됨.
+</code></pre></div></div>
+
+<p>실행 결과</p>
+
+<blockquote>
+  <p>{2, 3}</p>
+</blockquote>
+
+<h3 id="133-차집합">1.3.3 차집합</h3>
+
+<h4 id="-연산자-사용-2"><code class="language-plaintext highlighter-rouge">-</code>연산자 사용</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; x = {1, 2, 3}
+&gt;&gt;&gt; y = {2, 3, 4}
+&gt;&gt;&gt; x - y				# 혹은 x -= y
+</code></pre></div></div>
+
+<p>실행 결과</p>
+
+<blockquote>
+  <p>{1}</p>
+</blockquote>
+
+<h4 id="setdifferenceab-사용">set.difference(a,b) 사용</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; x = {1, 2, 3}
+&gt;&gt;&gt; y = {2, 3, 4}
+&gt;&gt;&gt; set.difference(x,y)
+</code></pre></div></div>
+
+<p>실행 결과</p>
+
+<blockquote>
+  <p>{1}</p>
+</blockquote>
+
+<h4 id="세트1difference_update세트2">세트1.difference_update(세트2)</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; x = {1, 2, 3}
+&gt;&gt;&gt; y = {2, 3, 4}
+&gt;&gt;&gt; x.difference_update(y)			#x에 결과가 저장됨
+</code></pre></div></div>
+
+<p>실행 결과</p>
+
+<blockquote>
+  <p>{1}</p>
+</blockquote>
+
+<h3 id="134-대칭차집합-a-b">1.3.4 대칭차집합 a b</h3>
+
+<h4 id="-연산자-사용-3">^ 연산자 사용</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; x = {1, 2, 3}
+&gt;&gt;&gt; y = {2, 3, 4}
+&gt;&gt;&gt; x ^ y				# 혹은 x ^= y		x = x^y축약형
+</code></pre></div></div>
+
+<p>실행 결과</p>
+
+<blockquote>
+  <p>{1, 4}</p>
+</blockquote>
+
+<h4 id="setsymmetric_difference-메서드-사용">set.symmetric_difference() 메서드 사용</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; x = {1, 2, 3}
+&gt;&gt;&gt; y = {2, 3, 4}
+&gt;&gt;&gt; set.symmetric_difference()
+</code></pre></div></div>
+
+<p>실행 결과</p>
+
+<blockquote>
+  <p>{1, 4}</p>
+</blockquote>
+
+<h4 id="세트1symmetric_difference_update세트2">세트1.symmetric_difference_update(세트2)</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; x = {1, 2, 3}
+&gt;&gt;&gt; y = {2, 3, 4}
+&gt;&gt;&gt; x.symmetric_difference_update(y)		# x에 결과가 저장됨
+</code></pre></div></div>
+
+<p>실행 결과</p>
+
+<blockquote>
+  <p>{1, 4}</p>
+</blockquote>
+
+<h3 id="135-부분집합">1.3.5 부분집합</h3>
+
+<h4 id="-사용">&lt;= 사용</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; i = { 1, 2, 3, 4}
+&gt;&gt;&gt; j = {2, 3}
+&gt;&gt;&gt; i &lt;= j
+False
+&gt;&gt;&gt; j &lt;= i
+True
+</code></pre></div></div>
+
+<p>⊂</p>
+
+<h4 id="세트1issubset세트2">세트1.issubset(세트2)</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; i = { 1, 2, 3, 4}
+&gt;&gt;&gt; j = {2, 3}
+&gt;&gt;&gt; i.issubset(j)
+False
+&gt;&gt;&gt; j.issubset(i)
+True
+</code></pre></div></div>
+
+<h3 id="136-진부분집합">1.3.6 진부분집합</h3>
+
+<h4 id="-사용-1">&lt; 사용</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="o">=</span><span class="p">{</span><span class="mi">2</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">&lt;</span><span class="n">b</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="o">&lt;</span><span class="n">a</span>
+<span class="bp">True</span>
+</code></pre></div></div>
+
+<h3 id="137-상위-집합">1.3.7 상위 집합</h3>
+
+<h4 id="-사용-2">&gt;= 사용</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; i = {1, 2, 3, 4}
+&gt;&gt;&gt; j = {2, 3}
+&gt;&gt;&gt; i&gt;=j
+True
+&gt;&gt;&gt; j&gt;=i
+False
+&gt;&gt;&gt; 
+</code></pre></div></div>
+
+<h4 id="세트1issuperset-세트2">세트1.issuperset (세트2)</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; i = {1, 2, 3, 4}
+&gt;&gt;&gt; j = {2, 3}
+&gt;&gt;&gt; i.issuperset(j)
+True
+&gt;&gt;&gt; j.issuperset(i)
+False
+</code></pre></div></div>
+
+<h2 id="14-세트-자료형의-활용">1.4 세트 자료형의 활용</h2>
+
+<h3 id="141-데이터-검색">1.4.1 데이터 검색</h3>
+
+<h4 id="값-in-세트변수">값 in 세트변수</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">alphabet</span><span class="o">=</span><span class="p">{</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">,</span> <span class="s">'d'</span><span class="p">,</span> <span class="s">'e'</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s">'c'</span> <span class="ow">in</span> <span class="n">alphabet</span>
+</code></pre></div></div>
+
+<p>실행결과</p>
+
+<blockquote>
+  <p>True</p>
+</blockquote>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">alphabet</span><span class="o">=</span><span class="p">{</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">,</span> <span class="s">'d'</span><span class="p">,</span> <span class="s">'e'</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s">'5'</span> <span class="ow">in</span> <span class="n">alphabet</span>
+</code></pre></div></div>
+
+<p>실행결과</p>
+
+<blockquote>
+  <p>False</p>
+</blockquote>
+
+<h4 id="값-not-in-세트">값 not in 세트</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">alphabet</span><span class="o">=</span><span class="p">{</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">,</span> <span class="s">'d'</span><span class="p">,</span> <span class="s">'e'</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s">'c'</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">alphabet</span>
+</code></pre></div></div>
+
+<p>실행결과</p>
+
+<blockquote>
+  <p>False</p>
+</blockquote>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">alphabet</span><span class="o">=</span><span class="p">{</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">,</span> <span class="s">'d'</span><span class="p">,</span> <span class="s">'e'</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s">'5'</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">alphabet</span>
+</code></pre></div></div>
+
+<p>실행결과</p>
+
+<blockquote>
+  <p>True</p>
+</blockquote>
+
+<h3 id="142-데이터-추가">1.4.2 데이터 추가</h3>
+
+<h4 id="add">add()</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; alphabet={'a', 'b', 'c', 'd', 'e'}
+&gt;&gt;&gt; alphabet.add(5)
+&gt;&gt;&gt; alphabet
+</code></pre></div></div>
+
+<p>실행결과</p>
+
+<blockquote>
+  <p>{‘b’, 5, ‘a’, ‘e’, ‘d’, ‘c’}</p>
+</blockquote>
+
+<h3 id="143-데이터-삭제">1.4.3 데이터 삭제</h3>
+
+<h4 id="remove">remove()</h4>
+
+<p>특정 요소 삭제 시, 요소가 없으면 에러를 발생시킴.</p>
+
+<p><img src="../assets/img/posts/image-20211230000228037.png" alt="image-20211230000228037" /></p>
+
+<h4 id="discard">discard()</h4>
+
+<p>특정 요소 삭제 시, 요소가 없어도 에러 발생 X</p>
+
+<p><img src="../assets/img/posts/image-20211230000334022.png" alt="image-20211230000334022" /></p>
+
+<h4 id="pop">pop()</h4>
+
+<p>임의 요소를 삭제한다.</p>
+
+<p><img src="../assets/img/posts/image-20211230000537768.png" alt="image-20211230000537768" /></p>
+
+<h4 id="clear">clear()</h4>
+
+<p>모든 요소를 삭제한다.</p>
+
+<p><img src="../assets/img/posts/image-20211230000614537.png" alt="image-20211230000614537" /></p>
+
+<h3 id="144-데이터-갯수-세기">1.4.4 데이터 갯수 세기</h3>
+
+<p>len()함수를 사용합니다.</p>
+
+<p><img src="../assets/img/posts/image-20211230000754973.png" alt="image-20211230000754973" /></p>
+
+<h2 id="15-세트-자료형의-할당과-복사">1.5 세트 자료형의 할당과 복사</h2>
+
+<p><img src="../assets/img/posts/image-20211231171701202.png" alt="image-20211231171701202" /></p>
+
+<h6 id="ram--random-access-memory">RAM : Random Access Memory</h6>
+
+<p>a 세트를 b 변수에 복사하고 싶다면 어떻게 하면 될까요? a를 선언해주고, <code class="language-plaintext highlighter-rouge">b = a</code>로 할당해주면 되는 걸까요?</p>
+
+<p><img src="../assets/img/posts/image-20211231171715649.png" alt="image-20211231171715649" /></p>
+
+<p><img src="../assets/img/posts/image-20211230001438242.png" alt="image-20211230001438242" />실상은 아닙니다.</p>
+
+<p>id(매개변수) 메서드는 매개변수의 고유 주소 값( 객체가 메모리에 위치해 있는 주소 )를 나타냅니다.</p>
+
+<p>a 세트 변수를 b에 복사 하고 싶다는 것은, a 세트 객체와 b세트 객체가 따로 존재해야 한다는 것을 의미합니다. 그렇게 되면, a의 주소 값과 b의 주소 값이 달라야 하는데 위를 보면 같은 메모리 번지를 참고 하고 있습니다. 하나의 객체를 가리키는 방법이 하나 더 늘어난 것 뿐이라는 의미입니다.</p>
+
+<p>즉, a와 b는 같은 객체를 가리키고 있으므로 a가 수정되면 b도 수정되게 됩니다. 다음과 같이요.</p>
+
+<p><img src="../assets/img/posts/image-20211230002058735.png" alt="image-20211230002058735" /></p>
+
+<p>a 와 b를 독립적인 다른 객체로 만들려면 copy()메서드를 사용하여 모든 요소를 복사해야 합니다. 이를 사용하여 객체를 변경하게 되면 a와 b는 독립적인 객체이므로, a의 변화가 b에 영향을 주지 않습니다.</p>
+
+<p><img src="../assets/img/posts/image-20211231171645839.png" alt="image-20211231171645839" /></p>
+
+<p><img src="../assets/img/posts/image-20211230002253181.png" alt="image-20211230002253181" /></p>
+
+<h2 id="16-세트-표현식">1.6 세트 표현식</h2>
+
+<h3 id="for을-이용한-세트-생성">for을 이용한 세트 생성</h3>
+
+<p><img src="../assets/img/posts/image-20211230012946790.png" alt="image-20211230012946790" /></p>
+
+<h3 id="if를-이용한-세트-생성">if를 이용한 세트 생성</h3>
+
+<p><img src="../assets/img/posts/image-20211230020531592.png" alt="image-20211230020531592" /></p>
+
+<h1 id="퀴즈">퀴즈</h1>
+
+<p><img src="../assets/img/posts/image-20211230100922367.png" alt="image-20211230100922367" /></p>
+
+<p>답 :  <span style="color:white">b</span></p>
+
+<p><img src="../assets/img/posts/image-20211230103733453.png" alt="image-20211230103733453" /></p>
+
+<p>답 :  <span style="color:white">B, E</span></p>
+
+<p><img src="../assets/img/posts/image-20211231150948469.png" alt="image-20211231150948469" /></p>
+
+<p>답 :  <span style="color:white">c, d</span></p>
+
+<p><img src="../assets/img/posts/image-20211230142741056.png" alt="image-20211230142741056" /></p>
+
+<p>답 :  <span style="color:white">a,c </span></p>
+
+<hr />
+
+<h6 id="출처">출처</h6>
+
+<ul>
+  <li>
+    <p>https://dojang.io/mod/page/view.php?id=2314 - 주 내용</p>
+  </li>
+  <li>
+    <p>https://ko.wikipedia.org/wiki/%EC%9E%90%EB%A3%8C%ED%98%95 - 자료형</p>
+  </li>
+</ul>
+:ET

@@ -1,0 +1,45 @@
+<p>오늘은 파이썬 문자열의 개념과 사용법에 대해서 공부를 해보았습니다.</p>
+
+<hr />
+
+<h6 id="출처">출처</h6>
+
+<ul>
+  <li><a href="https://dojang.io/mod/page/view.php?id=2196">파이썬 코딩도장 - 문자열</a></li>
+</ul>
+
+<hr />
+
+<h1 id="문자열-생성">문자열 생성</h1>
+
+<p>” “ , ‘ ‘ , “”” “”” , ‘’’ ‘’’ 를 이용하여서 생성할수 있습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">hello</span> <span class="o">=</span> <span class="s">"Hello Python!"</span>
+</code></pre></div></div>
+
+<p>특히 “”” “”” , ‘’’ ‘’’ 따옴표를 3개 연달아 붙여 사용하면 여러 줄로 된 문자열을 하나의 변수에 할당하여 사용할 수 있습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">hello</span> <span class="o">=</span> <span class="s">"""
+Hello Python!
+Hello World!
+"""</span>
+</code></pre></div></div>
+
+<h2 id="--와----두가지-생성-방법이-있는-이유">” “, 와 ‘ ‘ : 두가지 생성 방법이 있는 이유</h2>
+
+<p>” “ 로 생성하면 ‘ ‘를 기호문자로 받아들이지 않고, ‘ ‘로 생성하면 “ “를 기호문자로 받아들이지 않습니다.</p>
+
+<p>즉, 문자열 사이에 ‘ ‘가 있으면 “ “로 문자열을 생성하고, “ “가 있으면 ‘ ‘로 문자열을 생성해야 합니다.</p>
+
+<ul>
+  <li>
+    <p>기호문자를 기호문자로 인식하지 않게 하는 법</p>
+
+    <p><code class="language-plaintext highlighter-rouge">\</code> 문자를 앞에 붙이면 됩니다.</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="s">'Python isn</span><span class="se">\'</span><span class="s">t difficult'</span>
+<span class="s">'Python isn'</span><span class="n">t</span> <span class="n">difficult</span><span class="s">'
+</span></code></pre></div>    </div>
+  </li>
+</ul>
+

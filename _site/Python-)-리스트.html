@@ -1,0 +1,154 @@
+<p>오늘은 파이썬 리스트 자료형의 개념과 사용법에 대해서 공부를 해보았습니다.</p>
+
+<hr />
+
+<h6 id="출처">출처</h6>
+
+<ul>
+  <li><a href="https://dojang.io/mod/page/view.php?id=2200">파이썬 코딩도장 - 리스트</a></li>
+</ul>
+
+<hr />
+
+<h1 id="1-리스트-만들기">1. 리스트 만들기</h1>
+
+<ul>
+  <li>리스트 = [값, 값, 값]</li>
+  <li>리스트 = list( iterable object )
+    <ul>
+      <li>리스트 = list(range(4,40,5))</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="빈-리스트-만들기">빈 리스트 만들기</h2>
+
+<ul>
+  <li>리스트 = []</li>
+  <li>리스트 = list()</li>
+</ul>
+
+<h2 id="range를-사용하여-리스트-만들기">range를 사용하여 리스트 만들기</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+</code></pre></div></div>
+
+<p>실행결과</p>
+
+<blockquote>
+  <p>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</p>
+</blockquote>
+
+<ul>
+  <li>리스트 = list(range(시작, 끝, 증가폭))</li>
+</ul>
+
+<h2 id="문자열을-이용해-리스트-만들기">문자열을 이용해 리스트 만들기</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="s">"hello"</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+</code></pre></div></div>
+
+<p>실행결과</p>
+
+<blockquote>
+  <p>[‘H’, ‘e’, ‘l’, ‘l’, ‘o’]</p>
+</blockquote>
+
+<h1 id="2-리스트로-변수-만들기">2. 리스트로 변수 만들기</h1>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; a, b, c = [1, 2, 3]
+&gt;&gt;&gt; print(a, b, c)
+</code></pre></div></div>
+
+<p>실행결과</p>
+
+<blockquote>
+  <p>1 2 3</p>
+</blockquote>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">x</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>실행결과</p>
+
+<blockquote>
+  <p>1 2 3</p>
+</blockquote>
+
+<h1 id="3-특정-값이-있는지-확인하기">3. 특정 값이 있는지 확인하기</h1>
+
+<h2 id="값-in-시퀀스-자료형">값 in 시퀀스 자료형</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">90</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">30</span> <span class="ow">in</span> <span class="n">a</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">100</span> <span class="ow">in</span> <span class="n">a</span>
+<span class="bp">False</span>
+</code></pre></div></div>
+
+<h1 id="4-객체끼리-연결하기">4. 객체끼리 연결하기</h1>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; a = [10, 20, 30]
+&gt;&gt;&gt; b = [1, 2, 3]
+&gt;&gt;&gt; a + b
+</code></pre></div></div>
+
+<p>실행결과</p>
+
+<blockquote>
+  <p>[10, 20, 30, 1, 2, 3]</p>
+</blockquote>
+
+<h1 id="5-시퀀스-객체-반복하기">5. 시퀀스 객체 반복하기</h1>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span>
+</code></pre></div></div>
+
+<p>실행결과</p>
+
+<blockquote>
+  <p>[0, 10, 20, 30, 0, 10, 20, 30, 0, 10, 20, 30]</p>
+</blockquote>
+
+<h1 id="6-특정-값-가져오기">6. 특정 값 가져오기</h1>
+
+<ul>
+  <li>
+    <p>대괄호 사용하기</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">38</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">62</span><span class="p">,</span> <span class="mi">19</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</code></pre></div>    </div>
+
+    <p>실행결과</p>
+
+    <blockquote>
+      <p>21</p>
+    </blockquote>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">__getitem__</code> 사용하기</p>
+
+    <p>시퀀스 객체에서 <code class="language-plaintext highlighter-rouge">[]</code>(대괄호)를 사용하면 실제로는 <code class="language-plaintext highlighter-rouge">__getitem__</code> 메서드를 호출하여 요소를 가져옵니다. 따라서 메서드를 직접 호출하여 요소를 가져올 수도 있습니다.</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">38</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">62</span><span class="p">,</span> <span class="mi">19</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">.</span><span class="n">__getitem__</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>    </div>
+
+    <p>실행결과</p>
+
+    <blockquote>
+      <p>21</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h1 id="7-특정-값-삭제하기">7. 특정 값 삭제하기</h1>
+
+<ul>
+  <li>del a[5]</li>
+</ul>

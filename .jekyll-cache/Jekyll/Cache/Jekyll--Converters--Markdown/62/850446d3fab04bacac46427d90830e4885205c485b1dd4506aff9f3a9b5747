@@ -1,0 +1,59 @@
+I"�
+<p>https://i-never-stop-study.tistory.com/14</p>
+
+<p>오늘은 작사가 Exploration에서 코드가 이해되지 않았던 부분에 대해 작성하려고 한다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 데이터셋에서 데이터 한 배치만 불러오는 방법입니다.
+# 지금은 동작 원리에 너무 빠져들지 마세요~
+</span><span class="k">for</span> <span class="n">src_sample</span><span class="p">,</span> <span class="n">tgt_sample</span> <span class="ow">in</span> <span class="n">dataset</span><span class="p">.</span><span class="n">take</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span><span class="k">break</span>
+
+<span class="c1"># 한 배치만 불러온 데이터를 모델에 넣어봅니다
+</span><span class="n">model</span><span class="p">(</span><span class="n">src_sample</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ol>
+  <li>
+    <p>for문을 읽어오자 마자 break를 한다. 그냥 src_sample, tgt_sample = dataset.take(1)하면 안되나?</p>
+
+    <p>일단 두가지 시도를 해보았는데 안된다.</p>
+
+    <p>+ : (src_sample, tgt_sample) = dataset.take(1)도 해봤음. 위에거랑 같은 오류뜸.</p>
+  </li>
+</ol>
+
+<p><img src="../assets/img/posts/image-20220121141259807.png" alt="image-20220121141259807" /></p>
+
+<p><img src="../assets/img/posts/image-20220121141350799.png" alt="image-20220121141350799" /></p>
+
+<ol>
+  <li>
+    <p>for문 안에 선언해준 변수 src_sample은 지역변수일텐데 왜 for 블록 바깥에서 쓸 수 있는가.</p>
+
+    <p>알고보니 python에서는 for에서 선언해준 함수가 지역변수가 아니라 전역변수였다.(!)</p>
+
+    <p>그래서 다음과 같은 식이 가능하다.</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+       
+<span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>    </div>
+
+    <p>결과 화면</p>
+
+    <blockquote>
+      <p>1</p>
+
+      <p>2</p>
+
+      <p>3</p>
+
+      <p>4</p>
+
+      <p>5</p>
+    </blockquote>
+
+    <p>자바나 c에서는 for (int i = i ; i &lt;5 ; i++) { } 이 코드블럭에서 i는 지역변수라서 파이썬도 당연히 지역변수일줄 알았는데, 아니었다.</p>
+  </li>
+</ol>
+:ET
