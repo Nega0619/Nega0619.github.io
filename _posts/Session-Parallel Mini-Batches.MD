@@ -1,0 +1,92 @@
+오늘의 포스팅 주제는 Session-Parallel Mini-Batches입니다.
+
+아이펠 Exploration 노드 16번 추천시스템을 공부하다 알게 된 이론인데, 이해가 잘 되지 않아 더 조사하게 되었습니다.
+
+---
+
+###### 관련논문
+
+- [SESSION-BASED RECOMMENDATIONS WITH RECURRENT NEURAL NETWORKS](https://arxiv.org/pdf/1511.06939.pdf)
+- [IMPROVED SESSION-BASED RECOMMENDATIONS USING RECURRENT NEURAL NETWORKS FOR MUSIC DISCOVERY](https://iopscience.iop.org/article/10.1088/1742-6596/1314/1/012194/pdf)
+
+---
+
+
+
+
+
+# Session-Parallel Mini-Batches란?
+
+**Session-Based Recommendatation**에서 보통 쓰입니다.
+
+
+
+## Session-Based Recommendation이란?
+
+이 추천 시스템은 사용자의 개인정보나 아이템들의 정보를 분석하여 추천하는 것이 아니라, 세션 데이터를 기반으로 사용자가 다음에 클릭 혹은 구매할 아이템을 예측하는 추천입니다.
+
+
+
+- Session이란?
+  - 서버쪽에 저장되는 데이터로, 서비스를 이용하며 발생하는 중요한 정보들을 담은 데이터
+  - 같은 SessionID를 존재는 같은 유저라고 인지하며 보통 다음과 같은 정보를 가지고 있습니다.
+  - ![image-20220307115736517](../assets/img/posts/image-20220307115736517.png) 사진 출처 : Aiffel LMS
+
+
+
+## Session-Parallel Mini-Batches의 동작
+
+다음과 같은 session 데이터가 있을때, 
+
+![image-20220307145442657](../assets/img/posts/image-20220307145442657.png)
+
+Session parallel Mini batches는 다음과 같이 처리된다.
+
+![image-20220307145529789](../assets/img/posts/image-20220307145529789.png)
+
+
+
+- 설명
+
+
+
+![image-20220307145421363](../assets/img/posts/image-20220307145421363.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
