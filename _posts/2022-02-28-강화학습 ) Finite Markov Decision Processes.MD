@@ -46,38 +46,44 @@
   - Gt = R(t+1) +R(t+2) +R(t+3) + · · · +R(T)
   - T는 마지막 time step
 
-
-
-episode - 체스게임을 예로 들자면, 체스 한판, 한판을 의미.
-
-terminal - time step에서 마지막 time step, 에피소드를 끝내게 하는 최종 state 단계
+- 기대 보상값을 최대화 할 수 있는 경우는 실제 최종 단계인 time = T가 존재할 경우에만 유의미합니다.
 
 
 
-- 기대 보상값을 최대화 할 수 있는 경우는 실제 최동 단계인 T가 존재할 경우에만 유의미합니다.
+- 바둑을 두는 강화학습 모델이 있다고 했을 때, 바둑 돌을 한수, 두수 두는 것을 episode라고 하고, 각각의 episode는 terminal 상태라는 특수한 상태에서 끝납니다. (바둑으로 치면 상대가 바둑을 한 수 둔 것으로 이해했음.)
+- 에이전트가 terminal 상태에 도달하면 게임이 일부 재시작 상태로 세팅이 됩니다. (reset to some starting state)
 
-- On the other hand, there are many situations where the interaction between the agent and the environment goes on continually without a limit, We call these **continuing tasks.**
-- For example, imagine the agent receives a reward of +1 at each time step.
-- Since the final time step is T = ∞,  the return  will be infinite.
-
-
-
-- 아마 여기서 finite가 나온듯.
+- 이러한 에피소드를 가진 task를 episodic tasks라고 합니다.
+  - (사실 여기서 episode가 바둑 한판 한판을 의미하는지, 한수 씩 두는 그 단계를 episode라고 두는지 모르겟음. 처음엔 바둑게임 한판 한판으로 해석했는데  reset to start state가 아니라 reset to some starting state라고 해서 한수 / 두수 씩 두는 단계를 episode라고 해석했습니다.)
 
 
 
--> 무한 문제 해결하기 위해 : Hence we need another term that we will call **discounting.**
+
+
+- 이와 반대로, environment와 agnet가 제한 없이 계속 상호작용하는 경우가 있는데 이 경우는 continuing tasks 라고 합니다.
+- 이경우에 에이전트가 각 단계에서 +1점을 받고 최종 Time step = T  = ∞ 이므로 G(t)는 발산하게 됩니다.
+- 그래서 이경우 discounting을 도입하게 됩니다.
+  - 아마 여기서 finite가 나온듯.
+
+
+![img](https://miro.medium.com/max/700/1*9n95udYDF8TueFRpHzg80w.png)
+
+
+
+여기서 γ는 매개변수이며 0 ≤ γ ≤ 1이며 할인율 이라고 합니다.
 
 γ는 기본적으로 미래에 k 시간 단계에서 받은 보상이 즉시 받았을 경우의 가치의 γ^k−1배의 가치가 있다고 말합니다.
 
 γ < 1이면 무한 합이 유한한 값을 갖기 때문에 문제가 해결됩니다(보상 시퀀스가 제한되는 한).
+
+이제 에이전트의 목표는 받는 할인 보상의 합이 최대가 되도록 행동을 선택하는 것입니다. 
 
 
 
 ![img](https://miro.medium.com/max/1400/1*9MNcQRw7Wd376OnfM0eOMA.png)
 
 우리의 수익(Gt)이 다음 단계의 보상에 할인 요소를 곱한 다음 단계의 기대 수익과 같게 하는 것입니다.
-이것은 우리가 나중에 보게 될 벨만 방정식의 핵심 아이디어입니다.
+이것은 우리가 나중에 보게 될 벨만 방정식의 핵심 아이디어라고 합니다.
 
 
 
@@ -85,17 +91,17 @@ terminal - time step에서 마지막 time step, 에피소드를 끝내게 하는
 
 # Markov Property
 
-과거의 모든 관련 정보를 가질 수 있는 상태 신호를 **Markov 라고 하거나** **Markov 속성** 을 갖습니다 .
+과거의 모든 관련 정보를 가질 수 있는 현재 상태 신호를 **Markov property** 를 갖는다고 얘기합니다.
 
 TicTacToe 위치(모든 상태(즉, 보드의 모든 조각 구성))는 중요한 모든 것을 요약하기 때문에 **Markov 상태 로 사용됩니다.** 
 
--> 예전 상태 필요없이 현재 상태만 알면 내가 어디둬야할지 계획이 딱 똑띠 선다이말이야~
+-> 예전 상태 필요없이 현재 상태만 알면 내가 어디둬야할지 계획이 똑띠 선다~~
 
 즉, 미래를 예측하는 데 필요한 모든 정보는 우리가 가지고 있는 상태 표현에 포함되어 있습니다.
 
 
 
-이제 환경에 Markov 속성이 있는 경우 다음 방정식을 사용할 수 있습니다.
+환경에 Markov property가 있는 경우 다음 방정식을 사용할 수 있습니다.
 
 ![img](https://miro.medium.com/max/1400/1*Ft9QcOqZ1TGlkY3Lw5CPEA.png)
 
@@ -103,7 +109,9 @@ TicTacToe 위치(모든 상태(즉, 보드의 모든 조각 구성))는 중요�
 
 ![image-20220306174740825](../assets/img/posts/image-20220306174740825.png)
 
-이를 만족한다하는데 = 1은 왜나오는지 모르겠음 ;
+- 이를 만족한다하는데 = 1은 왜나오는지 모르겠음 ;
+
+
 
 현재 상태(S)와 행동(a)이 주어지면 다음 상태(S')와 예상되는 다음 보상(r) 을 예측할 수 있습니다 .
 
@@ -115,28 +123,35 @@ Markov 속성은 결정과 값이 현재 상태만의 함수로 가정되기 때
 
 # Markov Decdision Processes
 
-Markov 속성을 만족하는 RL 문제를 Markov Decision **Process** 또는 **MDP** 라고 합니다.
-게다가 유한한 수의 상태와 행동만 있는 경우 이를 **유한 마르코프 결정 프로세스** ( **유한 MDP** )라고 합니다.
+Markov 속성을 만족하는 RL 문제를 **Markov Decision Process** 또는 **MDP** 라고 합니다. 
 
-동적 함수에서 유용할 수 있는 몇 가지 다른 함수를 파생할 수도 있습니다.
+- state s_t가 이전 모든 state s_1s_2...s_{t-1}까지의 모든 상태를 포함하는 것을 말한다.
 
->  4변수 역학 함수 p로부터, 상태 전이 확률과 같이 환경에 대해 알고 싶은 다른 어떤 것도 계산할 수 있다.
+유한한 수의 상태와 행동만 있는 경우 이를 **유한 마르코프 결정 프로세스** ( **유한 MDP** )라고 합니다.
+
+![image-20220308093859394](../assets/img/posts/image-20220308093859394.png)
+
+위 함수는 p: S Χ R Χ S Χ A -> [0,1]를 만족하는 네가지 인수의 일반적인 결정론적 함수이기 때문에, 동적 함수에서 유용할 수 있는 몇 가지 다른 함수를 파생할 수도 있습니다.
+
+>  4변수 역학 함수 p로부터, 상태 전이 확률과 같이 환경에 대해 알고 싶은 다른 어떤 것도 계산할 수 있다..
+
+
+
+![image-20220308094041735](../assets/img/posts/image-20220308094041735.png)4변수 역학 함수로부터 3변수 역학함수로 변형할 수있습니다. 아래는 상태전이 확률값을 계산하는 식입니다.
 
 ![img](https://miro.medium.com/max/1400/1*QWa9G8-UfTyt8P9Q84BrzQ.png)
 
-현재 상태와 행동이 주어졌을 때 다음 상태(S') 확률은?
+
+
+![image-20220308094205450](../assets/img/posts/image-20220308094205450.png) state와 Action 쌍에서 Expected rewards functions을 구해낼 수 도있습니다.
 
 ![img](https://miro.medium.com/max/1400/1*4cZK2h7RJJvH8ZWB-FlB2g.png)
 
-어떤 상태와 행동에 대한 보상입니다.
-
-![img](https://miro.medium.com/max/1400/1*W2Egywx1TA_NX7M9mbBBEA.png)
 
 
+![image-20220308094506650](../assets/img/posts/image-20220308094506650.png)state - Action- Next state 세 변수로 expected reward를 계산할 수 있습니다.
 
-각각이 어떻게 도출되는진 모르겠는데, markov Property를 만족하면 dynamic p는  p: S Χ R Χ S Χ A -> [0,1]를 만족하는 네가지 인수의 일반적인 결정론적 함수이기 때문에, 
-
-
+![img](https://miro.medium.com/max/1400/1*W2Egywx1TA_NX7M9mbBBEA.png) 
 
 
 
@@ -144,7 +159,17 @@ Markov 속성을 만족하는 RL 문제를 Markov Decision **Process** 또는 **
 
 # Transition diagram
 
+finite MDP dynamic을 확인하는 유용한 방법.
 
+
+
+에이전트에게 각 상태에서 가능한 조치가 무엇인지 알려주는 그래프
+
+각 행동을 취할 확률과 각 행동에 대한 보상을 표기하기도 합니다.
+
+
+
+이 그래프는 테이블로도 표현할 수 있습니다.
 
 
 
@@ -152,31 +177,75 @@ Markov 속성을 만족하는 RL 문제를 Markov Decision **Process** 또는 **
 
 # Value Functions
 
+가치 함수는 agent에게 주어진 state가 얼마나 좋은지를 평가할 수 있습니다.
+
+πt(A|S)는 timestep = t에서 State S일 때, Action A를 취할 확률을 의미하고 이를 Policy라고 합니다.
 
 
 
+## - Policy - value functions
+
+정책 π에서 상태 S의 값은 V **π** (s)로 표시되며, S에서 시작하여 마지막 time step까지 그 이후에 π를 따를 때의 기대 수익입니다.![img](https://miro.medium.com/max/700/1*VIdvGE6uWhTVkQVToNISqw.png)
+
+정책 π에 대한 함수 V π를 state-value 함수라고 합니다. Gt에 대한 기댓값입니다.
 
 
+
+## Action-Value functions
+
+정책 π에 따라 상태 "S"에서 행동 "A"를 취하는 값을 q **π** (S, A)로 정의할 수 있습니다. 이것을 정책 π에 대한 행동 가치 함수라고 부릅니다.
+
+상태 S에서 시작하여 조치 A를 취하고 이후에 정책 π를 따르는 기대 수익입니다.
+
+
+
+https://towardsdatascience.com/introduction-to-reinforcement-learning-rl-part-3-finite-markov-decision-processes-51e1f8d3ddb7
 
 # Bellman Equations
 
+![img](https://miro.medium.com/max/700/0*5egXnk4bBL1ynI6q)
+
+π(a|s)는 정책 π에 따라 상태 "s"에서 행동 "a"를 취할 확률
+
+위의 방정식은 **Vπ에 대한 Bellman 방정식입니다** 정책 π에 따라 상태 S의 값과 다음 상태 S'의 값 사이의 관계를 나타냅니다.
+
+
+
+![img](https://miro.medium.com/max/684/1*F4iO6B63gDQ8CLb94Ut_TQ.png)
+
+업데이트 또는 백업 작업이 작동하는 방식을 보여주기 때문에 이러한 다이어그램을 backup diagrams이라고 합니다. 
 
 
 
 
 
+![img](https://miro.medium.com/max/698/1*W0vsxmosaPj7kYzG6svNpA.png)
+
+상태 값에 대한 벨만 방정식
+
+![img](https://miro.medium.com/max/700/1*4BtFvlvr7YjW24GrjIUQvg.png)
+
+Gt+1(4.4, 3.0, 0.7, 1.9)이라는 특정 값
+
+각각에 들어갈 확률은 0.25
+
+할인 계수 γ는 0.9
+
+
+
+0 + 0.9* [(0.25 * 4.4) + (0.25*1.9) + (0.25*0.7) + (0.25*3.0)] = 2.25 — > 2.3
 
 
 
 # Optimal Value Functions
 
+ V*에 대한 Bellman 최적 방정식
 
+보상을 최대화하기 위해 각 상태에 대해 최상의 보상을 제공하는 작업을 의미하는 "max(a)"를 사용
 
+![img](https://miro.medium.com/max/700/1*K3HPdeqPEjpa9Blf_boSmg.png)
 
-
-
-
-
+최적의 정책 **π\*** 은 최선의 조치가 무엇인지 알려줍니다. 모든 state에서 우리는 단순히 가장 높은 값의 지시를 따릅니다.
 
 
 
