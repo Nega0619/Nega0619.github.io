@@ -1,4 +1,483 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-03-10T10:21:54+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hwi’s footsteps</title><subtitle>Artificial Intelligence and Computer Science Study Notes.</subtitle><author><name>Shin Hwi Jeong</name></author><entry><title type="html">강화학습 ) finite markov decision processes</title><link href="http://localhost:4000/%EA%B0%95%ED%99%94%ED%95%99%EC%8A%B5-)-Finite-Markov-Decision-Processes.html" rel="alternate" type="text/html" title="강화학습 ) finite markov decision processes" /><published>2022-02-28T00:00:00+09:00</published><updated>2022-02-28T00:00:00+09:00</updated><id>http://localhost:4000/%EA%B0%95%ED%99%94%ED%95%99%EC%8A%B5%20)%20Finite%20Markov%20Decision%20Processes</id><content type="html" xml:base="http://localhost:4000/%EA%B0%95%ED%99%94%ED%95%99%EC%8A%B5-)-Finite-Markov-Decision-Processes.html"><![CDATA[<p>오늘은 강화학습 분야에서 Finite Markov Decision Processes에 대하여 공부한 것을 정리해 보았습니다.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-03-21T12:21:25+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hwi’s footsteps</title><subtitle>Artificial Intelligence and Computer Science Study Notes.</subtitle><author><name>Shin Hwi Jeong</name></author><entry><title type="html">Gd 03. 텍스트의 분포로 벡터화 하기</title><link href="http://localhost:4000/GD-03.-%ED%85%8D%EC%8A%A4%ED%8A%B8%EC%9D%98-%EB%B6%84%ED%8F%AC%EB%A1%9C-%EB%B2%A1%ED%84%B0%ED%99%94-%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="Gd 03. 텍스트의 분포로 벡터화 하기" /><published>2022-03-21T00:00:00+09:00</published><updated>2022-03-21T00:00:00+09:00</updated><id>http://localhost:4000/GD%2003.%20%ED%85%8D%EC%8A%A4%ED%8A%B8%EC%9D%98%20%EB%B6%84%ED%8F%AC%EB%A1%9C%20%EB%B2%A1%ED%84%B0%ED%99%94%20%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/GD-03.-%ED%85%8D%EC%8A%A4%ED%8A%B8%EC%9D%98-%EB%B6%84%ED%8F%AC%EB%A1%9C-%EB%B2%A1%ED%84%B0%ED%99%94-%ED%95%98%EA%B8%B0.html"><![CDATA[<p>오늘은 아이펠 Going Deeper 노드 2번을 공부하고 공부한 내용 정리해보았습니다.</p>
+
+<hr />
+
+<h6 id="출처">출처</h6>
+
+<ul>
+  <li>AIFFEL LMS</li>
+  <li>https://wikidocs.net/22592</li>
+</ul>
+
+<hr />
+
+<h6 id="학습데이터">학습데이터</h6>
+
+<blockquote>
+  <p>$ wget https://github.com/jungyeul/korean-parallel-corpora/raw/master/korean-english-news-v1/korean-english-park.train.tar.gz</p>
+
+  <p>$ mkdir -p ~/aiffel/sp_tokenizer/data</p>
+
+  <p>$ mv korean-english-park.train.tar.gz ~/aiffel/sp_tokenizer/data</p>
+
+  <p>$ cd ~/aiffel/sp_tokenizer/data</p>
+
+  <p>$ tar -xzvf korean-english-park.train.tar.gz</p>
+</blockquote>
+
+<hr />
+
+<p>오늘 배운 내용은 <strong>문장을 조각 내는 방법</strong>입니다.</p>
+
+<ul>
+  <li>중복 제거한 코드 분석
+    <ul>
+      <li>주요 요점!
+        <ol>
+          <li>min = 999, max = 0으로 표시되어있다.</li>
+          <li>set(raw_data)를 함으로써 중복은 없어진 것이다!</li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>Shin Hwi Jeong</name></author><summary type="html"><![CDATA[오늘은 아이펠 Going Deeper 노드 2번을 공부하고 공부한 내용 정리해보았습니다.]]></summary></entry><entry><title type="html">Gd 02. 멋진 단어사전 만들기</title><link href="http://localhost:4000/GD-02.-%EB%A9%8B%EC%A7%84-%EB%8B%A8%EC%96%B4%EC%82%AC%EC%A0%84-%EB%A7%8C%EB%93%A4%EA%B8%B0.html" rel="alternate" type="text/html" title="Gd 02. 멋진 단어사전 만들기" /><published>2022-03-17T00:00:00+09:00</published><updated>2022-03-17T00:00:00+09:00</updated><id>http://localhost:4000/GD%2002.%20%EB%A9%8B%EC%A7%84%20%EB%8B%A8%EC%96%B4%EC%82%AC%EC%A0%84%20%EB%A7%8C%EB%93%A4%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/GD-02.-%EB%A9%8B%EC%A7%84-%EB%8B%A8%EC%96%B4%EC%82%AC%EC%A0%84-%EB%A7%8C%EB%93%A4%EA%B8%B0.html"><![CDATA[<p>오늘은 아이펠 Going Deeper 노드 2번을 공부하고 공부한 내용 정리해보았습니다.</p>
+
+<hr />
+
+<h6 id="출처">출처</h6>
+
+<ul>
+  <li>AIFFEL LMS</li>
+  <li>https://wikidocs.net/22592</li>
+</ul>
+
+<hr />
+
+<h6 id="학습데이터">학습데이터</h6>
+
+<blockquote>
+  <p>$ wget https://github.com/jungyeul/korean-parallel-corpora/raw/master/korean-english-news-v1/korean-english-park.train.tar.gz</p>
+
+  <p>$ mkdir -p ~/aiffel/sp_tokenizer/data</p>
+
+  <p>$ mv korean-english-park.train.tar.gz ~/aiffel/sp_tokenizer/data</p>
+
+  <p>$ cd ~/aiffel/sp_tokenizer/data</p>
+
+  <p>$ tar -xzvf korean-english-park.train.tar.gz</p>
+</blockquote>
+
+<hr />
+
+<p>오늘 배운 내용은 <strong>문장을 조각 내는 방법</strong>입니다.</p>
+
+<ul>
+  <li>중복 제거한 코드 분석
+    <ul>
+      <li>주요 요점!
+        <ol>
+          <li>min = 999, max = 0으로 표시되어있다.</li>
+          <li>set(raw_data)를 함으로써 중복은 없어진 것이다!</li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>Shin Hwi Jeong</name></author><summary type="html"><![CDATA[오늘은 아이펠 Going Deeper 노드 2번을 공부하고 공부한 내용 정리해보았습니다.]]></summary></entry><entry><title type="html">Gd 01. 텍스트 데이터 다루기</title><link href="http://localhost:4000/GD-01.-%ED%85%8D%EC%8A%A4%ED%8A%B8-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%8B%A4%EB%A3%A8%EA%B8%B0.html" rel="alternate" type="text/html" title="Gd 01. 텍스트 데이터 다루기" /><published>2022-03-16T00:00:00+09:00</published><updated>2022-03-16T00:00:00+09:00</updated><id>http://localhost:4000/GD%2001.%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EB%8B%A4%EB%A3%A8%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/GD-01.-%ED%85%8D%EC%8A%A4%ED%8A%B8-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%8B%A4%EB%A3%A8%EA%B8%B0.html"><![CDATA[<p>오늘은 아이펠 Going Deeper 노드 1번을 공부하고 공부한 내용을 포스팅해보았습니다.</p>
+
+<hr />
+
+<h6 id="출처">출처</h6>
+
+<ul>
+  <li>AIFFEL LMS</li>
+  <li><a href="https://wikidocs.net/22592">딥러닝을 이용한 자연어 처리 입문</a></li>
+  <li><a href="https://brunch.co.kr/@learning/7">한국어를 위한 어휘 임베딩의 개발</a></li>
+</ul>
+
+<hr />
+
+<h1 id="1-자연언어와-인공언어">1. 자연언어와 인공언어</h1>
+
+<p>자연언어란, 몇만년간 인류가 나름대로 발전시키고 통신 수단으로 사용하는 언어. 현재 약 200가지가 넘는 언어가 존재하며 이 중 40가지 정도가 글을 가지고 있다.</p>
+
+<p><strong>문맥 의존 언어 이다.</strong></p>
+
+<p>인공언어란, 컴퓨터 프로그래밍을 위하여 특별히 개발된 포트란, 파스칼 C와 같은 언어</p>
+
+<p><strong>문맥자유 언어이다.</strong></p>
+
+<p>자연어를 처리하는 것이 어려운 이유는 문맥 자유 언어가 아니기 때문입니다. 컴퓨터가 언어를 해석할 때, 문맥 자유 언어는 문법에 맞게 작성했다면, 글의 흐름을 파악할 필요가 없습니다. 문법에 맞게 파싱하기만 하면 되기 때문에 프로그래머가 작성한 대로 프로그램이 동작하게 됩니다.</p>
+
+<h1 id="2-자연언어에서-발견할-수-있는-노이즈들">2. 자연언어에서 발견할 수 있는 노이즈들</h1>
+
+<ul>
+  <li>
+    <p>불완전한 문장으로 구성된 대화</p>
+
+    <p>카톡과 같은 메신저를 사용할 때, 한 문장을 한번에 보내지 않고 여러번에 나눠 전송하는 형태입니다.</p>
+  </li>
+  <li>
+    <p>문장의 길이가 너무 길거나 짧은 경우</p>
+
+    <p>대체로 <code class="language-plaintext highlighter-rouge">ㅋㅋㅋ</code> 혹은 <code class="language-plaintext highlighter-rouge">ㅎㅎ</code>, <code class="language-plaintext highlighter-rouge">ㅠㅠ</code>, <code class="language-plaintext highlighter-rouge">헐ㅋ</code>와 같은 리액션에 해당하는 경우가 많음.</p>
+  </li>
+  <li>
+    <p>채팅 데이터에서 문장 시간 간격이 너무 긴 경우</p>
+
+    <ul>
+      <li>
+        <p>서로의 말이 얽히며, 서로 각자의 할말만 하는 경우가 있음</p>
+
+        <blockquote>
+          <p>A: 베트맨2</p>
+
+          <p>B: 보러가자</p>
+
+          <p>A: 어제 봤는데 꿀잼</p>
+
+          <p>B: 오늘 저녀.. 아니 ㅠ</p>
+        </blockquote>
+      </li>
+      <li>
+        <p>말의 텀이 매우 길 때</p>
+
+        <blockquote>
+          <p>A: 혹시 돈좀 빌려 줄 수 있어?</p>
+
+          <p>…. (한참 뒤)</p>
+
+          <p>B: 아 미안 지금 봄. 지금도 필요해?</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>바람직하지 않은 문장의 사용</p>
+
+    <p>욕설이나 비속어, 오타 비율이 높은 경우</p>
+  </li>
+</ul>
+
+<p>위와 같은 언어는 UNFORMAL한 언어 데이터에서 자주 보이므로, FORMAL한 데이터에서도 자주 보이는 더 단순하고 근본적인 노이즈에 대해서도 알아보았습니다.</p>
+
+<ul>
+  <li>
+    <p>문장부호</p>
+
+    <p><code class="language-plaintext highlighter-rouge">Hi</code> 와 <code class="language-plaintext highlighter-rouge">Hi,</code>를 컴퓨터는 다르게 이해할 수 있습니다. 이같은 경우 문장부호 앞 뒤에 공백을 넣어 분리해줍니다.</p>
+
+    <p>하지만, www.naver.com 이나 101,456 과 같은 데이터의 경우 공백을 넣으면 오히려 이상하게 처리를 해주는 꼴입니다.</p>
+
+    <p>위 같은 경우는 불가피한 손실로 취급하고 넘어가게 됩니다. 모든 규칙에 대해서 변환을 정의해줄 수는 없기 때문입니다. 게다가 보통 수행하고자 하는 목적에 큰 영향을 주지 못하기 때문에 오류가 있음에도 그냥 넘어가게 됩니다.</p>
+  </li>
+  <li>
+    <p>대소문자</p>
+
+    <p>First와 first를 컴퓨터는 다르게 인식할 수 있으므로 lower()혹은 upper()메소드를 이용해 변경해줍니다.</p>
+  </li>
+  <li>
+    <p>특수문자</p>
+
+    <p>영어에서는 나이를 ten-year-old와 같이 표현하는 경우가 있습니다. 이 같은 경우 특정 특수문자를 공백으로 변경하거나 없애는 처리를 추가해주며 보통 정규표현식으 사용하여 처리합니다.</p>
+  </li>
+</ul>
+
+<h1 id="3-단어의-희소-표현과-분산-표현">3. 단어의 희소 표현과 분산 표현</h1>
+
+<h2 id="희소-표현">희소 표현</h2>
+
+<p>해당 단어의 속성이 어느 그룹에 속하느냐를 벡터로 표현한 것.</p>
+
+<p>원-핫 인코딩을 통해서 얻은 원-핫 벡터는 표현하고자 하는 단어의 인덱스의 값만 1이고, 나머지 인덱스에는 전부 0으로 표현되는 벡터 표현 방법이었습니다. 이와 같이 벡터 또는 행렬의 값이 대부분이 0으로 표현되는 방법이 희소표현입니다.</p>
+
+<p>ex ) 0번째 인덱스를 여자 = 1, 남자 -1로 표현한다면</p>
+
+<blockquote>
+  <p>남자 = [-1]</p>
+
+  <p>여자 = [1]</p>
+
+  <p>사과 = [0]</p>
+
+  <p>소년 = [-1]</p>
+
+  <p>바나나 = [0]</p>
+</blockquote>
+
+<p>이런 속성들이 여러개가 된다면 결국 0000001000000000011001000000과 같은 표현이 될것입니다. 메모리 낭비가 심합니다.</p>
+
+<h2 id="분산표현">분산표현</h2>
+
+<p>컴퓨터가 추상적으로 단어의 유사도를 계산하여 각각에 표현한 것.</p>
+
+<p>분산 표현(distributed representation) 방법은 기본적으로 분포 가설(distributional hypothesis)이라는 가정 하에 만들어진 표현 방법</p>
+
+<p>100개의 단어를 256차원의 속성으로 표현하고 싶다면 Embedding 레이어는 다음과 같이 정의됩니다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">embedding_layer = tf.keras.layers.Embedding(input_dim=100, output_dim=256)</code></p>
+
+<h1 id="4-토큰화">4. 토큰화</h1>
+
+<p>단어에 대해 희소표현과 분산표현을 해주는 것은 단어 사전을 만들어 주기 위함입니다. 하지만 단어사전이 존재한다고 해도 컴퓨터는 엉뚱하게 해석하고 표현합니다. 그 이유는 컴퓨터가 문장을 단어단위로 정확히 끊어내지 못하기 때문입니다.</p>
+
+<p>예를 들어,<code class="language-plaintext highlighter-rouge">나</code>와 <code class="language-plaintext highlighter-rouge">나는</code> 이란 단어가 있으면 <code class="language-plaintext highlighter-rouge">나</code>와 <code class="language-plaintext highlighter-rouge">나</code>,``-는<code class="language-plaintext highlighter-rouge">으로 단어를 끊어 해석해야 하는데  컴퓨터는 </code>나<code class="language-plaintext highlighter-rouge">와 </code>나는`을 전혀 연관성 없는 단어로 해석할 수 있습니다.</p>
+
+<p>그래서 문장을 어떤 기준으로 쪼개주어야 하는데 쪼개진 단어들을 토큰이라고 합니다.</p>
+
+<h2 id="토큰화-기법-1-공백-기반-토큰화">토큰화 기법 1. 공백 기반 토큰화</h2>
+
+<p>공백을 베이스로하여 문장을 나누어줍니다.  python에선 split함수를 많이 씀.</p>
+
+<h2 id="토큰화-기법-2-형태소-기반-토큰화">토큰화 기법 2. 형태소 기반 토큰화</h2>
+
+<p>대표적인 한국어 형태소 분석기 KoLNLPy를 사용해서 토큰화 해주기도 합니다.</p>
+
+<p><a href="https://konlpy-ko.readthedocs.io/ko/v0.4.3/">KoNLPy: 파이썬 한국어 NLP - KoNLPy 0.4.3 documentation</a></p>
+
+<p>다른 분석기를 사용하려면 다음 사이트를 참고하면 좋습니다</p>
+
+<p><a href="https://iostream.tistory.com/144">한국어 형태소 분석기 성능 비교</a></p>
+
+<h2 id="토큰화-기법-3-사전에-없는-단어의-문제">토큰화 기법 3. 사전에 없는 단어의 문제</h2>
+
+<p>토큰화 기법 1, 2에서 설명한 공백 기반, 형태소 기반은 모두 각각의 단어가 가지는 의미 단위로 토큰화 합니다. 이 기법의 경우는 데이터에  포함되는 모든 단어를 처리할 수 는 없기 때문에, 상위 N개의 단어만 사용하고 나머지는 특수한 토큰 <code class="language-plaintext highlighter-rouge">&lt;unk&gt;</code>토큰으로 치환합니다. 사진은 예시입니다.</p>
+
+<p><img src="../assets/img/posts/image-20220316173133220.png" alt="image-20220316173133220" /></p>
+
+<p>이런 문장을 영문으로 번역할 땐 어려움이 있을 수 밖에 없습니다. 이 같은 문제를 해결하고자 하는 시도들이 있었고 그것이 Wordpiece Model입니다.</p>
+
+<h1 id="5-토큰화-다른-방법">5. 토큰화 다른 방법</h1>
+
+<h2 id="5-1-byte-pair-encodingbpe">5-1. Byte Pair Encoding(BPE)</h2>
+
+<p>Subword(접두사/ 접미사 ex) Pre- )의 집합으로 보는 방법이 WPM(WordPiece Model)입니다. 이 모델을 알기전에 알아야 하는 것이  <strong>Byte Pair Encoding(BPE)</strong> 이므로, 이에 대해 간단히 설명하겠습니다.</p>
+
+<p>데이터에서 가장 많이 등장하는 바이트 쌍(Byte Pair)을 새로운 단어로 치환하여 압축하는 작업을 반복하는 방식으로 동작합니다.</p>
+
+<p>예시 )</p>
+
+<p><img src="../assets/img/posts/image-20220316173104200.png" alt="image-20220316173104200" /></p>
+
+<p>이 방식을 사용하면, <code class="language-plaintext highlighter-rouge">lowest</code>라는 처음 등장해도, <code class="language-plaintext highlighter-rouge">low</code>와 <code class="language-plaintext highlighter-rouge">est</code>라는 단어 묶음이 이미 있다면, <code class="language-plaintext highlighter-rouge">lowest</code>를 <code class="language-plaintext highlighter-rouge">low</code>와 <code class="language-plaintext highlighter-rouge">est</code>의 조합으로, 즉 아는 단어로 처리할 수 있습니다.</p>
+
+<p>즉 그렇기 대문에 아무리 큰 데이터도 원하는 크기로 OOV 문제없이 사전을 정의할 수 있습니다.</p>
+
+<blockquote>
+  <p>OOV : Out of Vocabulary</p>
+</blockquote>
+
+<p>Emdedding 레이어는 단어수 * Embedding 차원의 수 = weight 이기 때문에 단어의 개수 줄어드는 문제 = 메모리 절약</p>
+
+<p>많은 데이터는 정확도로 이어지기 때문에 굉장히 큰 의미가 있습니다.</p>
+
+<h2 id="5-2-wordpiece-modelwpm">5-2. Wordpiece Model(WPM)</h2>
+
+<p>BPE의 단점은 나누는 그룹이 <code class="language-plaintext highlighter-rouge">i / a / o / n / b</code> 단위라면 이 단위들을 합치기는 어렵습니다. 이러한 단점을 극복하려 구글에서 만든 것이 WPM입니다. WPM은 BPE보다 두가지가 다릅니다.</p>
+
+<ol>
+  <li>공백 복원을 위하여 단어 시작부분에 <code class="language-plaintext highlighter-rouge">_</code>를 추가합니다.</li>
+  <li>빈도수 기반이 아니라 가능도<code class="language-plaintext highlighter-rouge">likelihood</code>를 증가시키는 방향으로 문자쌍을 합칩니다.</li>
+</ol>
+
+<p>예를 들어 아까 예시는 <code class="language-plaintext highlighter-rouge">_i, _a, o, _n, b</code> 와 같이 토큰화가 진행됩니다.</p>
+
+<p>이 경우, 모든 토큰을 합친 후, 언더바를 _를 공백으로 치환으로 마무리되어 간편합니다.</p>
+
+<h2 id="5-3-soynlp">5-3. soynlp</h2>
+
+<p>한국어 자연어 처리를 위한 라이브러리로 한국어를 위한 토크나이저로 사용됩니다. 토크나이저 이외에도 단어 추출, 품사 판별, 전처리 기능도 제공합니다.</p>
+
+<p>soynlp는 문장에서 처음 단어를 받아들일 때 단어의 경계를 비지도 학습을 통해 결정합니다. 비지도 학습을 통한 방법이라, 미등록 단어도 토큰화가 가능합니다. 여기서 사용된 비지도 학습은 통계적 방법이라 soynlp를 통계 기반 토크나이저로 분류하기도 합니다. 즉, <code class="language-plaintext highlighter-rouge">젤다의 전설</code>이 한 단어임을 인지하기 위하여 젤, 젤다, 젤다의, 젤다의 전, 젤다의 전설 각각 다음 글자의 확률을 계산하는 방식입니다.</p>
+
+<h1 id="6-토큰에게-의미를-부여하기">6. 토큰에게 의미를 부여하기</h1>
+
+<p>토큰화된 단어조각들끼리 유사도 연산을 연산을 할 수 있게 의미를 부여하는 알고리즘을 소개합니다.</p>
+
+<h2 id="6-1-word2vec">6-1. Word2Vec</h2>
+
+<p><code class="language-plaintext highlighter-rouge">단어로 벡터를 만든다</code>는 뜻.</p>
+
+<p>단어를 희소표현이 아닌 분산표현으로 나타낸 방법. 저차원에 단어의 이미를 여러 차원에다가 분산하여 표현합니다. 이러한 표현 방법을 사용하면, 단어 벡터간 유의미한 유사도를 계산할 수있는데 이를 위한 대표적인 학습 방법이 Word2Vec입니다.</p>
+
+<p>word2Vec에는 두가지 학습 방식이 있습니다.</p>
+
+<ul>
+  <li>
+    <p>CBOW Continuous Bag of words</p>
+
+    <p>주변에 있는 단어들을 입력으로 중간에 있는 단어들을 예측하는 방법입니다.</p>
+  </li>
+  <li>
+    <p>Skip gram</p>
+
+    <p>중간에 있는 단어들을 입력으로 주변 단어들을 예측하는 방법입니다.</p>
+  </li>
+</ul>
+
+<h3 id="cbow">CBOW</h3>
+
+<p>주변에 있는 단어들을 입력으로 중간에 있는 단어들을 예측하는 방법입니다.</p>
+
+<p>예문 : “The fat cat sat on the mat” 이 있다고 하면, [‘The’, ‘fat’, ‘cat’, ‘on’, ‘the’, ‘mat’]를 입력으로 받고, ‘sat’이라는 중간 단어를 예측하는 것입니다.</p>
+
+<p>여기서 리스트에 존재하는 단어를 주변단어 context word라고 하고, sat을 중심단어 center word라고 합니다.</p>
+
+<p><img src="https://wikidocs.net/images/page/22660/%EB%8B%A8%EC%96%B4.PNG" alt="img" /></p>
+
+<p>중심 단어를 예측하기 위해 앞, 뒤로 몇 개의 단어를 볼 지 결정하는 것 = window</p>
+
+<p>위 예시는 window = 2일 경우, 중심단어에 따라 앞 뒤로 주변단어를 받는 예시입니다.</p>
+
+<p>슬라이딩 윈도우 sliding window = 윈도우 크기가 결정됐을 경우, 윈도우를 옆으로 움직여서 주변 단어와 중심단어의 선택을 변경해가며 학습을 위한 데이터셋을 만드는 방법</p>
+
+<p><img src="https://wikidocs.net/images/page/22660/word2vec_renew_1.PNG" alt="img" /></p>
+
+<p>CBOW의 인공 신경망을 간단히 도식화한 그림입니다.</p>
+
+<p>위 그림에서 알수있는것.</p>
+
+<ol>
+  <li>Word2Vec은 은닉층이 다수인 딥러닝 모델이 아니라, 은닉층이 1개인 얕은 신경망 shallow neural network라는 점.</li>
+  <li>일반적인 은닉층과 달리 활성화 함수 존재 X</li>
+  <li>Word2Vec의 은닉층은 룩업 테이블이라는 연산을 담당하는 층으로 투사층 projection layer이라 부르기도 합니다.</li>
+</ol>
+
+<h3 id="skip-gram">Skip gram</h3>
+
+<p>중간에 있는 단어들을 입력으로 주변 단어들을 예측하는 방법입니다.</p>
+
+<p>윈도우 크기가 2일때 구성되는 데이터 셋 :</p>
+
+<p><img src="https://wikidocs.net/images/page/22660/skipgram_dataset.PNG" alt="img" /></p>
+
+<p>인공 신경망을 도식화해보면 아래와 같습니다.</p>
+
+<p><img src="https://wikidocs.net/images/page/22660/word2vec_renew_6.PNG" alt="img" /></p>
+
+<p>중심 단어에서 주변 단어를 예측하므로, 투사층에서 벡터들의 평균을 구하는 과정은 없습니다.</p>
+
+<p>일반적으로 Skip-gram이 CBOW보다 성능이 좋다고 알려져있습니다.</p>
+
+<h2 id="6-2-fasttext">6-2. FastText</h2>
+
+<h2 id="elmo---the-1st-contextualized-word-embedding">ELMo - the 1st Contextualized Word Embedding</h2>]]></content><author><name>Shin Hwi Jeong</name></author><summary type="html"><![CDATA[오늘은 아이펠 Going Deeper 노드 1번을 공부하고 공부한 내용을 포스팅해보았습니다.]]></summary></entry><entry><title type="html">운영체제 ) ch3. processes 실습</title><link href="http://localhost:4000/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C-)-ch3.-Processes-%EC%8B%A4%EC%8A%B5.html" rel="alternate" type="text/html" title="운영체제 ) ch3. processes 실습" /><published>2022-03-16T00:00:00+09:00</published><updated>2022-03-16T00:00:00+09:00</updated><id>http://localhost:4000/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C%20)%20ch3.%20Processes%20%EC%8B%A4%EC%8A%B5</id><content type="html" xml:base="http://localhost:4000/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C-)-ch3.-Processes-%EC%8B%A4%EC%8A%B5.html"><![CDATA[<p>실습 1.</p>
+
+<p><img src="../assets/img/posts/image-20220316091214611.png" alt="image-20220316091214611" /></p>
+
+<p><img src="../assets/img/posts/image-20220316091455080.png" alt="image-20220316091455080" /></p>
+
+<p>gcc -&gt; a.out 으로 실행파일만듬.</p>
+
+<p>프로세서는 어디에 올라가는가? 모든 램에 올라가나?</p>
+
+<p>큰 파일이면,, 그 전체가?</p>
+
+<p>프로세스 실행상태</p>
+
+<p>PCB란?</p>
+
+<p>PCB는 어디에샐겨?</p>
+
+<p>프로그램 카운터란?</p>
+
+<p>프로세스 당 PCB가 하나인건가?</p>
+
+<p>at the same time, simultaneously,concurrently&lt;-&gt; parallel</p>
+
+<p>wait queue -&gt; ready Queue로감</p>
+
+<p><img src="../assets/img/posts/image-20220316095719889.png" alt="image-20220316095719889" /></p>]]></content><author><name>Shin Hwi Jeong</name></author><summary type="html"><![CDATA[실습 1.]]></summary></entry><entry><title type="html">[ex_16] 다음에 볼 영화 예측하기</title><link href="http://localhost:4000/ex_16-%EB%8B%A4%EC%9D%8C%EC%97%90-%EB%B3%BC-%EC%98%81%ED%99%94-%EC%98%88%EC%B8%A1%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="[ex_16] 다음에 볼 영화 예측하기" /><published>2022-03-07T00:00:00+09:00</published><updated>2022-03-07T00:00:00+09:00</updated><id>http://localhost:4000/%5Bex_16%5D%20%EB%8B%A4%EC%9D%8C%EC%97%90%20%EB%B3%BC%20%EC%98%81%ED%99%94%20%EC%98%88%EC%B8%A1%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/ex_16-%EB%8B%A4%EC%9D%8C%EC%97%90-%EB%B3%BC-%EC%98%81%ED%99%94-%EC%98%88%EC%B8%A1%ED%95%98%EA%B8%B0.html"><![CDATA[<p>오늘은 아이펠 Exploration 노드 14번을 공부하고 공부한 내용을 포스팅해보았습니다.</p>
+
+<hr />
+
+<h6 id="출처">출처</h6>
+
+<ul>
+  <li>
+    <p>AIFFEL LMS</p>
+
+    <p>문제시 연락 부탁드립니다. :)</p>
+  </li>
+</ul>
+
+<hr />]]></content><author><name>Shin Hwi Jeong</name></author><summary type="html"><![CDATA[오늘은 아이펠 Exploration 노드 14번을 공부하고 공부한 내용을 포스팅해보았습니다.]]></summary></entry><entry><title type="html">Session Parallel mini Batches</title><link href="http://localhost:4000/Session-Parallel-Mini-Batches.html" rel="alternate" type="text/html" title="Session Parallel mini Batches" /><published>2022-03-07T00:00:00+09:00</published><updated>2022-03-07T00:00:00+09:00</updated><id>http://localhost:4000/Session-Parallel%20Mini-Batches</id><content type="html" xml:base="http://localhost:4000/Session-Parallel-Mini-Batches.html"><![CDATA[<p>오늘의 포스팅 주제는 Session-Parallel Mini-Batches입니다.</p>
+
+<p>아이펠 Exploration 노드 16번 추천시스템을 공부하다 알게 된 이론인데, 이해가 잘 되지 않아 더 조사하게 되었습니다.</p>
+
+<hr />
+
+<h6 id="관련논문">관련논문</h6>
+
+<ul>
+  <li><a href="https://arxiv.org/pdf/1511.06939.pdf">SESSION-BASED RECOMMENDATIONS WITH RECURRENT NEURAL NETWORKS</a></li>
+  <li><a href="https://iopscience.iop.org/article/10.1088/1742-6596/1314/1/012194/pdf">IMPROVED SESSION-BASED RECOMMENDATIONS USING RECURRENT NEURAL NETWORKS FOR MUSIC DISCOVERY</a></li>
+</ul>
+
+<hr />
+
+<h1 id="session-parallel-mini-batches란">Session-Parallel Mini-Batches란?</h1>
+
+<p><strong>Session-Based Recommendatation</strong>에서 보통 쓰입니다.</p>
+
+<h2 id="session-based-recommendation이란">Session-Based Recommendation이란?</h2>
+
+<p>이 추천 시스템은 사용자의 개인정보나 아이템들의 정보를 분석하여 추천하는 것이 아니라, 세션 데이터를 기반으로 사용자가 다음에 클릭 혹은 구매할 아이템을 예측하는 추천입니다.</p>
+
+<ul>
+  <li>Session이란?
+    <ul>
+      <li>서버쪽에 저장되는 데이터로, 서비스를 이용하며 발생하는 중요한 정보들을 담은 데이터</li>
+      <li>같은 SessionID를 존재는 같은 유저라고 인지하며 보통 다음과 같은 정보를 가지고 있습니다.</li>
+      <li><img src="../assets/img/posts/image-20220307115736517.png" alt="image-20220307115736517" /> 사진 출처 : Aiffel LMS</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="session-parallel-mini-batches의-동작">Session-Parallel Mini-Batches의 동작</h2>
+
+<p>다음과 같은 session 데이터가 있을때,</p>
+
+<p><img src="../assets/img/posts/image-20220307145442657.png" alt="image-20220307145442657" /></p>
+
+<p>Session parallel Mini batches는 다음과 같이 처리된다.</p>
+
+<p><img src="../assets/img/posts/image-20220307145529789.png" alt="image-20220307145529789" /></p>
+
+<ul>
+  <li>설명</li>
+</ul>
+
+<p><img src="../assets/img/posts/image-20220307145421363.png" alt="image-20220307145421363" /></p>]]></content><author><name>Shin Hwi Jeong</name></author><summary type="html"><![CDATA[오늘의 포스팅 주제는 Session-Parallel Mini-Batches입니다.]]></summary></entry><entry><title type="html">Epoch, batch size, iteration의 의미</title><link href="http://localhost:4000/Epoch,-batch-size,-iteration%EC%9D%98-%EC%9D%98%EB%AF%B8.html" rel="alternate" type="text/html" title="Epoch, batch size, iteration의 의미" /><published>2022-03-07T00:00:00+09:00</published><updated>2022-03-07T00:00:00+09:00</updated><id>http://localhost:4000/Epoch,%20batch%20size,%20iteration%EC%9D%98%20%EC%9D%98%EB%AF%B8</id><content type="html" xml:base="http://localhost:4000/Epoch,-batch-size,-iteration%EC%9D%98-%EC%9D%98%EB%AF%B8.html"><![CDATA[<h1 id="epoch">Epoch</h1>
+
+<p>전체 데이터 셋에 대하여 foward pass/ backward pass 학습을  진행</p>
+
+<p>전체 데이터가 순전파와 역전파를 통해 신경망을 한 번 통과했습니다.</p>
+
+<h1 id="batch-size">Batch Size</h1>
+
+<p>batch size는 Single batch이 구성하고 있는 데이터 샘플의 크기를 의미합니다. Single batch는 mini-batch라고 보통 표현됩니다.</p>
+
+<p>전체 데이터셋을 batch size만큼의 수로 여러개 나눕니다.</p>
+
+<p>전체 데이터 셋을 나누는 이유는, 트레이닝 데이터를 통째로 신경망에 넣으면 메모리 초과가 날 수 도 있기 때문입니다.</p>
+
+<p><strong>batch size만큼 feed foward 학습과 backprop 학습이 둘 다 진행됩니다.</strong></p>
+
+<h1 id="iteration">Iteration</h1>
+
+<p>전체 데이터는 batch size수 만큼 데이터가 나뉘어져 있고, ㅑiteration수만큼 batch를 학습하면 한 epoch를 학습하게 되는 것입니다.</p>
+
+<p>즉, 1-epoch를 마치는데 필요한 mini batch의 갯수</p>
+
+<h1 id="총정리">총정리</h1>
+
+<p>5000개의 데이터가 존재하고 epoch = 100, batch_size = 250이라고 가정합니다.</p>
+
+<p>전체 데이터는 batch_size 수인 250만큼 나뉘고 1 Epoch당 250개 씩 데이터를 받아 20 iteration 학습합니다.</p>
+
+<p>그리고 전체 데이터는 100번 학습됩니다.</p>]]></content><author><name>Shin Hwi Jeong</name></author><summary type="html"><![CDATA[Epoch]]></summary></entry><entry><title type="html">Batch normalization</title><link href="http://localhost:4000/Batch-Normalization.html" rel="alternate" type="text/html" title="Batch normalization" /><published>2022-03-07T00:00:00+09:00</published><updated>2022-03-07T00:00:00+09:00</updated><id>http://localhost:4000/Batch%20Normalization</id><content type="html" xml:base="http://localhost:4000/Batch-Normalization.html"><![CDATA[<p>https://sjpyo.tistory.com/59</p>
+
+<p>https://velog.io/@gibonki77/Batch-Normalization-backpropagation-%EC%9C%A0%EB%8F%84%ED%95%98%EA%B8%B0</p>]]></content><author><name>Shin Hwi Jeong</name></author><summary type="html"><![CDATA[https://sjpyo.tistory.com/59]]></summary></entry><entry><title type="html">강화학습 ) finite markov decision processes</title><link href="http://localhost:4000/%EA%B0%95%ED%99%94%ED%95%99%EC%8A%B5-)-Finite-Markov-Decision-Processes.html" rel="alternate" type="text/html" title="강화학습 ) finite markov decision processes" /><published>2022-02-28T00:00:00+09:00</published><updated>2022-02-28T00:00:00+09:00</updated><id>http://localhost:4000/%EA%B0%95%ED%99%94%ED%95%99%EC%8A%B5%20)%20Finite%20Markov%20Decision%20Processes</id><content type="html" xml:base="http://localhost:4000/%EA%B0%95%ED%99%94%ED%95%99%EC%8A%B5-)-Finite-Markov-Decision-Processes.html"><![CDATA[<p>오늘은 강화학습 분야에서 Finite Markov Decision Processes에 대하여 공부한 것을 정리해 보았습니다.</p>
 
 <hr />
 
@@ -458,1271 +937,4 @@ The general rule we follow is that anything that cannot be changed arbitrarily b
 
 <ul>
   <li>del a[5]</li>
-</ul>]]></content><author><name>Shin Hwi Jeong</name></author><summary type="html"><![CDATA[오늘은 파이썬 리스트 자료형의 개념과 사용법에 대해서 공부를 해보았습니다.]]></summary></entry><entry><title type="html">Python ) 문자열</title><link href="http://localhost:4000/Python-)-%EB%AC%B8%EC%9E%90%EC%97%B4.html" rel="alternate" type="text/html" title="Python ) 문자열" /><published>2022-02-27T00:00:00+09:00</published><updated>2022-02-27T00:00:00+09:00</updated><id>http://localhost:4000/Python%20)%20%EB%AC%B8%EC%9E%90%EC%97%B4</id><content type="html" xml:base="http://localhost:4000/Python-)-%EB%AC%B8%EC%9E%90%EC%97%B4.html"><![CDATA[<p>오늘은 파이썬 문자열의 개념과 사용법에 대해서 공부를 해보았습니다.</p>
-
-<hr />
-
-<h6 id="출처">출처</h6>
-
-<ul>
-  <li><a href="https://dojang.io/mod/page/view.php?id=2196">파이썬 코딩도장 - 문자열</a></li>
-</ul>
-
-<hr />
-
-<h1 id="문자열-생성">문자열 생성</h1>
-
-<p>” “ , ‘ ‘ , “”” “”” , ‘’’ ‘’’ 를 이용하여서 생성할수 있습니다.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">hello</span> <span class="o">=</span> <span class="s">"Hello Python!"</span>
-</code></pre></div></div>
-
-<p>특히 “”” “”” , ‘’’ ‘’’ 따옴표를 3개 연달아 붙여 사용하면 여러 줄로 된 문자열을 하나의 변수에 할당하여 사용할 수 있습니다.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">hello</span> <span class="o">=</span> <span class="s">"""
-Hello Python!
-Hello World!
-"""</span>
-</code></pre></div></div>
-
-<h2 id="--와----두가지-생성-방법이-있는-이유">” “, 와 ‘ ‘ : 두가지 생성 방법이 있는 이유</h2>
-
-<p>” “ 로 생성하면 ‘ ‘를 기호문자로 받아들이지 않고, ‘ ‘로 생성하면 “ “를 기호문자로 받아들이지 않습니다.</p>
-
-<p>즉, 문자열 사이에 ‘ ‘가 있으면 “ “로 문자열을 생성하고, “ “가 있으면 ‘ ‘로 문자열을 생성해야 합니다.</p>
-
-<ul>
-  <li>
-    <p>기호문자를 기호문자로 인식하지 않게 하는 법</p>
-
-    <p><code class="language-plaintext highlighter-rouge">\</code> 문자를 앞에 붙이면 됩니다.</p>
-
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="s">'Python isn</span><span class="se">\'</span><span class="s">t difficult'</span>
-<span class="s">'Python isn'</span><span class="n">t</span> <span class="n">difficult</span><span class="s">'
-</span></code></pre></div>    </div>
-  </li>
-</ul>]]></content><author><name>Shin Hwi Jeong</name></author><summary type="html"><![CDATA[오늘은 파이썬 문자열의 개념과 사용법에 대해서 공부를 해보았습니다.]]></summary></entry><entry><title type="html">[fd_31] crawling and classification of news articles</title><link href="http://localhost:4000/fd_31-Crawling-and-classification-of-news-articles.html" rel="alternate" type="text/html" title="[fd_31] crawling and classification of news articles" /><published>2022-02-25T00:00:00+09:00</published><updated>2022-02-25T00:00:00+09:00</updated><id>http://localhost:4000/%5Bfd_31%5D%20Crawling%20and%20classification%20of%20news%20articles</id><content type="html" xml:base="http://localhost:4000/fd_31-Crawling-and-classification-of-news-articles.html"><![CDATA[<p>오늘은 아이펠 Fundamental 노드 31번을 공부하고 공부한 내용을 포스팅해보았습니다.</p>
-
-<hr />
-
-<h6 id="출처">출처</h6>
-
-<ul>
-  <li>
-    <p>AIFFEL LMS</p>
-
-    <p>문제시 연락 부탁드립니다. :)</p>
-  </li>
-</ul>
-
-<hr />
-
-<h6 id="목차">목차</h6>
-
-<ul>
-  <li>HTML과 태그</li>
-  <li>선택자</li>
-</ul>
-
-<p>[TOC]</p>
-
-<hr />
-
-<h6 id="사용하는-패키지--모듈">사용하는 패키지 / 모듈</h6>
-
-<ul>
-  <li>
-    <p>Mecab</p>
-
-    <ul>
-      <li>
-        <p>$ git clone https://github.com/SOMJANG/Mecab-ko-for-Google-Colab.git</p>
-
-        <p>$ cd Mecab-ko-for-Google-Colab</p>
-
-        <p>$ bash install_mecab-ko_on_colab190912.sh</p>
-      </li>
-    </ul>
-  </li>
-  <li>beautifulsoup4</li>
-  <li>newspaper3k</li>
-  <li>konlpy</li>
-</ul>
-
-<hr />
-
-<h1 id="html과-태그">HTML과 태그</h1>
-
-<p>크롤링이란, 웹 페이지로부터 데이터를 추출하는 것입니다. 크롤링하는 소프트웨어는 크롤러라고 합니다.</p>
-
-<p>크롤링을 하기 위해서는 HTML과 태그에 대해서 알아야합니다.</p>
-
-<ul>
-  <li>HTML이란 Hyper Text Markup Language의 준말입니다.
-    <ul>
-      <li>HyperText : 문서와 문서가 링크로 연결되어 있다.</li>
-      <li>Markup : 태그로 이루어져 있다.</li>
-    </ul>
-  </li>
-  <li>태그란 정보를 정의하는 형식입니다.</li>
-</ul>
-
-<h1 id="선택자">선택자</h1>
-
-<p>원활한 크롤링을 위해서는 HTML 내의 선택자가 매우 중요합니다. 선택자란, 특정 태그들에 그룹이나 번호를 주는 기능입니다.</p>
-
-<pre><code class="language-HTML">&lt;html&gt; 
-    &lt;head&gt; 
-    &lt;/head&gt; 
-    &lt;body&gt; 
-        &lt;h1&gt; 장바구니
-            &lt;p&gt; 라운드티
-                &lt;span&gt; 25 &lt;/span&gt; 
-                &lt;span&gt; 29000 &lt;/span&gt; 
-                &lt;span&gt; 의류&lt;/span&gt; 
-                &lt;a href = 'http://www.naver.com'&gt; 이동 &lt;/a&gt; 
-            &lt;/p&gt; 
-            &lt;p&gt; 시계
-                &lt;span&gt; 28 &lt;/span&gt;
-                &lt;span&gt; 32000 &lt;/span&gt; 
-                &lt;span&gt; 악세서리 &lt;/span&gt; 
-                &lt;a href = 'http://www.facebook.com'&gt; 이동 &lt;/a&gt; 
-            &lt;/p&gt; 
-        &lt;/h1&gt; 
-    &lt;/body&gt; 
-&lt;/html&gt;
-</code></pre>
-
-<p>위와 같은 HTML 문서가 있다고 할 때, <code class="language-plaintext highlighter-rouge">&lt;p&gt;</code> 태그는 2개, <code class="language-plaintext highlighter-rouge">&lt;span&gt;</code>태그는 6개, <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> 태그는 2개가 있습니다.</p>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">&lt;p&gt;</code>
-    <ul>
-      <li>Paragraph 문단의 약자로, 하나의 문단을 만들 때 쓰입니다.</li>
-    </ul>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">&lt;span&gt;</code>
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">&lt;span&gt;</code>태그는 <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code>태그처럼 특별한 기능을 갖고 있지 않으며 CSS와 함께 쓰입니다.</li>
-      <li>display속성이 Block이 아닌, Inline이며, <a href="https://ofcourse.kr/css-course/display-%EC%86%8D%EC%84%B1">CSS Display</a> 페이지에서 세부 정보를 알 수 있습니다.</li>
-      <li>줄바꿈안되는 속성</li>
-      <li><code class="language-plaintext highlighter-rouge">&lt;div&gt;</code>
-        <ul>
-          <li>Division의 약자로, 레이아웃을 나누는데 쓰입니다.</li>
-          <li>특별한 기능은 없으며 가상의 레이아웃을 설계하는데 쓰이며 CSS와 연동하여 쓰입니다.</li>
-          <li>줄바꿈이 됨</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">&lt;a&gt;</code>
-    <ul>
-      <li>하이퍼링크를 걸어주는 태그</li>
-      <li>속성
-        <ul>
-          <li>href : 클릭시 이동할 링크</li>
-          <li>target : 링크를 여는 방법
-            <ul>
-              <li><code class="language-plaintext highlighter-rouge">_self</code>: 현재 페이지 (기본값)</li>
-              <li><code class="language-plaintext highlighter-rouge">_blank</code>: 새 탭</li>
-              <li><code class="language-plaintext highlighter-rouge">_parent</code>: 부모 페이지로, iframe 등이 사용된 환경에서 쓰입니다.</li>
-              <li><code class="language-plaintext highlighter-rouge">_top</code>: 최상위 페이지로, iframe 등이 사용된 환경에서 쓰입니다.</li>
-              <li><em><code class="language-plaintext highlighter-rouge">프레임이름</code></em>: 직접 프레임이름을 명시해서 사용할 수도 있습니다.</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li><a href="https://ofcourse.kr/html-course/p-%ED%83%9C%EA%B7%B8">HTML 태그</a></li>
-</ul>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span> 
-    <span class="nt">&lt;head&gt;</span> 
-    <span class="nt">&lt;/head&gt;</span> 
-    <span class="nt">&lt;body&gt;</span> 
-        <span class="nt">&lt;h1&gt;</span> 장바구니
-            <span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">'clothes'</span> <span class="na">class=</span><span class="s">'name'</span> <span class="na">title=</span><span class="s">'라운드티'</span><span class="nt">&gt;</span> 라운드티
-                <span class="nt">&lt;span</span> <span class="na">class = </span><span class="s">'number'</span><span class="nt">&gt;</span> 25 <span class="nt">&lt;/span&gt;</span> 
-                <span class="nt">&lt;span</span> <span class="na">class = </span><span class="s">'price'</span><span class="nt">&gt;</span> 29000 <span class="nt">&lt;/span&gt;</span> 
-                <span class="nt">&lt;span</span> <span class="na">class = </span><span class="s">'menu'</span><span class="nt">&gt;</span> 의류<span class="nt">&lt;/span&gt;</span> 
-                <span class="nt">&lt;a</span> <span class="na">href = </span><span class="s">'http://www.naver.com'</span><span class="nt">&gt;</span> 바로가기 <span class="nt">&lt;/a&gt;</span> 
-            <span class="nt">&lt;/p&gt;</span> 
-            <span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">'watch'</span> <span class="na">class=</span><span class="s">'name'</span> <span class="na">title=</span><span class="s">'시계'</span><span class="nt">&gt;</span> 시계
-                <span class="nt">&lt;span</span> <span class="na">class = </span><span class="s">'number'</span><span class="nt">&gt;</span> 28 <span class="nt">&lt;/span&gt;</span>
-                <span class="nt">&lt;span</span> <span class="na">class = </span><span class="s">'price'</span><span class="nt">&gt;</span> 32000 <span class="nt">&lt;/span&gt;</span> 
-                <span class="nt">&lt;span</span> <span class="na">class = </span><span class="s">'menu'</span><span class="nt">&gt;</span> 악세서리 <span class="nt">&lt;/span&gt;</span> 
-                <span class="nt">&lt;a</span> <span class="na">href = </span><span class="s">'http://www.facebook.com'</span><span class="nt">&gt;</span> 바로가기 <span class="nt">&lt;/a&gt;</span> 
-            <span class="nt">&lt;/p&gt;</span> 
-        <span class="nt">&lt;/h1&gt;</span> 
-    <span class="nt">&lt;/body&gt;</span> 
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div></div>
-
-<p>위 코드는 id와 class를 위 코드블록에서 추가한 코드입니다.</p>
-
-<ul>
-  <li>id : CSS의 스타일을 적용할때 매우 유용</li>
-  <li>class : 비슷한 성격을 가지는 그룹을 정의해서 한번에 관리하고 싶을때 사용</li>
-</ul>
-
-<h1 id="beautifulsoup-패키지">BeautifulSoup 패키지</h1>
-
-<p>HTML이나 XML 문서로부터 원하는 정보를 추출해주는 파이썬 크롤링 패키지입니다.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html</span><span class="p">,</span> <span class="s">'html.parser'</span><span class="p">)</span>
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">BeautifulSoup(입력 문자열, parser종류)</code> 형식으로 사용하는 메소드입니다.</p>
-
-<ul>
-  <li>html 자리에 html 문서 혹은 html형식으로 작성된 문자열을 넣어줍니다.</li>
-  <li>‘html.parser’ : 입력 문자열이 html 형식으로 작성되어 있으니, HTML 문법을 기반으로 파싱하라는 뜻</li>
-</ul>
-
-<p>위와같이 인스턴스를 생성하고나면, 정보를 가져오는 것은 <code class="language-plaintext highlighter-rouge">select()</code> 메소드를 이용하여 가능합니다.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">soup</span><span class="p">.</span><span class="n">select</span><span class="p">(</span><span class="s">'body'</span><span class="p">))</span>
-</code></pre></div></div>
-
-<p>실행결과</p>
-
-<blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[&lt;body&gt;
-&lt;h1&gt; 장바구니
-            &lt;p class="name" id="clothes" title="라운드티"&gt; 라운드티
-                &lt;span class="number"&gt; 25 &lt;/span&gt;
-&lt;span class="price"&gt; 29000 &lt;/span&gt;
-&lt;span class="menu"&gt; 의류&lt;/span&gt;
-&lt;a href="http://www.naver.com"&gt; 바로가기 &lt;/a&gt;
-&lt;/p&gt;
-&lt;p class="name" id="watch" title="시계"&gt; 시계
-                &lt;span class="number"&gt; 28 &lt;/span&gt;
-&lt;span class="price"&gt; 32000 &lt;/span&gt;
-&lt;span class="menu"&gt; 악세서리 &lt;/span&gt;
-&lt;a href="http://www.facebook.com"&gt; 바로가기 &lt;/a&gt;
-&lt;/p&gt;
-&lt;/h1&gt;
-&lt;/body&gt;]
-</code></pre></div>  </div>
-</blockquote>
-
-<p>즉, soup.select(‘찾는정보’) 형식으로 사용합니다.</p>
-
-<ul>
-  <li><a href="https://m.blog.naver.com/kiddwannabe/221177292446">BeautifulSoup로 크롤링하기</a></li>
-</ul>
-
-<p>부모와 자식관계라면 다음과 같이 사용합니다.</p>
-
-<p><code class="language-plaintext highlighter-rouge">soup.select( 부모 &gt; 자식 )</code></p>
-
-<p>다음과 같은 html body 태그가 있으면,</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;body&gt;</span>
-  <span class="nt">&lt;h1&gt;</span> 장바구니
-    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"name"</span> <span class="na">id=</span><span class="s">"clothes"</span> <span class="na">title=</span><span class="s">"라운드티"</span><span class="nt">&gt;</span> 라운드티
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"number"</span><span class="nt">&gt;</span> 25 <span class="nt">&lt;/span&gt;</span>
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"price"</span><span class="nt">&gt;</span> 29000 <span class="nt">&lt;/span&gt;</span>
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"menu"</span><span class="nt">&gt;</span> 의류<span class="nt">&lt;/span&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://www.naver.com"</span><span class="nt">&gt;</span> 바로가기 <span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"name"</span> <span class="na">id=</span><span class="s">"watch"</span> <span class="na">title=</span><span class="s">"시계"</span><span class="nt">&gt;</span> 시계
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"number"</span><span class="nt">&gt;</span> 28 <span class="nt">&lt;/span&gt;</span>
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"price"</span><span class="nt">&gt;</span> 32000 <span class="nt">&lt;/span&gt;</span>
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"menu"</span><span class="nt">&gt;</span> 악세서리 <span class="nt">&lt;/span&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://www.facebook.com"</span><span class="nt">&gt;</span> 바로가기 <span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;/h1&gt;</span>
-<span class="nt">&lt;/body&gt;</span>
-</code></pre></div></div>
-
-<p>h1 요소의 자식에서 .name의 자식인 클래스 menu인 경우만 뽑는다면,</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">soup</span><span class="p">.</span><span class="n">select</span><span class="p">(</span><span class="s">'h1 .name .menu'</span><span class="p">))</span>
-</code></pre></div></div>
-
-<p>실행 결과</p>
-
-<blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[&lt;span class="menu"&gt; 의류&lt;/span&gt;, &lt;span class="menu"&gt; 악세서리 &lt;/span&gt;]
-</code></pre></div>  </div>
-</blockquote>
-
-<p>잘못된 입력</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">soup</span><span class="p">.</span><span class="n">select</span><span class="p">(</span><span class="s">'html &gt; h1'</span><span class="p">))</span>
-</code></pre></div></div>
-
-<blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[]
-</code></pre></div>  </div>
-</blockquote>
-
-<p>h1이 html의 자식이긴 하지만, 바로 아래 자식은 아니고, body의 자식입니다. 즉 html &gt; body &gt; h1인 것입니다. 하지만 html의 바로 아래 자식인것 처럼 사용하면 위와 같이 빈 정보를 출력합니다.</p>
-
-<h1 id="newspaper3k-패키지">newspaper3k 패키지</h1>
-
-<p>뉴스데이터를 크롤링하기 위해 만들어진 패키지입니다.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">newspaper</span> <span class="kn">import</span> <span class="n">Article</span>
-
-<span class="n">url</span> <span class="o">=</span> <span class="s">'https://news.naver.com/main/read.nhn?mode=LSD&amp;mid=sec&amp;sid1=101&amp;oid=030&amp;aid=0002881076'</span>
-
-<span class="c1">#- 언어가 한국어이므로 language='ko'로 설정해주었습니다.
-</span><span class="n">article</span> <span class="o">=</span> <span class="n">Article</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s">'ko'</span><span class="p">)</span>
-<span class="n">article</span><span class="p">.</span><span class="n">download</span><span class="p">()</span>
-<span class="n">article</span><span class="p">.</span><span class="n">parse</span><span class="p">()</span>
-</code></pre></div></div>
-
-<p>위 코드를 실행하면, URL의 뉴스 데이터를 파싱합니다.</p>
-
-<ul>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">article.title</code> : 기사 제목을 출력해줍니다.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">article.text</code> : 기사의 내용을 출력해줍니다.</p>
-  </li>
-</ul>]]></content><author><name>Shin Hwi Jeong</name></author><summary type="html"><![CDATA[오늘은 아이펠 Fundamental 노드 31번을 공부하고 공부한 내용을 포스팅해보았습니다.]]></summary></entry><entry><title type="html">Swea ) 프로그래밍과 논리, 수학 1</title><link href="http://localhost:4000/SWEA-)-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EA%B3%BC-%EB%85%BC%EB%A6%AC,-%EC%88%98%ED%95%99-1.html" rel="alternate" type="text/html" title="Swea ) 프로그래밍과 논리, 수학 1" /><published>2022-02-24T00:00:00+09:00</published><updated>2022-02-24T00:00:00+09:00</updated><id>http://localhost:4000/SWEA%20)%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EA%B3%BC%20%EB%85%BC%EB%A6%AC,%20%EC%88%98%ED%95%99%201</id><content type="html" xml:base="http://localhost:4000/SWEA-)-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EA%B3%BC-%EB%85%BC%EB%A6%AC,-%EC%88%98%ED%95%99-1.html"><![CDATA[<p>오늘은 삼성 SW Expert Academy의 프로그래밍과 논리, 수학 강의 1강을 보고 학습한 내용을 정리해보았습니다</p>
-
-<hr />
-
-<h6 id="강의-링크">강의 링크</h6>
-
-<p>https://swexpertacademy.com/main/learn/course/lectureVideoPlayer.do</p>
-
-<hr />
-
-<h6 id="강의-전체-목차">강의 전체 목차</h6>
-
-<ul>
-  <li>프로그래밍과 논리/수학 ( 오늘의 분량 )</li>
-  <li>논리와 증명 ( 오늘의 분량 )</li>
-  <li>수와 표현</li>
-  <li>집합과 조합론</li>
-  <li>기초 수식</li>
-  <li>재귀</li>
-  <li>동적 프로그래밍</li>
-  <li>조합론 프로그램 과제</li>
-  <li>기초 알고리즘 프로그램 과제</li>
-</ul>
-
-<hr />
-
-<h1 id="프로그래밍과-논리--수학">프로그래밍과 논리 / 수학</h1>
-
-<ul>
-  <li>
-    <p>프로그래밍이 어려운 이유</p>
-
-    <ul>
-      <li>
-        <p>능숙해지기 위해 많은 훈련이 필요하지만, 이 과정의 중요 목표는 아님!</p>
-      </li>
-      <li>
-        <p>논리적인 어려움 존재</p>
-
-        <ul>
-          <li>
-            <p>ex ( 카드문제 )</p>
-
-            <ul>
-              <li>
-                <p>사실과, 주장, 문제에서 사실과 주장을 잘 구분해야한다!</p>
-              </li>
-              <li>
-                <p>사실 : 모든 카드의 한쪽에는 알파벳, 다른쪽에는 숫자</p>
-              </li>
-              <li>
-                <p>주장 : 만약 한쪽이 D이면 반대쪽은 3</p>
-              </li>
-              <li>
-                <p>문제 : 주장이 사실인지 확인하기 위해 아래 카드 중 반드시 뒤집어봐야 하는 카드는 몇개이고 어느것인가?</p>
-
-                <p><img src="../assets/img/posts/image-20220224183257085-1645964110017-1645964263172.png" alt="image-20220224183257085" /></p>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<blockquote>
-  <p>정답 : D와 7</p>
-</blockquote>
-
-<p>D를 뒤집어 봐야한다는 것은, 3인지를 확인해야하기 위함이고,</p>
-
-<p>7을 뒤집어 봐야하는 것은 다른 숫자가 적힌 카드의 뒷면에는 D가 없는지를 확인해봐야하기 때문.</p>
-
-<p>여기서 F는 확인 안해도 되는 것이 <del>이미 이미 D와 3에 위반된 조건이기 때문이다.</del></p>
-
-<p>F의 뒤에 3이 있을지 걱정하는 경우인데, 주장은 D 뒤에 3이있다는 것이지 F뒤에 3이 잇으면 안된다가 아님! <strong>3이 있던 없던 상관없음!</strong></p>
-
-<p>그렇담 3은 확인 안해도 되는것인가? 이건 F의 문제와 귀결되네. <strong>D뒤에 3이 존재하는것을 주장</strong>하는 거지 3 뒤에 그 어떤것이 와도 상관없다는 것!</p>
-
-<p>7을 뒤집어야 하는 이유는 7뒤에 D가 있으면 <strong>주장이 깨어지기 때문!</strong></p>
-
-<p><del>나는 여기서 궁금한 것이, 카드가 저기 4장뿐인가 라는 생각은 할 필요가 없는것인가. 카드 종류가 다양할 수 있잖아. 이 경우에는 전부 다 뒤집어야 하나?</del> 주장을 제대로 파악하지 못해서 생긴 문제다.</p>
-
-<ul>
-  <li>논리 != 직관
-    <ul>
-      <li>직관이란, 논리적인 <strong>느낌</strong>을 주는 것.
-        <ul>
-          <li>장점은 익숙한 상황에서는 매우 빠름</li>
-          <li>단점은 정확하지 않다. 가끔은 익숙한 상황에서도 틀릴 수 있다.</li>
-          <li>또한, 강한 착각을 일으킬 수 있다.</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<h1 id="논리와-증명">논리와 증명</h1>
-
-<ul>
-  <li>soft logic
-    <ul>
-      <li>논리적으로 부정확한 표현을 사용하지만, 어떤 의미인지 모든 사람이 알고있다는 가정</li>
-    </ul>
-  </li>
-  <li>hard logic
-    <ul>
-      <li>프로그래밍 언어 표현의 모두 논리학에서 나온 것입니다.</li>
-      <li>사용되고 있는 수 많은 알고리즘을 이해하기 위해서는 hard logic이 필요하다.</li>
-    </ul>
-  </li>
-  <li>프로그래밍의 어려움에는 soft logic으로 알고리즘을 이해하려고 하는 것입니다.
-    <ul>
-      <li>알고리즘 설명을 보고 또 봐도 이해가 안되는 것은 증명을 안봤기 때문</li>
-      <li>증명을 봐도 이해가 안되는 것은 직관으로 이해하려고 하기 때문.</li>
-      <li>직관으로 완전한 이해를 얻는 것은 불 가 능</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="논리연습-1">논리연습 1</h2>
-
-<ul>
-  <li>다음을 명제식 형태로 쓰고 참인지 거짓인지 판단하시오
-    <ol>
-      <li>만약 0이 홀수라면, 미국에서 2080년 월드컵이 열린다.</li>
-      <li>만약<img src="../assets/img/posts/image-20220224203954973-1645964113990-1645964270286.png" alt="image-20220224203954973" />이 prime number라면 2는 짝수이다.</li>
-    </ol>
-  </li>
-</ul>
-
-<blockquote>
-  <p>1.</p>
-
-  <p>p 이면 q이다 라는 명제에서 p는 0이 홀수이다. q는 미국에서2080년 월드컵이 열린다 입니다.</p>
-
-  <p><del>p이면 q이다 의 명제의 전제는 p가 참일 경우입니다. p가 거짓이면 명제식 자체가 거짓이 됩니다.</del></p>
-
-  <p>p이면 q이다 (참)</p>
-
-  <p>p이면 ~q이다 (거짓)</p>
-
-  <p>~p이면 q이다 (참)</p>
-
-  <p>~p이면 ~q이다 (참)</p>
-
-  <p>p이면 q라고 주장했지, ~p이면 ~q라고 말한게 아닙니다!</p>
-
-  <p>즉, ~p이면 q, ~q 둘 다 참입니다.</p>
-
-  <p><strong>가정이 거짓이되면 전체는 참이됩니다.</strong></p>
-
-  <p>1번 : 참</p>
-</blockquote>
-
-<blockquote>
-  <p>2.</p>
-
-  <p>p 이면 q이다 라는 명제에서 p는 저 숫자가 prime numer이다. q는 2는 짝수이다. 입니다.</p>
-
-  <p>p의 사실 여부와 상관없이, q가 항상 참이므로, 2번 명제는 항상 참입니다. p가 참이어도 결론 q는 참, p가 거짓이어도 결론 q는 참이기 때문입니다.</p>
-</blockquote>
-
-<h2 id="논리-연습2">논리 연습2</h2>
-
-<p>p와 q가 명제이고, p -&gt; q가 거짓이라고 하자. 다음 명제식의 참 거짓은 어떻게 되는가?</p>
-
-<p>ⓐ ~p -&gt; q</p>
-
-<p>ⓑ p V q</p>
-
-<p>ⓒq -&gt; p</p>
-
-<p>생각정리.</p>
-
-<p>p가 참이면 q의 참 거짓에 따라 거짓이 판별됨.</p>
-
-<p>p가 거짓이면 q는 항상 참이다.</p>
-
-<p>근데, q는 거짓이라그랬으니까, p는 참인데, q가 거짓인 경우뿐이네!</p>
-
-<p><del>즉, 참인 경우 : ~q or q -&gt; p인 경우 (c) ,거짓인 경우 : ~p -&gt; q인 경우 (a)</del></p>
-
-<p>(a) : 참 (가정이 거짓이 되면 전체는 참이 되기 때문입니다.)</p>
-
-<p>(b) : 참 (참 과 거짓 이면 참입니다.)</p>
-
-<p>(c) : 참</p>
-
-<blockquote>
-  <p>b의 문법은 뭘까요?</p>
-
-  <p>p와 q 합집합으로 이해하면 됩니다.</p>
-</blockquote>
-
-<h2 id="논리-연습-3">논리 연습 3.</h2>
-
-<p>다음 명제들의 역 이 대우를 쓰시오</p>
-
-<ol>
-  <li>만약 0이 홀수라면, 미국에서 2080년 월드컵이 열린다.</li>
-  <li>
-    <p>만약 <img src="../assets/img/posts/image-20220224205958021-1645964117645-1645964203117-1645964273354.png" alt="image-20220224205958021" />가 prime number라면 2는 짝수이다.</p>
-  </li>
-  <li>
-    <p>역 : 만약 미국에서 2080년 월드컵이 열린다면 0이 홀수이다.</p>
-  </li>
-  <li>
-    <p>이 : 만약 0이 홀수가 아니라면, 미국에서 2080년 월드컵이 열리지 않는다.</p>
-  </li>
-  <li>대우 : 미국에서 2080년 월드컵이 열리지 않는다면, 0이 홀수가 아니다.</li>
-  <li>
-    <p>역 : 만약 2가 짝수라면저 숫자는 prime number이다.</p>
-  </li>
-  <li>
-    <p>이 : 만약 저 숫자가 prime number가 아니라면, 2는 짝수가 아니다.</p>
-  </li>
-  <li>대우 : 2가 짝수가 아니라면, 저 숫자가 prime number가 아니다.</li>
-</ol>
-
-<h2 id="논리-연습-4">논리 연습 4.</h2>
-
-<p><img src="../assets/img/posts/image-20220224210624355-1645964119319-1645964200049-1645964274639.png" alt="image-20220224210624355" /></p>
-
-<ol>
-  <li><img src="../assets/img/posts/image-20220224212544120-1645964120754-1645964199087-1645964275703.png" alt="image-20220224212544120" /></li>
-</ol>
-
-<ul>
-  <li>증명이란?
-    <ul>
-      <li>정확한 명제식으로 표현할 수 있는 것이라야 함</li>
-      <li>보통은 정확한 명제식까지 쓰지는 않으나 근본적으로는 명제식으로 바꿀 수 있음</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="당구공-paradox">당구공 paradox</h2>
-
-<p><img src="../assets/img/posts/image-20220224212905380-1645964122235-1645964207905-1645964277479.png" alt="image-20220224212905380" /></p>
-
-<p><img src="../assets/img/posts/image-20220224213249351-1645964123503-1645964206425-1645964279271.png" alt="image-20220224213249351" /></p>
-
-<ul>
-  <li>
-    <p>수학적 귀납법이란?</p>
-
-    <ul>
-      <li>
-        <p>자연수 n에 관한 명제 P(n)이 모든 자연수 n에 대하여 성립함을 다음과 같이 증명하는 방법</p>
-
-        <p>자연수 n에 관한 어떤 명제 P(n)에 대하여</p>
-
-        <p>(1) n = 1일 때, 즉 P(1)이 성립함을 증명하고,</p>
-
-        <p>(2) n = k일 때, 즉 P(k)가 성립한다고 가정하면 n = k+1일 때, 즉 P(k+1)도 성립함을 증명한다.</p>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p>대부분 사람들이 P(n)이 참이라고 가정할 수없다고 반론함.</p>
-
-    <ul>
-      <li><strong>수학적 귀납법에서 필요한 것은 P(n)-&gt;P(n+1)이 참임을 보이는 것 뿐이므로, P(n)이 정말로 참일 필요는 없음.</strong>
-        <ul>
-          <li><del>P(n)이 거짓이면 전부 통째로 참이되어버리니까 오히려 좋아</del></li>
-        </ul>
-      </li>
-      <li>위 증명에서 실제로 잘못된 부분은
-        <ul>
-          <li>위의 두 상황에서 처음 뺀 당구공과 두번째로 뺀 당구공의 색이 같음을 알수있으므로,,,</li>
-        </ul>
-      </li>
-      <li>처음뺀 당구공과 두번째로 뺀 당구공의 색이 같다는 것은 공통부분이 있다는 것인데, 실제로 n = 1인 경우, 즉, n+1=2인 경우 공통부분이 없다.
-        <ul>
-          <li>n=1인 경우에는 주머니안에 있는 공들의 색이 전부 같다는게 아니라, n=1인경우에는 주머니에 그 공 하나라서 색이 같을 수 밖에 없다는 것이므로 성립하지 않는대.</li>
-          <li>조금 이해가 안되는 부분이 공을 뺐을 때 다른색깔일 경우는 생각조차 안하는건가?</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="infinitely-many-prime-numbers">Infinitely Many Prime Numbers</h2>
-
-<p><img src="../assets/img/posts/image-20220224224029944-1645964209792-1645964282270.png" alt="image-20220224224029944" /></p>
-
-<ul>
-  <li>Prime number란?
-    <ul>
-      <li>소수를 의미하며, 1과 자기 자신으로만 나누어 떨어지는 1보다 큰 양수입니다.</li>
-    </ul>
-  </li>
-  <li>
-    <p>설명</p>
-
-    <ul>
-      <li>prime number의 수가 유한하며 (조건1), 모든 prime 수를 다 곱하고 1을 더한 수를 n이라고 하면 이 n은 prime number가 아니게 된다.
-        <ul>
-          <li>모든 소수보다도 큰 수이기 떄문에 소수가 될 수없다. 그렇기 때문에 이 수는 인수분해가 되어야 한다.</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p>반론</p>
-
-    <ul>
-      <li>작성은스킵</li>
-    </ul>
-  </li>
-</ul>
-
-<h1 id="버블-소트-증명">버블 소트 증명</h1>
-
-<p><img src="../assets/img/posts/image-20220224233546030-1645964211709-1645964256942.png" alt="image-20220224233546030" /></p>]]></content><author><name>Shin Hwi Jeong</name></author><summary type="html"><![CDATA[오늘은 삼성 SW Expert Academy의 프로그래밍과 논리, 수학 강의 1강을 보고 학습한 내용을 정리해보았습니다]]></summary></entry><entry><title type="html">[ex_15]문자를 읽을 수 있는 딥러닝</title><link href="http://localhost:4000/ex_15-%EB%AC%B8%EC%9E%90%EB%A5%BC-%EC%9D%BD%EC%9D%84-%EC%88%98-%EC%9E%88%EB%8A%94-%EB%94%A5%EB%9F%AC%EB%8B%9D.html" rel="alternate" type="text/html" title="[ex_15]문자를 읽을 수 있는 딥러닝" /><published>2022-02-24T00:00:00+09:00</published><updated>2022-02-24T00:00:00+09:00</updated><id>http://localhost:4000/%5Bex_15%5D%EB%AC%B8%EC%9E%90%EB%A5%BC%20%EC%9D%BD%EC%9D%84%20%EC%88%98%20%EC%9E%88%EB%8A%94%20%EB%94%A5%EB%9F%AC%EB%8B%9D</id><content type="html" xml:base="http://localhost:4000/ex_15-%EB%AC%B8%EC%9E%90%EB%A5%BC-%EC%9D%BD%EC%9D%84-%EC%88%98-%EC%9E%88%EB%8A%94-%EB%94%A5%EB%9F%AC%EB%8B%9D.html"><![CDATA[<p>오늘은 아이펠 Exploration 노드 15번을 공부하고 공부한 내용을 포스팅해보았습니다.</p>
-
-<hr />
-
-<h6 id="출처">출처</h6>
-
-<ul>
-  <li>
-    <p>AIFFEL LMS</p>
-
-    <p>문제시 연락 부탁드립니다. :)</p>
-  </li>
-</ul>
-
-<hr />
-
-<h6 id="목차">목차</h6>
-
-<ul>
-  <li>기계는 어떤 방식으로 글을 읽을까?
-    <ul>
-      <li>딥러닝 문자 인식의 시작</li>
-    </ul>
-  </li>
-  <li>사진 속 문자 찾아내기 - detection</li>
-  <li>사진 속 문자 읽어내기 - recognition</li>
-  <li>keras-ocr 써보기</li>
-  <li>테서랙트 써보기</li>
-  <li>프로젝트 : 다양한 OCR 모델 비교하기</li>
-</ul>
-
-<hr />
-
-<h1 id="기계는-어떤-방식으로-글을-읽을까">기계는 어떤 방식으로 글을 읽을까?</h1>
-
-<h2 id="딥러닝-문자-인식의-시작">딥러닝 문자 인식의 시작</h2>
-
-<h1 id="사진-속-문자-찾아내기---detection">사진 속 문자 찾아내기 - detection</h1>
-
-<h1 id="사진-속-문자-읽어내기---recognition">사진 속 문자 읽어내기 - recognition</h1>
-
-<h1 id="keras-ocr-써보기">keras-ocr 써보기</h1>
-
-<h1 id="테서랙트-써보기">테서랙트 써보기</h1>
-
-<h1 id="프로젝트--다양한-ocr-모델-비교하기">프로젝트 : 다양한 OCR 모델 비교하기</h1>]]></content><author><name>Shin Hwi Jeong</name></author><summary type="html"><![CDATA[오늘은 아이펠 Exploration 노드 15번을 공부하고 공부한 내용을 포스팅해보았습니다.]]></summary></entry><entry><title type="html">Swea ) 프로그래밍과 논리, 수학 1 복사본</title><link href="http://localhost:4000/SWEA-)-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EA%B3%BC-%EB%85%BC%EB%A6%AC,-%EC%88%98%ED%95%99-1-%EB%B3%B5%EC%82%AC%EB%B3%B8.html" rel="alternate" type="text/html" title="Swea ) 프로그래밍과 논리, 수학 1 복사본" /><published>2022-02-24T00:00:00+09:00</published><updated>2022-02-24T00:00:00+09:00</updated><id>http://localhost:4000/SWEA%20)%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EA%B3%BC%20%EB%85%BC%EB%A6%AC,%20%EC%88%98%ED%95%99%201%20%EB%B3%B5%EC%82%AC%EB%B3%B8</id><content type="html" xml:base="http://localhost:4000/SWEA-)-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EA%B3%BC-%EB%85%BC%EB%A6%AC,-%EC%88%98%ED%95%99-1-%EB%B3%B5%EC%82%AC%EB%B3%B8.html"><![CDATA[<p>오늘은 삼성 SW Expert Academy의 프로그래밍과 논리, 수학 강의 1강을 보고 학습한 내용을 정리해보았습니다</p>
-
-<hr />
-
-<h6 id="강의-링크">강의 링크</h6>
-
-<p>https://swexpertacademy.com/main/learn/course/lectureVideoPlayer.do</p>
-
-<hr />
-
-<h6 id="강의-전체-목차">강의 전체 목차</h6>
-
-<ul>
-  <li>프로그래밍과 논리/수학 ( 오늘의 분량 )</li>
-  <li>논리와 증명 ( 오늘의 분량 )</li>
-  <li>수와 표현</li>
-  <li>집합과 조합론</li>
-  <li>기초 수식</li>
-  <li>재귀</li>
-  <li>동적 프로그래밍</li>
-  <li>조합론 프로그램 과제</li>
-  <li>기초 알고리즘 프로그램 과제</li>
-</ul>
-
-<hr />]]></content><author><name>Shin Hwi Jeong</name></author><summary type="html"><![CDATA[오늘은 삼성 SW Expert Academy의 프로그래밍과 논리, 수학 강의 1강을 보고 학습한 내용을 정리해보았습니다]]></summary></entry><entry><title type="html">[fd_30] computer power up</title><link href="http://localhost:4000/fd_30-Computer-Power-UP.html" rel="alternate" type="text/html" title="[fd_30] computer power up" /><published>2022-02-23T00:00:00+09:00</published><updated>2022-02-23T00:00:00+09:00</updated><id>http://localhost:4000/%5Bfd_30%5D%20Computer%20Power%20UP</id><content type="html" xml:base="http://localhost:4000/fd_30-Computer-Power-UP.html"><![CDATA[<p>오늘은 아이펠 Fundamental 노드 30번을 공부하고 공부한 내용을 포스팅해보았습니다.</p>
-
-<p>깃허브 주소 : https://github.com/Nega0619/Aiffel_Fundamental_nodes/blob/main/%5Bfd_30%5D%20Computer%20Power%20UP.ipynb</p>
-
-<hr />
-
-<h6 id="출처">출처</h6>
-
-<ul>
-  <li>
-    <p>AIFFEL LMS</p>
-
-    <p>문제시 연락 부탁드립니다. :)</p>
-  </li>
-</ul>
-
-<hr />
-
-<h6 id="목차">목차</h6>
-
-<ul>
-  <li>멀티태스킹
-    <ul>
-      <li>멀티태스킹이란?</li>
-      <li>프로세스, 스레드, 프로파일링</li>
-      <li>Scale-up VS Scale-out</li>
-    </ul>
-  </li>
-  <li>멀티프로세스, 멀티 스레드
-    <ul>
-      <li>멀티스레드</li>
-      <li>멀티프로세스</li>
-      <li>스레드 / 프로세스 풀</li>
-    </ul>
-  </li>
-  <li>실전예제</li>
-</ul>
-
-<hr />
-
-<h1 id="1-멀티태스킹">1. 멀티태스킹</h1>
-
-<h2 id="1-1-멀티태스킹이란">1-1. 멀티태스킹이란?</h2>
-
-<p>자원을 최적화하는 법, 병렬 컴퓨팅, 분산컴퓨팅의 개념은 빅데이터를 다루기 위해선 꼭 알고있어야 하는 중요한 개념들입니다. 한정된 컴퓨팅 자원을 활용하여 여러가지 일을 효율적으로 진행할 수 있도록 해주는 것을 멀티태스킹이라고 합니다. 멀티태스킹은 동시성 병렬성을 가지고 있으며 다음 글을 참고하니 이해하기 쉬웠습니다.</p>
-
-<ul>
-  <li><a href="https://techdifferences.com/difference-between-concurrency-and-parallelism.html">Difference Between Concurrency and Parallelism</a>
-    <ul>
-      <li>동시성 : 동시에 많은 것을 처리함(동시성의 환상을 제공)</li>
-      <li>병렬성 : 속도를 높이기 위해 동시에 많은 일을 하는 것.</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="동시성">동시성</h3>
-
-<p>하나의 Processor가 여러가지 task를 동시에 수행하는 개념</p>
-
-<p>즉, processor가 특정 순간에 1가지 task만을 수행하지만, 라면을 끓일때 물 끓기까지 기다리는 것 처럼 다른 task를 수행할 수 있는 시간에 task를 전환하여 task를 여러개 수행하는 것 처럼 보이게 하는 것입니다.</p>
-
-<h3 id="병렬성">병렬성</h3>
-
-<p>유사한 task를 여러 processor가 동시에 수행하는 개념</p>
-
-<p>병렬성의 효율을 극대화 시키기 위해서는 동시성이 같이 요구되어야 한다.</p>
-
-<h3 id="동기-vs-비동기-synchronious-vs-asynchronous">동기 vs 비동기 (synchronious vs asynchronous)</h3>
-
-<p>동기와 비동기는 동시성에서 주로 다루게 되는 개념입니다.</p>
-
-<p>컴퓨터에서 어떤 일을 바로 하지 못하고 대기해야 하는 경우를 일컬어 <code class="language-plaintext highlighter-rouge">바운드(bound)되었다.</code>라는 표현을 쓴다고 합니다.</p>
-
-<p>바운드 되었을때, 앞 작업이 기다리기를 하염없이 기다리다 다음 작업을 시작하는 것을 동기(synchronize)라고 하고, 바운드 되고 있는 작업을 기다리는 동안 다른 일을 처리하는 것을 비동기(asynchronize)라고 합니다.</p>
-
-<ul>
-  <li>동기 : 일이 순차적으로 진행되며, 요청과 요청에 대한 응답이 연속적으로 실행</li>
-  <li>비동기 : 일이 비순차적으로 진행되며, 요청과 요청에 대한 응답이 비연속적으로 실행. 특정 코드의 연산이 끝날 때 까지 코드 실행을 멈추지 않으며 다음코드를 실행하고 중간에 실행되는 코드는 콜백함수로 연결하여 처리하기도 함</li>
-</ul>
-
-<h3 id="io-bound-vs-cpu-bound">I/O Bound VS CPU Bound</h3>
-
-<p>컴퓨터가 일을 수행하면서 뭔가를 기다릴 때, 즉 속도 제한이 걸리는 경우는 2가지입니다.</p>
-
-<ul>
-  <li>I/O Bound : 입 출력에서 데이터 처리에 시간이 소요되는 경우</li>
-  <li>CPU Bound : 복잡한 수식이나 그래픽 작업과 같은 많은 계산이 요구되는 경우</li>
-</ul>
-
-<h2 id="1-2-프로세스-스레드-프로파일링">1-2. 프로세스, 스레드, 프로파일링</h2>
-
-<h3 id="프로세스-process">프로세스 Process</h3>
-
-<p>프로세스란 프로그램을 구동해 프로그램 자체와 프로그램의 상태가 메모리상에서 실행되는 작업의 단위입니다. 하나의 프로그램을 실행할 때, 운영체제는 프로세스를 한개를 생성합니다.</p>
-
-<p>프로세스는 운영체제의 커널(Kernel)에서 시스템 자원(CPU, 메모리, 디스크) 과 자료구조를 이용합니다.</p>
-
-<h3 id="스레드-thread">스레드 Thread</h3>
-
-<p>스레드(thread)란 어떠한 프로그램 내에서 즉, 프로세스 내에서 실행되는 흐름의 단위</p>
-
-<p>예를 들어 요리를 만드는 프로그램이 존재한다고 한다면, 요리사는 프로세스, 재료썰기, 밥짓기, 볶기 등의 작업을 스레드에 비유할 수 있습니다. 같은 작업을 빠르게 처리하기 위해 여러 개의 스레드를 생성하기도 합니다.</p>
-
-<p>각각의 작업을 할 때 도마나 불판 등의 주방 공간은 공유되지만 요리사 각자의 주방 공간은 공유하지 않습니다. 마찬가지로 프로세스도 자신만의 전용 메모리 공간 (Heap)을 가집니다.그렇기때문에 스레드들도 메모리 공간자체는 공유 하지만 다른 프로세스와 공유하지는 않습니다.</p>
-
-<p><img src="../assets/img/posts/image-20220223135657027-1645964094740-1645964447641.png" alt="image-20220223135657027" /></p>
-
-<h3 id="프로파일링-profiling">프로파일링 Profiling</h3>
-
-<p>프로파일링이란 것은, 코드에서 시스템의 어느 부분이 느린지 혹은 어디에서 RAM을 많이 사용하고 있는지 확인하고 싶을때 사용하는 기법입니다.</p>
-
-<p>프로파일링은 애플리케이션에서 자원이 가장 집중되는 지점을 정밀하게 찾아내는 기법입니다.</p>
-
-<p>프로파일링은 애플리케이션을 실행시키고 각각의 함수 실행 시간을 재는 프로그램입니다.</p>
-
-<p>프로파일링은 코드의 병목(bottleneck)을 찾아내고 성능을 측정해주는 도구입니다.</p>
-
-<ul>
-  <li>참고링크
-    <ul>
-      <li><a href="https://docs.python.org/ko/3/library/profile.html">파이썬 프로파일러 - cProfile, profile</a></li>
-      <li><a href="https://frhyme.github.io/python-libs/python_line_profileing_in_python/">line profiler를 사용하여 파이썬의 각 라인이 어떻게 돌아가는지를 알아보자.</a></li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="scale-up-vs-scale-out">scale-up VS scale-out</h2>
-
-<ul>
-  <li>scale-up : 컴퓨터 자원을 활용하기 위해서 자원을 업그레이드/최적화 시키는 것
-    <ul>
-      <li>한대의 컴퓨터 성능을 최적화 시키는 것</li>
-    </ul>
-  </li>
-  <li>scale-out :컴퓨터 자원을 활용하기 위해서 자원을 확장 시키는 것
-    <ul>
-      <li>여러대의 컴퓨터를 한 대처럼 사용하는 것</li>
-    </ul>
-  </li>
-</ul>
-
-<h1 id="1-3-멀티-프로세스-멀티스레드">1-3. 멀티 프로세스, 멀티스레드</h1>
-
-<h2 id="멀티스레드">멀티스레드</h2>
-
-<p>파이썬에서 멀티스레드 구현은 <a href="https://docs.python.org/3.7/library/threading.html">threading 모듈</a>을 이용합니다.</p>
-
-<ul>
-  <li>
-    <p>생성방법 1. 클래스에 Thread 상속받기</p>
-
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Class</span> <span class="n">Delivery</span><span class="p">(</span><span class="n">Thread</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">order</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">"배달이요"</span><span class="p">)</span>
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p>생성방법 2. Thread 인스턴스화</p>
-
-    <p>t = Thread(target=함수이름, args=())</p>
-
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">threading</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
-  
-<span class="n">Stopped</span> <span class="o">=</span> <span class="bp">False</span>
-  
-<span class="k">def</span> <span class="nf">worker</span><span class="p">(</span><span class="n">work</span><span class="p">,</span> <span class="n">sleep_sec</span><span class="p">):</span>    <span class="c1"># 일꾼 스레드입니다.
-</span>    <span class="k">while</span> <span class="ow">not</span> <span class="n">Stopped</span><span class="p">:</span>          <span class="c1"># 그만 하라고 할때까지
-</span>        <span class="k">print</span><span class="p">(</span><span class="s">'do '</span><span class="p">,</span> <span class="n">work</span><span class="p">)</span>      <span class="c1"># 시키는 일을 하고
-</span>        <span class="n">sleep</span><span class="p">(</span><span class="n">sleep_sec</span><span class="p">)</span>        <span class="c1"># 잠깐 쉽니다.
-</span>    <span class="k">print</span><span class="p">(</span><span class="s">'retired..'</span><span class="p">)</span>          <span class="c1"># 언젠가 이 굴레를 벗어나면, 은퇴할 때가 오겠지요?
-</span>          
-<span class="n">t</span> <span class="o">=</span> <span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">worker</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="s">'Overwork'</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>    <span class="c1"># 일꾼 스레드를 하나 생성합니다. 열심히 일하고 3초간 쉽니다.
-</span><span class="n">t</span><span class="p">.</span><span class="n">start</span><span class="p">()</span>    <span class="c1"># 일꾼, 이제 일을 해야지? 😈
-</span></code></pre></div>    </div>
-
-    <ul>
-      <li>
-        <p>스레드 멈추기</p>
-
-        <p>t.terminate() 메소드는 없으므로 멈추려면 flag를 체크해서 멈추도록 합니다.</p>
-
-        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 이 코드 블럭을 실행하기 전까지는 일꾼 스레드는 종료하지 않습니다. 
-</span><span class="n">Stopped</span> <span class="o">=</span> <span class="bp">True</span>    <span class="c1"># 일꾼 일 그만하라고 세팅해 줍시다. 
-</span><span class="n">t</span><span class="p">.</span><span class="n">join</span><span class="p">()</span>          <span class="c1"># 일꾼 스레드가 종료할때까지 기다립니다. 
-</span><span class="k">print</span><span class="p">(</span><span class="s">'worker is gone.'</span><span class="p">)</span>
-</code></pre></div>        </div>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p>스레드 생성확인</p>
-
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Delivery</span><span class="p">(</span><span class="n">Thread</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">order</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">"배달이요"</span><span class="p">)</span>
-  
-<span class="n">work2</span> <span class="o">=</span> <span class="n">Delivery</span><span class="p">()</span>
-<span class="k">print</span><span class="p">(</span><span class="n">work2</span><span class="p">.</span><span class="n">run</span><span class="p">)</span>
-</code></pre></div>    </div>
-
-    <p>실행결과</p>
-
-    <blockquote>
-      <p>&lt;bound method Delivery.run of &lt;Delivery(Thread-21, initial)»</p>
-    </blockquote>
-  </li>
-</ul>
-
-<h2 id="멀티프로세스">멀티프로세스</h2>
-
-<ul>
-  <li>
-    <p>생성 방법 1. Process 인스턴스 생성</p>
-
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">multiprocessing</span> <span class="k">as</span> <span class="n">mp</span>
-  
-<span class="k">def</span> <span class="nf">delivery</span><span class="p">():</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">'delivering...'</span><span class="p">)</span>
-  
-<span class="n">p</span> <span class="o">=</span> <span class="n">mp</span><span class="p">.</span><span class="n">Process</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">delivery</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">())</span>
-<span class="n">p</span><span class="p">.</span><span class="n">start</span><span class="p">()</span>
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p>프로세스 사용</p>
-
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">p</span> <span class="o">=</span> <span class="n">mp</span><span class="p">.</span><span class="n">Process</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">delivery</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">())</span>
-<span class="n">p</span><span class="p">.</span><span class="n">start</span><span class="p">()</span> <span class="c1"># 프로세스 시작
-</span><span class="n">p</span><span class="p">.</span><span class="n">join</span><span class="p">()</span> <span class="c1"># 실제 종료까지 기다림 (필요시에만 사용)
-</span><span class="n">p</span><span class="p">.</span><span class="n">terminate</span><span class="p">()</span> <span class="c1"># 프로세스 종료
-</span></code></pre></div>    </div>
-  </li>
-</ul>
-
-<h2 id="스레드--프로세스-풀">스레드 / 프로세스 풀</h2>
-
-<p>스레드나 프로세느는 사용할때 단독으로 사용하고 종료해주지 않고 스레드 / 프로세스 풀을 사용해서 생성합니다.</p>
-
-<p>“풀(Pool)”은 스레드나 프로세스들로 가득 찬 풀장입니다. 스레드 풀을 만들면 각각의 태스크들에 대해서 자동으로 스레드들을 할당하고 종료합니다.</p>
-
-<ul>
-  <li>풀 만드는 방법 2가지
-    <ul>
-      <li><a href="https://docs.python.org/3.7/library/queue.html">Queue</a>를 사용해서 직접 만드는 방법</li>
-      <li><a href="https://docs.python.org/ko/3.7/library/concurrent.futures.html">concurrent.futures</a> 라이브러리의 <code class="language-plaintext highlighter-rouge">ThreadPoolExecutor</code> , <code class="language-plaintext highlighter-rouge">ProcessPoolExecutor</code>클래스를 이용하는 방법</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="concurrentfutures-모듈을-이용해서-스레드-풀-만드는-방법">concurrent.futures 모듈을 이용해서 스레드 풀 만드는 방법</h3>
-
-<ul>
-  <li>concurrent.futures 기능 4가지
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">Executor</code> 객체</li>
-      <li><code class="language-plaintext highlighter-rouge">ThreadPoolExecutor</code> 객체</li>
-      <li><code class="language-plaintext highlighter-rouge">ProcessPoolExecutor</code> 객체</li>
-      <li><code class="language-plaintext highlighter-rouge">Future</code> 객체</li>
-    </ul>
-  </li>
-</ul>
-
-<h4 id="threadpoolexecuter">ThreadPoolExecuter</h4>
-
-<p><code class="language-plaintext highlighter-rouge">Executor</code> 객체를 이용하면 스레드 생성, 시작, 조인 같은 작업을 할 때, <code class="language-plaintext highlighter-rouge">with</code> 컨텍스트 관리자와 같은 방법으로 가독성 높은 코드를 구현할 수 있습니다.(프로세스도 동일)</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">with</span> <span class="n">ThreadPoolExecutor</span><span class="p">()</span> <span class="k">as</span> <span class="n">executor</span><span class="p">:</span>
-    <span class="n">future</span> <span class="o">=</span> <span class="n">executor</span><span class="p">.</span><span class="n">submit</span><span class="p">(</span><span class="n">함수이름</span><span class="p">,</span> <span class="n">인자</span><span class="p">)</span>
-</code></pre></div></div>
-
-<h4 id="multiprocessingpool">multiprocessing.Pool</h4>
-
-<p>multiprocessing.Pool.map을 이용하여 여러 개의 프로세스에 특정한 함수를 매핑해 병렬처리하도록 구현하는 방법이 널리 사용</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">with</span> <span class="n">Pool</span><span class="p">()</span> <span class="k">as</span> <span class="n">pool</span><span class="p">:</span>
-      <span class="n">result</span> <span class="o">=</span> <span class="n">pool</span><span class="p">.</span><span class="nb">map</span><span class="p">(</span><span class="n">double</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
-      <span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-</code></pre></div></div>
-
-<p>위의 메소드를 실행하면 <code class="language-plaintext highlighter-rouge">double(i)</code>이라는 메소드가 pool을 통해서 각각 다른 pid를 가진 프로세스들 위에 multiprocess로 실행되었다는 것을 확인할 수 있습니다.</p>
-
-<h1 id="실전예제">실전예제</h1>
-
-<p>깃허브 참고</p>]]></content><author><name>Shin Hwi Jeong</name></author><summary type="html"><![CDATA[오늘은 아이펠 Fundamental 노드 30번을 공부하고 공부한 내용을 포스팅해보았습니다.]]></summary></entry><entry><title type="html">[ex_14] find another artist that iu fans will like</title><link href="http://localhost:4000/ex_14-Find-another-artist-that-IU-fans-will-like.html" rel="alternate" type="text/html" title="[ex_14] find another artist that iu fans will like" /><published>2022-02-22T00:00:00+09:00</published><updated>2022-02-22T00:00:00+09:00</updated><id>http://localhost:4000/%5Bex_14%5D%20Find%20another%20artist%20that%20IU%20fans%20will%20like</id><content type="html" xml:base="http://localhost:4000/ex_14-Find-another-artist-that-IU-fans-will-like.html"><![CDATA[<p>오늘은 아이펠 Exploration 노드 14번을 공부하고 공부한 내용을 포스팅해보았습니다.</p>
-
-<p>전체 코드는 깃허브를 참고하시고, 여기서는 중요한 메소드만을 작성하였습니다.</p>
-
-<hr />
-
-<h6 id="출처">출처</h6>
-
-<ul>
-  <li>
-    <p>AIFFEL LMS</p>
-
-    <p>문제시 연락 부탁드립니다. :)</p>
-  </li>
-</ul>
-
-<hr />
-
-<p>목차</p>
-
-<ul>
-  <li>추천 시스템이란?</li>
-  <li>데이터 탐색과 전처리</li>
-  <li>사용자의 명시적 / 암묵적 평가</li>
-  <li>Matrix Factorization ( MF )</li>
-  <li>CSR (Compressed Sparse Row) Matrix</li>
-  <li>MF 모델 학습하기</li>
-  <li>비슷한 아티스트 찾기 + 유저에게 추천하기</li>
-</ul>
-
-<hr />
-
-<h1 id="1-추천시스템이란">1. 추천시스템이란?</h1>
-
-<p>추천 시스템은 사용자가 선호할 만한 아이템을 추측함으로써 여러 가지 항목 중 사용자에게 적합 한 특정 항목을 선택(information filtering)하여 제공하는 시스템입니다.</p>
-
-<ul>
-  <li>
-    <p>고전적 추천 시스템</p>
-
-    <ul>
-      <li>
-        <p>협업 필터링</p>
-
-        <ul>
-          <li>
-            <p>대규모의 기존 사용자 행동 정보를 분석하여 해당 사용자와 비슷한 성향의 사용자들이 기존에 좋아했던 항목을 추천하는 기술</p>
-          </li>
-          <li>
-            <p>행렬분해(Matrix Factorization), k-최근접 이웃 알고리즘 (k-Nearest Neighbor algorithm; kNN) 등의 방법이 많이 사용</p>
-          </li>
-          <li>
-            <p>협업 필터링을 위해서는 반드시 기존 자료를 활용 BUT 이러한 자료들을 사용자에게 직접 요구해야만 하는것은 아님</p>
-          </li>
-          <li>
-            <p>단점</p>
-
-            <ul>
-              <li>
-                <p>Cold Start</p>
-
-                <p>협업 필터링은 기존의 자료가 필요한바, 기존에 없던 새로운 항목이 추가되는 경우는 추천이 곤란해지는 현상</p>
-              </li>
-              <li>
-                <p>사용자 수가 많은 경우 효율 적으로 추천할 수 없음</p>
-
-                <p>계산이 몇 시간에서 며칠까지 걸리는 경우가 종종 생김</p>
-              </li>
-              <li>
-                <p>Long tail</p>
-
-                <p>시스템 항목이 많다 하더라도 사용자들은 소수의 인기 있는 항목에만 관심을 보이기 마련이다. 따라서 사용자들의 관심이 적은 다수의 항목은 추천 을 위한 충분한 정보를 제공하지 못하는 경우</p>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <p>콘텐츠 기반 필터링</p>
-
-        <ul>
-          <li>항목 자체를 분석하여 추천을 구현</li>
-          <li>항목을 분석한 프로파일(item profile)과 사용자의 선호도를 추출한 프로파일(user profile)을 추출하여 이의 유사성을 계산</li>
-          <li>아이템 분석 알고리즘이 핵심적
-            <ul>
-              <li>군집분석(Clustering analysis), 인공신경망(Artificial neural network), tf-idf(term frequencyinverse document frequency) 등의 기술이 사용</li>
-            </ul>
-          </li>
-          <li>로 협업 필터링에서 발생하는 콜드 스타트 문제 를 자연스럽게 해결</li>
-          <li>단점
-            <ul>
-              <li>만 다양한 형식의 항목을 추천하기 어려움</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p>모델 기반 협력 필터링</p>
-
-    <ul>
-      <li>
-        <p>기존 항목 간 유사성을 단순하게 비교하는 것에서 벗어나 자료 안에 내재한 패턴 을 이용하는 기법</p>
-
-        <ul>
-          <li>
-            <p>자료의 크기를 동적으로 변화시키는 방법</p>
-
-            <p>영 화를 추천하는 경우, ‘해리 포터’ 시리즈 2편을 추천하기 위해서는 ‘해리 포터’ 시리즈 1편, 단 한 편을 좋아했는가가 다른 무엇보다 중요한 요소</p>
-          </li>
-          <li>
-            <p>추천을 위한 자료의 크기를 변화시키는 방법</p>
-          </li>
-          <li>
-            <p>잠재(latent) 모델에 기반을 둔 방법</p>
-
-            <p>잠재 모델이란 사용자가 특정 항목을 선호 하는 이유를 알고리즘적으로 알아내는 기법</p>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <p>LDA(Latent Dirichlet Allocation), 베이지안 네트워크 (Bayesian Network) 등의 알고리즘이 사용</p>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p>출처 : <a href="http://www.kocca.kr/insight/vol05/vol05_04.pdf">콘텐츠 추천 알고리즘의 진화</a></p>
-  </li>
-</ul>
-
-<h1 id="2-데이터-탐색과-전처리">2. 데이터 탐색과 전처리</h1>
-
-<ul>
-  <li>TSV 파일이란?
-    <ul>
-      <li>tsv는 Tab-Separated Values의 약자로서,  구분자가 tab(‘\t’) 문자</li>
-    </ul>
-  </li>
-  <li>CSV 파일이란?
-    <ul>
-      <li>csv는 Comma-Separated Values의 약자로서, 구분자가 comma(‘,’) 문자</li>
-    </ul>
-  </li>
-  <li>
-    <p>tsv 파일 읽어오기</p>
-
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">'</span><span class="se">\t</span><span class="s">'</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span> <span class="n">col_names</span><span class="p">)</span>      <span class="c1"># sep='\t'로 주어야 tsv를 열 수 있습니다.  
-</span></code></pre></div>    </div>
-  </li>
-  <li>
-    <p>pandas에서 사용할 컬럼만 남기기</p>
-
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">using_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s">'user_id'</span><span class="p">,</span> <span class="s">'artist'</span><span class="p">,</span> <span class="s">'play'</span><span class="p">]</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">using_cols</span><span class="p">]</span>
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p>pandas Dataframe에서 유니크한 데이터 개수알아보기</p>
-
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">data</span><span class="p">[</span><span class="s">'user_id'</span><span class="p">].</span><span class="n">nunique</span><span class="p">()</span>
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p>pandas Dataframe에서 group by 사용하기</p>
-
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">user_median</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="n">groupby</span><span class="p">(</span><span class="s">'user_id'</span><span class="p">)[</span><span class="s">'play'</span><span class="p">].</span><span class="n">median</span><span class="p">()</span>
-  
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p>꼭 암기</p>
-
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 아티스트 이름은 꼭 데이터셋에 있는 것과 동일하게 맞춰주세요. 
-</span><span class="n">my_favorite</span> <span class="o">=</span> <span class="p">[</span><span class="s">'black eyed peas'</span> <span class="p">,</span> <span class="s">'maroon5'</span> <span class="p">,</span><span class="s">'jason mraz'</span> <span class="p">,</span><span class="s">'coldplay'</span> <span class="p">,</span><span class="s">'beyoncé'</span><span class="p">]</span>
-  
-<span class="c1"># 'hwi'이라는 user_id가 위 아티스트의 노래를 30회씩 들었다고 가정하겠습니다.
-</span><span class="n">my_playlist</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s">'user_id'</span><span class="p">:</span> <span class="p">[</span><span class="s">'hwi'</span><span class="p">]</span><span class="o">*</span><span class="mi">5</span><span class="p">,</span> <span class="s">'artist'</span><span class="p">:</span> <span class="n">my_favorite</span><span class="p">,</span> <span class="s">'play'</span><span class="p">:[</span><span class="mi">30</span><span class="p">]</span><span class="o">*</span><span class="mi">5</span><span class="p">})</span>
-  
-<span class="k">if</span> <span class="ow">not</span> <span class="n">data</span><span class="p">.</span><span class="n">isin</span><span class="p">({</span><span class="s">'user_id'</span><span class="p">:[</span><span class="s">'zimin'</span><span class="p">]})[</span><span class="s">'user_id'</span><span class="p">].</span><span class="nb">any</span><span class="p">():</span>  <span class="c1"># user_id에 'zimin'이라는 데이터가 없다면
-</span>    <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">my_playlist</span><span class="p">)</span>                           <span class="c1"># 위에 임의로 만든 my_favorite 데이터를 추가해 줍니다. 
-</span></code></pre></div>    </div>
-
-    <ul>
-      <li>
-        <p><code class="language-plaintext highlighter-rouge">data = data.append(my_palylist)</code>로 하면 index 순서대로가 아닌 0 ,1, 2, 3, 4, …. , 56643,56644, 0,1,2,3,4 순으로 들어오게 됩니다.</p>
-
-        <ul>
-          <li>
-            <p>인덱스 순서대로 넣게해주려면 <code class="language-plaintext highlighter-rouge">data = data.append(my_playlist, ignore_index=True) </code> 처럼 <code class="language-plaintext highlighter-rouge">ignore_index=True</code>옵션을 넣어주면 됩니다.</p>
-          </li>
-          <li>
-            <p>https://yganalyst.github.io/data_handling/Pd_2/에서의 inplace와 drop은 안됨.</p>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<h1 id="3-사용자의-명시적--암묵적-평가">3. 사용자의 명시적 / 암묵적 평가</h1>
-
-<ul>
-  <li>
-    <p>명시적 평가 : 좋아요나 별점과 같은 사용자가 직접적으로 드러낸 데이터</p>
-  </li>
-  <li>
-    <p>암묵적 평가 : 어떤 곡을 몇번 플레이했다 / 어떤 영화를 몇번 봤다와 같은 서비스를 이용하면서 자연스럽게 발생하는 암묵적(Implicit) 피드백</p>
-
-    <ul>
-      <li>암묵적 데이터를 사용할때 참고하면 좋을 논문 : <a href="http://yifanhu.net/PUB/cf.pdf">Collaborative Filtering for Implicit Feedback Datasets</a></li>
-      <li>특징
-        <ul>
-          <li>부정적인 피드백이 없다.(No Negative Feedback)</li>
-          <li>애초에 잡음이 많다.(Inherently Noisy)</li>
-          <li>수치는 신뢰도를 의미한다.(The numerical value of implicit feedback indicates confidence)</li>
-          <li>Implicit-feedback Recommender System의 평가는 적절한 방법을 고민해봐야 한다.(Evaluation of implicit-feedback recommender requires appropriate measures)</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<p>해당 프로젝트에서는 암묵적 데이터의 해석에 대한 규칙을 다음과 같이 정했습니다.</p>
-
-<ul>
-  <li>한번이라도 들었으면 선호라고 판단</li>
-  <li>많이 재생한 아티스트에 대해 가중치를 주어서 확실히 좋아한다고 판단한다.</li>
-</ul>
-
-<h1 id="4-matrix-factorization--mf-">4. Matrix Factorization ( MF )</h1>
-
-<p>해당 프로젝트에서는 m명의 사용자들이 n명의 아티스트에 대해 평가한 데이터를 포함한 (m*n) 사이즈의 평가 행렬(Rating Matrix)을 만들었습니다.</p>
-
-<p>행렬에는 그림과 같이 결측치가 존재하며, 추천시스템의 협업 필터링이란 이 평가행렬을 전제로합니다.</p>
-
-<p>추천시스템의 모델은 Matrix Factorization(MF, 행렬 분해) 모델을 사용하였습니다. 기본아이디어는 <code class="language-plaintext highlighter-rouge">(m*n)</code> 사이즈의 행렬 R을 <code class="language-plaintext highlighter-rouge">(m*k)</code> 사이즈의 행렬 P와 <code class="language-plaintext highlighter-rouge">(k*n)</code>사이즈의 행렬 Q로 분해한다면 R이란 P와 Q의 행렬곱으로 표현할수 있다는 것입니다. 아이디어는 단순하지만, k는 m이나 n보다 훨씬 작은 값이므로, 계산량 측면에서 매우 유리하고 MF모델의 성능이 준수하고 Scalability가 좋아서 많이 사용됩니다.</p>
-
-<p><img src="../assets/img/posts/image-20220222205911237.png" alt="image-20220222205911237" /></p>
-
-<p>실제 영화 추천 시스템에 예를들어 보자면 다음과 같습니다.</p>
-
-<p><img src="../assets/img/posts/image-20220222211810682.png" alt="image-20220222211810682" /></p>
-
-<p>MF 모델의 목표는 모든 유저와 아이템들에 대해서 K-Dimension 벡터를 벡터를 잘 만드는 것입니다. 벡터를 잘 만드는 기준은 유저 i의 벡터 U_i와 아이템 백터 j의 벡터 I_j를 내적했을 때 유저 i가 아이템 j에 대해 평가한 수치 M_ij와 비슷한지 입니다.</p>
-
-<p><img src="../assets/img/posts/image-20220222212919507.png" alt="image-20220222212919507" /></p>
-
-<p>MF에도 다양한 변형이 있으며, 해당 프로젝트에서 사용할 모델은 <a href="http://yifanhu.net/PUB/cf.pdf">여기 논문</a>에서 제안한 모델입니다.</p>
-
-<h1 id="5-csr-compressed-sparse-row-matrix">5. CSR (Compressed Sparse Row) Matrix</h1>
-
-<p>실제로 평가행렬을 만든다고 생각해 보면, 유저수도 수백명에 아티스트는 29만명이 넘습니다. 평가행렬의 값이 1Byte를 가진다고해도 실제 유저수와 아티스트의 곱인 평가행렬의 크기는 엄청날 것이며, 대부분 0으로 채워질 것입니다.</p>
-
-<p>이 평가행렬의 전부를 메로이에 올려놓고 작업한다는 것은 불가능하며, 그 대안으로 사용되는 것이 CSR Matrix입니다.</p>
-
-<p>CSR Matrix는 Sparse한 matrix에서 0이 아닌 유효한 데이터로만 채우는 Matrix입니다.</p>
-
-<h1 id="6-mf-모델-학습하기">6. MF 모델 학습하기</h1>
-
-<h1 id="7-비슷한-아티스트-찾기--유저에게-추천하기">7. 비슷한 아티스트 찾기 + 유저에게 추천하기</h1>]]></content><author><name>Shin Hwi Jeong</name></author><summary type="html"><![CDATA[오늘은 아이펠 Exploration 노드 14번을 공부하고 공부한 내용을 포스팅해보았습니다.]]></summary></entry><entry><title type="html">강화학습 치팅시트</title><link href="http://localhost:4000/%EA%B0%95%ED%99%94%ED%95%99%EC%8A%B5-%EC%B9%98%ED%8C%85%EC%8B%9C%ED%8A%B8.html" rel="alternate" type="text/html" title="강화학습 치팅시트" /><published>2022-02-22T00:00:00+09:00</published><updated>2022-02-22T00:00:00+09:00</updated><id>http://localhost:4000/%EA%B0%95%ED%99%94%ED%95%99%EC%8A%B5%20%EC%B9%98%ED%8C%85%EC%8B%9C%ED%8A%B8</id><content type="html" xml:base="http://localhost:4000/%EA%B0%95%ED%99%94%ED%95%99%EC%8A%B5-%EC%B9%98%ED%8C%85%EC%8B%9C%ED%8A%B8.html"><![CDATA[<ul>
-  <li>
-    <p>파이</p>
-  </li>
-  <li>
-    <p>스타</p>
-  </li>
-  <li>
-    <p>파이_뉴= 파이</p>
-
-    <p>​				!= 파이</p>
-  </li>
-</ul>]]></content><author><name>Shin Hwi Jeong</name></author><summary type="html"><![CDATA[파이]]></summary></entry></feed>
+</ul>]]></content><author><name>Shin Hwi Jeong</name></author><summary type="html"><![CDATA[오늘은 파이썬 리스트 자료형의 개념과 사용법에 대해서 공부를 해보았습니다.]]></summary></entry></feed>

@@ -240,33 +240,33 @@
 		<div class="post">
 			
 
-			<a class="post-list-title" href="./%EA%B0%95%ED%99%94%ED%95%99%EC%8A%B5-)-Finite-Markov-Decision-Processes.html">강화학습 ) finite markov decision processes</a>
+			<a class="post-list-title" href="./GD-03.-%ED%85%8D%EC%8A%A4%ED%8A%B8%EC%9D%98-%EB%B6%84%ED%8F%AC%EB%A1%9C-%EB%B2%A1%ED%84%B0%ED%99%94-%ED%95%98%EA%B8%B0.html">Gd 03. 텍스트의 분포로 벡터화 하기</a>
 			
 
 			<div class="post-excerpt">
-				<p>오늘은 강화학습 분야에서 Finite Markov Decision Processes에 대하여 공부한 것을 정리해 보았습니다.</p><hr /><h6 id="참고사이트">참고사이트</h6><ul> <li>https://towardsdatascience.com/introduction-to-reinforcement-learning-rl-part-3-finite-markov-decision-processes-51e1f8d3ddb7</li></ul><hr /><h6 id="핵심개념">핵심개념</h6><ul> <li>RL Problem이 MDP 프레임워크에 어떻게 적용이 되는가</li> <li>Markov Property란 무엇인가</li> <li>전환 확률 transition probabilities란 무엇인가</li> <li>미래 보상 할인이란 무엇인가 Discounting future rewards</li> <li>일시적인 작업과 연속작업</li> <li>벨만 최적 방정식 Bellman optimality Equations을 사용하여 최적의 정책 optimal Policy Function및 가치함수 optimal Value Function 풀기</li></ul><hr /><h1 id="강화학습-정리">강화학습 정리</h1><ul> <li>강화학습에서 learner, decision-maker는 Agent입니다.</li> <li>Agent 외부의 모든 것을 포함하여 상호작용 하는 것은 Environment입니다.</li> <li>매 time step마다 environment는 agent에게 state를 보냅니다.</li> <li>state를 기초로 하여 agent는 Action을 선택합니다.</li> <li>다음 time step에서 Agent는 reward를 받게 되고, 다음 단계의 state를 받게 됩니다.</li>...<a class="read-more" href="./%EA%B0%95%ED%99%94%ED%95%99%EC%8A%B5-)-Finite-Markov-Decision-Processes.html"> read more</a>
+				<p>오늘은 아이펠 Going Deeper 노드 2번을 공부하고 공부한 내용 정리해보았습니다.</p><hr /><h6 id="출처">출처</h6><ul>  <li>AIFFEL LMS</li>  <li>https://wikidocs.net/22592</li></ul><hr /><h6 id="학습데이터">학습데이터</h6><blockquote>  <p>$ wget https://github.com/jungyeul/korean-parallel-corpora/raw/master/korean-english-news-v1/korean-english-park.train.tar.gz</p>  <p>$ mkdir -p ~/aiffel/sp_tokenizer/data</p>  <p>$ mv korean-english-park.train.tar.gz ~/aiffel/sp_tokenizer/data</p>  <p>$ cd ~/aiffel/sp_tokenizer/data</p>  <p>$ tar -xzvf korean-english-park.train.tar.gz</p></blockquote><hr /><p>오늘 배운 내용은 <strong>문장을 조각 내는 방법</strong>입니다.</p><ul>  <li>중복 제거한 코드 분석    <ul>      <li>주요 요점!        <ol>          <li>min = 999, max = 0으로 표시되어있다.</li>          <li>set(raw_data)를 함으로써 중복은 없어진 것이다!</li>        </ol>      </li>    </ul>  </li></ul><a class="read-more" href="./GD-03.-%ED%85%8D%EC%8A%A4%ED%8A%B8%EC%9D%98-%EB%B6%84%ED%8F%AC%EB%A1%9C-%EB%B2%A1%ED%84%B0%ED%99%94-%ED%95%98%EA%B8%B0.html"> read more</a>
 			</div>
 		</div>
 	
 		<div class="post">
 			
 
-			<a class="post-list-title" href="./Python-)-%EB%AC%B8%EC%9E%90%EC%97%B4.html">Python ) 문자열</a>
+			<a class="post-list-title" href="./GD-02.-%EB%A9%8B%EC%A7%84-%EB%8B%A8%EC%96%B4%EC%82%AC%EC%A0%84-%EB%A7%8C%EB%93%A4%EA%B8%B0.html">Gd 02. 멋진 단어사전 만들기</a>
 			
 
 			<div class="post-excerpt">
-				<p>오늘은 파이썬 문자열의 개념과 사용법에 대해서 공부를 해보았습니다.</p><hr /><h6 id="출처">출처</h6><ul> <li><a href="https://dojang.io/mod/page/view.php?id=2196">파이썬 코딩도장 - 문자열</a></li></ul><hr /><h1 id="문자열-생성">문자열 생성</h1><p>” “ , ‘ ‘ , “”” “”” , ‘’’ ‘’’ 를 이용하여서 생성할수 있습니다.</p><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">hello</span> <span class="o">=</span> <span class="s">"Hello Python!"</span></code></pre></div></div><p>특히 “”” “”” , ‘’’ ‘’’ 따옴표를 3개 연달아 붙여 사용하면 여러 줄로 된 문자열을 하나의 변수에 할당하여 사용할 수 있습니다.</p><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">hello</span> <span class="o">=</span> <span class="s">"""Hello Python!Hello World!"""</span></code></pre></div></div><h2 id="--와----두가지-생성-방법이-있는-이유">” “, 와 ‘ ‘ : 두가지 생성 방법이 있는 이유</h2><p>” “ 로 생성하면 ‘ ‘를 기호문자로 받아들이지 않고, ‘ ‘로 생성하면 “ “를 기호문자로 받아들이지 않습니다.</p><p>즉,...<a class="read-more" href="./Python-)-%EB%AC%B8%EC%9E%90%EC%97%B4.html"> read more</a>
+				<p>오늘은 아이펠 Going Deeper 노드 2번을 공부하고 공부한 내용 정리해보았습니다.</p><hr /><h6 id="출처">출처</h6><ul>  <li>AIFFEL LMS</li>  <li>https://wikidocs.net/22592</li></ul><hr /><h6 id="학습데이터">학습데이터</h6><blockquote>  <p>$ wget https://github.com/jungyeul/korean-parallel-corpora/raw/master/korean-english-news-v1/korean-english-park.train.tar.gz</p>  <p>$ mkdir -p ~/aiffel/sp_tokenizer/data</p>  <p>$ mv korean-english-park.train.tar.gz ~/aiffel/sp_tokenizer/data</p>  <p>$ cd ~/aiffel/sp_tokenizer/data</p>  <p>$ tar -xzvf korean-english-park.train.tar.gz</p></blockquote><hr /><p>오늘 배운 내용은 <strong>문장을 조각 내는 방법</strong>입니다.</p><ul>  <li>중복 제거한 코드 분석    <ul>      <li>주요 요점!        <ol>          <li>min = 999, max = 0으로 표시되어있다.</li>          <li>set(raw_data)를 함으로써 중복은 없어진 것이다!</li>        </ol>      </li>    </ul>  </li></ul><a class="read-more" href="./GD-02.-%EB%A9%8B%EC%A7%84-%EB%8B%A8%EC%96%B4%EC%82%AC%EC%A0%84-%EB%A7%8C%EB%93%A4%EA%B8%B0.html"> read more</a>
 			</div>
 		</div>
 	
 		<div class="post">
 			
 
-			<a class="post-list-title" href="./Python-)-%EB%A6%AC%EC%8A%A4%ED%8A%B8.html">Python ) 리스트</a>
+			<a class="post-list-title" href="./%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C-)-ch3.-Processes-%EC%8B%A4%EC%8A%B5.html">운영체제 ) ch3. processes 실습</a>
 			
 
 			<div class="post-excerpt">
-				<p>오늘은 파이썬 리스트 자료형의 개념과 사용법에 대해서 공부를 해보았습니다.</p><hr /><h6 id="출처">출처</h6><ul> <li><a href="https://dojang.io/mod/page/view.php?id=2200">파이썬 코딩도장 - 리스트</a></li></ul><hr /><h1 id="1-리스트-만들기">1. 리스트 만들기</h1><ul> <li>리스트 = [값, 값, 값]</li> <li>리스트 = list( iterable object ) <ul> <li>리스트 = list(range(4,40,5))</li> </ul> </li></ul><h2 id="빈-리스트-만들기">빈 리스트 만들기</h2><ul> <li>리스트 = []</li> <li>리스트 = list()</li></ul><h2 id="range를-사용하여-리스트-만들기">range를 사용하여 리스트 만들기</h2><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span></code></pre></div></div><p>실행결과</p><blockquote> <p>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</p></blockquote><ul> <li>리스트 = list(range(시작, 끝, 증가폭))</li></ul><h2 id="문자열을-이용해-리스트-만들기">문자열을 이용해 리스트 만들기</h2><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span...<a class="read-more" href="./Python-)-%EB%A6%AC%EC%8A%A4%ED%8A%B8.html"> read more</a>
+				<p>실습 1.</p><p><img src="../assets/img/posts/image-20220316091214611.png" alt="image-20220316091214611" /></p><p><img src="../assets/img/posts/image-20220316091455080.png" alt="image-20220316091455080" /></p><p>gcc -&gt; a.out 으로 실행파일만듬.</p><p>프로세서는 어디에 올라가는가? 모든 램에 올라가나?</p><p>큰 파일이면,, 그 전체가?</p><p>프로세스 실행상태</p><p>PCB란?</p><p>PCB는 어디에샐겨?</p><p>프로그램 카운터란?</p><p>프로세스 당 PCB가 하나인건가?</p><p>at the same time, simultaneously,concurrently&lt;-&gt; parallel</p><p>wait queue -&gt; ready Queue로감</p><p><img src="../assets/img/posts/image-20220316095719889.png" alt="image-20220316095719889" /></p><a class="read-more" href="./%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C-)-ch3.-Processes-%EC%8B%A4%EC%8A%B5.html"> read more</a>
 			</div>
 		</div>
 	
