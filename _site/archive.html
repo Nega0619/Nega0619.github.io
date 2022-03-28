@@ -240,22 +240,11 @@
 		<div class="post">
 			
 
-			<a class="post-list-title" href="./GD-03.-%ED%85%8D%EC%8A%A4%ED%8A%B8%EC%9D%98-%EB%B6%84%ED%8F%AC%EB%A1%9C-%EB%B2%A1%ED%84%B0%ED%99%94-%ED%95%98%EA%B8%B0.html">Gd 03. 텍스트의 분포로 벡터화 하기</a>
-			
-
-			<div class="post-excerpt">
-				<p>오늘은 아이펠 Going Deeper 노드 2번을 공부하고 공부한 내용 정리해보았습니다.</p><hr /><h6 id="출처">출처</h6><ul>  <li>AIFFEL LMS</li>  <li>https://wikidocs.net/22592</li></ul><hr /><h6 id="학습데이터">학습데이터</h6><blockquote>  <p>$ wget https://github.com/jungyeul/korean-parallel-corpora/raw/master/korean-english-news-v1/korean-english-park.train.tar.gz</p>  <p>$ mkdir -p ~/aiffel/sp_tokenizer/data</p>  <p>$ mv korean-english-park.train.tar.gz ~/aiffel/sp_tokenizer/data</p>  <p>$ cd ~/aiffel/sp_tokenizer/data</p>  <p>$ tar -xzvf korean-english-park.train.tar.gz</p></blockquote><hr /><p>오늘 배운 내용은 <strong>문장을 조각 내는 방법</strong>입니다.</p><ul>  <li>중복 제거한 코드 분석    <ul>      <li>주요 요점!        <ol>          <li>min = 999, max = 0으로 표시되어있다.</li>          <li>set(raw_data)를 함으로써 중복은 없어진 것이다!</li>        </ol>      </li>    </ul>  </li></ul><a class="read-more" href="./GD-03.-%ED%85%8D%EC%8A%A4%ED%8A%B8%EC%9D%98-%EB%B6%84%ED%8F%AC%EB%A1%9C-%EB%B2%A1%ED%84%B0%ED%99%94-%ED%95%98%EA%B8%B0.html"> read more</a>
-			</div>
-		</div>
-	
-		<div class="post">
-			
-
 			<a class="post-list-title" href="./GD-02.-%EB%A9%8B%EC%A7%84-%EB%8B%A8%EC%96%B4%EC%82%AC%EC%A0%84-%EB%A7%8C%EB%93%A4%EA%B8%B0.html">Gd 02. 멋진 단어사전 만들기</a>
 			
 
 			<div class="post-excerpt">
-				<p>오늘은 아이펠 Going Deeper 노드 2번을 공부하고 공부한 내용 정리해보았습니다.</p><hr /><h6 id="출처">출처</h6><ul>  <li>AIFFEL LMS</li>  <li>https://wikidocs.net/22592</li></ul><hr /><h6 id="학습데이터">학습데이터</h6><blockquote>  <p>$ wget https://github.com/jungyeul/korean-parallel-corpora/raw/master/korean-english-news-v1/korean-english-park.train.tar.gz</p>  <p>$ mkdir -p ~/aiffel/sp_tokenizer/data</p>  <p>$ mv korean-english-park.train.tar.gz ~/aiffel/sp_tokenizer/data</p>  <p>$ cd ~/aiffel/sp_tokenizer/data</p>  <p>$ tar -xzvf korean-english-park.train.tar.gz</p></blockquote><hr /><p>오늘 배운 내용은 <strong>문장을 조각 내는 방법</strong>입니다.</p><ul>  <li>중복 제거한 코드 분석    <ul>      <li>주요 요점!        <ol>          <li>min = 999, max = 0으로 표시되어있다.</li>          <li>set(raw_data)를 함으로써 중복은 없어진 것이다!</li>        </ol>      </li>    </ul>  </li></ul><a class="read-more" href="./GD-02.-%EB%A9%8B%EC%A7%84-%EB%8B%A8%EC%96%B4%EC%82%AC%EC%A0%84-%EB%A7%8C%EB%93%A4%EA%B8%B0.html"> read more</a>
+				<p>오늘은 아이펠 Going Deeper 노드 2번을 공부하고 공부한 내용 정리해보았습니다.</p><hr /><h6 id="출처">출처</h6><ul> <li>AIFFEL LMS</li> <li>https://wikidocs.net/22592</li></ul><hr /><h6 id="학습데이터">학습데이터</h6><blockquote> <p>$ wget https://github.com/jungyeul/korean-parallel-corpora/raw/master/korean-english-news-v1/korean-english-park.train.tar.gz</p> <p>$ mkdir -p ~/aiffel/sp_tokenizer/data</p> <p>$ mv korean-english-park.train.tar.gz ~/aiffel/sp_tokenizer/data</p> <p>$ cd ~/aiffel/sp_tokenizer/data</p> <p>$ tar -xzvf korean-english-park.train.tar.gz</p></blockquote><hr /><p>위 학습데이터를 이용해 <strong>문장을 조각 내는 방법</strong>을 배워보았습니다. 실습은 MeCab클래스를 활용하였습니다.</p><h1 id="1-raw-데이터-분석">1. raw 데이터 분석</h1><p>raw 데이터에서 각 문장이 어느 정도 길이를 가지는 가지는지 확인하는 것은 중요합니다. 이 과정을 통해 지나치게 긴 데이터를 삭제할 수 있고(이는 연산량을 감소시켜 학습속도가 빨라집니다.) 지나치게 짧은 데이터를 검증할 수 있습니다. 어느정도 길이를 가지는지 확인하는 것은 데이터를 얼마나 사용할지 타협점을 정의할 수 있습니다.</p><ul> <li> <p>raw 데이터에서 중복된 문장을 없애는 것은 set자료형을...<a class="read-more" href="./GD-02.-%EB%A9%8B%EC%A7%84-%EB%8B%A8%EC%96%B4%EC%82%AC%EC%A0%84-%EB%A7%8C%EB%93%A4%EA%B8%B0.html"> read more</a>
 			</div>
 		</div>
 	
@@ -267,6 +256,17 @@
 
 			<div class="post-excerpt">
 				<p>실습 1.</p><p><img src="../assets/img/posts/image-20220316091214611.png" alt="image-20220316091214611" /></p><p><img src="../assets/img/posts/image-20220316091455080.png" alt="image-20220316091455080" /></p><p>gcc -&gt; a.out 으로 실행파일만듬.</p><p>프로세서는 어디에 올라가는가? 모든 램에 올라가나?</p><p>큰 파일이면,, 그 전체가?</p><p>프로세스 실행상태</p><p>PCB란?</p><p>PCB는 어디에샐겨?</p><p>프로그램 카운터란?</p><p>프로세스 당 PCB가 하나인건가?</p><p>at the same time, simultaneously,concurrently&lt;-&gt; parallel</p><p>wait queue -&gt; ready Queue로감</p><p><img src="../assets/img/posts/image-20220316095719889.png" alt="image-20220316095719889" /></p><a class="read-more" href="./%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C-)-ch3.-Processes-%EC%8B%A4%EC%8A%B5.html"> read more</a>
+			</div>
+		</div>
+	
+		<div class="post">
+			
+
+			<a class="post-list-title" href="./GD-01.-%ED%85%8D%EC%8A%A4%ED%8A%B8-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%8B%A4%EB%A3%A8%EA%B8%B0.html">Gd 01. 텍스트 데이터 다루기</a>
+			
+
+			<div class="post-excerpt">
+				<p>오늘은 아이펠 Going Deeper 노드 1번을 공부하고 공부한 내용을 포스팅해보았습니다.</p><hr /><h6 id="출처">출처</h6><ul> <li>AIFFEL LMS</li> <li><a href="https://wikidocs.net/22592">딥러닝을 이용한 자연어 처리 입문</a></li> <li><a href="https://brunch.co.kr/@learning/7">한국어를 위한 어휘 임베딩의 개발</a></li></ul><hr /><h1 id="1-자연언어와-인공언어">1. 자연언어와 인공언어</h1><p>자연언어란, 몇만년간 인류가 나름대로 발전시키고 통신 수단으로 사용하는 언어. 현재 약 200가지가 넘는 언어가 존재하며 이 중 40가지 정도가 글을 가지고 있다.</p><p><strong>문맥 의존 언어 이다.</strong></p><p>인공언어란, 컴퓨터 프로그래밍을 위하여 특별히 개발된 포트란, 파스칼 C와 같은 언어</p><p><strong>문맥자유 언어이다.</strong></p><p>자연어를 처리하는 것이 어려운 이유는 문맥 자유 언어가 아니기 때문입니다. 컴퓨터가 언어를 해석할 때, 문맥 자유 언어는 문법에 맞게 작성했다면, 글의 흐름을 파악할 필요가 없습니다. 문법에 맞게 파싱하기만 하면 되기 때문에 프로그래머가 작성한 대로 프로그램이 동작하게...<a class="read-more" href="./GD-01.-%ED%85%8D%EC%8A%A4%ED%8A%B8-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%8B%A4%EB%A3%A8%EA%B8%B0.html"> read more</a>
 			</div>
 		</div>
 	

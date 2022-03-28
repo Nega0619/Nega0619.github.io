@@ -276,5 +276,13 @@
 
 <h2 id="6-2-fasttext">6-2. FastText</h2>
 
-<h2 id="elmo---the-1st-contextualized-word-embedding">ELMo - the 1st Contextualized Word Embedding</h2>
+<p>Word2Vec의 단점은 영어만을 위한 임베딩 학습 방법이 아님에도 영어가 아닌 언어를 학습하면 여러 문제가 발생한다는 것이었습니다.</p>
+
+<p>특히 한국어와 같은 교착어는 동일한 어휘가 문맥속에서 다양하게 형태가 변하는데 Word2Vec는 이를 전부 다른 어휘로 처리되어, 이런 특징은 제대로 학습이 되지 않는 문제가 발생하였습니다. 또한 새로 등장한 어휘에 대해 임베딩을 어떻게 구성할지에 대한 문제도 있는데 이러한 문제를 당시에 유행하기 시작한 접근법을 활용해서 개선하고자 한 시도가 FAST TEXT입니다.</p>
+
+<h2 id="6-3-elmo---the-1st-contextualized-word-embedding">6-3. ELMo - the 1st Contextualized Word Embedding</h2>
+
+<p>한국어에서 사과는 apple과 appology라는 의미를 둘 다 가지고 있는 동음이의어 입니다. 기존의 Word Embedding에서는 apple이라는 의미로 사과가 사용되어도, apology라는 의미로 사과가 사용되어도 동일한 벡터값으로 처리되는 문제가 있었습니다.</p>
+
+<p>분명 의미가 다른 두 사과를 구별하기 위해서는 문맥을 이해할 필요가 있었고, 이를 해결한 방법이 ELMo방법입니다. 즉, 단어의 의미 벡터를 구하기 위해서 그 단어 뿐만 아니라 그 단어가 놓인 주변 단어의 배치 맥락이 함께 고려되는 Word Embedding을 해주는 것입니다. 이 개념을 Confkrhtextualized Word Embedding이라고 합니다.</p>
 

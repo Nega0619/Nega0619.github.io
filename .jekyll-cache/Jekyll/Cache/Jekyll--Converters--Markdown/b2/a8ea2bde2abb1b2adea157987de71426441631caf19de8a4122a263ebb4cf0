@@ -1,0 +1,289 @@
+I")C<p>오늘은 아이펠 Going Deeper 노드 1번을 공부하고 공부한 내용을 포스팅해보았습니다.</p>
+
+<hr />
+
+<h6 id="출처">출처</h6>
+
+<ul>
+  <li>AIFFEL LMS</li>
+  <li><a href="https://wikidocs.net/22592">딥러닝을 이용한 자연어 처리 입문</a></li>
+  <li><a href="https://brunch.co.kr/@learning/7">한국어를 위한 어휘 임베딩의 개발</a></li>
+</ul>
+
+<hr />
+
+<h1 id="1-자연언어와-인공언어">1. 자연언어와 인공언어</h1>
+
+<p>자연언어란, 몇만년간 인류가 나름대로 발전시키고 통신 수단으로 사용하는 언어. 현재 약 200가지가 넘는 언어가 존재하며 이 중 40가지 정도가 글을 가지고 있다.</p>
+
+<p><strong>문맥 의존 언어 이다.</strong></p>
+
+<p>인공언어란, 컴퓨터 프로그래밍을 위하여 특별히 개발된 포트란, 파스칼 C와 같은 언어</p>
+
+<p><strong>문맥자유 언어이다.</strong></p>
+
+<p>자연어를 처리하는 것이 어려운 이유는 문맥 자유 언어가 아니기 때문입니다. 컴퓨터가 언어를 해석할 때, 문맥 자유 언어는 문법에 맞게 작성했다면, 글의 흐름을 파악할 필요가 없습니다. 문법에 맞게 파싱하기만 하면 되기 때문에 프로그래머가 작성한 대로 프로그램이 동작하게 됩니다.</p>
+
+<h1 id="2-자연언어에서-발견할-수-있는-노이즈들">2. 자연언어에서 발견할 수 있는 노이즈들</h1>
+
+<ul>
+  <li>
+    <p>불완전한 문장으로 구성된 대화</p>
+
+    <p>카톡과 같은 메신저를 사용할 때, 한 문장을 한번에 보내지 않고 여러번에 나눠 전송하는 형태입니다.</p>
+  </li>
+  <li>
+    <p>문장의 길이가 너무 길거나 짧은 경우</p>
+
+    <p>대체로 <code class="language-plaintext highlighter-rouge">ㅋㅋㅋ</code> 혹은 <code class="language-plaintext highlighter-rouge">ㅎㅎ</code>, <code class="language-plaintext highlighter-rouge">ㅠㅠ</code>, <code class="language-plaintext highlighter-rouge">헐ㅋ</code>와 같은 리액션에 해당하는 경우가 많음.</p>
+  </li>
+  <li>
+    <p>채팅 데이터에서 문장 시간 간격이 너무 긴 경우</p>
+
+    <ul>
+      <li>
+        <p>서로의 말이 얽히며, 서로 각자의 할말만 하는 경우가 있음</p>
+
+        <blockquote>
+          <p>A: 베트맨2</p>
+
+          <p>B: 보러가자</p>
+
+          <p>A: 어제 봤는데 꿀잼</p>
+
+          <p>B: 오늘 저녀.. 아니 ㅠ</p>
+        </blockquote>
+      </li>
+      <li>
+        <p>말의 텀이 매우 길 때</p>
+
+        <blockquote>
+          <p>A: 혹시 돈좀 빌려 줄 수 있어?</p>
+
+          <p>…. (한참 뒤)</p>
+
+          <p>B: 아 미안 지금 봄. 지금도 필요해?</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>바람직하지 않은 문장의 사용</p>
+
+    <p>욕설이나 비속어, 오타 비율이 높은 경우</p>
+  </li>
+</ul>
+
+<p>위와 같은 언어는 UNFORMAL한 언어 데이터에서 자주 보이므로, FORMAL한 데이터에서도 자주 보이는 더 단순하고 근본적인 노이즈에 대해서도 알아보았습니다.</p>
+
+<ul>
+  <li>
+    <p>문장부호</p>
+
+    <p><code class="language-plaintext highlighter-rouge">Hi</code> 와 <code class="language-plaintext highlighter-rouge">Hi,</code>를 컴퓨터는 다르게 이해할 수 있습니다. 이같은 경우 문장부호 앞 뒤에 공백을 넣어 분리해줍니다.</p>
+
+    <p>하지만, www.naver.com 이나 101,456 과 같은 데이터의 경우 공백을 넣으면 오히려 이상하게 처리를 해주는 꼴입니다.</p>
+
+    <p>위 같은 경우는 불가피한 손실로 취급하고 넘어가게 됩니다. 모든 규칙에 대해서 변환을 정의해줄 수는 없기 때문입니다. 게다가 보통 수행하고자 하는 목적에 큰 영향을 주지 못하기 때문에 오류가 있음에도 그냥 넘어가게 됩니다.</p>
+  </li>
+  <li>
+    <p>대소문자</p>
+
+    <p>First와 first를 컴퓨터는 다르게 인식할 수 있으므로 lower()혹은 upper()메소드를 이용해 변경해줍니다.</p>
+  </li>
+  <li>
+    <p>특수문자</p>
+
+    <p>영어에서는 나이를 ten-year-old와 같이 표현하는 경우가 있습니다. 이 같은 경우 특정 특수문자를 공백으로 변경하거나 없애는 처리를 추가해주며 보통 정규표현식으 사용하여 처리합니다.</p>
+  </li>
+</ul>
+
+<h1 id="3-단어의-희소-표현과-분산-표현">3. 단어의 희소 표현과 분산 표현</h1>
+
+<h2 id="희소-표현">희소 표현</h2>
+
+<p>해당 단어의 속성이 어느 그룹에 속하느냐를 벡터로 표현한 것.</p>
+
+<p>원-핫 인코딩을 통해서 얻은 원-핫 벡터는 표현하고자 하는 단어의 인덱스의 값만 1이고, 나머지 인덱스에는 전부 0으로 표현되는 벡터 표현 방법이었습니다. 이와 같이 벡터 또는 행렬의 값이 대부분이 0으로 표현되는 방법이 희소표현입니다.</p>
+
+<p>ex ) 0번째 인덱스를 여자 = 1, 남자 -1로 표현한다면</p>
+
+<blockquote>
+  <p>남자 = [-1]</p>
+
+  <p>여자 = [1]</p>
+
+  <p>사과 = [0]</p>
+
+  <p>소년 = [-1]</p>
+
+  <p>바나나 = [0]</p>
+</blockquote>
+
+<p>이런 속성들이 여러개가 된다면 결국 0000001000000000011001000000과 같은 표현이 될것입니다. 메모리 낭비가 심합니다.</p>
+
+<h2 id="분산표현">분산표현</h2>
+
+<p>컴퓨터가 추상적으로 단어의 유사도를 계산하여 각각에 표현한 것.</p>
+
+<p>분산 표현(distributed representation) 방법은 기본적으로 분포 가설(distributional hypothesis)이라는 가정 하에 만들어진 표현 방법</p>
+
+<p>100개의 단어를 256차원의 속성으로 표현하고 싶다면 Embedding 레이어는 다음과 같이 정의됩니다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">embedding_layer = tf.keras.layers.Embedding(input_dim=100, output_dim=256)</code></p>
+
+<h1 id="4-토큰화">4. 토큰화</h1>
+
+<p>단어에 대해 희소표현과 분산표현을 해주는 것은 단어 사전을 만들어 주기 위함입니다. 하지만 단어사전이 존재한다고 해도 컴퓨터는 엉뚱하게 해석하고 표현합니다. 그 이유는 컴퓨터가 문장을 단어단위로 정확히 끊어내지 못하기 때문입니다.</p>
+
+<p>예를 들어,<code class="language-plaintext highlighter-rouge">나</code>와 <code class="language-plaintext highlighter-rouge">나는</code> 이란 단어가 있으면 <code class="language-plaintext highlighter-rouge">나</code>와 <code class="language-plaintext highlighter-rouge">나</code>,``-는<code class="language-plaintext highlighter-rouge">으로 단어를 끊어 해석해야 하는데  컴퓨터는 </code>나<code class="language-plaintext highlighter-rouge">와 </code>나는`을 전혀 연관성 없는 단어로 해석할 수 있습니다.</p>
+
+<p>그래서 문장을 어떤 기준으로 쪼개주어야 하는데 쪼개진 단어들을 토큰이라고 합니다.</p>
+
+<h2 id="토큰화-기법-1-공백-기반-토큰화">토큰화 기법 1. 공백 기반 토큰화</h2>
+
+<p>공백을 베이스로하여 문장을 나누어줍니다.  python에선 split함수를 많이 씀.</p>
+
+<h2 id="토큰화-기법-2-형태소-기반-토큰화">토큰화 기법 2. 형태소 기반 토큰화</h2>
+
+<p>대표적인 한국어 형태소 분석기 KoLNLPy를 사용해서 토큰화 해주기도 합니다.</p>
+
+<p><a href="https://konlpy-ko.readthedocs.io/ko/v0.4.3/">KoNLPy: 파이썬 한국어 NLP - KoNLPy 0.4.3 documentation</a></p>
+
+<p>다른 분석기를 사용하려면 다음 사이트를 참고하면 좋습니다</p>
+
+<p><a href="https://iostream.tistory.com/144">한국어 형태소 분석기 성능 비교</a></p>
+
+<h2 id="토큰화-기법-3-사전에-없는-단어의-문제">토큰화 기법 3. 사전에 없는 단어의 문제</h2>
+
+<p>토큰화 기법 1, 2에서 설명한 공백 기반, 형태소 기반은 모두 각각의 단어가 가지는 의미 단위로 토큰화 합니다. 이 기법의 경우는 데이터에  포함되는 모든 단어를 처리할 수 는 없기 때문에, 상위 N개의 단어만 사용하고 나머지는 특수한 토큰 <code class="language-plaintext highlighter-rouge">&lt;unk&gt;</code>토큰으로 치환합니다. 사진은 예시입니다.</p>
+
+<p><img src="../assets/img/posts/image-20220316173133220.png" alt="image-20220316173133220" /></p>
+
+<p>이런 문장을 영문으로 번역할 땐 어려움이 있을 수 밖에 없습니다. 이 같은 문제를 해결하고자 하는 시도들이 있었고 그것이 Wordpiece Model입니다.</p>
+
+<h1 id="5-토큰화-다른-방법">5. 토큰화 다른 방법</h1>
+
+<h2 id="5-1-byte-pair-encodingbpe">5-1. Byte Pair Encoding(BPE)</h2>
+
+<p>Subword(접두사/ 접미사 ex) Pre- )의 집합으로 보는 방법이 WPM(WordPiece Model)입니다. 이 모델을 알기전에 알아야 하는 것이  <strong>Byte Pair Encoding(BPE)</strong> 이므로, 이에 대해 간단히 설명하겠습니다.</p>
+
+<p>데이터에서 가장 많이 등장하는 바이트 쌍(Byte Pair)을 새로운 단어로 치환하여 압축하는 작업을 반복하는 방식으로 동작합니다.</p>
+
+<p>예시 )</p>
+
+<p><img src="../assets/img/posts/image-20220316173104200.png" alt="image-20220316173104200" /></p>
+
+<p>이 방식을 사용하면, <code class="language-plaintext highlighter-rouge">lowest</code>라는 처음 등장해도, <code class="language-plaintext highlighter-rouge">low</code>와 <code class="language-plaintext highlighter-rouge">est</code>라는 단어 묶음이 이미 있다면, <code class="language-plaintext highlighter-rouge">lowest</code>를 <code class="language-plaintext highlighter-rouge">low</code>와 <code class="language-plaintext highlighter-rouge">est</code>의 조합으로, 즉 아는 단어로 처리할 수 있습니다.</p>
+
+<p>즉 그렇기 대문에 아무리 큰 데이터도 원하는 크기로 OOV 문제없이 사전을 정의할 수 있습니다.</p>
+
+<blockquote>
+  <p>OOV : Out of Vocabulary</p>
+</blockquote>
+
+<p>Emdedding 레이어는 단어수 * Embedding 차원의 수 = weight 이기 때문에 단어의 개수 줄어드는 문제 = 메모리 절약</p>
+
+<p>많은 데이터는 정확도로 이어지기 때문에 굉장히 큰 의미가 있습니다.</p>
+
+<h2 id="5-2-wordpiece-modelwpm">5-2. Wordpiece Model(WPM)</h2>
+
+<p>BPE의 단점은 나누는 그룹이 <code class="language-plaintext highlighter-rouge">i / a / o / n / b</code> 단위라면 이 단위들을 합치기는 어렵습니다. 이러한 단점을 극복하려 구글에서 만든 것이 WPM입니다. WPM은 BPE보다 두가지가 다릅니다.</p>
+
+<ol>
+  <li>공백 복원을 위하여 단어 시작부분에 <code class="language-plaintext highlighter-rouge">_</code>를 추가합니다.</li>
+  <li>빈도수 기반이 아니라 가능도<code class="language-plaintext highlighter-rouge">likelihood</code>를 증가시키는 방향으로 문자쌍을 합칩니다.</li>
+</ol>
+
+<p>예를 들어 아까 예시는 <code class="language-plaintext highlighter-rouge">_i, _a, o, _n, b</code> 와 같이 토큰화가 진행됩니다.</p>
+
+<p>이 경우, 모든 토큰을 합친 후, 언더바를 _를 공백으로 치환으로 마무리되어 간편합니다.</p>
+
+<h2 id="5-3-soynlp">5-3. soynlp</h2>
+
+<p>한국어 자연어 처리를 위한 라이브러리로 한국어를 위한 토크나이저로 사용됩니다. 토크나이저 이외에도 단어 추출, 품사 판별, 전처리 기능도 제공합니다.</p>
+
+<p>soynlp는 문장에서 처음 단어를 받아들일 때 단어의 경계를 비지도 학습을 통해 결정합니다. 비지도 학습을 통한 방법이라, 미등록 단어도 토큰화가 가능합니다. 여기서 사용된 비지도 학습은 통계적 방법이라 soynlp를 통계 기반 토크나이저로 분류하기도 합니다. 즉, <code class="language-plaintext highlighter-rouge">젤다의 전설</code>이 한 단어임을 인지하기 위하여 젤, 젤다, 젤다의, 젤다의 전, 젤다의 전설 각각 다음 글자의 확률을 계산하는 방식입니다.</p>
+
+<h1 id="6-토큰에게-의미를-부여하기">6. 토큰에게 의미를 부여하기</h1>
+
+<p>토큰화된 단어조각들끼리 유사도 연산을 연산을 할 수 있게 의미를 부여하는 알고리즘을 소개합니다.</p>
+
+<h2 id="6-1-word2vec">6-1. Word2Vec</h2>
+
+<p><code class="language-plaintext highlighter-rouge">단어로 벡터를 만든다</code>는 뜻.</p>
+
+<p>단어를 희소표현이 아닌 분산표현으로 나타낸 방법. 저차원에 단어의 이미를 여러 차원에다가 분산하여 표현합니다. 이러한 표현 방법을 사용하면, 단어 벡터간 유의미한 유사도를 계산할 수있는데 이를 위한 대표적인 학습 방법이 Word2Vec입니다.</p>
+
+<p>word2Vec에는 두가지 학습 방식이 있습니다.</p>
+
+<ul>
+  <li>
+    <p>CBOW Continuous Bag of words</p>
+
+    <p>주변에 있는 단어들을 입력으로 중간에 있는 단어들을 예측하는 방법입니다.</p>
+  </li>
+  <li>
+    <p>Skip gram</p>
+
+    <p>중간에 있는 단어들을 입력으로 주변 단어들을 예측하는 방법입니다.</p>
+  </li>
+</ul>
+
+<h3 id="cbow">CBOW</h3>
+
+<p>주변에 있는 단어들을 입력으로 중간에 있는 단어들을 예측하는 방법입니다.</p>
+
+<p>예문 : “The fat cat sat on the mat” 이 있다고 하면, [‘The’, ‘fat’, ‘cat’, ‘on’, ‘the’, ‘mat’]를 입력으로 받고, ‘sat’이라는 중간 단어를 예측하는 것입니다.</p>
+
+<p>여기서 리스트에 존재하는 단어를 주변단어 context word라고 하고, sat을 중심단어 center word라고 합니다.</p>
+
+<p><img src="https://wikidocs.net/images/page/22660/%EB%8B%A8%EC%96%B4.PNG" alt="img" /></p>
+
+<p>중심 단어를 예측하기 위해 앞, 뒤로 몇 개의 단어를 볼 지 결정하는 것 = window</p>
+
+<p>위 예시는 window = 2일 경우, 중심단어에 따라 앞 뒤로 주변단어를 받는 예시입니다.</p>
+
+<p>슬라이딩 윈도우 sliding window = 윈도우 크기가 결정됐을 경우, 윈도우를 옆으로 움직여서 주변 단어와 중심단어의 선택을 변경해가며 학습을 위한 데이터셋을 만드는 방법</p>
+
+<p><img src="https://wikidocs.net/images/page/22660/word2vec_renew_1.PNG" alt="img" /></p>
+
+<p>CBOW의 인공 신경망을 간단히 도식화한 그림입니다.</p>
+
+<p>위 그림에서 알수있는것.</p>
+
+<ol>
+  <li>Word2Vec은 은닉층이 다수인 딥러닝 모델이 아니라, 은닉층이 1개인 얕은 신경망 shallow neural network라는 점.</li>
+  <li>일반적인 은닉층과 달리 활성화 함수 존재 X</li>
+  <li>Word2Vec의 은닉층은 룩업 테이블이라는 연산을 담당하는 층으로 투사층 projection layer이라 부르기도 합니다.</li>
+</ol>
+
+<h3 id="skip-gram">Skip gram</h3>
+
+<p>중간에 있는 단어들을 입력으로 주변 단어들을 예측하는 방법입니다.</p>
+
+<p>윈도우 크기가 2일때 구성되는 데이터 셋 :</p>
+
+<p><img src="https://wikidocs.net/images/page/22660/skipgram_dataset.PNG" alt="img" /></p>
+
+<p>인공 신경망을 도식화해보면 아래와 같습니다.</p>
+
+<p><img src="https://wikidocs.net/images/page/22660/word2vec_renew_6.PNG" alt="img" /></p>
+
+<p>중심 단어에서 주변 단어를 예측하므로, 투사층에서 벡터들의 평균을 구하는 과정은 없습니다.</p>
+
+<p>일반적으로 Skip-gram이 CBOW보다 성능이 좋다고 알려져있습니다.</p>
+
+<h2 id="6-2-fasttext">6-2. FastText</h2>
+
+<p>Word2Vec의 단점은 영어만을 위한 임베딩 학습 방법이 아님에도 영어가 아닌 언어를 학습하면 여러 문제가 발생한다는 것이었습니다.</p>
+
+<p>특히 한국어와 같은 교착어는 동일한 어휘가 문맥속에서 다양하게 형태가 변하는데 Word2Vec는 이를 전부 다른 어휘로 처리되어, 이런 특징은 제대로 학습이 되지 않는 문제가 발생하였습니다. 또한 새로 등장한 어휘에 대해 임베딩을 어떻게 구성할지에 대한 문제도 있는데 이러한 문제를 당시에 유행하기 시작한 접근법을 활용해서 개선하고자 한 시도가 FAST TEXT입니다.</p>
+
+<h2 id="6-3-elmo---the-1st-contextualized-word-embedding">6-3. ELMo - the 1st Contextualized Word Embedding</h2>
+
+<p>한국어에서 사과는 apple과 appology라는 의미를 둘 다 가지고 있는 동음이의어 입니다. 기존의 Word Embedding에서는 apple이라는 의미로 사과가 사용되어도, apology라는 의미로 사과가 사용되어도 동일한 벡터값으로 처리되는 문제가 있었습니다.</p>
+
+<p>분명 의미가 다른 두 사과를 구별하기 위해서는 문맥을 이해할 필요가 있었고, 이를 해결한 방법이 ELMo방법입니다. 즉, 단어의 의미 벡터를 구하기 위해서 그 단어 뿐만 아니라 그 단어가 놓인 주변 단어의 배치 맥락이 함께 고려되는 Word Embedding을 해주는 것입니다. 이 개념을 Confkrhtextualized Word Embedding이라고 합니다</p>
+
+:ET

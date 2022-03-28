@@ -1,0 +1,47 @@
+I"r<p>오늘은 아이펠 Going Deeper 노드 2번을 공부하고 공부한 내용 정리해보았습니다.</p>
+
+<hr />
+
+<h6 id="출처">출처</h6>
+
+<ul>
+  <li>AIFFEL LMS</li>
+  <li>https://wikidocs.net/22592</li>
+</ul>
+
+<hr />
+
+<h6 id="학습데이터">학습데이터</h6>
+
+<blockquote>
+  <p>$ wget https://github.com/jungyeul/korean-parallel-corpora/raw/master/korean-english-news-v1/korean-english-park.train.tar.gz</p>
+
+  <p>$ mkdir -p ~/aiffel/sp_tokenizer/data</p>
+
+  <p>$ mv korean-english-park.train.tar.gz ~/aiffel/sp_tokenizer/data</p>
+
+  <p>$ cd ~/aiffel/sp_tokenizer/data</p>
+
+  <p>$ tar -xzvf korean-english-park.train.tar.gz</p>
+</blockquote>
+
+<hr />
+
+<p>오늘 배운 내용은 <strong>문장을 조각 내는 방법</strong>입니다. MeCab클래스를 활용해 실습해 보았습니다.</p>
+
+<p>raw 데이터에서 각 문장이</p>
+
+<ul>
+  <li>중복 제거한 코드 분석
+    <ul>
+      <li>주요 요점!
+        <ol>
+          <li>min = 999, max = 0으로 표시되어있다.</li>
+          <li>set(raw_data)를 함으로써 중복은 없어진 것이다!</li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+:ET
